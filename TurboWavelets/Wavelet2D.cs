@@ -3,6 +3,8 @@
 //  
 // Author:
 //       Stefan Moebius
+// Date:
+//       2016-04-09
 // 
 // Copyright (c) 2016 Stefan Moebius
 // 
@@ -254,13 +256,12 @@ namespace TurboWavelets
 							}
 						}
 					}
+					keep [maxIdxX, maxIdxY] = true;
+					//Scale all major coefficients (with greater amplitutes)
+					//by the coresponding scale factor 
+					if (scaleFactorsMajors != null)
+						src [startX + maxIdxX, startY + maxIdxY] *= scaleFactorsMajors [k];
 				}
-				keep [maxIdxX, maxIdxY] = true;
-				//Scale all major coefficients (with greater amplitutes)
-				//by the coresponding scale factor 
-				if (scaleFactorsMajors != null)
-					src [startX + maxIdxX, startY + maxIdxY] *= scaleFactorsMajors [k];
-
 				//all minor coefficients (with small amplitutes)
 				//are multiplied by a certain factor (for denoising typically zero)
 				for (int y = startY; y < endY; y++) {
