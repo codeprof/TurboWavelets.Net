@@ -1,3 +1,28 @@
+// 
+// Wavelet2D.cs
+//  
+// Author:
+//       Stefan Moebius
+// 
+// Copyright (c) 2016 Stefan Moebius
+// 
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+// 
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+// 
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+// THE SOFTWARE.
 using System;
 using System.Threading.Tasks;
 
@@ -11,14 +36,20 @@ namespace TurboWavelets
 		protected int allowedMinSize;
 
 		/// <summary>
-		/// Initalizes a two dimensional wavelet transformation
+		/// Initalizes a two dimensional wavelet cascade transformation
 		/// </summary>
+		/// <param name="minSize">minimum size up to a transformation is applied (can be set arbitary)</param>
+		/// <param name="allowedMinSize">minimum size up to a transformation can be applied (implementation depended)</param>
+		/// <param name="width">starting width of the transformation</param>
+		/// <param name="height">starting height of the transformation</param>				
 		public Wavelet2D (int minSize, int allowedMinSize, int width, int height)
 		{
+			if (allowedMinSize < 0) {
+				throw new ArgumentException ("allowedMinSize cannot be less than zero");
+			}
 			if (minSize < allowedMinSize) {
 				throw new ArgumentException ("minSize cannot be smaller than " + allowedMinSize);
 			}
-
 			if (width < minSize || height < minSize) {
 				throw new ArgumentException ("width and height must be greater or equal to " + minSize);
 			}
@@ -46,35 +77,76 @@ namespace TurboWavelets
 			}
 		}
 
-		virtual protected void TransformRows (float[,] src, float[,] dst, int w, int h)
+		virtual protected void TransformRow (float[,] src, float[,] dst, int y, int length)
 		{
 			//will be overwritten by method of child class...
+		}
+
+		virtual protected void TransformCol (float[,] src, float[,] dst, int x, int length)
+		{
+			//will be overwritten by method of child class...
+		}
+
+		virtual protected void InvTransformRow (float[,] src, float[,] dst, int y, int length)
+		{
+			//will be overwritten by method of child class...
+		}
+
+		virtual protected void InvTransformCol (float[,] src, float[,] dst, int x, int length)
+		{
+			//will be overwritten by method of child class...
+		}
+
+		virtual protected void TransformRows (float[,] src, float[,] dst, int w, int h)
+		{
+			Parallel.For (0, h, y => 
+			{
+				TransformRow (src, dst, y, w);
+			});
 		}
 
 		virtual protected void TransformCols (float[,] src, float[,] dst, int w, int h)
 		{
-			//will be overwritten by method of child class...
+			Parallel.For (0, w, x => 
+			{
+				TransformCol (src, dst, x, h);
+			});
 		}
 
 		virtual protected void InvTransformRows (float[,] src, float[,] dst, int w, int h)
 		{
-			//will be overwritten by method of child class...
+			Parallel.For (0, h, y => 
+			{
+				InvTransformRow (src, dst, y, w);
+			});
 		}
 
 		virtual protected void InvTransformCols (float[,] src, float[,] dst, int w, int h)
 		{
-			//will be overwritten by method of child class...
+			Parallel.For (0, w, x => 
+			{
+				InvTransformCol (src, dst, x, h);
+			});
 		}
 
 		/// <summary>
 		/// Perfroms a two dimensional isotropic wavelet transformation for an array. The result is copied back to the declared array.
 		/// </summary>
+		/// <param name="src">two dimensional float array to perform the the wavelet transformation on</param>	
 		virtual public void TransformIsotropic2D (float[,] src)
 		{
+			if (src == null) {
+				throw new ArgumentException ("src cannot be null");
+			}
+			if (src.GetLength (0) < width) {
+				throw new ArgumentException ("first dimension of src cannot be smaller than " + width);
+			}
+			if (src.GetLength (1) < height) {
+				throw new ArgumentException ("second dimension of src cannot be smaller than " + width);
+			}
 			float[,] tmp = new float[width, height];
 			int w = width, h = height;
 			while ((w > minSize) && (h > minSize)) {
-				//Console.WriteLine (width.ToString () + "  " + height.ToString () + "\n");
 				TransformRows (src, tmp, w, h);
 				TransformCols (tmp, src, w, h);
 				w >>= 1;
@@ -87,6 +159,15 @@ namespace TurboWavelets
 		/// </summary>
 		virtual public void BacktransformIsotropic2D (float[,] src)
 		{
+			if (src == null) {
+				throw new ArgumentException ("src cannot be null");
+			}
+			if (src.GetLength (0) < width) {
+				throw new ArgumentException ("first dimension of src cannot be smaller than " + width);
+			}
+			if (src.GetLength (1) < height) {
+				throw new ArgumentException ("second dimension of src cannot be smaller than " + width);
+			}
 			//Calculate the integral digits of log to the base two of the maximum of "width" and "height" 
 			//The resulting number of "width | height" cannot have a greater log to the base 2 (integral digits)
 			//than the greater of both values.
@@ -101,8 +182,7 @@ namespace TurboWavelets
 			while (i <= log2) {
 				int w = width >> (log2 - i);
 				int h = height >> (log2 - i);
-				if ((w > 3) && (h > 3)) {
-					//Console.WriteLine (w.ToString () + "  " + h.ToString () + "\n");
+				if ((w > minSize) && (h > minSize)) {
 					InvTransformCols (src, tmp, w, h);
 					InvTransformRows (tmp, src, w, h);
 				}
@@ -112,22 +192,31 @@ namespace TurboWavelets
 
 		virtual protected void ModifyCoefficients (float[,] src, int n, float[] scaleFactorsMajors, float scaleFactorsMinors, int gridSize)
 		{
-			if (scaleFactorsMajors != null) {
-				if (scaleFactorsMajors.Length != n)
-					throw new ArgumentException ("scaleFactorsMajors must be null or the length must be of dimension n (" + n + ")");
+			if (src == null) {
+				throw new ArgumentException ("src cannot be null");
 			}
-			if (gridSize < 1)
+			if (scaleFactorsMajors != null) {
+				if (scaleFactorsMajors.Length != n) {
+					throw new ArgumentException ("scaleFactorsMajors must be null or the length must be of dimension n (" + n + ")");
+				}
+			}
+			if (gridSize < 1) {
 				throw new ArgumentException ("gridSize (" + gridSize + ") cannot be smaller than 1");
-			if (n < 0)
+			}
+			if (n < 0) {
 				throw new ArgumentException ("n (" + n + ") cannot be negative");
-			if (n > gridSize * gridSize)
+			}
+			if (n > gridSize * gridSize) {
 				throw new ArgumentException ("n" + n + " cannot be greater than " + gridSize + "*" + gridSize);
+			}
 			int w = width / gridSize;
-			if ((w % gridSize) != 0)
+			if ((w % gridSize) != 0) {
 				w++;
+			}
 			int h = width / gridSize;
-			if ((h % gridSize) != 0)
+			if ((h % gridSize) != 0) {
 				h++;
+			}
 			int numBlocks = w * h;
 
 			Parallel.For (0, numBlocks, block => 
@@ -137,15 +226,14 @@ namespace TurboWavelets
 
 				int endX = startX + gridSize;
 				int endY = startY + gridSize;
-				if (endX > width)
+				if (endX > width) {
 					endX = width;
-				if (endY > height)
+				}
+				if (endY > height) {
 					endY = height;
-
-				float[,] tmpBlock = new float[gridSize, gridSize];
+				}
 				bool[,] keep = new bool[gridSize, gridSize];
-				Array.Clear (tmpBlock, 0, tmpBlock.Length);
-				Array.Clear (keep, 0, keep.Length);
+				float[,] tmpBlock = new float[gridSize, gridSize];
 
 				for (int y = startY; y < endY; y++) {
 					for (int x = startX; x < endX; x++) {
@@ -166,13 +254,13 @@ namespace TurboWavelets
 							}
 						}
 					}
-					keep [maxIdxX, maxIdxY] = true;
-					//Scale all major coefficients (with greater amplitutes)
-					//by the declared scale factor 
-					if (scaleFactorsMajors != null)
-						src [startX + maxIdxX, startY + maxIdxY] *= scaleFactorsMajors [k];
-
 				}
+				keep [maxIdxX, maxIdxY] = true;
+				//Scale all major coefficients (with greater amplitutes)
+				//by the coresponding scale factor 
+				if (scaleFactorsMajors != null)
+					src [startX + maxIdxX, startY + maxIdxY] *= scaleFactorsMajors [k];
+
 				//all minor coefficients (with small amplitutes)
 				//are multiplied by a certain factor (for denoising typically zero)
 				for (int y = startY; y < endY; y++) {
@@ -196,11 +284,13 @@ namespace TurboWavelets
 		/// Scales the n (length of the scaleFactors array) greatest coefficinets (for a defined grid size) by the value declared in scaleFactors.
 		/// </summary>
 		virtual public void ScaleCoefficients (float[,] src, float[] scaleFactors, int gridSize)
-		{
-			if (scaleFactors == null)
+		{		
+			if (scaleFactors == null) {
 				throw new ArgumentException ("scaleFactors cannot be null");
-			if (scaleFactors.Length > gridSize * gridSize)
+			}
+			if (scaleFactors.Length > gridSize * gridSize) {
 				throw new ArgumentException ("scaleFactors lenght cannot be greater than " + gridSize * gridSize);
+			}
 			ModifyCoefficients (src, scaleFactors.Length, scaleFactors, 1.0f, gridSize);
 		}
 	}

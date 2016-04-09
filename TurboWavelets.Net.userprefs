@@ -1,0 +1,16 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="TurboWavelets/Wavelet2D.cs">
+    <Files>
+      <File FileName="TurboWavelets/Biorthogonal53Wavelet2D.cs" Line="1" Column="1" />
+      <File FileName="TurboWavelets/Wavelet2D.cs" Line="8" Column="23" />
+      <File FileName="TurboWavelets-Test/TurboWaveletsTest.cs" Line="1" Column="1" />
+      <File FileName="TurboWavelets/OrderWavelet2D.cs" Line="1" Column="1" />
+      <File FileName="TurboWavelets/Biorthogonal53Wavelet1DStatic.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
