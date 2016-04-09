@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TurboWavelets-Test", "TurboWavelets-Test\TurboWavelets-Test.csproj", "{5C7CD59F-8311-41F2-93D4-058913CEEA91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TurboWavelets", "TurboWavelets\TurboWavelets.csproj", "{1E7A9FFF-4D2D-4608-98CF-051E3F883266}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1E7A9FFF-4D2D-4608-98CF-051E3F883266}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E7A9FFF-4D2D-4608-98CF-051E3F883266}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E7A9FFF-4D2D-4608-98CF-051E3F883266}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E7A9FFF-4D2D-4608-98CF-051E3F883266}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C7CD59F-8311-41F2-93D4-058913CEEA91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C7CD59F-8311-41F2-93D4-058913CEEA91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C7CD59F-8311-41F2-93D4-058913CEEA91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C7CD59F-8311-41F2-93D4-058913CEEA91}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = TurboWavelets\TurboWavelets.csproj
+	EndGlobalSection
+EndGlobal
