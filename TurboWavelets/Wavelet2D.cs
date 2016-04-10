@@ -4,7 +4,7 @@
 // Author:
 //       Stefan Moebius
 // Date:
-//       2016-04-09
+//       2016-04-11
 // 
 // Copyright (c) 2016 Stefan Moebius
 // 
@@ -26,7 +26,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 using System;
+using System.Threading;
 using System.Threading.Tasks;
+using System.Runtime.CompilerServices;
 
 namespace TurboWavelets
 {
@@ -38,7 +40,7 @@ namespace TurboWavelets
 		protected int allowedMinSize;
 		protected bool enableParallel = true;
 		protected bool enableCacheing = false;
-		protected float [,] cacheArray = null;
+		protected float[,] cachedArray = null;
 
 		/// <summary>
 		/// Initalizes a two dimensional wavelet cascade transformation
@@ -85,6 +87,7 @@ namespace TurboWavelets
 		/// <summary>
 		/// enables or disables caching of memory (disabled by default)
 		/// </summary>
+		[MethodImpl(MethodImplOptions.Synchronized)]
 		public bool EnableCaching {
 			get {
 				return enableCacheing;
@@ -92,7 +95,7 @@ namespace TurboWavelets
 			set {
 				enableCacheing = value;
 				if (!value) {
-					FlushCache();
+					FlushCache ();
 				}
 			}
 		}
@@ -100,6 +103,7 @@ namespace TurboWavelets
 		/// <summary>
 		/// enables or disables parallel execution (enabled by default)
 		/// </summary>
+		[MethodImpl(MethodImplOptions.Synchronized)]
 		public bool EnableParallel {
 			get {
 				return enableParallel;
@@ -112,7 +116,9 @@ namespace TurboWavelets
 		/// <summary>
 		/// Frees all cached memory
 		/// </summary>
-		public void FlushCache(){
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		public void FlushCache ()
+		{
 			cacheArray = null;
 		}
 
@@ -144,8 +150,7 @@ namespace TurboWavelets
 					TransformRow (src, dst, y, w);
 				});
 			} else {
-				for (int y = 0; y < h; y++) 
-				{
+				for (int y = 0; y < h; y++) {
 					TransformRow (src, dst, y, w);
 				}
 			}
@@ -159,8 +164,7 @@ namespace TurboWavelets
 					TransformCol (src, dst, x, h);
 				});
 			} else {
-				for (int x = 0; x < w; x++) 
-				{
+				for (int x = 0; x < w; x++) {
 					TransformCol (src, dst, x, h);
 				}
 			}
@@ -174,8 +178,7 @@ namespace TurboWavelets
 					InvTransformRow (src, dst, y, w);
 				});
 			} else {
-				for (int y = 0; y < h; y++) 
-				{
+				for (int y = 0; y < h; y++) {
 					InvTransformRow (src, dst, y, w);
 				}
 			}
@@ -189,8 +192,7 @@ namespace TurboWavelets
 					InvTransformCol (src, dst, x, h);
 				});
 			} else {
-				for (int x = 0; x < w; x++) 
-				{
+				for (int x = 0; x < w; x++) {
 					InvTransformCol (src, dst, x, h);
 				}
 			}
@@ -200,6 +202,7 @@ namespace TurboWavelets
 		/// Perfroms a two dimensional isotropic wavelet transformation for an array. The result is copied back to the declared array.
 		/// </summary>
 		/// <param name="src">two dimensional float array to perform the the wavelet transformation on</param>	
+		[MethodImpl(MethodImplOptions.Synchronized)] //Needed because of cached array
 		virtual public void TransformIsotropic2D (float[,] src)
 		{
 			if (src == null) {
@@ -209,13 +212,13 @@ namespace TurboWavelets
 				throw new ArgumentException ("first dimension of src cannot be smaller than " + width);
 			}
 			if (src.GetLength (1) < height) {
-				throw new ArgumentException ("second dimension of src cannot be smaller than " + width);
+				throw new ArgumentException ("second dimension of src cannot be smaller than " + height);
 			}
-			float[,] tmp = cacheArray;
+			float[,] tmp = cachedArray;
 			if (tmp == null) {
 				tmp = new float[width, height];
-				if (enableCacheing){
-					cacheArray = tmp;
+				if (enableCacheing) {
+					cachedArray = tmp;
 				}
 			}
 			int w = width, h = height;
@@ -230,6 +233,7 @@ namespace TurboWavelets
 		/// <summary>
 		/// Perfroms a two dimensional isotropic wavelet transformation for an array. The result is copied back to the declared array.
 		/// </summary>
+		[MethodImpl(MethodImplOptions.Synchronized)] //Needed because of cached array
 		virtual public void BacktransformIsotropic2D (float[,] src)
 		{
 			if (src == null) {
@@ -250,11 +254,16 @@ namespace TurboWavelets
 				test <<= 1;
 				log2++;
 			}
-			float[,] tmp = cacheArray;
+			float[,] tmp = cachedArray;
 			if (tmp == null) {
+				//Note: if we do transform the cols and rows in sequentally (not in parallel) we
+				//do not need an temporary array of the same size as the source array.
+				//Insead a one dimensional array (with the maximum of width and height as length
+				//would be sufficient. However we do not use this fact here, as
+				//different implementations of TransformCol(), TransformRow()... would be required
 				tmp = new float[width, height];
-				if (enableCacheing){
-					cacheArray = tmp;
+				if (enableCacheing) {
+					cachedArray = tmp;
 				}
 			}
 			int i = 1;
@@ -316,8 +325,11 @@ namespace TurboWavelets
 
 				for (int y = startY; y < endY; y++) {
 					for (int x = startX; x < endX; x++) {
-						tmpBlock [x - startX, y - startY] = Math.Abs (src [x, y]);
-						keep [x - startX, y - startY] = false;
+						float val = src [x, y];
+						if (val < 0) {
+							val = -val;
+						}
+						tmpBlock [x - startX, y - startY] = val;
 					}
 				}
 				for (int k = 0; k < n; k++) {
@@ -359,32 +371,88 @@ namespace TurboWavelets
 		}
 
 		/// <summary>
-		/// Set all coefficient with an absolute value smaller then "minAbsoluteValue" to zero
+		/// Set all coefficient with an absolute value smaller then "minAbsoluteValue" to zero (deadzone)
 		/// </summary>
 		virtual public void CropCoefficients (float[,] src, float minAbsoluteValue)
 		{
 			if (enableParallel) {
-				Parallel.For (0, h, y => 
+				Parallel.For (0, height, y => 
 				{
-					for (int x = 0; x < w; x++) 
-					{
-						if (Math.Abs(src[x,y]) < minAbsoluteValue)
-						{
-							src[x,y] = 0.0f;
+					for (int x = 0; x < width; x++) {
+						float val = src [x, y];
+						if ((val < minAbsoluteValue) && (-val < minAbsoluteValue)) { //Same as Math.Abs(val) < minAbsoluteValue
+							src [x, y] = 0.0f;
 						}
 					}
 				});
 			} else {
-				for (int y = 0; y < h; y++) 
-				{
-					for (int x = 0; x < w; x++) 
-					{
-						if (Math.Abs(src[x,y]) < minAbsoluteValue)
-						{
-							src[x,y] = 0.0f;
+				for (int y = 0; y < height; y++) {
+					for (int x = 0; x < width; x++) {
+						float val = src [x, y];
+						if ((val < minAbsoluteValue) && (-val < minAbsoluteValue)) { //Same as Math.Abs(val) < minAbsoluteValue
+							src [x, y] = 0.0f;
 						}
 					}
 				}
+			}
+		}
+
+		/// <summary>
+		/// get the minimum and maximum amplitude (absolute values) of all coefficient values 
+		/// </summary>
+		virtual public void getCoefficientsRange (float[,] src, ref float min, ref float max)
+		{
+			if (src == null) {
+				throw new ArgumentException ("src cannot be null");
+			}
+			float minVal = float.MaxValue;
+			float maxVal = float.MinValue;
+			if (enableParallel) {
+				object sync = new object ();
+				Parallel.For (0, height, y => 
+				{
+					float thrdMinVal = float.MaxValue;
+					float thrdMaxVal = float.MinValue;
+					for (int x = 0; x < width; x++) {
+						float val = src [x, y];
+						if (val < 0) {
+							val = -val;
+						}
+						if (val < thrdMinVal) {
+							thrdMinVal = val;
+						} else if (val > thrdMaxVal) {
+							thrdMaxVal = val;
+						}
+					}
+					lock (sync) {
+						if (thrdMinVal < minVal) {
+							minVal = thrdMinVal;
+						}
+						if (thrdMaxVal > maxVal) {
+							maxVal = thrdMaxVal;
+						}
+					}
+				});
+			} else {
+				for (int y = 0; y < height; y++) {
+					for (int x = 0; x < width; x++) {
+						float val = src [x, y];
+						if (val < 0) {
+							val = -val;
+						}
+						if (val < minVal) {
+							minVal = val;
+						} else if (val > maxVal) {
+							maxVal = val;
+						}
+					}
+				}
+			}
+			if (min != null) {
+				min = minVal;
+			}
+			if (max != null) {
+				max = maxVal;
 			}
 		}
 
