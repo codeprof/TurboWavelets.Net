@@ -31,8 +31,6 @@ using NUnit.Framework;
 
 namespace TurboWavelets
 {
-
-
 	[TestFixture]
 	public class TurboWaveletsTest
 	{

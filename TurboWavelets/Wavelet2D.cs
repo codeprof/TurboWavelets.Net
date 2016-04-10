@@ -36,6 +36,9 @@ namespace TurboWavelets
 		protected int height;
 		protected int minSize;
 		protected int allowedMinSize;
+		protected bool enableParallel = true;
+		protected bool enableCacheing = false;
+		protected float [,] cacheArray = null;
 
 		/// <summary>
 		/// Initalizes a two dimensional wavelet cascade transformation
@@ -79,6 +82,40 @@ namespace TurboWavelets
 			}
 		}
 
+		/// <summary>
+		/// enables or disables caching of memory (disabled by default)
+		/// </summary>
+		public bool EnableCaching {
+			get {
+				return enableCacheing;
+			}
+			set {
+				enableCacheing = value;
+				if (!value) {
+					FlushCache();
+				}
+			}
+		}
+
+		/// <summary>
+		/// enables or disables parallel execution (enabled by default)
+		/// </summary>
+		public bool EnableParallel {
+			get {
+				return enableParallel;
+			}
+			set {
+				enableParallel = value;
+			}
+		}
+
+		/// <summary>
+		/// Frees all cached memory
+		/// </summary>
+		public void FlushCache(){
+			cacheArray = null;
+		}
+
 		virtual protected void TransformRow (float[,] src, float[,] dst, int y, int length)
 		{
 			//will be overwritten by method of child class...
@@ -101,34 +138,62 @@ namespace TurboWavelets
 
 		virtual protected void TransformRows (float[,] src, float[,] dst, int w, int h)
 		{
-			Parallel.For (0, h, y => 
-			{
-				TransformRow (src, dst, y, w);
-			});
+			if (enableParallel) {
+				Parallel.For (0, h, y => 
+				{
+					TransformRow (src, dst, y, w);
+				});
+			} else {
+				for (int y = 0; y < h; y++) 
+				{
+					TransformRow (src, dst, y, w);
+				}
+			}
 		}
 
 		virtual protected void TransformCols (float[,] src, float[,] dst, int w, int h)
 		{
-			Parallel.For (0, w, x => 
-			{
-				TransformCol (src, dst, x, h);
-			});
+			if (enableParallel) {
+				Parallel.For (0, w, x => 
+				{
+					TransformCol (src, dst, x, h);
+				});
+			} else {
+				for (int x = 0; x < w; x++) 
+				{
+					TransformCol (src, dst, x, h);
+				}
+			}
 		}
 
 		virtual protected void InvTransformRows (float[,] src, float[,] dst, int w, int h)
 		{
-			Parallel.For (0, h, y => 
-			{
-				InvTransformRow (src, dst, y, w);
-			});
+			if (enableParallel) {
+				Parallel.For (0, h, y => 
+				{
+					InvTransformRow (src, dst, y, w);
+				});
+			} else {
+				for (int y = 0; y < h; y++) 
+				{
+					InvTransformRow (src, dst, y, w);
+				}
+			}
 		}
 
 		virtual protected void InvTransformCols (float[,] src, float[,] dst, int w, int h)
 		{
-			Parallel.For (0, w, x => 
-			{
-				InvTransformCol (src, dst, x, h);
-			});
+			if (enableParallel) {
+				Parallel.For (0, w, x => 
+				{
+					InvTransformCol (src, dst, x, h);
+				});
+			} else {
+				for (int x = 0; x < w; x++) 
+				{
+					InvTransformCol (src, dst, x, h);
+				}
+			}
 		}
 
 		/// <summary>
@@ -146,7 +211,13 @@ namespace TurboWavelets
 			if (src.GetLength (1) < height) {
 				throw new ArgumentException ("second dimension of src cannot be smaller than " + width);
 			}
-			float[,] tmp = new float[width, height];
+			float[,] tmp = cacheArray;
+			if (tmp == null) {
+				tmp = new float[width, height];
+				if (enableCacheing){
+					cacheArray = tmp;
+				}
+			}
 			int w = width, h = height;
 			while ((w > minSize) && (h > minSize)) {
 				TransformRows (src, tmp, w, h);
@@ -179,7 +250,13 @@ namespace TurboWavelets
 				test <<= 1;
 				log2++;
 			}
-			float[,] tmp = new float[width, height];
+			float[,] tmp = cacheArray;
+			if (tmp == null) {
+				tmp = new float[width, height];
+				if (enableCacheing){
+					cacheArray = tmp;
+				}
+			}
 			int i = 1;
 			while (i <= log2) {
 				int w = width >> (log2 - i);
