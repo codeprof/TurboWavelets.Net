@@ -359,6 +359,36 @@ namespace TurboWavelets
 		}
 
 		/// <summary>
+		/// Set all coefficient with an absolute value smaller then "minAbsoluteValue" to zero
+		/// </summary>
+		virtual public void CropCoefficients (float[,] src, float minAbsoluteValue)
+		{
+			if (enableParallel) {
+				Parallel.For (0, h, y => 
+				{
+					for (int x = 0; x < w; x++) 
+					{
+						if (Math.Abs(src[x,y]) < minAbsoluteValue)
+						{
+							src[x,y] = 0.0f;
+						}
+					}
+				});
+			} else {
+				for (int y = 0; y < h; y++) 
+				{
+					for (int x = 0; x < w; x++) 
+					{
+						if (Math.Abs(src[x,y]) < minAbsoluteValue)
+						{
+							src[x,y] = 0.0f;
+						}
+					}
+				}
+			}
+		}
+
+		/// <summary>
 		/// Scales the n (length of the scaleFactors array) greatest coefficinets (for a defined grid size) by the value declared in scaleFactors.
 		/// </summary>
 		virtual public void ScaleCoefficients (float[,] src, float[] scaleFactors, int gridSize)
