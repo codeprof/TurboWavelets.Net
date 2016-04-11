@@ -260,17 +260,17 @@ namespace TurboWavelets
 		/// </summary>
 		virtual public void BacktransformIsotropic2D (float[,] src)
 		{
-			checkArrayArgument (src, "src");
-			//Calculate the integral digits of log to the base two of the maximum of "width" and "height" 
-			//The resulting number of "width | height" cannot have a greater log to the base 2 (integral digits)
-			//than the greater of both values.
-			int log2 = 1;
-			int test = 1;
-			while (test < (width | height)) {
-				test <<= 1;
-				log2++;
-			}
 			lock (threadSync) {
+				checkArrayArgument (src, "src");
+				//Calculate the integral digits of log to the base two of the maximum of "width" and "height" 
+				//The resulting number of "width | height" cannot have a greater log to the base 2 (integral digits)
+				//than the greater of both values.
+				int log2 = 1;
+				int test = 1;
+				while (test < (width | height)) {
+					test <<= 1;
+					log2++;
+				}
 				float[,] tmp = getTempArray ();
 				int i = 1;
 				while (i <= log2) {
@@ -312,61 +312,60 @@ namespace TurboWavelets
 			}
 			int numBlocks = w * h;
 
-			lock (threadSync) {
-				Parallel.For (0, numBlocks, block => 
-				{
-					int startX = (block % w) * gridSize;
-					int startY = (block / w) * gridSize;
 
-					int endX = startX + gridSize;
-					int endY = startY + gridSize;
-					if (endX > width) {
-						endX = width;
-					}
-					if (endY > height) {
-						endY = height;
-					}
-					bool[,] keep = new bool[gridSize, gridSize];
-					float[,] tmpBlock = new float[gridSize, gridSize];
+			Parallel.For (0, numBlocks, block => 
+			{
+				int startX = (block % w) * gridSize;
+				int startY = (block / w) * gridSize;
 
-					for (int y = startY; y < endY; y++) {
-						for (int x = startX; x < endX; x++) {
-							float val = src [x, y];
-							if (val < 0) {
-								val = -val;
+				int endX = startX + gridSize;
+				int endY = startY + gridSize;
+				if (endX > width) {
+					endX = width;
+				}
+				if (endY > height) {
+					endY = height;
+				}
+				bool[,] keep = new bool[gridSize, gridSize];
+				float[,] tmpBlock = new float[gridSize, gridSize];
+
+				for (int y = startY; y < endY; y++) {
+					for (int x = startX; x < endX; x++) {
+						float val = src [x, y];
+						if (val < 0) {
+							val = -val;
+						}
+						tmpBlock [x - startX, y - startY] = val;
+					}
+				}
+				for (int k = 0; k < n; k++) {
+					float max = -1.0f;
+					int maxIdxX = -1, maxIdxY = -1;
+					for (int y = 0; y <  gridSize; y++) {
+						for (int x = 0; x <  gridSize; x++) {
+							if (!keep [x, y])
+							if (tmpBlock [x, y] >= max) {
+								max = tmpBlock [x, y];
+								maxIdxX = x;
+								maxIdxY = y;
 							}
-							tmpBlock [x - startX, y - startY] = val;
 						}
 					}
-					for (int k = 0; k < n; k++) {
-						float max = -1.0f;
-						int maxIdxX = -1, maxIdxY = -1;
-						for (int y = 0; y <  gridSize; y++) {
-							for (int x = 0; x <  gridSize; x++) {
-								if (!keep [x, y])
-								if (tmpBlock [x, y] >= max) {
-									max = tmpBlock [x, y];
-									maxIdxX = x;
-									maxIdxY = y;
-								}
-							}
-						}
-						keep [maxIdxX, maxIdxY] = true;
-						//Scale all major coefficients (with greater amplitutes)
-						//by the coresponding scale factor 
-						if (scaleFactorsMajors != null)
-							src [startX + maxIdxX, startY + maxIdxY] *= scaleFactorsMajors [k];
+					keep [maxIdxX, maxIdxY] = true;
+					//Scale all major coefficients (with greater amplitutes)
+					//by the coresponding scale factor 
+					if (scaleFactorsMajors != null)
+						src [startX + maxIdxX, startY + maxIdxY] *= scaleFactorsMajors [k];
+				}
+				//all minor coefficients (with small amplitutes)
+				//are multiplied by a certain factor (for denoising typically zero)
+				for (int y = startY; y < endY; y++) {
+					for (int x = startX; x < endX; x++) {
+						if (!keep [x - startX, y - startY])
+							src [x, y] *= scaleFactorsMinors;
 					}
-					//all minor coefficients (with small amplitutes)
-					//are multiplied by a certain factor (for denoising typically zero)
-					for (int y = startY; y < endY; y++) {
-						for (int x = startX; x < endX; x++) {
-							if (!keep [x - startX, y - startY])
-								src [x, y] *= scaleFactorsMinors;
-						}
-					}
-				});
-			}
+				}
+			});
 		}
 
 		/// <summary>
@@ -374,7 +373,9 @@ namespace TurboWavelets
 		/// </summary>
 		virtual public void CropCoefficients (float[,] src, int n, int gridSize)
 		{
-			ModifyCoefficients (src, n, null, 0.0f, gridSize);
+			lock (threadSync) {
+				ModifyCoefficients (src, n, null, 0.0f, gridSize);
+			}
 		}
 
 		/// <summary>
@@ -382,8 +383,8 @@ namespace TurboWavelets
 		/// </summary>
 		virtual public void CropCoefficients (float[,] src, float minAbsoluteValue)
 		{
-			checkArrayArgument (src, "src");
 			lock (threadSync) {
+				checkArrayArgument (src, "src");
 				if (enableParallel) {
 					Parallel.For (0, height, y => 
 					{
@@ -412,10 +413,10 @@ namespace TurboWavelets
 		/// </summary>
 		virtual public void getCoefficientsRange (float[,] src, ref float min, ref float max)
 		{
-			checkArrayArgument (src, "src");
-			float minVal = float.MaxValue;
-			float maxVal = float.MinValue;
 			lock (threadSync) {
+				checkArrayArgument (src, "src");
+				float minVal = float.MaxValue;
+				float maxVal = float.MinValue;
 				if (enableParallel) {
 					object sync = new object ();
 					Parallel.For (0, height, y => 
@@ -471,13 +472,15 @@ namespace TurboWavelets
 		/// </summary>
 		virtual public void ScaleCoefficients (float[,] src, float[] scaleFactors, int gridSize)
 		{		
-			if (scaleFactors == null) {
-				throw new ArgumentException ("scaleFactors cannot be null");
+			lock (threadSync) {
+				if (scaleFactors == null) {
+					throw new ArgumentException ("scaleFactors cannot be null");
+				}
+				if (scaleFactors.Length > gridSize * gridSize) {
+					throw new ArgumentException ("scaleFactors lenght cannot be greater than " + gridSize * gridSize);
+				}
+				ModifyCoefficients (src, scaleFactors.Length, scaleFactors, 1.0f, gridSize);
 			}
-			if (scaleFactors.Length > gridSize * gridSize) {
-				throw new ArgumentException ("scaleFactors lenght cannot be greater than " + gridSize * gridSize);
-			}
-			ModifyCoefficients (src, scaleFactors.Length, scaleFactors, 1.0f, gridSize);
 		}
 	}
 }
