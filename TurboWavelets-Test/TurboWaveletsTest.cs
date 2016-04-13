@@ -91,7 +91,25 @@ namespace TurboWavelets
 			TurboWaveletsTest o = new TurboWaveletsTest();
 			o.testBiorthogonal53Wavelet2D_5x8();
 			o.testBiorthogonal53Wavelet2D_68x111();
+			Assert.Pass("Passed");
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

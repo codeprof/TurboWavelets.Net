@@ -56,8 +56,8 @@ namespace TurboWavelets
 		/// <param name="height">starting height of the transformation</param>				
 		public Wavelet2D (int minSize, int allowedMinSize, int width, int height)
 		{
-			if (allowedMinSize < 0) {
-				throw new ArgumentException ("allowedMinSize cannot be less than zero");
+			if (allowedMinSize < 1) {
+				throw new ArgumentException ("allowedMinSize cannot be less than one");
 			}
 			if (minSize < allowedMinSize) {
 				throw new ArgumentException ("minSize cannot be smaller than " + allowedMinSize);
@@ -92,7 +92,6 @@ namespace TurboWavelets
 		/// <summary>
 		/// enables or disables caching of memory (disabled by default)
 		/// </summary>
-		[MethodImpl(MethodImplOptions.Synchronized)]
 		public bool EnableCaching {
 			get {
 				return enableCacheing;
@@ -108,7 +107,6 @@ namespace TurboWavelets
 		/// <summary>
 		/// enables or disables parallel execution (enabled by default)
 		/// </summary>
-		[MethodImpl(MethodImplOptions.Synchronized)]
 		public bool EnableParallel {
 			get {
 				return enableParallel;
@@ -219,8 +217,9 @@ namespace TurboWavelets
 
 		private float[,] getTempArray ()
 		{
+			float [,] tmp = null;
 			lock (threadSync) {
-				float[,] tmp = cachedArray;
+				tmp = cachedArray;
 				if (tmp == null) {
 					//Note: if we do transform the cols and rows in sequentally (not in parallel) we
 					//do not need an temporary array of the same size as the source array.
@@ -246,11 +245,16 @@ namespace TurboWavelets
 			lock (threadSync) {
 				float[,] tmp = getTempArray ();
 				int w = width, h = height;
-				while ((w > minSize) && (h > minSize)) {
+				while ((w >= minSize) && (h >= minSize)) {
+					Console.WriteLine(w + " " + h );
 					TransformRows (src, tmp, w, h);
 					TransformCols (tmp, src, w, h);
-					w >>= 1;
-					h >>= 1;
+					// shift always rounds down (towards negative infinity)
+					//However, for odd lengths we have one low freqency value more than
+					//high frequency values. By shifting the negative value and negating the result
+					//we get the desired result.
+					w = -(-w >> 1);
+					h = -(-h >> 1);
 				}
 			}
 		}
@@ -274,9 +278,15 @@ namespace TurboWavelets
 				float[,] tmp = getTempArray ();
 				int i = 1;
 				while (i <= log2) {
-					int w = width >> (log2 - i);
-					int h = height >> (log2 - i);
-					if ((w > minSize) && (h > minSize)) {
+					// shift always rounds down (towards negative infinity)
+					//However, for odd lengths we have one more low freqency value than
+					//high frequency values. By shifting the negative value and negating the result
+					//we get the desired result.
+					int w = -(-width >> (log2 - i));
+					int h = -(-height >> (log2 - i));
+
+					if ((w >= minSize) && (h >= minSize)) {
+						Console.WriteLine(w + " " + h );
 						InvTransformCols (src, tmp, w, h);
 						InvTransformRows (tmp, src, w, h);
 					}
@@ -411,7 +421,7 @@ namespace TurboWavelets
 		/// <summary>
 		/// get the minimum and maximum amplitude (absolute values) of all coefficient values 
 		/// </summary>
-		virtual public void getCoefficientsRange (float[,] src, ref float min, ref float max)
+		virtual public void getCoefficientsRange (float[,] src, out float min, out float max)
 		{
 			lock (threadSync) {
 				checkArrayArgument (src, "src");
@@ -458,12 +468,12 @@ namespace TurboWavelets
 						}
 					}
 				}
-				if (min != null) {
-					min = minVal;
-				}
-				if (max != null) {
-					max = maxVal;
-				}
+				//if (min != null) {
+				min = minVal;
+				//}
+				//if (max != null) {
+				max = maxVal;
+				//}
 			}
 		}
 
