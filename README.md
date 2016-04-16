@@ -1,3 +1,4 @@
+<img src="https://ci.appveyor.com/api/projects/status/5j9nc0pqnd7aibbh?svg=true">
 # TurboWavelets.Net
 TurboWavelets.Net provides very fast, flexible and compact implementations of discrete wavelet transformations in C#.
 Unlike others this implementation has no limitation is sizes for the transformation (lengths like 39, 739,... are possible, not just power of two numbers) 
