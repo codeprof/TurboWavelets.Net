@@ -29,7 +29,7 @@ using System;
 using TurboWavelets;
 using NUnit.Framework;
 
-namespace TurboWavelets
+namespace TurboWaveletsTests
 {
 	[TestFixture]
 	public class TurboWaveletsTest
@@ -39,7 +39,6 @@ namespace TurboWavelets
 		float[,] val; 
 		int width, height;
 		Wavelet2D.ProgressDelegate del;
-
 
 		public bool logProgress (float progress)
 		{
@@ -75,6 +74,11 @@ namespace TurboWavelets
 			return isSame;
 		}
 
+		[SetUp] public void Init() 
+		{
+		}
+
+
 		[Test]
 		public void testBiorthogonal53Wavelet2D_5x8()
 		{
@@ -95,6 +99,8 @@ namespace TurboWavelets
 			Assert.IsTrue(compare());
 		}
 
+
+		/*
 		public static void Main (string[] args)
 		{
 			TurboWaveletsTest o = new TurboWaveletsTest();
@@ -103,6 +109,7 @@ namespace TurboWavelets
 			
 			Assert.Pass("Passed");
 		}
+*/
 	}
 }
 
