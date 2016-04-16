@@ -11,3 +11,6 @@ At the moment only floating point numbers are supported.
 - Scale/Crop coefficients in a defined grid
 - apply a deadzone
 - Multithreaded and threadsafe
+
+# Licence
+MIT License (MIT)
