@@ -1,0 +1,12 @@
+before_build:
+  - nuget restore TurboWavelets.Net.sln
+
+configuration: Release  
+  
+build:
+  project: TurboWavelets.Net.sln
+  
+artifacts:
+  - path: 'TurboWavelets\bin\$(configuration)'
+    name: TurboWavelets
+    type: zip
