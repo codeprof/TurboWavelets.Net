@@ -309,8 +309,8 @@ namespace TurboWavelets
 			/// <param name="src">two dimensional float array to perform the the wavelet transformation on</param>	
 			virtual public void TransformIsotropic2D (float[,] src, ProgressDelegate progressDelegate = null)
 			{
-				checkArrayArgument (src, "src");
 				lock (threadSync) {
+				checkArrayArgument (src, "src");
 					float[,] tmp = getTempArray ();
 					int w = width, h = height;
 					initProgress (progressDelegate);
@@ -348,7 +348,7 @@ namespace TurboWavelets
 				int i = 1;
 				initProgress (progressDelegate);
 				while ((i <= log2) && (!updateProgress(0))) {
-					// shift always rounds down (towards negative infinity)
+					//Shift always rounds down (towards negative infinity)
 					//However, for odd lengths we have one more low freqency value than
 					//high frequency values. By shifting the negative value and negating the result
 					//we get the desired result.
@@ -367,6 +367,9 @@ namespace TurboWavelets
 
 		virtual protected void ModifyCoefficients (float[,] src, int n, float[] scaleFactorsMajors, float scaleFactorsMinors, int gridSize)
 		{
+			//Note: ModifyCoefficients should not be called directly, as
+			//it is not thread safe. The critical section must be started
+			//in the calling method
 			checkArrayArgument (src, "src");
 			if (scaleFactorsMajors != null) {
 				if (scaleFactorsMajors.Length != n) {
