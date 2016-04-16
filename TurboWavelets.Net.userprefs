@@ -1,16 +1,19 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="TurboWavelets-Test/TurboWaveletsTest.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="TurboWavelets/Wavelet2D.cs">
     <Files>
       <File FileName="TurboWavelets/Biorthogonal53Wavelet2D.cs" Line="1" Column="1" />
-      <File FileName="TurboWavelets/Wavelet2D.cs" Line="212" Column="20" />
+      <File FileName="TurboWavelets/Wavelet2D.cs" Line="269" Column="25" />
       <File FileName="TurboWavelets-Test/TurboWaveletsTest.cs" Line="1" Column="1" />
       <File FileName="TurboWavelets/OrderWavelet2D.cs" Line="1" Column="1" />
       <File FileName="TurboWavelets/Biorthogonal53Wavelet1DStatic.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/home/benutzer/Downloads/turbo/TurboWavelets.Net/TurboWavelets-Test/TurboWaveletsTest.cs" line="87" column="30" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <AuthorInfo Name="Stefan Moebius" Email="" Copyright="Stefan Moebius" Company="" Trademark="" />
 </Properties>

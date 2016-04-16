@@ -34,192 +34,148 @@ namespace TurboWavelets
 {
 	public abstract class Wavelet2D
 	{
-		#region protected attributes
-		protected int width;
-		protected int height;
-		protected int minSize;
-		protected int allowedMinSize;
-		protected bool enableParallel = true;
-		protected bool enableCacheing = false;
-		protected float[,] cachedArray = null;
-		//Used to make all calls thread safe.
-		//Note than using [MethodImpl(MethodImplOptions.Synchronized)] is not sufficient, as
-		//the temporary and src array can be used by different methods at the same time
-		protected object threadSync = new object ();
-		#endregion
-		/// <summary>
-		/// Initalizes a two dimensional wavelet cascade transformation
-		/// </summary>
-		/// <param name="minSize">minimum size up to a transformation is applied (can be set arbitary)</param>
-		/// <param name="allowedMinSize">minimum size up to a transformation can be applied (implementation depended)</param>
-		/// <param name="width">starting width of the transformation</param>
-		/// <param name="height">starting height of the transformation</param>				
-		public Wavelet2D (int minSize, int allowedMinSize, int width, int height)
-		{
-			if (allowedMinSize < 1) {
-				throw new ArgumentException ("allowedMinSize cannot be less than one");
-			}
-			if (minSize < allowedMinSize) {
-				throw new ArgumentException ("minSize cannot be smaller than " + allowedMinSize);
-			}
-			if (width < minSize || height < minSize) {
-				throw new ArgumentException ("width and height must be greater or equal to " + minSize);
-			}
-			this.width = width;
-			this.height = height;
-			this.minSize = minSize;
-			this.allowedMinSize = allowedMinSize;
-		}
+		public delegate bool ProgressDelegate (float progress);
 
-		/// <summary>
-		/// returns the width for the two dimensional wavelet transformation
-		/// </summary>
-		public int Width {
-			get {
-				return width;
+			#region protected attributes
+			protected int width;
+			protected int height;
+			protected int minSize;
+			protected int allowedMinSize;
+			protected volatile bool enableParallel = true;
+			protected volatile bool enableCacheing = false;
+			protected volatile float[,] cachedArray = null;
+			//Used to make all calls thread safe.
+			//Note than using [MethodImpl(MethodImplOptions.Synchronized)] is not sufficient, as
+			//the temporary and src array can be used by different methods at the same time
+			protected object threadSync = new object ();
+			protected ProgressDelegate progressDelegate;
+			protected volatile bool progressAbort;
+			protected object progressSync = null;
+			protected long progressValue;
+			protected long progressMax;
+			#endregion
+			private void initProgress (ProgressDelegate progressDelegate)
+			{
+				if (progressDelegate != null) {
+					this.progressSync = new object ();
+				} else {
+					this.progressSync = null;
+				}
+				//Calculate the exact maximal value for the progress value
+				int w = width, h = height;
+				this.progressMax = 0;
+				while ((w >= minSize) && (h >= minSize)) {
+					this.progressMax += 2 * w * h;
+					w = -(-w >> 1);
+					h = -(-h >> 1);
+				}
+				this.progressDelegate = progressDelegate;
+				this.progressValue = 0;
+				this.progressAbort = false;
 			}
-		}
 
-		/// <summary>
-		/// returns the height for the two dimensional wavelet transformation
-		/// </summary>
-		public int Height {
-			get {
-				return height;
+			private bool updateProgress (long increment)
+			{
+				bool abort = false;
+				if (progressSync != null) {
+					lock (progressSync) {
+						if (!progressAbort) {
+							progressValue += increment;
+							if (progressValue > progressMax) {
+								progressValue = progressMax;
+							}
+							progressAbort = progressDelegate ((float)progressValue / (float)progressMax * 100.0f);
+						} else {
+							//Make sure delegate not called after abort
+						}
+						abort = progressAbort;
+					}
+				}
+				return abort;
 			}
-		}
 
-		/// <summary>
-		/// enables or disables caching of memory (disabled by default)
-		/// </summary>
-		public bool EnableCaching {
-			get {
-				return enableCacheing;
+			/// <summary>
+			/// Initalizes a two dimensional wavelet cascade transformation
+			/// </summary>
+			/// <param name="minSize">minimum size up to a transformation is applied (can be set arbitary)</param>
+			/// <param name="allowedMinSize">minimum size up to a transformation can be applied (implementation depended)</param>
+			/// <param name="width">starting width of the transformation</param>
+			/// <param name="height">starting height of the transformation</param>				
+			public Wavelet2D (int minSize, int allowedMinSize, int width, int height)
+			{
+				if (allowedMinSize < 1) {
+					throw new ArgumentException ("allowedMinSize cannot be less than one");
+				}
+				if (minSize < allowedMinSize) {
+					throw new ArgumentException ("minSize cannot be smaller than " + allowedMinSize);
+				}
+				if (width < minSize || height < minSize) {
+					throw new ArgumentException ("width and height must be greater or equal to " + minSize);
+				}
+				this.width = width;
+				this.height = height;
+				this.minSize = minSize;
+				this.allowedMinSize = allowedMinSize;
 			}
-			set {
-				enableCacheing = value;
-				if (!value) {
-					FlushCache ();
+
+			/// <summary>
+			/// returns the width for the two dimensional wavelet transformation
+			/// </summary>
+			public int Width {
+				get {
+					return width;
 				}
 			}
-		}
 
-		/// <summary>
-		/// enables or disables parallel execution (enabled by default)
-		/// </summary>
-		public bool EnableParallel {
-			get {
-				return enableParallel;
-			}
-			set {
-				enableParallel = value;
-			}
-		}
-
-		/// <summary>
-		/// Frees all cached memory
-		/// </summary>
-		public void FlushCache ()
-		{
-			lock (threadSync) {
-				cachedArray = null;
-			}
-		}
-
-		virtual protected void TransformRow (float[,] src, float[,] dst, int y, int length)
-		{
-			//will be overwritten by method of child class...
-		}
-
-		virtual protected void TransformCol (float[,] src, float[,] dst, int x, int length)
-		{
-			//will be overwritten by method of child class...
-		}
-
-		virtual protected void InvTransformRow (float[,] src, float[,] dst, int y, int length)
-		{
-			//will be overwritten by method of child class...
-		}
-
-		virtual protected void InvTransformCol (float[,] src, float[,] dst, int x, int length)
-		{
-			//will be overwritten by method of child class...
-		}
-
-		virtual protected void TransformRows (float[,] src, float[,] dst, int w, int h)
-		{
-			if (enableParallel) {
-				Parallel.For (0, h, y => 
-				{
-					TransformRow (src, dst, y, w);
-				});
-			} else {
-				for (int y = 0; y < h; y++) {
-					TransformRow (src, dst, y, w);
+			/// <summary>
+			/// returns the height for the two dimensional wavelet transformation
+			/// </summary>
+			public int Height {
+				get {
+					return height;
 				}
 			}
-		}
 
-		virtual protected void TransformCols (float[,] src, float[,] dst, int w, int h)
-		{
-			if (enableParallel) {
-				Parallel.For (0, w, x => 
-				{
-					TransformCol (src, dst, x, h);
-				});
-			} else {
-				for (int x = 0; x < w; x++) {
-					TransformCol (src, dst, x, h);
+			/// <summary>
+			/// enables or disables caching of memory (disabled by default)
+			/// </summary>
+			public bool EnableCaching {
+				get {
+					return enableCacheing;
+				}
+				set {
+					enableCacheing = value;
+					if (!value) {
+						FlushCache ();
+					}
 				}
 			}
-		}
 
-		virtual protected void InvTransformRows (float[,] src, float[,] dst, int w, int h)
-		{
-			if (enableParallel) {
-				Parallel.For (0, h, y => 
-				{
-					InvTransformRow (src, dst, y, w);
-				});
-			} else {
-				for (int y = 0; y < h; y++) {
-					InvTransformRow (src, dst, y, w);
+			/// <summary>
+			/// enables or disables parallel execution (enabled by default)
+			/// </summary>
+			public bool EnableParallel {
+				get {
+					return enableParallel;
+				}
+				set {
+					enableParallel = value;
 				}
 			}
-		}
 
-		virtual protected void InvTransformCols (float[,] src, float[,] dst, int w, int h)
-		{
-			if (enableParallel) {
-				Parallel.For (0, w, x => 
-				{
-					InvTransformCol (src, dst, x, h);
-				});
-			} else {
-				for (int x = 0; x < w; x++) {
-					InvTransformCol (src, dst, x, h);
+			/// <summary>
+			/// Frees all cached memory
+			/// </summary>
+			public void FlushCache ()
+			{
+				lock (threadSync) {
+					cachedArray = null;
 				}
 			}
-		}
 
-		private void checkArrayArgument (float[,] src, string name)
-		{
-			if (src == null) {
-				throw new ArgumentException (name + " cannot be null");
-			}
-			if (src.GetLength (0) < width) {
-				throw new ArgumentException ("first dimension of src cannot be smaller than " + width);
-			}
-			if (src.GetLength (1) < height) {
-				throw new ArgumentException ("second dimension of src cannot be smaller than " + height);
-			}
-		}
-
-		private float[,] getTempArray ()
-		{
-			float [,] tmp = null;
-			lock (threadSync) {
-				tmp = cachedArray;
+			protected float[,] getTempArray ()
+			{
+				float[,] tmp = cachedArray;
 				if (tmp == null) {
 					//Note: if we do transform the cols and rows in sequentally (not in parallel) we
 					//do not need an temporary array of the same size as the source array.
@@ -231,38 +187,151 @@ namespace TurboWavelets
 						cachedArray = tmp;
 					}
 				}
+				return tmp;
 			}
-			return tmp;
-		}
 
-		/// <summary>
-		/// Perfroms a two dimensional isotropic wavelet transformation for an array. The result is copied back to the declared array.
-		/// </summary>
-		/// <param name="src">two dimensional float array to perform the the wavelet transformation on</param>	
-		virtual public void TransformIsotropic2D (float[,] src)
-		{
-			checkArrayArgument (src, "src");
-			lock (threadSync) {
-				float[,] tmp = getTempArray ();
-				int w = width, h = height;
-				while ((w >= minSize) && (h >= minSize)) {
-					Console.WriteLine(w + " " + h );
-					TransformRows (src, tmp, w, h);
-					TransformCols (tmp, src, w, h);
-					// shift always rounds down (towards negative infinity)
-					//However, for odd lengths we have one low freqency value more than
-					//high frequency values. By shifting the negative value and negating the result
-					//we get the desired result.
-					w = -(-w >> 1);
-					h = -(-h >> 1);
+			virtual protected void TransformRow (float[,] src, float[,] dst, int y, int length)
+			{
+				//will be overwritten by method of child class...
+			}
+
+			virtual protected void TransformCol (float[,] src, float[,] dst, int x, int length)
+			{
+				//will be overwritten by method of child class...
+			}
+
+			virtual protected void InvTransformRow (float[,] src, float[,] dst, int y, int length)
+			{
+				//will be overwritten by method of child class...
+			}
+
+			virtual protected void InvTransformCol (float[,] src, float[,] dst, int x, int length)
+			{
+				//will be overwritten by method of child class...
+			}
+
+			virtual protected void TransformRows (float[,] src, float[,] dst, int w, int h)
+			{
+				if (enableParallel) {
+					Parallel.For (0, h, (y, loopState) => 
+					{
+						if (updateProgress (w)) {
+							loopState.Stop ();
+						}
+						TransformRow (src, dst, y, w);
+					});
+				} else {
+					for (int y = 0; y < h; y++) {
+						if (updateProgress (w)) {
+							break;
+						}
+						TransformRow (src, dst, y, w);
+					}
 				}
 			}
-		}
+
+			virtual protected void TransformCols (float[,] src, float[,] dst, int w, int h)
+			{
+				if (enableParallel) {
+					Parallel.For (0, w, (x, loopState) => 
+					{
+						if (updateProgress (h)) {
+							loopState.Stop ();
+						}
+						TransformCol (src, dst, x, h);
+					});
+				} else {
+					for (int x = 0; x < w; x++) {
+						if (updateProgress (h)) {
+							break;
+						}
+						TransformCol (src, dst, x, h);
+					}
+				}
+			}
+
+			virtual protected void InvTransformRows (float[,] src, float[,] dst, int w, int h)
+			{
+				if (enableParallel) {
+					Parallel.For (0, h, (y, loopState) => 
+					{
+						if (updateProgress (w)) {
+							loopState.Stop ();
+						}
+						InvTransformRow (src, dst, y, w);
+					});
+				} else {
+					for (int y = 0; y < h; y++) {
+						if (updateProgress (w)) {
+							break;
+						}
+						InvTransformRow (src, dst, y, w);
+					}
+				}
+			}
+
+			virtual protected void InvTransformCols (float[,] src, float[,] dst, int w, int h)
+			{
+				if (enableParallel) {
+					Parallel.For (0, w, (x, loopState) => 
+					{
+						if (updateProgress (h)) {
+							loopState.Stop ();
+						}
+						InvTransformCol (src, dst, x, h);
+					});
+				} else {
+					for (int x = 0; x < w; x++) {
+						if (updateProgress (h)) {
+							break;
+						}
+						InvTransformCol (src, dst, x, h);
+					}
+				}
+			}
+
+			private void checkArrayArgument (float[,] src, string name)
+			{
+				if (src == null) {
+					throw new ArgumentException (name + " cannot be null");
+				}
+				if (src.GetLength (0) < width) {
+					throw new ArgumentException ("first dimension of " + name + " cannot be smaller than " + width);
+				}
+				if (src.GetLength (1) < height) {
+					throw new ArgumentException ("second dimension of " + name + " cannot be smaller than " + height);
+				}
+			}
+
+			/// <summary>
+			/// Perfroms a two dimensional isotropic wavelet transformation for an array. The result is copied back to the declared array.
+			/// </summary>
+			/// <param name="src">two dimensional float array to perform the the wavelet transformation on</param>	
+			virtual public void TransformIsotropic2D (float[,] src, ProgressDelegate progressDelegate = null)
+			{
+				checkArrayArgument (src, "src");
+				lock (threadSync) {
+					float[,] tmp = getTempArray ();
+					int w = width, h = height;
+					initProgress (progressDelegate);
+					while ((w >= minSize) && (h >= minSize) && (!updateProgress(0))) {
+						Console.WriteLine (w + " " + h);
+						TransformRows (src, tmp, w, h);
+						TransformCols (tmp, src, w, h);
+						// shift always rounds down (towards negative infinity)
+						//However, for odd lengths we have one low freqency value more than
+						//high frequency values. By shifting the negative value and negating the result
+						//we get the desired result.
+						w = -(-w >> 1);
+						h = -(-h >> 1);
+					}
+				}
+			}
 
 		/// <summary>
 		/// Perfroms a two dimensional isotropic wavelet transformation for an array. The result is copied back to the declared array.
 		/// </summary>
-		virtual public void BacktransformIsotropic2D (float[,] src)
+		virtual public void BacktransformIsotropic2D (float[,] src, ProgressDelegate progressDelegate = null)
 		{
 			lock (threadSync) {
 				checkArrayArgument (src, "src");
@@ -277,7 +346,8 @@ namespace TurboWavelets
 				}
 				float[,] tmp = getTempArray ();
 				int i = 1;
-				while (i <= log2) {
+				initProgress (progressDelegate);
+				while ((i <= log2) && (!updateProgress(0))) {
 					// shift always rounds down (towards negative infinity)
 					//However, for odd lengths we have one more low freqency value than
 					//high frequency values. By shifting the negative value and negating the result
@@ -286,7 +356,7 @@ namespace TurboWavelets
 					int h = -(-height >> (log2 - i));
 
 					if ((w >= minSize) && (h >= minSize)) {
-						Console.WriteLine(w + " " + h );
+						Console.WriteLine (w + " " + h);
 						InvTransformCols (src, tmp, w, h);
 						InvTransformRows (tmp, src, w, h);
 					}
@@ -468,12 +538,8 @@ namespace TurboWavelets
 						}
 					}
 				}
-				//if (min != null) {
 				min = minVal;
-				//}
-				//if (max != null) {
 				max = maxVal;
-				//}
 			}
 		}
 
