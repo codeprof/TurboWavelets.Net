@@ -36,19 +36,21 @@ namespace TurboWaveletsTests
 	{
 		Wavelet2D wavelet;
 		float[,] test;
-		float[,] val; 
+		float[,] val;
 		int width, height;
+		float progressValue;
 		Wavelet2D.ProgressDelegate del;
 
 		public bool logProgress (float progress)
 		{
-			Console.WriteLine(progress.ToString());
+			progressValue = progress;
+			Console.WriteLine (progress.ToString ());
 			return false;
 		}
 
-		public void init(Wavelet2D wavelet)
+		public void init (Wavelet2D wavelet)
 		{
-			del = new Wavelet2D.ProgressDelegate(logProgress);
+			del = new Wavelet2D.ProgressDelegate (logProgress);
 			this.wavelet = wavelet;
 			this.width = wavelet.Width;
 			this.height = wavelet.Height;
@@ -57,12 +59,12 @@ namespace TurboWaveletsTests
 			for (int x = 0; x < width; x++) {
 				for (int y=0; y < height; y++) {
 					test [x, y] = x * y - 4 * x + 7 * y + 5.5f;
-					val  [x, y] = test [x, y];
+					val [x, y] = test [x, y];
 				}
 			}
 		}
 
-		public bool compare()
+		public bool compare ()
 		{
 			bool isSame = true;
 			for (int x = 0; x < this.width; x++) {
@@ -74,29 +76,64 @@ namespace TurboWaveletsTests
 			return isSame;
 		}
 
-		[SetUp] public void Init() 
+		[SetUp] public void Init ()
 		{
 		}
 
-
 		[Test]
-		public void testBiorthogonal53Wavelet2D_5x8()
+		public void testBiorthogonal53Wavelet2D_5x8 ()
 		{
-			init(new Biorthogonal53Wavelet2D (5, 8));
+			init (new Biorthogonal53Wavelet2D (5, 8));
 			wavelet.TransformIsotropic2D (test, del);
-			Assert.IsFalse(compare());
-			wavelet.BacktransformIsotropic2D(test);
-			Assert.IsTrue(compare());
+			Assert.IsFalse (compare ());
+			wavelet.BacktransformIsotropic2D (test);
+			Assert.IsTrue (compare ());
 		}
 
 		[Test]
 		public void testBiorthogonal53Wavelet2D_68x111 ()
 		{
-			init (new Biorthogonal53Wavelet2D (1687, 1871));
+			init (new Biorthogonal53Wavelet2D (68, 111));
 			wavelet.TransformIsotropic2D (test, del);
-			Assert.IsFalse(compare());
-			wavelet.BacktransformIsotropic2D(test, del);
-			Assert.IsTrue(compare());
+			Assert.IsFalse (compare ());
+			wavelet.BacktransformIsotropic2D (test, del);
+			Assert.IsTrue (compare ());
+		}
+
+		[Test]
+		public void testOrderWavelet2D_5x8 ()
+		{
+			init (new OrderWavelet2D (5, 8));
+			wavelet.TransformIsotropic2D (test, del);
+			Assert.IsFalse (compare ());
+			wavelet.BacktransformIsotropic2D (test);
+			Assert.IsTrue (compare ());
+		}
+
+		[Test]
+		public void testOrderWavelet2D_68x111 ()
+		{
+			init (new OrderWavelet2D (68, 111));
+			wavelet.TransformIsotropic2D (test, del);
+			Assert.IsFalse (compare ());
+			wavelet.BacktransformIsotropic2D (test, del);
+			Assert.IsTrue (compare ());
+		}
+
+		[Test]
+		public void testProgress ()
+		{
+			init (new Biorthogonal53Wavelet2D (64, 64));
+			wavelet.TransformIsotropic2D (test, del);
+			Assert.IsTrue(Math.Abs(100.0f - progressValue) < 0.00001f);
+			wavelet.BacktransformIsotropic2D (test, del);
+			Assert.IsTrue(Math.Abs(100.0f - progressValue) < 0.00001f);
+
+			init (new Biorthogonal53Wavelet2D (791, 324));
+			wavelet.TransformIsotropic2D (test, del);
+			Assert.IsTrue(Math.Abs(100.0f - progressValue) < 0.00001f);
+			wavelet.BacktransformIsotropic2D (test, del);
+			Assert.IsTrue(Math.Abs(100.0f - progressValue) < 0.00001f);
 		}
 
 
@@ -106,10 +143,11 @@ namespace TurboWaveletsTests
 			TurboWaveletsTest o = new TurboWaveletsTest();
 			o.testBiorthogonal53Wavelet2D_5x8();
 			o.testBiorthogonal53Wavelet2D_68x111();
-			
+			o.testOrderWavelet2D_5x8();
+			o.testOrderWavelet2D_68x111();
 			Assert.Pass("Passed");
 		}
-*/
+		*/
 	}
 }
 
