@@ -38,6 +38,7 @@
     <Compile Include="OrderWavelet2D.cs" />
     <Compile Include="Wavelet2D.cs" />
     <Compile Include="Biorthogonal53Wavelet1DStatic.cs" />
+    <Compile Include="HaarWavelet2D.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

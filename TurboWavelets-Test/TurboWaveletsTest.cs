@@ -4,7 +4,7 @@
 // Author:
 //       Stefan Moebius
 // Date:
-//       2016-04-09
+//       2016-04-16
 // 
 // Copyright (c) 2016 Stefan Moebius
 // 
@@ -119,6 +119,28 @@ namespace TurboWaveletsTests
 			wavelet.BacktransformIsotropic2D (test, del);
 			Assert.IsTrue (compare ());
 		}
+
+
+		[Test]
+		public void testHaarWavelet2D_5x8 ()
+		{
+			init (new HaarWavelet2D (5, 8));
+			wavelet.TransformIsotropic2D (test, del);
+			Assert.IsFalse (compare ());
+			wavelet.BacktransformIsotropic2D (test);
+			Assert.IsTrue (compare ());
+		}
+
+		[Test]
+		public void testHaarWavelet2D_68x111 ()
+		{
+			init (new HaarWavelet2D (68, 111));
+			wavelet.TransformIsotropic2D (test, del);
+			Assert.IsFalse (compare ());
+			wavelet.BacktransformIsotropic2D (test, del);
+			Assert.IsTrue (compare ());
+		}
+
 
 		[Test]
 		public void testProgress ()

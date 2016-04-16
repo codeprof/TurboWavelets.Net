@@ -1,10 +1,10 @@
 // 
-// OrderWavelet2D.cs
+// HaarWavelet2D.cs
 //  
 // Author:
 //       Stefan Moebius
 // Date:
-//       2016-04-09
+//       2016-04-16
 // 
 // Copyright (c) 2016 Stefan Moebius
 // 
@@ -30,34 +30,36 @@ using System;
 
 namespace TurboWavelets
 {
-	public class OrderWavelet2D : Wavelet2D
+	public class HaarWavelet2D : Wavelet2D
 	{
+		protected const int   MINSIZE    = 2;
+		protected const float SCALE      = 2.0f;
+		protected const float SCALE_INV  = 0.5f;
+		protected const float MEAN       = 0.5f;
+		protected const float MEAN_INV   = 2.0f;
+
 		/// <summary>
-		/// A fast implementation of a two-dimensional ordering transformation
+		/// A fast implementation of a two-dimensional haar transformation
 		/// for arbitary lenghts (works for all sizes, not just power of 2)
-		/// This does not perform a complete wavelet transformation. It
-		/// just does the cascade ordering of the values.
 		/// The implementation takes advantage of multiple CPU cores.
 		/// </summary>
 		/// <param name="width">The width of the transformation</param>
 		/// <param name="height">The width of the transformation</param>
-		public OrderWavelet2D (int width, int height)
-            : base(2, 2, width, height)
+		public HaarWavelet2D (int width, int height)
+            : base(MINSIZE, MINSIZE, width, height)
 		{   
 		}
 
 		/// <summary>
-		/// A fast implementation of a two-dimensional ordering transformation
+		/// A fast implementation of a two-dimensional haar transformation
 		/// for arbitary lenghts (works for all sizes, not just power of 2)
-		/// This does not perform a complete wavelet transformation. It
-		/// just does the cascade ordering of the values.
 		/// The implementation takes advantage of multiple CPU cores.
 		/// </summary>
 		/// <param name="width">The width of the transformation</param>
 		/// <param name="height">The width of the transformation</param>
 		/// <param name="minSize">Minimum width/height up to the transformation should be applied</param>
-		public OrderWavelet2D (int width, int height, int minSize)
-            : base(minSize, 2, width, height)
+		public HaarWavelet2D (int width, int height, int minSize)
+            : base(minSize, MINSIZE, width, height)
 		{
 		}
 
@@ -70,12 +72,16 @@ namespace TurboWavelets
 				int num_lf_values = half + (length & 1);
 
 				for (int i = 0; i < half; i++) {
-					dst [i, y] = src [offsrc, y];
-					dst [i + num_lf_values, y] = src [offsrc + 1, y];
+					float a = src [offsrc    , y];
+					float b = src [offsrc + 1, y];
+					//calculate the mean of a and b and scale with factor 2
+					//So no multiplication needed at all
+					dst [i, y] = (a + b);
+					dst [i + num_lf_values, y] = (b - a) * MEAN;
 					offsrc += 2;
 				}							
 				if ((length & 1) != 0)
-					dst [num_lf_values - 1, y] = src [length - 1, y];
+					dst [num_lf_values - 1, y] = src [length - 1, y] * SCALE;
 			} else {
 				for (int i = 0; i < length; i++)
 					dst [i, y] = src [i, y];
@@ -91,12 +97,16 @@ namespace TurboWavelets
 				int num_lf_values = half + (length & 1);
 
 				for (int i = 0; i < half; i++) {
-					dst [x, i] = src [x, offsrc];
-					dst [x, i + num_lf_values] = src [x, offsrc + 1];
+					float a = src [x, offsrc    ];
+					float b = src [x, offsrc + 1];
+					//calculate the mean of a and b and scale with factor 2
+					//So no multiplication needed at all
+					dst [x, i] = (a + b);
+					dst [x, i + num_lf_values] = (b - a) * MEAN;
 					offsrc += 2;
 				}							
 				if ((length & 1) != 0)
-					dst [x, num_lf_values - 1] = src [x, length - 1];
+					dst [x, num_lf_values - 1] = src [x, length - 1] * SCALE;
 			} else {
 				for (int i = 0; i < length; i++)
 					dst [x, i] = src [x, i];
@@ -112,12 +122,14 @@ namespace TurboWavelets
 				int num_lf_values = half + (length & 1);
 
 				for (int i = 0; i < half; i++) {
-					dst [offdst, y] = src [i, y];
-					dst [offdst + 1, y] = src [i + num_lf_values, y];
+					float a = src [i, y];
+					float b = src [i + num_lf_values, y] * MEAN_INV;
+					dst [offdst, y] = a - b;
+					dst [offdst + 1, y] = b - a;
 					offdst += 2;
 				}							
 				if ((length & 1) != 0)
-					dst [length - 1, y] = src [num_lf_values - 1, y]; 
+					dst [length - 1, y] = src [num_lf_values - 1, y] * SCALE_INV; 
 			} else {
 				for (int i = 0; i < length; i++)
 					dst [i, y] = src [i, y];
@@ -133,12 +145,14 @@ namespace TurboWavelets
 				int num_lf_values = half + (length & 1);
 
 				for (int i = 0; i < half; i++) {
-					dst [x, offdst] = src [x, i];
-					dst [x, offdst + 1] = src [x, i + num_lf_values];
+					float a = src [x, i];
+					float b = src [x, i + num_lf_values] * MEAN_INV;
+					dst [x, offdst] = a - b;
+					dst [x, offdst + 1] = b - a;
 					offdst += 2;
 				}							
 				if ((length & 1) != 0)
-					dst [x, length - 1] = src [x, num_lf_values - 1]; 
+					dst [x, length - 1] = src [x, num_lf_values - 1] * SCALE_INV; 
 			} else {
 				for (int i = 0; i < length; i++)
 					dst [x, i] = src [x, i];

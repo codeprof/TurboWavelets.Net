@@ -49,6 +49,9 @@
     <Compile Include="..\TurboWavelets\Wavelet2D.cs">
       <Link>TurboWavelets\Wavelet2D.cs</Link>
     </Compile>
+    <Compile Include="..\TurboWavelets\HaarWavelet2D.cs">
+      <Link>TurboWavelets\HaarWavelet2D.cs</Link>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
