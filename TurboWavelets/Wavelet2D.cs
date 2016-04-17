@@ -315,12 +315,11 @@ namespace TurboWavelets
 					int w = width, h = height;
 					initProgress (progressDelegate);
 					while ((w >= minSize) && (h >= minSize) && (!updateProgress(0))) {
-						Console.WriteLine (w + " " + h);
 						TransformRows (src, tmp, w, h);
 						TransformCols (tmp, src, w, h);
 						// shift always rounds down (towards negative infinity)
-						//However, for odd lengths we have one low freqency value more than
-						//high frequency values. By shifting the negative value and negating the result
+						//However, for odd lengths we have one low-pass value more than
+						//high-pass values. By shifting the negative value and negating the result
 						//we get the desired result.
 						w = -(-w >> 1);
 						h = -(-h >> 1);
@@ -349,14 +348,13 @@ namespace TurboWavelets
 				initProgress (progressDelegate);
 				while ((i <= log2) && (!updateProgress(0))) {
 					//Shift always rounds down (towards negative infinity)
-					//However, for odd lengths we have one more low freqency value than
-					//high frequency values. By shifting the negative value and negating the result
+					//However, for odd lengths we have one more low-pass value than
+					//high-pass values. By shifting the negative value and negating the result
 					//we get the desired result.
 					int w = -(-width >> (log2 - i));
 					int h = -(-height >> (log2 - i));
 
 					if ((w >= minSize) && (h >= minSize)) {
-						Console.WriteLine (w + " " + h);
 						InvTransformCols (src, tmp, w, h);
 						InvTransformRows (tmp, src, w, h);
 					}
@@ -394,7 +392,6 @@ namespace TurboWavelets
 				h++;
 			}
 			int numBlocks = w * h;
-
 
 			Parallel.For (0, numBlocks, block => 
 			{

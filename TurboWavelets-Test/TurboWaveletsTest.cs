@@ -36,140 +36,144 @@ namespace TurboWaveletsTests
 	{
 		Wavelet2D wavelet;
 		float[,] test;
-		float[,] val;
+		float[,] valOrg;
+		float[,] valTrans;
 		int width, height;
 		float progressValue;
-		Wavelet2D.ProgressDelegate del;
 
-		public bool logProgress (float progress)
+		private bool logProgress (float progress)
 		{
 			progressValue = progress;
 			Console.WriteLine (progress.ToString ());
 			return false;
 		}
 
-		public void init (Wavelet2D wavelet)
+		private void initTestData (Wavelet2D wavelet, bool simpleTestData = false)
 		{
-			del = new Wavelet2D.ProgressDelegate (logProgress);
+			Random rnd = new Random (1);
 			this.wavelet = wavelet;
 			this.width = wavelet.Width;
 			this.height = wavelet.Height;
 			test = new float[width, height];
-			val = new float[width, height];
+			valOrg = new float[width, height];
 			for (int x = 0; x < width; x++) {
 				for (int y=0; y < height; y++) {
-					test [x, y] = x * y - 4 * x + 7 * y + 5.5f;
-					val [x, y] = test [x, y];
+					if (simpleTestData) {
+						test [x, y] = (float)(x + y);
+					} else {
+						test [x, y] = (float)(rnd.NextDouble () * 10.0 - 5.0);
+					}
+					valOrg [x, y] = test [x, y];
 				}
 			}
 		}
 
-		public bool compare ()
+		private bool compareSource ()
 		{
 			bool isSame = true;
 			for (int x = 0; x < this.width; x++) {
-				for (int y=0; y < this.height; y++) {
-					if (Math.Abs (test [x, y] - val [x, y]) > 0.001f)
+				for (int y = 0; y < this.height; y++) {
+					if (Math.Abs (test [x, y] - valOrg [x, y]) > 0.001f)
 						isSame = false;
 				}
 			}
 			return isSame;
 		}
 
-		[SetUp] public void Init ()
+		private bool compareTransformed ()
+		{
+			bool isSame = true;
+			for (int x = 0; x < this.width; x++) {
+				for (int y = 0; y < this.height; y++) {
+					if (Math.Abs (test [x, y] - valTrans [x, y]) > 0.001f)
+						isSame = false;
+				}
+			}
+			return isSame;
+		}
+
+		private void performForwardAndBackwardTest (Wavelet2D wavelet, bool simpleTestData = false, bool checkTransformationResults = false)
+		{
+			initTestData (wavelet, simpleTestData);
+			wavelet.TransformIsotropic2D (test);
+			//Note: This test is wrong, if transformation does not change
+			//the values in the array! For a array with all zeros this is the case
+			Assert.IsFalse (compareSource ());
+			if (checkTransformationResults) {
+				Assert.IsTrue (compareTransformed ());	
+			}
+			wavelet.BacktransformIsotropic2D (test);
+			Assert.IsTrue (compareSource ());
+		}
+
+		[SetUp]
+		public void Setup ()
 		{
 		}
 
 		[Test]
 		public void testBiorthogonal53Wavelet2D_5x8 ()
 		{
-			init (new Biorthogonal53Wavelet2D (5, 8));
-			wavelet.TransformIsotropic2D (test, del);
-			Assert.IsFalse (compare ());
-			wavelet.BacktransformIsotropic2D (test);
-			Assert.IsTrue (compare ());
+			performForwardAndBackwardTest (new Biorthogonal53Wavelet2D (5, 8));
 		}
 
 		[Test]
 		public void testBiorthogonal53Wavelet2D_68x111 ()
 		{
-			init (new Biorthogonal53Wavelet2D (68, 111));
-			wavelet.TransformIsotropic2D (test, del);
-			Assert.IsFalse (compare ());
-			wavelet.BacktransformIsotropic2D (test, del);
-			Assert.IsTrue (compare ());
+			performForwardAndBackwardTest (new Biorthogonal53Wavelet2D (68, 111));
 		}
 
 		[Test]
 		public void testOrderWavelet2D_5x8 ()
 		{
-			init (new OrderWavelet2D (5, 8));
-			wavelet.TransformIsotropic2D (test, del);
-			Assert.IsFalse (compare ());
-			wavelet.BacktransformIsotropic2D (test);
-			Assert.IsTrue (compare ());
+			performForwardAndBackwardTest (new OrderWavelet2D (5, 8));
 		}
 
 		[Test]
 		public void testOrderWavelet2D_68x111 ()
 		{
-			init (new OrderWavelet2D (68, 111));
-			wavelet.TransformIsotropic2D (test, del);
-			Assert.IsFalse (compare ());
-			wavelet.BacktransformIsotropic2D (test, del);
-			Assert.IsTrue (compare ());
+			performForwardAndBackwardTest (new OrderWavelet2D (68, 111));
 		}
 
+		[Test]
+		public void testHaarWavelet2D_2x2 ()
+		{
+			valTrans = new float[2, 2];
+			valTrans [0, 0] = 4;
+			valTrans [1, 0] = 1;
+			valTrans [0, 1] = 1;
+			valTrans [1, 1] = 0;
+			performForwardAndBackwardTest (new HaarWavelet2D (2, 2), true, true);
+		}
 
 		[Test]
 		public void testHaarWavelet2D_5x8 ()
 		{
-			init (new HaarWavelet2D (5, 8));
-			wavelet.TransformIsotropic2D (test, del);
-			Assert.IsFalse (compare ());
-			wavelet.BacktransformIsotropic2D (test);
-			Assert.IsTrue (compare ());
+			performForwardAndBackwardTest (new HaarWavelet2D (5, 8));
 		}
 
 		[Test]
 		public void testHaarWavelet2D_68x111 ()
 		{
-			init (new HaarWavelet2D (68, 111));
-			wavelet.TransformIsotropic2D (test, del);
-			Assert.IsFalse (compare ());
-			wavelet.BacktransformIsotropic2D (test, del);
-			Assert.IsTrue (compare ());
+			performForwardAndBackwardTest (new HaarWavelet2D (68, 111));
 		}
-
 
 		[Test]
 		public void testProgress ()
 		{
-			init (new Biorthogonal53Wavelet2D (64, 64));
+			Wavelet2D.ProgressDelegate del = new Wavelet2D.ProgressDelegate (logProgress);
+			initTestData (new Biorthogonal53Wavelet2D (64, 64));
 			wavelet.TransformIsotropic2D (test, del);
-			Assert.IsTrue(Math.Abs(100.0f - progressValue) < 0.00001f);
+			Assert.IsTrue (Math.Abs (100.0f - progressValue) < 0.00001f);
 			wavelet.BacktransformIsotropic2D (test, del);
-			Assert.IsTrue(Math.Abs(100.0f - progressValue) < 0.00001f);
+			Assert.IsTrue (Math.Abs (100.0f - progressValue) < 0.00001f);
 
-			init (new Biorthogonal53Wavelet2D (791, 324));
+			initTestData (new Biorthogonal53Wavelet2D (791, 324));
 			wavelet.TransformIsotropic2D (test, del);
-			Assert.IsTrue(Math.Abs(100.0f - progressValue) < 0.00001f);
+			Assert.IsTrue (Math.Abs (100.0f - progressValue) < 0.00001f);
 			wavelet.BacktransformIsotropic2D (test, del);
-			Assert.IsTrue(Math.Abs(100.0f - progressValue) < 0.00001f);
+			Assert.IsTrue (Math.Abs (100.0f - progressValue) < 0.00001f);
 		}
-
-
-		/*
-		public static void Main (string[] args)
-		{
-			TurboWaveletsTest o = new TurboWaveletsTest();
-			o.testBiorthogonal53Wavelet2D_5x8();
-			o.testBiorthogonal53Wavelet2D_68x111();
-			o.testOrderWavelet2D_5x8();
-			o.testOrderWavelet2D_68x111();
-			Assert.Pass("Passed");
-		}
-		*/
 	}
 }
 

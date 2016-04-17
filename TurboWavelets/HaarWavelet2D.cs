@@ -25,18 +25,17 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
-
 using System;
 
 namespace TurboWavelets
 {
 	public class HaarWavelet2D : Wavelet2D
 	{
-		protected const int   MINSIZE    = 2;
-		protected const float SCALE      = 2.0f;
-		protected const float SCALE_INV  = 0.5f;
-		protected const float MEAN       = 0.5f;
-		protected const float MEAN_INV   = 2.0f;
+		protected const int   MINSIZE   = 2;
+		protected const float SCALE     = 2.0f;
+		protected const float SCALE_INV = 0.5f;
+		protected const float MEAN      = 0.5f;
+		protected const float MEAN_INV  = 2.0f;
 
 		/// <summary>
 		/// A fast implementation of a two-dimensional haar transformation
@@ -69,19 +68,20 @@ namespace TurboWavelets
 				int half = length >> 1;
 				int offsrc = 0;
 				// number of low-pass values
-				int num_lf_values = half + (length & 1);
+				int numLFValues = half + (length & 1);
 
 				for (int i = 0; i < half; i++) {
 					float a = src [offsrc    , y];
 					float b = src [offsrc + 1, y];
 					//calculate the mean of a and b and scale with factor 2
 					//So no multiplication needed at all
-					dst [i, y] = (a + b);
-					dst [i + num_lf_values, y] = (b - a) * MEAN;
+					dst [i              , y] = (a + b);
+					dst [i + numLFValues, y] = (b - a) * MEAN;
 					offsrc += 2;
 				}							
-				if ((length & 1) != 0)
-					dst [num_lf_values - 1, y] = src [length - 1, y] * SCALE;
+				if ((length & 1) != 0) {
+					dst [numLFValues - 1, y] = src [length - 1, y] * SCALE;
+				}		
 			} else {
 				for (int i = 0; i < length; i++)
 					dst [i, y] = src [i, y];
@@ -94,19 +94,20 @@ namespace TurboWavelets
 				int half = length >> 1;
 				int offsrc = 0;
 				// number of low-pass values
-				int num_lf_values = half + (length & 1);
+				int numLFValues = half + (length & 1);
 
 				for (int i = 0; i < half; i++) {
 					float a = src [x, offsrc    ];
 					float b = src [x, offsrc + 1];
 					//calculate the mean of a and b and scale with factor 2
 					//So no multiplication needed at all
-					dst [x, i] = (a + b);
-					dst [x, i + num_lf_values] = (b - a) * MEAN;
+					dst [x, i              ] = (a + b);
+					dst [x, i + numLFValues] = (b - a) * MEAN;
 					offsrc += 2;
 				}							
-				if ((length & 1) != 0)
-					dst [x, num_lf_values - 1] = src [x, length - 1] * SCALE;
+				if ((length & 1) != 0) {
+					dst [x, numLFValues - 1] = src [x, length - 1] * SCALE;
+				}	
 			} else {
 				for (int i = 0; i < length; i++)
 					dst [x, i] = src [x, i];
@@ -119,17 +120,18 @@ namespace TurboWavelets
 				int half = length >> 1;
 				int offdst = 0;
 				// number of low-pass values
-				int num_lf_values = half + (length & 1);
+				int numLFValues = half + (length & 1);
 
 				for (int i = 0; i < half; i++) {
-					float a = src [i, y];
-					float b = src [i + num_lf_values, y] * MEAN_INV;
-					dst [offdst, y] = a - b;
-					dst [offdst + 1, y] = b - a;
+					float a = src [i, y              ] * SCALE_INV;
+					float b = src [i + numLFValues, y];
+					dst [offdst,     y] = a - b;
+					dst [offdst + 1, y] = a + b;
 					offdst += 2;
 				}							
-				if ((length & 1) != 0)
-					dst [length - 1, y] = src [num_lf_values - 1, y] * SCALE_INV; 
+				if ((length & 1) != 0) {
+					dst [length - 1, y] = src [numLFValues - 1, y] * SCALE_INV; 
+				}
 			} else {
 				for (int i = 0; i < length; i++)
 					dst [i, y] = src [i, y];
@@ -142,17 +144,18 @@ namespace TurboWavelets
 				int half = length >> 1;
 				int offdst = 0;
 				// number of low-pass values
-				int num_lf_values = half + (length & 1);
+				int numLFValues = half + (length & 1);
 
 				for (int i = 0; i < half; i++) {
-					float a = src [x, i];
-					float b = src [x, i + num_lf_values] * MEAN_INV;
-					dst [x, offdst] = a - b;
-					dst [x, offdst + 1] = b - a;
+					float a = src [x, i              ] * SCALE_INV;
+					float b = src [x, i + numLFValues];
+					dst [x,     offdst] = a - b;
+					dst [x, offdst + 1] = a + b;
 					offdst += 2;
 				}							
-				if ((length & 1) != 0)
-					dst [x, length - 1] = src [x, num_lf_values - 1] * SCALE_INV; 
+				if ((length & 1) != 0) {
+					dst [x, length - 1] = src [x, numLFValues - 1] * SCALE_INV;
+				} 
 			} else {
 				for (int i = 0; i < length; i++)
 					dst [x, i] = src [x, i];
