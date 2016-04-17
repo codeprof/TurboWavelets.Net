@@ -68,6 +68,18 @@ namespace TurboWaveletsTests
 			}
 		}
 
+		private bool isAllZero ()
+		{
+			bool isZero = true;
+			for (int x = 0; x < this.width; x++) {
+				for (int y = 0; y < this.height; y++) {
+					if (Math.Abs (test [x, y]) > 0.00001f)
+						isZero = false;
+				}
+			}
+			return isZero;
+		}
+
 		private bool compareSource ()
 		{
 			bool isSame = true;
@@ -92,19 +104,32 @@ namespace TurboWaveletsTests
 			return isSame;
 		}
 
-		private void performForwardAndBackwardTest (Wavelet2D wavelet, bool simpleTestData = false, bool checkTransformationResults = false)
+		private void performForwardAndBackwardTest (Wavelet2D wavelet, bool parallel, bool cached, bool simpleTestData = false, bool checkTransformationResults = false)
 		{
 			initTestData (wavelet, simpleTestData);
+			wavelet.EnableParallel = parallel;
+			wavelet.EnableCaching = cached;
 			wavelet.TransformIsotropic2D (test);
 			//Note: This test is wrong, if transformation does not change
 			//the values in the array! For a array with all zeros this is the case
-			Assert.IsFalse (compareSource ());
+			if (!isAllZero ()) {
+				Assert.IsFalse (compareSource ());
+			}
 			if (checkTransformationResults) {
 				Assert.IsTrue (compareTransformed ());	
 			}
 			wavelet.BacktransformIsotropic2D (test);
 			Assert.IsTrue (compareSource ());
 		}
+		
+		private void performForwardAndBackwardTestCombined (Wavelet2D wavelet, bool simpleTestData = false, bool checkTransformationResults = false)
+		{
+			performForwardAndBackwardTest(wavelet, false, false, simpleTestData, checkTransformationResults);
+			performForwardAndBackwardTest(wavelet, true,  false, simpleTestData, checkTransformationResults);
+			performForwardAndBackwardTest(wavelet, false, true , simpleTestData, checkTransformationResults);
+			performForwardAndBackwardTest(wavelet, true , true , simpleTestData, checkTransformationResults);
+		}
+
 
 		[SetUp]
 		public void Setup ()
@@ -114,25 +139,25 @@ namespace TurboWaveletsTests
 		[Test]
 		public void testBiorthogonal53Wavelet2D_5x8 ()
 		{
-			performForwardAndBackwardTest (new Biorthogonal53Wavelet2D (5, 8));
+			performForwardAndBackwardTestCombined (new Biorthogonal53Wavelet2D (5, 8));
 		}
 
 		[Test]
 		public void testBiorthogonal53Wavelet2D_68x111 ()
 		{
-			performForwardAndBackwardTest (new Biorthogonal53Wavelet2D (68, 111));
+			performForwardAndBackwardTestCombined (new Biorthogonal53Wavelet2D (68, 111));
 		}
 
 		[Test]
 		public void testOrderWavelet2D_5x8 ()
 		{
-			performForwardAndBackwardTest (new OrderWavelet2D (5, 8));
+			performForwardAndBackwardTestCombined (new OrderWavelet2D (5, 8));
 		}
 
 		[Test]
 		public void testOrderWavelet2D_68x111 ()
 		{
-			performForwardAndBackwardTest (new OrderWavelet2D (68, 111));
+			performForwardAndBackwardTestCombined (new OrderWavelet2D (68, 111));
 		}
 
 		[Test]
@@ -143,19 +168,19 @@ namespace TurboWaveletsTests
 			valTrans [1, 0] = 1;
 			valTrans [0, 1] = 1;
 			valTrans [1, 1] = 0;
-			performForwardAndBackwardTest (new HaarWavelet2D (2, 2), true, true);
+			performForwardAndBackwardTestCombined (new HaarWavelet2D (2, 2), true, true);
 		}
 
 		[Test]
 		public void testHaarWavelet2D_5x8 ()
 		{
-			performForwardAndBackwardTest (new HaarWavelet2D (5, 8));
+			performForwardAndBackwardTestCombined (new HaarWavelet2D (5, 8));
 		}
 
 		[Test]
 		public void testHaarWavelet2D_68x111 ()
 		{
-			performForwardAndBackwardTest (new HaarWavelet2D (68, 111));
+			performForwardAndBackwardTestCombined (new HaarWavelet2D (68, 111));
 		}
 
 		[Test]
@@ -174,6 +199,31 @@ namespace TurboWaveletsTests
 			wavelet.BacktransformIsotropic2D (test, del);
 			Assert.IsTrue (Math.Abs (100.0f - progressValue) < 0.00001f);
 		}
+
+		[Test]
+		public void testRange ()
+		{
+			Wavelet2D wavelet = new OrderWavelet2D (512, 512);
+			float[,] test = new float[512, 512];
+			for (int y = 0; y < 512; y++) {
+				for (int x = 0; x < 512; x++) {
+					test[x,y] = 50.0f;
+				}
+			}
+			test[5,5] = 100.0f;
+			test[10,100] = - 10.0f;
+			float min;
+			float max;
+			wavelet.EnableParallel = false;
+			wavelet.getCoefficientsRange(test, out min, out max);
+			Assert.AreEqual(min, 10.0f);
+			Assert.AreEqual(max, 100.0f);
+			wavelet.EnableParallel = true;
+			wavelet.getCoefficientsRange(test, out min, out max);
+			Assert.AreEqual(min, 10.0f);
+			Assert.AreEqual(max, 100.0f);
+		}
+
 	}
 }
 
