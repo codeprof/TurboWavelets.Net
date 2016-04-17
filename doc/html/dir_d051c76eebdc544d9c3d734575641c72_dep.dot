@@ -1,0 +1,6 @@
+digraph "Properties" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  dir_d051c76eebdc544d9c3d734575641c72 [shape=box, label="Properties", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_d051c76eebdc544d9c3d734575641c72.html"];
+}
