@@ -11,7 +11,7 @@ env:
   global:
     - GH_REPO_NAME: TurboWavelets.Net
     - DOXYFILE: $TRAVIS_BUILD_DIR/Doxyfile
-    - GH_REPO_REF: https://github.com/codeprof/TurboWavelets.Net.git
+    - GH_REPO_REF: github.com/codeprof/TurboWavelets.Net.git
 
 # Install dependencies
 addons:
