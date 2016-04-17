@@ -26,6 +26,8 @@ warning: ignoring unsupported tag `DIA_PATH               =' at line 2126, file 
 warning: ignoring unsupported tag `UML_LIMIT_NUM_FIELDS   =' at line 2220, file /home/travis/build/codeprof/TurboWavelets.Net/Doxyfile
 warning: ignoring unsupported tag `DIAFILE_DIRS           =' at line 2334, file /home/travis/build/codeprof/TurboWavelets.Net/Doxyfile
 warning: ignoring unsupported tag `PLANTUML_JAR_PATH      =' at line 2343, file /home/travis/build/codeprof/TurboWavelets.Net/Doxyfile
+warning: tag INPUT: input source `TurboWavelets' does not exist
+warning: source TurboWavelets is not a readable file or directory... skipping.
 Searching for include files...
 Searching for example files...
 Searching for images...
@@ -33,24 +35,6 @@ Searching for dot files...
 Searching for msc files...
 Searching for files to exclude
 Searching for files to process...
-Searching for files in directory /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net
-Searching for files in directory /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/.git
-Searching for files in directory /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/.git/branches
-Searching for files in directory /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/.git/hooks
-Searching for files in directory /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/.git/info
-Searching for files in directory /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/.git/logs
-Searching for files in directory /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/.git/logs/refs
-Searching for files in directory /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/.git/logs/refs/heads
-Searching for files in directory /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/.git/logs/refs/remotes
-Searching for files in directory /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/.git/logs/refs/remotes/origin
-Searching for files in directory /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/.git/objects
-Searching for files in directory /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/.git/objects/info
-Searching for files in directory /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/.git/objects/pack
-Searching for files in directory /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/.git/refs
-Searching for files in directory /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/.git/refs/heads
-Searching for files in directory /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/.git/refs/remotes
-Searching for files in directory /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/.git/refs/remotes/origin
-Searching for files in directory /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/.git/refs/tags
 Reading and parsing tag files
 Building group list...
 Building directory list...
