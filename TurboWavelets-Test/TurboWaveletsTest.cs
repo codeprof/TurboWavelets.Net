@@ -48,14 +48,19 @@ namespace TurboWaveletsTests
 			return false;
 		}
 
+		private void initArrays (int width, int height)
+		{
+				this.width = width;
+			this.height = height;
+			test = new float[width, height];
+			valOrg = new float[width, height];
+		}
+
 		private void initTestData (Wavelet2D wavelet, bool simpleTestData = false)
 		{
 			Random rnd = new Random (1);
 			this.wavelet = wavelet;
-			this.width = wavelet.Width;
-			this.height = wavelet.Height;
-			test = new float[width, height];
-			valOrg = new float[width, height];
+			initArrays(wavelet.Width, wavelet.Height);
 			for (int x = 0; x < width; x++) {
 				for (int y=0; y < height; y++) {
 					if (simpleTestData) {
@@ -253,6 +258,54 @@ namespace TurboWaveletsTests
 			wavelet.getCoefficientsRange(test, out min, out max);
 			Assert.AreEqual(10.0f, min);
 			Assert.AreEqual(50.0f, max);
+		}
+
+		[Test]
+		public void testCrop2 ()
+		{
+			Wavelet2D wavelet = new OrderWavelet2D (16, 16);
+			initArrays (16, 16);
+
+			foreach (bool parallel in new bool[]{false, true}) {
+ 
+				for (int y = 0; y < 16; y++) {
+					for (int x = 0; x < 16; x++) {
+						test [x, y] = x + y;
+						if (((x % 8) == 7) && ((y % 8) == 7)) {
+							valOrg [x, y] = test [x, y];
+						} else {
+							valOrg [x, y] = 0.0f;
+						}
+					}
+				}
+				wavelet.EnableParallel = parallel;
+				wavelet.CropCoefficients (test, 1, 8);
+				Assert.True (compareSource ());
+			}
+		}
+
+		[Test]
+		public void testScale ()
+		{
+			Wavelet2D wavelet = new OrderWavelet2D (16, 16);
+			initArrays (16, 16);
+
+			foreach (bool parallel in new bool[]{false, true}) {
+ 
+				for (int y = 0; y < 16; y++) {
+					for (int x = 0; x < 16; x++) {
+						test [x, y] = x + y;
+						if (((x % 8) == 7) && ((y % 8) == 7)) {
+							valOrg [x, y] = 2.5f * test [x, y];
+						} else {
+							valOrg [x, y] = test [x, y];
+						}
+					}
+				}
+				wavelet.EnableParallel = parallel;
+				wavelet.ScaleCoefficients (test, new float[]{2.5f}, 8);
+				Assert.True (compareSource ());
+			}
 		}
 
 	}

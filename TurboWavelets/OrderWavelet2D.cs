@@ -4,7 +4,7 @@
 // Author:
 //       Stefan Moebius
 // Date:
-//       2016-04-16
+//       2016-04-17
 // 
 // Copyright (c) 2016 Stefan Moebius
 // 
@@ -65,17 +65,17 @@ namespace TurboWavelets
 		{
 			if (length >= allowedMinSize) {
 				int half = length >> 1;
-				int offsrc = 0;
+				int offSrc = 0;
 				// number of low-pass values
-				int num_lf_values = half + (length & 1);
+				int numLFValues = half + (length & 1);
 
 				for (int i = 0; i < half; i++) {
-					dst [i, y] = src [offsrc, y];
-					dst [i + num_lf_values, y] = src [offsrc + 1, y];
-					offsrc += 2;
+					dst [i, y] = src [offSrc, y];
+					dst [i + numLFValues, y] = src [offSrc + 1, y];
+					offSrc += 2;
 				}							
 				if ((length & 1) != 0)
-					dst [num_lf_values - 1, y] = src [length - 1, y];
+					dst [numLFValues - 1, y] = src [length - 1, y];
 			} else {
 				for (int i = 0; i < length; i++)
 					dst [i, y] = src [i, y];
@@ -86,17 +86,17 @@ namespace TurboWavelets
 		{
 			if (length >= allowedMinSize) {
 				int half = length >> 1;
-				int offsrc = 0;
+				int offSrc = 0;
 				// number of low-pass values
-				int num_lf_values = half + (length & 1);
+				int numLFValues = half + (length & 1);
 
 				for (int i = 0; i < half; i++) {
-					dst [x, i] = src [x, offsrc];
-					dst [x, i + num_lf_values] = src [x, offsrc + 1];
-					offsrc += 2;
+					dst [x, i] = src [x, offSrc];
+					dst [x, i + numLFValues] = src [x, offSrc + 1];
+					offSrc += 2;
 				}							
 				if ((length & 1) != 0)
-					dst [x, num_lf_values - 1] = src [x, length - 1];
+					dst [x, numLFValues - 1] = src [x, length - 1];
 			} else {
 				for (int i = 0; i < length; i++)
 					dst [x, i] = src [x, i];
@@ -107,17 +107,17 @@ namespace TurboWavelets
 		{
 			if (length >= allowedMinSize) {
 				int half = length >> 1;
-				int offdst = 0;
+				int offDst = 0;
 				// number of low-pass values
-				int num_lf_values = half + (length & 1);
+				int numLFValues = half + (length & 1);
 
 				for (int i = 0; i < half; i++) {
-					dst [offdst, y] = src [i, y];
-					dst [offdst + 1, y] = src [i + num_lf_values, y];
-					offdst += 2;
+					dst [offDst, y] = src [i, y];
+					dst [offDst + 1, y] = src [i + numLFValues, y];
+					offDst += 2;
 				}							
 				if ((length & 1) != 0)
-					dst [length - 1, y] = src [num_lf_values - 1, y]; 
+					dst [length - 1, y] = src [numLFValues - 1, y]; 
 			} else {
 				for (int i = 0; i < length; i++)
 					dst [i, y] = src [i, y];
@@ -128,17 +128,17 @@ namespace TurboWavelets
 		{
 			if (length >= allowedMinSize) {
 				int half = length >> 1;
-				int offdst = 0;
+				int offDst = 0;
 				// number of low-pass values
-				int num_lf_values = half + (length & 1);
+				int numLFValues = half + (length & 1);
 
 				for (int i = 0; i < half; i++) {
-					dst [x, offdst] = src [x, i];
-					dst [x, offdst + 1] = src [x, i + num_lf_values];
-					offdst += 2;
+					dst [x, offDst] = src [x, i];
+					dst [x, offDst + 1] = src [x, i + numLFValues];
+					offDst += 2;
 				}							
 				if ((length & 1) != 0)
-					dst [x, length - 1] = src [x, num_lf_values - 1]; 
+					dst [x, length - 1] = src [x, numLFValues - 1]; 
 			} else {
 				for (int i = 0; i < length; i++)
 					dst [x, i] = src [x, i];

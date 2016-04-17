@@ -436,14 +436,14 @@ namespace TurboWavelets
 				throw new ArgumentException ("n (" + n + ") cannot be negative");
 			}
 			if (n > gridSize * gridSize) {
-				throw new ArgumentException ("n" + n + " cannot be greater than " + gridSize + "*" + gridSize);
+				throw new ArgumentException ("n (" + n + ") cannot be greater than " + gridSize + "*" + gridSize);
 			}
 			int w = width / gridSize;
-			if ((w % gridSize) != 0) {
+			if ((width % gridSize) != 0) {
 				w++;
 			}
 			int h = width / gridSize;
-			if ((h % gridSize) != 0) {
+			if ((height % gridSize) != 0) {
 				h++;
 			}
 			int numBlocks = w * h;
@@ -468,6 +468,22 @@ namespace TurboWavelets
 						break;
 					}
 				}
+			}
+		}
+
+		/// <summary>
+		/// Scales the n (length of the scaleFactors array) greatest coefficinets (for a defined grid size) by the value declared in scaleFactors.
+		/// </summary>
+		virtual public void ScaleCoefficients (float[,] src, float[] scaleFactors, int gridSize, ProgressDelegate progressDelegate = null)
+		{		
+			lock (threadSync) {
+				if (scaleFactors == null) {
+					throw new ArgumentException ("scaleFactors cannot be null");
+				}
+				if (scaleFactors.Length > gridSize * gridSize) {
+					throw new ArgumentException ("scaleFactors lenght cannot be greater than " + gridSize * gridSize);
+				}
+				ModifyCoefficients (src, scaleFactors.Length, scaleFactors, 1.0f, gridSize, progressDelegate);
 			}
 		}
 
@@ -577,22 +593,6 @@ namespace TurboWavelets
 				}
 				min = minVal;
 				max = maxVal;
-			}
-		}
-
-		/// <summary>
-		/// Scales the n (length of the scaleFactors array) greatest coefficinets (for a defined grid size) by the value declared in scaleFactors.
-		/// </summary>
-		virtual public void ScaleCoefficients (float[,] src, float[] scaleFactors, int gridSize, ProgressDelegate progressDelegate = null)
-		{		
-			lock (threadSync) {
-				if (scaleFactors == null) {
-					throw new ArgumentException ("scaleFactors cannot be null");
-				}
-				if (scaleFactors.Length > gridSize * gridSize) {
-					throw new ArgumentException ("scaleFactors lenght cannot be greater than " + gridSize * gridSize);
-				}
-				ModifyCoefficients (src, scaleFactors.Length, scaleFactors, 1.0f, gridSize, progressDelegate);
 			}
 		}
 	}

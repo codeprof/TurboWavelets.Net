@@ -4,7 +4,7 @@
 // Author:
 //       Stefan Moebius
 // Date:
-//       2016-04-09
+//       2016-04-17
 // 
 // Copyright (c) 2016 Stefan Moebius
 // 
@@ -65,41 +65,41 @@ namespace TurboWavelets
 				int half = length >> 1;
 				//if the length is even then subtract 1 from "half"
 				//as there is the same number of low and high-pass values
-				//(Note that "num_lf_values" is equal to "half+1") 
+				//(Note that "numLFValues" is equal to "half+1") 
 				//For a odd length there is one additional quency value (so do not subtract 1)
-				//"half" is one less than "num_lf_values" as we cannot directly
+				//"half" is one less than "numLFValues" as we cannot directly
 				//calculate the last value in the for-loop (array bounds)
 				if ((length & 1) == 0)
 					half--;
-				int offsrc = 0;
+				int offSrc = 0;
 				// starting offset for high-pass values (= number of low-pass values)
 				int offdst = half + 1; 
-				int num_lf_values = offdst;
+				int numLFValues = offdst;
 	
-				float last_hf = 0.0f;
+				float lastHF = 0.0f;
 				for (int i = 0; i < half; i++) {
 					//calculate the high-pass value by
 					//subtracting the mean of the immediate neighbors for every second value
-					float hf = src [offsrc + 1, y] - (src [offsrc, y] + src [offsrc + 2, y]) * MEAN;
+					float hf = src [offSrc + 1, y] - (src [offSrc, y] + src [offSrc + 2, y]) * MEAN;
 					//smoothing the low-pass value, scale by factor 2 
 					//(instead of scaling low frequencies by factor sqrt(2) and
 					//shrinking high frequencies by factor sqrt(2)
 					//and reposition to have all low frequencies on the left side
-					dst [i, y] = SCALE * (src [offsrc, y] + (last_hf + hf) * SMOOTH);
+					dst [i, y] = SCALE * (src [offSrc, y] + (lastHF + hf) * SMOOTH);
 					dst [offdst++, y] = hf;
-					last_hf = hf;
-					offsrc += 2; 
+					lastHF = hf;
+					offSrc += 2; 
 				} 
 				if ((length & 1) == 0) {
 					//the secound last value in the array is our last low-pass value
-					dst [num_lf_values - 1, y] = SCALE * src [length - 2, y]; 
+					dst [numLFValues - 1, y] = SCALE * src [length - 2, y]; 
 					//the last value is a high-pass value
 					//however here we just subtract the previos value (so not really a
 					//biorthogonal 5/3 transformation)
 					//This is done because the 5/3 wavelet cannot be calculated at the boundary
 					dst [length - 1, y] = src [length - 1, y] - src [length - 2, y];
 				} else {
-					dst [num_lf_values - 1, y] = SCALE * src [length - 1, y]; 
+					dst [numLFValues - 1, y] = SCALE * src [length - 1, y]; 
 				}
 			} else {
 				//We cannot perform the biorthogonal 5/3 wavelet transformation
@@ -117,41 +117,41 @@ namespace TurboWavelets
 				int half = length >> 1;
 				//if the length is even then subtract 1 from "half"
 				//as there is the same number of low and high-pass values
-				//(Note that "num_lf_values" is equal to "half+1") 
+				//(Note that "numLFValues" is equal to "half+1") 
 				//For a odd length there is one additional low-pass value (so do not subtract 1)
-				//"half" is one less than "num_lf_values" as we cannot directly
+				//"half" is one less than "numLFValues" as we cannot directly
 				//calculate the last value in the for-loop (array bounds)
 				if ((length & 1) == 0)
 					half--;
-				int offsrc = 0;
+				int offSrc = 0;
 				// starting offset for high-pass values (= number of low-pass values)
 				int offdst = half + 1; 
-				int num_lf_values = offdst;
+				int numLFValues = offdst;
 	
-				float last_hf = 0.0f;
+				float lastHF = 0.0f;
 				for (int i = 0; i < half; i++) {
 					//calculate the high-pass value by
 					//subtracting the mean of the immediate neighbors for every second value
-					float hf = src [x, offsrc + 1] - (src [x, offsrc] + src [x, offsrc + 2]) * MEAN;
+					float hf = src [x, offSrc + 1] - (src [x, offSrc] + src [x, offSrc + 2]) * MEAN;
 					//smoothing the low-pass value, scale by factor 2 
 					//(instead of scaling low frequencies by factor sqrt(2) and
 					//shrinking high frequencies by factor sqrt(2)
 					//and reposition to have all low frequencies on the left side
-					dst [x, i] = SCALE * (src [x, offsrc] + (last_hf + hf) * SMOOTH);
+					dst [x, i] = SCALE * (src [x, offSrc] + (lastHF + hf) * SMOOTH);
 					dst [x, offdst++] = hf;
-					last_hf = hf;
-					offsrc += 2; 
+					lastHF = hf;
+					offSrc += 2; 
 				} 
 				if ((length & 1) == 0) {
 					//the secound last value in the array is our last low-pass value
-					dst [x, num_lf_values - 1] = src [x, length - 2] * SCALE; 
+					dst [x, numLFValues - 1] = src [x, length - 2] * SCALE; 
 					//the last value is a high-pass value
 					//however here we just subtract the previos value (so not really a
 					//biorthogonal 5/3 transformation)
 					//This is done because the 5/3 wavelet cannot be calculated at the boundary
 					dst [x, length - 1] = src [x, length - 1] - src [x, length - 2];
 				} else {
-					dst [x, num_lf_values - 1] = src [x, length - 1] * SCALE; 
+					dst [x, numLFValues - 1] = src [x, length - 1] * SCALE; 
 				}
 			} else {
 				//We cannot perform the biorthogonal 5/3 wavelet transformation
@@ -168,50 +168,50 @@ namespace TurboWavelets
 				int half = length >> 1;
 				//if the length is even then subtract 1 from "half"
 				//as there is the same number of low and high-pass values
-				//(Note that "num_lf_values" is equal to "half+1") 
+				//(Note that "numLFValues" is equal to "half+1") 
 				//For a odd length there is one additional low-pass value (so do not subtract 1)
-				//"half" is one less than "num_lf_values" as we cannot directly
+				//"half" is one less than "numLFValues" as we cannot directly
 				//calculate the last value in the for-loop (array bounds)
 				if ((length & 1) == 0)
 					half--;
 				// number of low-pass values
-				int num_lf_values = half + 1;
+				int numLFValues = half + 1;
 	
-				float last_lf = SCALE_INV * src [0, y] - src [num_lf_values, y] * SMOOTH;
-				float last_hf = src [num_lf_values, y];
+				float lastLF = SCALE_INV * src [0, y] - src [numLFValues, y] * SMOOTH;
+				float lastHF = src [numLFValues, y];
 				//Calculate the first two values outside the for loop (array bounds)
-				dst [0, y] = last_lf;
-				dst [1, y] = last_hf + last_lf * SCALE_INV;
+				dst [0, y] = lastLF;
+				dst [1, y] = lastHF + lastLF * SCALE_INV;
 				for (int i = 1; i < half; i++) {
-					float hf = src [num_lf_values + i, y];
+					float hf = src [numLFValues + i, y];
 					float lf = SCALE_INV * src [i, y];
 					//reconstruct the original value by removing the "smoothing" 
-					float lf_reconst = lf - (hf + last_hf) * SMOOTH;
-					dst [2 * i, y] = lf_reconst;
+					float lfReconst = lf - (hf + lastHF) * SMOOTH;
+					dst [2 * i, y] = lfReconst;
 					//add reconstructed low-pass value (left side) and high-pass value
-					dst [2 * i + 1, y] = lf_reconst * MEAN + hf;
+					dst [2 * i + 1, y] = lfReconst * MEAN + hf;
 					//add other low-pass value (right side)
 					//This must be done one iteration later, as the
 					//reconstructed values is not known earlier
-					dst [2 * i - 1, y] += lf_reconst * MEAN;
-					last_hf = hf;
-					last_lf = lf_reconst;
+					dst [2 * i - 1, y] += lfReconst * MEAN;
+					lastHF = hf;
+					lastLF = lfReconst;
 				}
 	
 				if ((length & 1) == 0) {
 					//restore the last 3 values outside the for loop
 					//adding the missing low-pass value (right side)
-					dst [length - 3, y] += src [num_lf_values - 1, y] * MEAN * SCALE_INV;
+					dst [length - 3, y] += src [numLFValues - 1, y] * MEAN * SCALE_INV;
 					//copy the last low-pass value
-					dst [length - 2, y] = src [num_lf_values - 1, y] * SCALE_INV;
+					dst [length - 2, y] = src [numLFValues - 1, y] * SCALE_INV;
 					//restore the last value by adding last low-pass value
-					dst [length - 1, y] = src [length - 1, y] + src [num_lf_values - 1, y] * SCALE_INV; 
+					dst [length - 1, y] = src [length - 1, y] + src [numLFValues - 1, y] * SCALE_INV; 
 				} else {
 					//restore the last 2 values outside the for loop
 					//adding the missing low-pass value (right side)
-					dst [length - 2, y] += src [num_lf_values - 1, y] * MEAN * SCALE_INV;
+					dst [length - 2, y] += src [numLFValues - 1, y] * MEAN * SCALE_INV;
 					//copy the last low-pass value
-					dst [length - 1, y] = src [num_lf_values - 1, y] * SCALE_INV;
+					dst [length - 1, y] = src [numLFValues - 1, y] * SCALE_INV;
 				}
 			} else {
 				//We cannot perform the biorthogonal 5/3 wavelet transformation
@@ -228,50 +228,50 @@ namespace TurboWavelets
 				int half = length >> 1;
 				//if the length is even then subtract 1 from "half"
 				//as there is the same number of low and high-pass values
-				//(Note that "num_lf_values" is equal to "half+1") 
+				//(Note that "numLFValues" is equal to "half+1") 
 				//For a odd length there is one additional low-pass value (so do not subtract 1)
-				//"half" is one less than "num_lf_values" as we cannot directly
+				//"half" is one less than "numLFValues" as we cannot directly
 				//calculate the last value in the for-loop (array bounds)
 				if ((length & 1) == 0)
 					half--;
 				// number of low-pass values
-				int num_lf_values = half + 1;
+				int numLFValues = half + 1;
 	
-				float last_lf = SCALE_INV * src [x, 0] - src [x, num_lf_values] * SMOOTH;
-				float last_hf = src [x, num_lf_values];
+				float lastLF = SCALE_INV * src [x, 0] - src [x, numLFValues] * SMOOTH;
+				float lastHF = src [x, numLFValues];
 				//Calculate the first two values outside the for loop (array bounds)
-				dst [x, 0] = last_lf;
-				dst [x, 1] = last_hf + last_lf * SCALE_INV;
+				dst [x, 0] = lastLF;
+				dst [x, 1] = lastHF + lastLF * SCALE_INV;
 				for (int i = 1; i < half; i++) {
-					float hf = src [x, num_lf_values + i];
+					float hf = src [x, numLFValues + i];
 					float lf = SCALE_INV * src [x, i];
 					//reconstruct the original value by removing the "smoothing" 
-					float lf_reconst = lf - (hf + last_hf) * SMOOTH;
-					dst [x, 2 * i] = lf_reconst;
+					float lfReconst = lf - (hf + lastHF) * SMOOTH;
+					dst [x, 2 * i] = lfReconst;
 					//add reconstructed low-pass value (left side) and high-pass value
-					dst [x, 2 * i + 1] = lf_reconst * MEAN + hf;
+					dst [x, 2 * i + 1] = lfReconst * MEAN + hf;
 					//add other low-pass value (right side)
 					//This must be done one iteration later, as the
 					//reconstructed values is not known earlier
-					dst [x, 2 * i - 1] += lf_reconst * MEAN;
-					last_hf = hf;
-					last_lf = lf_reconst;
+					dst [x, 2 * i - 1] += lfReconst * MEAN;
+					lastHF = hf;
+					lastLF = lfReconst;
 				}
 	
 				if ((length & 1) == 0) {
 					//restore the last 3 values outside the for loop
 					//adding the missing low-pass value (right side)
-					dst [x, length - 3] += src [x, num_lf_values - 1] * MEAN * SCALE_INV;
+					dst [x, length - 3] += src [x, numLFValues - 1] * MEAN * SCALE_INV;
 					//copy the last low-pass value
-					dst [x, length - 2] = src [x, num_lf_values - 1] * SCALE_INV;
+					dst [x, length - 2] = src [x, numLFValues - 1] * SCALE_INV;
 					//restore the last value by adding last low-pass value
-					dst [x, length - 1] = src [x, length - 1] + src [x, num_lf_values - 1] * SCALE_INV; 
+					dst [x, length - 1] = src [x, length - 1] + src [x, numLFValues - 1] * SCALE_INV; 
 				} else {
 					//restore the last 2 values outside the for loop
 					//adding the missing low-pass value (right side)
-					dst [x, length - 2] += src [x, num_lf_values - 1] * MEAN * SCALE_INV;
+					dst [x, length - 2] += src [x, numLFValues - 1] * MEAN * SCALE_INV;
 					//copy the last low-pass value
-					dst [x, length - 1] = src [x, num_lf_values - 1] * SCALE_INV;
+					dst [x, length - 1] = src [x, numLFValues - 1] * SCALE_INV;
 				}
 			} else {
 				//We cannot perform the biorthogonal 5/3 wavelet transformation

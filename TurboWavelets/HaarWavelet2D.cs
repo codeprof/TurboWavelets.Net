@@ -4,7 +4,7 @@
 // Author:
 //       Stefan Moebius
 // Date:
-//       2016-04-16
+//       2016-04-17
 // 
 // Copyright (c) 2016 Stefan Moebius
 // 
@@ -66,18 +66,18 @@ namespace TurboWavelets
 		{
 			if (length >= allowedMinSize) {
 				int half = length >> 1;
-				int offsrc = 0;
+				int offSrc = 0;
 				// number of low-pass values
 				int numLFValues = half + (length & 1);
 
 				for (int i = 0; i < half; i++) {
-					float a = src [offsrc    , y];
-					float b = src [offsrc + 1, y];
+					float a = src [offSrc    , y];
+					float b = src [offSrc + 1, y];
 					//calculate the mean of a and b and scale with factor 2
 					//So no multiplication needed at all
 					dst [i              , y] = (a + b);
 					dst [i + numLFValues, y] = (b - a) * MEAN;
-					offsrc += 2;
+					offSrc += 2;
 				}							
 				if ((length & 1) != 0) {
 					dst [numLFValues - 1, y] = src [length - 1, y] * SCALE;
@@ -92,18 +92,18 @@ namespace TurboWavelets
 		{
 			if (length >= allowedMinSize) {
 				int half = length >> 1;
-				int offsrc = 0;
+				int offSrc = 0;
 				// number of low-pass values
 				int numLFValues = half + (length & 1);
 
 				for (int i = 0; i < half; i++) {
-					float a = src [x, offsrc    ];
-					float b = src [x, offsrc + 1];
+					float a = src [x, offSrc    ];
+					float b = src [x, offSrc + 1];
 					//calculate the mean of a and b and scale with factor 2
 					//So no multiplication needed at all
 					dst [x, i              ] = (a + b);
 					dst [x, i + numLFValues] = (b - a) * MEAN;
-					offsrc += 2;
+					offSrc += 2;
 				}							
 				if ((length & 1) != 0) {
 					dst [x, numLFValues - 1] = src [x, length - 1] * SCALE;
@@ -118,16 +118,16 @@ namespace TurboWavelets
 		{
 			if (length >= allowedMinSize) {
 				int half = length >> 1;
-				int offdst = 0;
+				int offDst = 0;
 				// number of low-pass values
 				int numLFValues = half + (length & 1);
 
 				for (int i = 0; i < half; i++) {
 					float a = src [i, y              ] * SCALE_INV;
 					float b = src [i + numLFValues, y];
-					dst [offdst,     y] = a - b;
-					dst [offdst + 1, y] = a + b;
-					offdst += 2;
+					dst [offDst,     y] = a - b;
+					dst [offDst + 1, y] = a + b;
+					offDst += 2;
 				}							
 				if ((length & 1) != 0) {
 					dst [length - 1, y] = src [numLFValues - 1, y] * SCALE_INV; 
@@ -142,16 +142,16 @@ namespace TurboWavelets
 		{
 			if (length >= allowedMinSize) {
 				int half = length >> 1;
-				int offdst = 0;
+				int offDst = 0;
 				// number of low-pass values
 				int numLFValues = half + (length & 1);
 
 				for (int i = 0; i < half; i++) {
 					float a = src [x, i              ] * SCALE_INV;
 					float b = src [x, i + numLFValues];
-					dst [x,     offdst] = a - b;
-					dst [x, offdst + 1] = a + b;
-					offdst += 2;
+					dst [x,     offDst] = a - b;
+					dst [x, offDst + 1] = a + b;
+					offDst += 2;
 				}							
 				if ((length & 1) != 0) {
 					dst [x, length - 1] = src [x, numLFValues - 1] * SCALE_INV;
