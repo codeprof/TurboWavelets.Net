@@ -210,11 +210,14 @@ namespace TurboWaveletsTests
 					test[x,y] = 50.0f;
 				}
 			}
-			test[5,5] = 100.0f;
-			test[10,100] = - 10.0f;
 			float min;
 			float max;
 			wavelet.EnableParallel = false;
+			wavelet.getCoefficientsRange(test, out min, out max);
+			Assert.AreEqual(min, 50.0f);
+			Assert.AreEqual(max, 50.0f);
+			test[5,5] = 100.0f;
+			test[10,100] = - 10.0f;
 			wavelet.getCoefficientsRange(test, out min, out max);
 			Assert.AreEqual(min, 10.0f);
 			Assert.AreEqual(max, 100.0f);
@@ -222,6 +225,34 @@ namespace TurboWaveletsTests
 			wavelet.getCoefficientsRange(test, out min, out max);
 			Assert.AreEqual(min, 10.0f);
 			Assert.AreEqual(max, 100.0f);
+		}
+
+		[Test]
+		public void testCrop ()
+		{
+			Wavelet2D wavelet = new OrderWavelet2D (4, 4);
+			float[,] test = new float[4, 4];
+			for (int y = 0; y < 4; y++) {
+				for (int x = 0; x < 4; x++) {
+					test[x,y] = 50.0f;
+				}
+			}
+			float min;
+			float max;
+			test[1,0] = 10.0f;
+			test[0,1] = - 10.0f;
+			wavelet.CropCoefficients(test, 10.1f);
+			wavelet.EnableParallel = false;
+			wavelet.getCoefficientsRange(test, out min, out max);
+			Assert.AreEqual(0.0f, min);
+			Assert.AreEqual(50.0f, max);
+			test[1,0] = 10.0f;
+			test[0,1] = - 10.0f;
+			wavelet.CropCoefficients(test, 9.9f);
+			wavelet.EnableParallel = true;
+			wavelet.getCoefficientsRange(test, out min, out max);
+			Assert.AreEqual(10.0f, min);
+			Assert.AreEqual(50.0f, max);
 		}
 
 	}
