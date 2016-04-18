@@ -55,7 +55,7 @@ cd $GH_REPO_NAME
 ls
 git checkout gh-pages
 cp ../source/$GH_REPO_NAME/TurboWavelets/ TurboWavelets -rf
-cp ../source/$GH_REPO_NAME/Doxygen Doxygen
+cp ../source/$GH_REPO_NAME/Doxyfile Doxyfile
 cp 
 ls
 
