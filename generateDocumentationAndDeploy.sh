@@ -54,9 +54,6 @@ git clone https://git@$GH_REPO_REF
 cd $GH_REPO_NAME
 ls
 git checkout gh-pages
-cp ../source/$GH_REPO_NAME/TurboWavelets/ TurboWavelets -rf
-cp ../source/$GH_REPO_NAME/Doxyfile Doxyfile
-ls
 
 ##### Configure git.
 # Set the push default to simple i.e. push only the current branch.
@@ -71,6 +68,10 @@ git config user.email "travis@travis-ci.org"
 # can be safely cleaned, and it is sure that everything pushed later is the new
 # documentation.
 rm -rf *
+
+cp ../source/$GH_REPO_NAME/TurboWavelets/ TurboWavelets -rf
+cp ../source/$GH_REPO_NAME/Doxyfile Doxyfile
+ls
 
 # Need to create a .nojekyll file to allow filenames starting with an underscore
 # to be seen on the gh-pages site. Therefore creating an empty .nojekyll file.
