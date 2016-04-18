@@ -1,0 +1,552 @@
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d}{\section{\-Turbo\-Wavelets.\-Wavelet2\-D \-Class \-Reference}
+\label{class_turbo_wavelets_1_1_wavelet2_d}\index{\-Turbo\-Wavelets.\-Wavelet2\-D@{\-Turbo\-Wavelets.\-Wavelet2\-D}}
+}
+
+
+\-Inheritance diagram for \-Turbo\-Wavelets.\-Wavelet2\-D\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_turbo_wavelets_1_1_wavelet2_d__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+delegate bool \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_aec52fe74aa08e073119064ef4ac3fe93}{\-Progress\-Delegate} (float progress)
+\item 
+\hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a5156da3a3376121d64967dd8cd75725b}{\-Wavelet2\-D} (int \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_af5148ef1a46dd5694ccea13aa8f1b9e2}{min\-Size}, int \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a949bac2b4f540092cf7cc8916968cdc0}{allowed\-Min\-Size}, int \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_aaa4b3711957fe1798980e6891331a08d}{width}, int \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_afb2aa87b89b82f329357cbdc0cde18a8}{height})
+\begin{DoxyCompactList}\small\item\em \-Initalizes a two dimensional wavelet cascade transformation. \end{DoxyCompactList}\item 
+void \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a727e557f207cf861b10c38f1f1a91b52}{\-Flush\-Cache} ()
+\begin{DoxyCompactList}\small\item\em \-Frees all cached memory. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_ac647a989c2b66ca08a8b7e4196cbc547}{\-Transform\-Isotropic2\-D} (float\mbox{[},\mbox{]} src, \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_aec52fe74aa08e073119064ef4ac3fe93}{\-Progress\-Delegate} \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a41d9135f22a6b2cb661b2cc2ccb768ff}{progress\-Delegate}=null)
+\begin{DoxyCompactList}\small\item\em \-Perfroms a two dimensional isotropic wavelet transformation for an array. \-The result is copied back to the declared array. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_ac1644fb0d5f8a2ba8f265b445cba454b}{\-Backtransform\-Isotropic2\-D} (float\mbox{[},\mbox{]} src, \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_aec52fe74aa08e073119064ef4ac3fe93}{\-Progress\-Delegate} \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a41d9135f22a6b2cb661b2cc2ccb768ff}{progress\-Delegate}=null)
+\begin{DoxyCompactList}\small\item\em \-Perfroms a two dimensional isotropic wavelet transformation for an array. \-The result is copied back to the declared array. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a55e3f96cb79da6cc4621ccc1118a0d6f}{\-Scale\-Coefficients} (float\mbox{[},\mbox{]} src, float\mbox{[}$\,$\mbox{]} scale\-Factors, int grid\-Size, \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_aec52fe74aa08e073119064ef4ac3fe93}{\-Progress\-Delegate} \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a41d9135f22a6b2cb661b2cc2ccb768ff}{progress\-Delegate}=null)
+\begin{DoxyCompactList}\small\item\em \-Scales the n (length of the scale\-Factors array) greatest coefficinets (for a defined grid size) by the value declared in scale\-Factors. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_aa1e399d2ab5f85843185a2895bf7f7ad}{\-Crop\-Coefficients} (float\mbox{[},\mbox{]} src, int n, int grid\-Size, \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_aec52fe74aa08e073119064ef4ac3fe93}{\-Progress\-Delegate} \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a41d9135f22a6b2cb661b2cc2ccb768ff}{progress\-Delegate}=null)
+\begin{DoxyCompactList}\small\item\em \-Set all but the greatest n coefficient to zero in the defined grid size. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a9abbbf0cffd0d8dca5d78d6ad4dad399}{\-Crop\-Coefficients} (float\mbox{[},\mbox{]} src, float min\-Absolute\-Value, \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_aec52fe74aa08e073119064ef4ac3fe93}{\-Progress\-Delegate} \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a41d9135f22a6b2cb661b2cc2ccb768ff}{progress\-Delegate}=null)
+\begin{DoxyCompactList}\small\item\em \-Set all coefficient with an absolute value smaller then \char`\"{}min\-Absolute\-Value\char`\"{} to zero (deadzone) \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_ad25227565f3b5e5953e951ad5b375654}{get\-Coefficients\-Range} (float\mbox{[},\mbox{]} src, out float min, out float max, \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_aec52fe74aa08e073119064ef4ac3fe93}{\-Progress\-Delegate} \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a41d9135f22a6b2cb661b2cc2ccb768ff}{progress\-Delegate}=null)
+\begin{DoxyCompactList}\small\item\em get the minimum and maximum amplitude (absolute values) of all coefficient values \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+float\mbox{[},\mbox{]} \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a3dc6269869eb9c864f615e42d7822153}{get\-Temp\-Array} ()
+\item 
+virtual void \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_af0339475762d327f9d8ec019079cdc28}{\-Transform\-Row} (float\mbox{[},\mbox{]} src, float\mbox{[},\mbox{]} dst, int y, int length)
+\item 
+virtual void \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a6a6c334fb499d248b72215001ff5e9d4}{\-Transform\-Col} (float\mbox{[},\mbox{]} src, float\mbox{[},\mbox{]} dst, int x, int length)
+\item 
+virtual void \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_ac0b65a648f05436b54aa4d925812e1d5}{\-Inv\-Transform\-Row} (float\mbox{[},\mbox{]} src, float\mbox{[},\mbox{]} dst, int y, int length)
+\item 
+virtual void \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a9897e5e3f830ab7ea106e6bcf367fa07}{\-Inv\-Transform\-Col} (float\mbox{[},\mbox{]} src, float\mbox{[},\mbox{]} dst, int x, int length)
+\item 
+virtual void \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a95e430713dc5e27ebf7b254d1346777e}{\-Transform\-Rows} (float\mbox{[},\mbox{]} src, float\mbox{[},\mbox{]} dst, int w, int h)
+\item 
+virtual void \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a7aae90825e937ebb7822c2daa976d22a}{\-Transform\-Cols} (float\mbox{[},\mbox{]} src, float\mbox{[},\mbox{]} dst, int w, int h)
+\item 
+virtual void \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a9109cf50d757e7cda895ce0965134f76}{\-Inv\-Transform\-Rows} (float\mbox{[},\mbox{]} src, float\mbox{[},\mbox{]} dst, int w, int h)
+\item 
+virtual void \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a08ab1e9de65415589726214fa8b45ae2}{\-Inv\-Transform\-Cols} (float\mbox{[},\mbox{]} src, float\mbox{[},\mbox{]} dst, int w, int h)
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_aaa4b3711957fe1798980e6891331a08d}{width}
+\item 
+int \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_afb2aa87b89b82f329357cbdc0cde18a8}{height}
+\item 
+int \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_af5148ef1a46dd5694ccea13aa8f1b9e2}{min\-Size}
+\item 
+int \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a949bac2b4f540092cf7cc8916968cdc0}{allowed\-Min\-Size}
+\item 
+volatile bool \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a742fff705da3ff5a4b6d67e9a56637be}{enable\-Parallel} = true
+\item 
+volatile bool \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a2b5e1636f40bab5b6ee88f6e8bb1b653}{enable\-Cacheing} = false
+\item 
+volatile float\mbox{[},\mbox{]} \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a07949ac8b81d7afa1776e92f11b74834}{cached\-Array} = null
+\item 
+object \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_ad69614eed43d939d02cf11076f95adee}{thread\-Sync} = new object ()
+\item 
+\hyperlink{class_turbo_wavelets_1_1_wavelet2_d_aec52fe74aa08e073119064ef4ac3fe93}{\-Progress\-Delegate} \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a41d9135f22a6b2cb661b2cc2ccb768ff}{progress\-Delegate}
+\item 
+volatile bool \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_adb4984a01d9ab29c0056b18cbbcdef6f}{progress\-Abort}
+\item 
+object \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a08a8ff6259f0d66913715c00ed6e167b}{progress\-Sync} = null
+\item 
+long \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_ad2fad1f07e9e5c4901c0cdc925991e49}{progress\-Value}
+\item 
+long \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a7cbf7ce44310a48178f36101a4c03add}{progress\-Max}
+\end{DoxyCompactItemize}
+\subsection*{\-Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a30058c5e0e5bd95b29bc080efbcf9083}{\-Width}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em returns the width for the two dimensional wavelet transformation \end{DoxyCompactList}\item 
+int \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a277d0f89d73f839350c64a83ccd76ff6}{\-Height}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em returns the height for the two dimensional wavelet transformation \end{DoxyCompactList}\item 
+bool \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_abbd41e51d24f8a7912ae47dd364ed4fb}{\-Enable\-Caching}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em enables or disables caching of memory (disabled by default) \end{DoxyCompactList}\item 
+bool \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_abec21e54c6ab8cce0e02ef3ad64ae5af}{\-Enable\-Parallel}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em enables or disables parallel execution (enabled by default) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 35 of file \-Wavelet2\-D.\-cs.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_a5156da3a3376121d64967dd8cd75725b}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!\-Wavelet2\-D@{\-Wavelet2\-D}}
+\index{\-Wavelet2\-D@{\-Wavelet2\-D}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
+\subsubsection[{\-Wavelet2\-D}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Turbo\-Wavelets.\-Wavelet2\-D.\-Wavelet2\-D} (
+\begin{DoxyParamCaption}
+\item[{int}]{min\-Size, }
+\item[{int}]{allowed\-Min\-Size, }
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)}}\label{class_turbo_wavelets_1_1_wavelet2_d_a5156da3a3376121d64967dd8cd75725b}
+
+
+\-Initalizes a two dimensional wavelet cascade transformation. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em min\-Size} & minimum size up to a transformation is applied (can be set arbitary)\\
+\hline
+{\em allowed\-Min\-Size} & minimum size up to a transformation can be applied (implementation depended)\\
+\hline
+{\em width} & starting width of the transformation\\
+\hline
+{\em height} & starting height of the transformation\\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 105 of file \-Wavelet2\-D.\-cs.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_ac1644fb0d5f8a2ba8f265b445cba454b}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!\-Backtransform\-Isotropic2\-D@{\-Backtransform\-Isotropic2\-D}}
+\index{\-Backtransform\-Isotropic2\-D@{\-Backtransform\-Isotropic2\-D}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
+\subsubsection[{\-Backtransform\-Isotropic2\-D}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Turbo\-Wavelets.\-Wavelet2\-D.\-Backtransform\-Isotropic2\-D} (
+\begin{DoxyParamCaption}
+\item[{float}]{src\mbox{[},\mbox{]}, }
+\item[{{\bf \-Progress\-Delegate}}]{progress\-Delegate = {\ttfamily null}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_ac1644fb0d5f8a2ba8f265b445cba454b}
+
+
+\-Perfroms a two dimensional isotropic wavelet transformation for an array. \-The result is copied back to the declared array. 
+
+
+
+\-Definition at line 334 of file \-Wavelet2\-D.\-cs.
+
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_aa1e399d2ab5f85843185a2895bf7f7ad}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!\-Crop\-Coefficients@{\-Crop\-Coefficients}}
+\index{\-Crop\-Coefficients@{\-Crop\-Coefficients}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
+\subsubsection[{\-Crop\-Coefficients}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Turbo\-Wavelets.\-Wavelet2\-D.\-Crop\-Coefficients} (
+\begin{DoxyParamCaption}
+\item[{float}]{src\mbox{[},\mbox{]}, }
+\item[{int}]{n, }
+\item[{int}]{grid\-Size, }
+\item[{{\bf \-Progress\-Delegate}}]{progress\-Delegate = {\ttfamily null}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_aa1e399d2ab5f85843185a2895bf7f7ad}
+
+
+\-Set all but the greatest n coefficient to zero in the defined grid size. 
+
+
+
+\-Definition at line 493 of file \-Wavelet2\-D.\-cs.
+
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_a9abbbf0cffd0d8dca5d78d6ad4dad399}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!\-Crop\-Coefficients@{\-Crop\-Coefficients}}
+\index{\-Crop\-Coefficients@{\-Crop\-Coefficients}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
+\subsubsection[{\-Crop\-Coefficients}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Turbo\-Wavelets.\-Wavelet2\-D.\-Crop\-Coefficients} (
+\begin{DoxyParamCaption}
+\item[{float}]{src\mbox{[},\mbox{]}, }
+\item[{float}]{min\-Absolute\-Value, }
+\item[{{\bf \-Progress\-Delegate}}]{progress\-Delegate = {\ttfamily null}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_a9abbbf0cffd0d8dca5d78d6ad4dad399}
+
+
+\-Set all coefficient with an absolute value smaller then \char`\"{}min\-Absolute\-Value\char`\"{} to zero (deadzone) 
+
+
+
+\-Definition at line 503 of file \-Wavelet2\-D.\-cs.
+
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_a727e557f207cf861b10c38f1f1a91b52}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!\-Flush\-Cache@{\-Flush\-Cache}}
+\index{\-Flush\-Cache@{\-Flush\-Cache}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
+\subsubsection[{\-Flush\-Cache}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Turbo\-Wavelets.\-Wavelet2\-D.\-Flush\-Cache} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_turbo_wavelets_1_1_wavelet2_d_a727e557f207cf861b10c38f1f1a91b52}
+
+
+\-Frees all cached memory. 
+
+
+
+\-Definition at line 170 of file \-Wavelet2\-D.\-cs.
+
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_ad25227565f3b5e5953e951ad5b375654}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!get\-Coefficients\-Range@{get\-Coefficients\-Range}}
+\index{get\-Coefficients\-Range@{get\-Coefficients\-Range}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
+\subsubsection[{get\-Coefficients\-Range}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Turbo\-Wavelets.\-Wavelet2\-D.\-get\-Coefficients\-Range} (
+\begin{DoxyParamCaption}
+\item[{float}]{src\mbox{[},\mbox{]}, }
+\item[{out float}]{min, }
+\item[{out float}]{max, }
+\item[{{\bf \-Progress\-Delegate}}]{progress\-Delegate = {\ttfamily null}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_ad25227565f3b5e5953e951ad5b375654}
+
+
+get the minimum and maximum amplitude (absolute values) of all coefficient values 
+
+
+
+\-Definition at line 540 of file \-Wavelet2\-D.\-cs.
+
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_a3dc6269869eb9c864f615e42d7822153}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!get\-Temp\-Array@{get\-Temp\-Array}}
+\index{get\-Temp\-Array@{get\-Temp\-Array}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
+\subsubsection[{get\-Temp\-Array}]{\setlength{\rightskip}{0pt plus 5cm}float \mbox{[},\mbox{]} {\bf \-Turbo\-Wavelets.\-Wavelet2\-D.\-get\-Temp\-Array} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_a3dc6269869eb9c864f615e42d7822153}
+
+
+\-Definition at line 177 of file \-Wavelet2\-D.\-cs.
+
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_a9897e5e3f830ab7ea106e6bcf367fa07}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!\-Inv\-Transform\-Col@{\-Inv\-Transform\-Col}}
+\index{\-Inv\-Transform\-Col@{\-Inv\-Transform\-Col}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
+\subsubsection[{\-Inv\-Transform\-Col}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Turbo\-Wavelets.\-Wavelet2\-D.\-Inv\-Transform\-Col} (
+\begin{DoxyParamCaption}
+\item[{float}]{src\mbox{[},\mbox{]}, }
+\item[{float}]{dst\mbox{[},\mbox{]}, }
+\item[{int}]{x, }
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_a9897e5e3f830ab7ea106e6bcf367fa07}
+
+
+\-Reimplemented in \hyperlink{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_a2f52053d7f8f2da84b0ca6964481bd06}{\-Turbo\-Wavelets.\-Biorthogonal53\-Wavelet2\-D}, \hyperlink{class_turbo_wavelets_1_1_haar_wavelet2_d_a780d0ea14dea6a587c8ebf21f19670d0}{\-Turbo\-Wavelets.\-Haar\-Wavelet2\-D}, and \hyperlink{class_turbo_wavelets_1_1_order_wavelet2_d_ae7e013e9ee79f1d0932de6fa2e1854de}{\-Turbo\-Wavelets.\-Order\-Wavelet2\-D}.
+
+
+
+\-Definition at line 209 of file \-Wavelet2\-D.\-cs.
+
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_a08ab1e9de65415589726214fa8b45ae2}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!\-Inv\-Transform\-Cols@{\-Inv\-Transform\-Cols}}
+\index{\-Inv\-Transform\-Cols@{\-Inv\-Transform\-Cols}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
+\subsubsection[{\-Inv\-Transform\-Cols}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Turbo\-Wavelets.\-Wavelet2\-D.\-Inv\-Transform\-Cols} (
+\begin{DoxyParamCaption}
+\item[{float}]{src\mbox{[},\mbox{]}, }
+\item[{float}]{dst\mbox{[},\mbox{]}, }
+\item[{int}]{w, }
+\item[{int}]{h}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_a08ab1e9de65415589726214fa8b45ae2}
+
+
+\-Definition at line 274 of file \-Wavelet2\-D.\-cs.
+
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_ac0b65a648f05436b54aa4d925812e1d5}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!\-Inv\-Transform\-Row@{\-Inv\-Transform\-Row}}
+\index{\-Inv\-Transform\-Row@{\-Inv\-Transform\-Row}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
+\subsubsection[{\-Inv\-Transform\-Row}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Turbo\-Wavelets.\-Wavelet2\-D.\-Inv\-Transform\-Row} (
+\begin{DoxyParamCaption}
+\item[{float}]{src\mbox{[},\mbox{]}, }
+\item[{float}]{dst\mbox{[},\mbox{]}, }
+\item[{int}]{y, }
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_ac0b65a648f05436b54aa4d925812e1d5}
+
+
+\-Reimplemented in \hyperlink{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_a74b2789642a900fcfab4f47e023329ed}{\-Turbo\-Wavelets.\-Biorthogonal53\-Wavelet2\-D}, \hyperlink{class_turbo_wavelets_1_1_haar_wavelet2_d_a870ff202a886a34c54013b867e56f6e6}{\-Turbo\-Wavelets.\-Haar\-Wavelet2\-D}, and \hyperlink{class_turbo_wavelets_1_1_order_wavelet2_d_a67a15c5e174f2bf762d153a976f86b36}{\-Turbo\-Wavelets.\-Order\-Wavelet2\-D}.
+
+
+
+\-Definition at line 204 of file \-Wavelet2\-D.\-cs.
+
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_a9109cf50d757e7cda895ce0965134f76}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!\-Inv\-Transform\-Rows@{\-Inv\-Transform\-Rows}}
+\index{\-Inv\-Transform\-Rows@{\-Inv\-Transform\-Rows}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
+\subsubsection[{\-Inv\-Transform\-Rows}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Turbo\-Wavelets.\-Wavelet2\-D.\-Inv\-Transform\-Rows} (
+\begin{DoxyParamCaption}
+\item[{float}]{src\mbox{[},\mbox{]}, }
+\item[{float}]{dst\mbox{[},\mbox{]}, }
+\item[{int}]{w, }
+\item[{int}]{h}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_a9109cf50d757e7cda895ce0965134f76}
+
+
+\-Definition at line 254 of file \-Wavelet2\-D.\-cs.
+
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_aec52fe74aa08e073119064ef4ac3fe93}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!\-Progress\-Delegate@{\-Progress\-Delegate}}
+\index{\-Progress\-Delegate@{\-Progress\-Delegate}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
+\subsubsection[{\-Progress\-Delegate}]{\setlength{\rightskip}{0pt plus 5cm}delegate bool {\bf \-Turbo\-Wavelets.\-Wavelet2\-D.\-Progress\-Delegate} (
+\begin{DoxyParamCaption}
+\item[{float}]{progress}
+\end{DoxyParamCaption}
+)}}\label{class_turbo_wavelets_1_1_wavelet2_d_aec52fe74aa08e073119064ef4ac3fe93}
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_a55e3f96cb79da6cc4621ccc1118a0d6f}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!\-Scale\-Coefficients@{\-Scale\-Coefficients}}
+\index{\-Scale\-Coefficients@{\-Scale\-Coefficients}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
+\subsubsection[{\-Scale\-Coefficients}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Turbo\-Wavelets.\-Wavelet2\-D.\-Scale\-Coefficients} (
+\begin{DoxyParamCaption}
+\item[{float}]{src\mbox{[},\mbox{]}, }
+\item[{float\mbox{[}$\,$\mbox{]}}]{scale\-Factors, }
+\item[{int}]{grid\-Size, }
+\item[{{\bf \-Progress\-Delegate}}]{progress\-Delegate = {\ttfamily null}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_a55e3f96cb79da6cc4621ccc1118a0d6f}
+
+
+\-Scales the n (length of the scale\-Factors array) greatest coefficinets (for a defined grid size) by the value declared in scale\-Factors. 
+
+
+
+\-Definition at line 477 of file \-Wavelet2\-D.\-cs.
+
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_a6a6c334fb499d248b72215001ff5e9d4}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!\-Transform\-Col@{\-Transform\-Col}}
+\index{\-Transform\-Col@{\-Transform\-Col}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
+\subsubsection[{\-Transform\-Col}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Turbo\-Wavelets.\-Wavelet2\-D.\-Transform\-Col} (
+\begin{DoxyParamCaption}
+\item[{float}]{src\mbox{[},\mbox{]}, }
+\item[{float}]{dst\mbox{[},\mbox{]}, }
+\item[{int}]{x, }
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_a6a6c334fb499d248b72215001ff5e9d4}
+
+
+\-Reimplemented in \hyperlink{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_aa93cd7f9ac110e04678a5313336fb73f}{\-Turbo\-Wavelets.\-Biorthogonal53\-Wavelet2\-D}, \hyperlink{class_turbo_wavelets_1_1_haar_wavelet2_d_a5695f7a35bbbae2f64d5c92212cd1f83}{\-Turbo\-Wavelets.\-Haar\-Wavelet2\-D}, and \hyperlink{class_turbo_wavelets_1_1_order_wavelet2_d_a94c72dd8852fe900901bcffd12c37272}{\-Turbo\-Wavelets.\-Order\-Wavelet2\-D}.
+
+
+
+\-Definition at line 199 of file \-Wavelet2\-D.\-cs.
+
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_a7aae90825e937ebb7822c2daa976d22a}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!\-Transform\-Cols@{\-Transform\-Cols}}
+\index{\-Transform\-Cols@{\-Transform\-Cols}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
+\subsubsection[{\-Transform\-Cols}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Turbo\-Wavelets.\-Wavelet2\-D.\-Transform\-Cols} (
+\begin{DoxyParamCaption}
+\item[{float}]{src\mbox{[},\mbox{]}, }
+\item[{float}]{dst\mbox{[},\mbox{]}, }
+\item[{int}]{w, }
+\item[{int}]{h}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_a7aae90825e937ebb7822c2daa976d22a}
+
+
+\-Definition at line 234 of file \-Wavelet2\-D.\-cs.
+
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_ac647a989c2b66ca08a8b7e4196cbc547}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!\-Transform\-Isotropic2\-D@{\-Transform\-Isotropic2\-D}}
+\index{\-Transform\-Isotropic2\-D@{\-Transform\-Isotropic2\-D}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
+\subsubsection[{\-Transform\-Isotropic2\-D}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Turbo\-Wavelets.\-Wavelet2\-D.\-Transform\-Isotropic2\-D} (
+\begin{DoxyParamCaption}
+\item[{float}]{src\mbox{[},\mbox{]}, }
+\item[{{\bf \-Progress\-Delegate}}]{progress\-Delegate = {\ttfamily null}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_ac647a989c2b66ca08a8b7e4196cbc547}
+
+
+\-Perfroms a two dimensional isotropic wavelet transformation for an array. \-The result is copied back to the declared array. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em src} & two dimensional float array to perform the the wavelet transformation on\\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 311 of file \-Wavelet2\-D.\-cs.
+
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_af0339475762d327f9d8ec019079cdc28}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!\-Transform\-Row@{\-Transform\-Row}}
+\index{\-Transform\-Row@{\-Transform\-Row}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
+\subsubsection[{\-Transform\-Row}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Turbo\-Wavelets.\-Wavelet2\-D.\-Transform\-Row} (
+\begin{DoxyParamCaption}
+\item[{float}]{src\mbox{[},\mbox{]}, }
+\item[{float}]{dst\mbox{[},\mbox{]}, }
+\item[{int}]{y, }
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_af0339475762d327f9d8ec019079cdc28}
+
+
+\-Reimplemented in \hyperlink{class_turbo_wavelets_1_1_haar_wavelet2_d_a55f6abb99bf5d87017e715b63f64cc15}{\-Turbo\-Wavelets.\-Haar\-Wavelet2\-D}, \hyperlink{class_turbo_wavelets_1_1_order_wavelet2_d_af45baa14b0d867362b989db7d41f14dc}{\-Turbo\-Wavelets.\-Order\-Wavelet2\-D}, and \hyperlink{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_acec9bb2730e6dee78c8f6d5c8d79a523}{\-Turbo\-Wavelets.\-Biorthogonal53\-Wavelet2\-D}.
+
+
+
+\-Definition at line 194 of file \-Wavelet2\-D.\-cs.
+
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_a95e430713dc5e27ebf7b254d1346777e}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!\-Transform\-Rows@{\-Transform\-Rows}}
+\index{\-Transform\-Rows@{\-Transform\-Rows}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
+\subsubsection[{\-Transform\-Rows}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Turbo\-Wavelets.\-Wavelet2\-D.\-Transform\-Rows} (
+\begin{DoxyParamCaption}
+\item[{float}]{src\mbox{[},\mbox{]}, }
+\item[{float}]{dst\mbox{[},\mbox{]}, }
+\item[{int}]{w, }
+\item[{int}]{h}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_a95e430713dc5e27ebf7b254d1346777e}
+
+
+\-Definition at line 214 of file \-Wavelet2\-D.\-cs.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_a949bac2b4f540092cf7cc8916968cdc0}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!allowed\-Min\-Size@{allowed\-Min\-Size}}
+\index{allowed\-Min\-Size@{allowed\-Min\-Size}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
+\subsubsection[{allowed\-Min\-Size}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Turbo\-Wavelets.\-Wavelet2\-D.\-allowed\-Min\-Size}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_a949bac2b4f540092cf7cc8916968cdc0}
+
+
+\-Definition at line 42 of file \-Wavelet2\-D.\-cs.
+
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_a07949ac8b81d7afa1776e92f11b74834}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!cached\-Array@{cached\-Array}}
+\index{cached\-Array@{cached\-Array}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
+\subsubsection[{cached\-Array}]{\setlength{\rightskip}{0pt plus 5cm}volatile float \mbox{[},\mbox{]} {\bf \-Turbo\-Wavelets.\-Wavelet2\-D.\-cached\-Array} = null\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_a07949ac8b81d7afa1776e92f11b74834}
+
+
+\-Definition at line 45 of file \-Wavelet2\-D.\-cs.
+
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_a2b5e1636f40bab5b6ee88f6e8bb1b653}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!enable\-Cacheing@{enable\-Cacheing}}
+\index{enable\-Cacheing@{enable\-Cacheing}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
+\subsubsection[{enable\-Cacheing}]{\setlength{\rightskip}{0pt plus 5cm}volatile bool {\bf \-Turbo\-Wavelets.\-Wavelet2\-D.\-enable\-Cacheing} = false\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_a2b5e1636f40bab5b6ee88f6e8bb1b653}
+
+
+\-Definition at line 44 of file \-Wavelet2\-D.\-cs.
+
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_a742fff705da3ff5a4b6d67e9a56637be}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!enable\-Parallel@{enable\-Parallel}}
+\index{enable\-Parallel@{enable\-Parallel}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
+\subsubsection[{enable\-Parallel}]{\setlength{\rightskip}{0pt plus 5cm}volatile bool {\bf \-Turbo\-Wavelets.\-Wavelet2\-D.\-enable\-Parallel} = true\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_a742fff705da3ff5a4b6d67e9a56637be}
+
+
+\-Definition at line 43 of file \-Wavelet2\-D.\-cs.
+
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_afb2aa87b89b82f329357cbdc0cde18a8}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!height@{height}}
+\index{height@{height}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
+\subsubsection[{height}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Turbo\-Wavelets.\-Wavelet2\-D.\-height}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_afb2aa87b89b82f329357cbdc0cde18a8}
+
+
+\-Definition at line 40 of file \-Wavelet2\-D.\-cs.
+
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_af5148ef1a46dd5694ccea13aa8f1b9e2}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!min\-Size@{min\-Size}}
+\index{min\-Size@{min\-Size}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
+\subsubsection[{min\-Size}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Turbo\-Wavelets.\-Wavelet2\-D.\-min\-Size}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_af5148ef1a46dd5694ccea13aa8f1b9e2}
+
+
+\-Definition at line 41 of file \-Wavelet2\-D.\-cs.
+
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_adb4984a01d9ab29c0056b18cbbcdef6f}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!progress\-Abort@{progress\-Abort}}
+\index{progress\-Abort@{progress\-Abort}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
+\subsubsection[{progress\-Abort}]{\setlength{\rightskip}{0pt plus 5cm}volatile bool {\bf \-Turbo\-Wavelets.\-Wavelet2\-D.\-progress\-Abort}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_adb4984a01d9ab29c0056b18cbbcdef6f}
+
+
+\-Definition at line 51 of file \-Wavelet2\-D.\-cs.
+
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_a41d9135f22a6b2cb661b2cc2ccb768ff}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!progress\-Delegate@{progress\-Delegate}}
+\index{progress\-Delegate@{progress\-Delegate}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
+\subsubsection[{progress\-Delegate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Progress\-Delegate} {\bf \-Turbo\-Wavelets.\-Wavelet2\-D.\-progress\-Delegate}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_a41d9135f22a6b2cb661b2cc2ccb768ff}
+
+
+\-Definition at line 50 of file \-Wavelet2\-D.\-cs.
+
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_a7cbf7ce44310a48178f36101a4c03add}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!progress\-Max@{progress\-Max}}
+\index{progress\-Max@{progress\-Max}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
+\subsubsection[{progress\-Max}]{\setlength{\rightskip}{0pt plus 5cm}long {\bf \-Turbo\-Wavelets.\-Wavelet2\-D.\-progress\-Max}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_a7cbf7ce44310a48178f36101a4c03add}
+
+
+\-Definition at line 54 of file \-Wavelet2\-D.\-cs.
+
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_a08a8ff6259f0d66913715c00ed6e167b}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!progress\-Sync@{progress\-Sync}}
+\index{progress\-Sync@{progress\-Sync}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
+\subsubsection[{progress\-Sync}]{\setlength{\rightskip}{0pt plus 5cm}object {\bf \-Turbo\-Wavelets.\-Wavelet2\-D.\-progress\-Sync} = null\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_a08a8ff6259f0d66913715c00ed6e167b}
+
+
+\-Definition at line 52 of file \-Wavelet2\-D.\-cs.
+
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_ad2fad1f07e9e5c4901c0cdc925991e49}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!progress\-Value@{progress\-Value}}
+\index{progress\-Value@{progress\-Value}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
+\subsubsection[{progress\-Value}]{\setlength{\rightskip}{0pt plus 5cm}long {\bf \-Turbo\-Wavelets.\-Wavelet2\-D.\-progress\-Value}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_ad2fad1f07e9e5c4901c0cdc925991e49}
+
+
+\-Definition at line 53 of file \-Wavelet2\-D.\-cs.
+
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_ad69614eed43d939d02cf11076f95adee}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!thread\-Sync@{thread\-Sync}}
+\index{thread\-Sync@{thread\-Sync}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
+\subsubsection[{thread\-Sync}]{\setlength{\rightskip}{0pt plus 5cm}object {\bf \-Turbo\-Wavelets.\-Wavelet2\-D.\-thread\-Sync} = new object ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_ad69614eed43d939d02cf11076f95adee}
+
+
+\-Definition at line 49 of file \-Wavelet2\-D.\-cs.
+
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_aaa4b3711957fe1798980e6891331a08d}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!width@{width}}
+\index{width@{width}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
+\subsubsection[{width}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Turbo\-Wavelets.\-Wavelet2\-D.\-width}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_aaa4b3711957fe1798980e6891331a08d}
+
+
+\-Definition at line 39 of file \-Wavelet2\-D.\-cs.
+
+
+
+\subsection{\-Property \-Documentation}
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_abbd41e51d24f8a7912ae47dd364ed4fb}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!\-Enable\-Caching@{\-Enable\-Caching}}
+\index{\-Enable\-Caching@{\-Enable\-Caching}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
+\subsubsection[{\-Enable\-Caching}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Turbo\-Wavelets.\-Wavelet2\-D.\-Enable\-Caching}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_abbd41e51d24f8a7912ae47dd364ed4fb}
+
+
+enables or disables caching of memory (disabled by default) 
+
+
+
+\-Definition at line 143 of file \-Wavelet2\-D.\-cs.
+
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_abec21e54c6ab8cce0e02ef3ad64ae5af}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!\-Enable\-Parallel@{\-Enable\-Parallel}}
+\index{\-Enable\-Parallel@{\-Enable\-Parallel}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
+\subsubsection[{\-Enable\-Parallel}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Turbo\-Wavelets.\-Wavelet2\-D.\-Enable\-Parallel}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_abec21e54c6ab8cce0e02ef3ad64ae5af}
+
+
+enables or disables parallel execution (enabled by default) 
+
+
+
+\-Definition at line 158 of file \-Wavelet2\-D.\-cs.
+
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_a277d0f89d73f839350c64a83ccd76ff6}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!\-Height@{\-Height}}
+\index{\-Height@{\-Height}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
+\subsubsection[{\-Height}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Turbo\-Wavelets.\-Wavelet2\-D.\-Height}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_a277d0f89d73f839350c64a83ccd76ff6}
+
+
+returns the height for the two dimensional wavelet transformation 
+
+
+
+\-Definition at line 134 of file \-Wavelet2\-D.\-cs.
+
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_a30058c5e0e5bd95b29bc080efbcf9083}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!\-Width@{\-Width}}
+\index{\-Width@{\-Width}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
+\subsubsection[{\-Width}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Turbo\-Wavelets.\-Wavelet2\-D.\-Width}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_a30058c5e0e5bd95b29bc080efbcf9083}
+
+
+returns the width for the two dimensional wavelet transformation 
+
+
+
+\-Definition at line 125 of file \-Wavelet2\-D.\-cs.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\-Turbo\-Wavelets/\hyperlink{_wavelet2_d_8cs}{\-Wavelet2\-D.\-cs}\end{DoxyCompactItemize}
