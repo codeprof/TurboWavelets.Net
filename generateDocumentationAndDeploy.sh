@@ -54,8 +54,8 @@ git clone https://git@$GH_REPO_REF
 cd $GH_REPO_NAME
 ls
 git checkout gh-pages
-cp ../source/TurboWavelets/ TurboWavelets -rf
-cp ../source/Doxygen Doxygen
+cp ../source/$GH_REPO_REF/TurboWavelets/ TurboWavelets -rf
+cp ../source/$GH_REPO_REF/Doxygen Doxygen
 cp 
 ls
 
