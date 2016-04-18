@@ -49,7 +49,7 @@ cd source
 git clone https://git@$GH_REPO_REF
 cd $GH_REPO_NAME
 ls
-cd ..
+cd ../..
 git clone https://git@$GH_REPO_REF
 cd $GH_REPO_NAME
 ls
