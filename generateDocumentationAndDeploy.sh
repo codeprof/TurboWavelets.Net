@@ -51,8 +51,12 @@ cd $GH_REPO_NAME
 ls
 cd ..
 git clone https://git@$GH_REPO_REF
+cd $GH_REPO_NAME
 ls
 git checkout gh-pages
+cp ../source/TurboWavelets/ TurboWavelets -rf
+cp ../source/Doxygen Doxygen
+cp 
 ls
 
 ##### Configure git.
@@ -79,7 +83,8 @@ echo "" > .nojekyll
 ##### Generate the Doxygen code documentation and log the output.          #####
 echo 'Generating Doxygen code documentation...'
 # Redirect both stderr and stdout to the log file AND the console.
-doxygen ../source/$GH_REPO_REF/$DOXYFILE 2>&1 | tee doxygen.log
+doxygen $DOXYFILE 2>&1 | tee doxygen.log
+rm TurboWavelets -rf
 
 ################################################################################
 ##### Upload the documentation to the gh-pages branch of the repository.   #####
