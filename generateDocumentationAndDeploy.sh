@@ -44,8 +44,13 @@ mkdir code_docs
 cd code_docs
 
 # Get the current gh-pages branch
+mkdir source
+cd source
 git clone https://git@$GH_REPO_REF
 cd $GH_REPO_NAME
+ls
+cd ..
+git clone https://git@$GH_REPO_REF
 ls
 git checkout gh-pages
 ls
@@ -74,7 +79,7 @@ echo "" > .nojekyll
 ##### Generate the Doxygen code documentation and log the output.          #####
 echo 'Generating Doxygen code documentation...'
 # Redirect both stderr and stdout to the log file AND the console.
-doxygen $DOXYFILE 2>&1 | tee doxygen.log
+doxygen ../source/$GH_REPO_REF/$DOXYFILE 2>&1 | tee doxygen.log
 
 ################################################################################
 ##### Upload the documentation to the gh-pages branch of the repository.   #####
