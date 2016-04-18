@@ -2,7 +2,7 @@
 ################################################################################
 # Title         : generateDocumentationAndDeploy.sh
 # Date created  : 2016/02/22
-# Notes         :
+# Notes         : Edited by Stefan Moebius for TurboWavelets.Net project
 __AUTHOR__="Jeroen de Bruijn"
 # Preconditions:
 # - Packages doxygen doxygen-doc doxygen-latex doxygen-gui graphviz
@@ -54,8 +54,8 @@ git clone https://git@$GH_REPO_REF
 cd $GH_REPO_NAME
 ls
 git checkout gh-pages
-cp ../source/$GH_REPO_REF/TurboWavelets/ TurboWavelets -rf
-cp ../source/$GH_REPO_REF/Doxygen Doxygen
+cp ../source/$GH_REPO_NAME/TurboWavelets/ TurboWavelets -rf
+cp ../source/$GH_REPO_NAME/Doxygen Doxygen
 cp 
 ls
 
