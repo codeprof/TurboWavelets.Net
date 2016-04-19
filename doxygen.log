@@ -70,6 +70,7 @@ Par/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/Tur
 /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs:34: warning: Compound TurboWavelets::OrderWavelet2D is not documented.
 /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs:34: warning: Compound TurboWavelets::Biorthogonal53Wavelet2D is not documented.
 /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs:36: warning: Compound TurboWavelets::Wavelet2D is not documented.
+Project logo '/home/benutzer/Downloads/turbo3/TurboWavelets.Net/turbowavelets-logo.svg' specified by PROJECT_LOGO does not exist!
 /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet1DStatic.cs:35: warning: The following parameters of TurboWavelets::Biorthogonal53Wavelet1DStatic::wavelet53_1d(float[] src, float[] dst, int length) are not documented:
   parameter 'length'
 /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet1DStatic.cs:94: warning: The following parameters of TurboWavelets::Biorthogonal53Wavelet1DStatic::wavelet53_1d_inverse(float[] src, float[] dst, int length) are not documented:
