@@ -223,25 +223,25 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="29">
+      <node id="21">
         <label>TurboWavelets.OrderWavelet2D</label>
         <link refid="class_turbo_wavelets_1_1_order_wavelet2_d"/>
-        <childnode refid="30" relation="public-inheritance">
+        <childnode refid="22" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="30">
+      <node id="22">
         <label>Wavelet2D</label>
         <link refid="class_turbo_wavelets_1_1_wavelet2_d"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="31">
+      <node id="23">
         <label>TurboWavelets.OrderWavelet2D</label>
         <link refid="class_turbo_wavelets_1_1_order_wavelet2_d"/>
-        <childnode refid="32" relation="public-inheritance">
+        <childnode refid="24" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="32">
+      <node id="24">
         <label>Wavelet2D</label>
         <link refid="class_turbo_wavelets_1_1_wavelet2_d"/>
       </node>

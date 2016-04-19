@@ -14,9 +14,6 @@
 \subsection*{\-Public \-Member \-Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_aec52fe74aa08e073119064ef4ac3fe93}{delegate bool {\bfseries \-Progress\-Delegate} (float progress)}\label{class_turbo_wavelets_1_1_wavelet2_d_aec52fe74aa08e073119064ef4ac3fe93}
-
-\item 
 \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a5156da3a3376121d64967dd8cd75725b}{\-Wavelet2\-D} (int min\-Size, int allowed\-Min\-Size, int width, int height)
 \begin{DoxyCompactList}\small\item\em \-Initalizes a two dimensional wavelet cascade transformation. \end{DoxyCompactList}\item 
 void \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a727e557f207cf861b10c38f1f1a91b52}{\-Flush\-Cache} ()
@@ -33,78 +30,6 @@ virtual void \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a9abbbf0cffd0d8dca5d
 \begin{DoxyCompactList}\small\item\em \-Set all coefficient with an absolute value smaller then \char`\"{}min\-Absolute\-Value\char`\"{} to zero (deadzone) \end{DoxyCompactList}\item 
 virtual void \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_ad25227565f3b5e5953e951ad5b375654}{get\-Coefficients\-Range} (float\mbox{[},\mbox{]} src, out float min, out float max, \-Progress\-Delegate progress\-Delegate=null)
 \begin{DoxyCompactList}\small\item\em get the minimum and maximum amplitude (absolute values) of all coefficient values \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{\-Protected \-Member \-Functions}
-\begin{DoxyCompactItemize}
-\item 
-\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_a3dc6269869eb9c864f615e42d7822153}{float\mbox{[},\mbox{]} {\bfseries get\-Temp\-Array} ()}\label{class_turbo_wavelets_1_1_wavelet2_d_a3dc6269869eb9c864f615e42d7822153}
-
-\item 
-\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_af0339475762d327f9d8ec019079cdc28}{virtual void {\bfseries \-Transform\-Row} (float\mbox{[},\mbox{]} src, float\mbox{[},\mbox{]} dst, int y, int length)}\label{class_turbo_wavelets_1_1_wavelet2_d_af0339475762d327f9d8ec019079cdc28}
-
-\item 
-\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_a6a6c334fb499d248b72215001ff5e9d4}{virtual void {\bfseries \-Transform\-Col} (float\mbox{[},\mbox{]} src, float\mbox{[},\mbox{]} dst, int x, int length)}\label{class_turbo_wavelets_1_1_wavelet2_d_a6a6c334fb499d248b72215001ff5e9d4}
-
-\item 
-\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_ac0b65a648f05436b54aa4d925812e1d5}{virtual void {\bfseries \-Inv\-Transform\-Row} (float\mbox{[},\mbox{]} src, float\mbox{[},\mbox{]} dst, int y, int length)}\label{class_turbo_wavelets_1_1_wavelet2_d_ac0b65a648f05436b54aa4d925812e1d5}
-
-\item 
-\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_a9897e5e3f830ab7ea106e6bcf367fa07}{virtual void {\bfseries \-Inv\-Transform\-Col} (float\mbox{[},\mbox{]} src, float\mbox{[},\mbox{]} dst, int x, int length)}\label{class_turbo_wavelets_1_1_wavelet2_d_a9897e5e3f830ab7ea106e6bcf367fa07}
-
-\item 
-\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_a95e430713dc5e27ebf7b254d1346777e}{virtual void {\bfseries \-Transform\-Rows} (float\mbox{[},\mbox{]} src, float\mbox{[},\mbox{]} dst, int w, int h)}\label{class_turbo_wavelets_1_1_wavelet2_d_a95e430713dc5e27ebf7b254d1346777e}
-
-\item 
-\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_a7aae90825e937ebb7822c2daa976d22a}{virtual void {\bfseries \-Transform\-Cols} (float\mbox{[},\mbox{]} src, float\mbox{[},\mbox{]} dst, int w, int h)}\label{class_turbo_wavelets_1_1_wavelet2_d_a7aae90825e937ebb7822c2daa976d22a}
-
-\item 
-\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_a9109cf50d757e7cda895ce0965134f76}{virtual void {\bfseries \-Inv\-Transform\-Rows} (float\mbox{[},\mbox{]} src, float\mbox{[},\mbox{]} dst, int w, int h)}\label{class_turbo_wavelets_1_1_wavelet2_d_a9109cf50d757e7cda895ce0965134f76}
-
-\item 
-\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_a08ab1e9de65415589726214fa8b45ae2}{virtual void {\bfseries \-Inv\-Transform\-Cols} (float\mbox{[},\mbox{]} src, float\mbox{[},\mbox{]} dst, int w, int h)}\label{class_turbo_wavelets_1_1_wavelet2_d_a08ab1e9de65415589726214fa8b45ae2}
-
-\end{DoxyCompactItemize}
-\subsection*{\-Protected \-Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_aaa4b3711957fe1798980e6891331a08d}{int {\bfseries width}}\label{class_turbo_wavelets_1_1_wavelet2_d_aaa4b3711957fe1798980e6891331a08d}
-
-\item 
-\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_afb2aa87b89b82f329357cbdc0cde18a8}{int {\bfseries height}}\label{class_turbo_wavelets_1_1_wavelet2_d_afb2aa87b89b82f329357cbdc0cde18a8}
-
-\item 
-\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_af5148ef1a46dd5694ccea13aa8f1b9e2}{int {\bfseries min\-Size}}\label{class_turbo_wavelets_1_1_wavelet2_d_af5148ef1a46dd5694ccea13aa8f1b9e2}
-
-\item 
-\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_a949bac2b4f540092cf7cc8916968cdc0}{int {\bfseries allowed\-Min\-Size}}\label{class_turbo_wavelets_1_1_wavelet2_d_a949bac2b4f540092cf7cc8916968cdc0}
-
-\item 
-\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_a742fff705da3ff5a4b6d67e9a56637be}{volatile bool {\bfseries enable\-Parallel} = true}\label{class_turbo_wavelets_1_1_wavelet2_d_a742fff705da3ff5a4b6d67e9a56637be}
-
-\item 
-\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_a2b5e1636f40bab5b6ee88f6e8bb1b653}{volatile bool {\bfseries enable\-Cacheing} = false}\label{class_turbo_wavelets_1_1_wavelet2_d_a2b5e1636f40bab5b6ee88f6e8bb1b653}
-
-\item 
-\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_a07949ac8b81d7afa1776e92f11b74834}{volatile float\mbox{[},\mbox{]} {\bfseries cached\-Array} = null}\label{class_turbo_wavelets_1_1_wavelet2_d_a07949ac8b81d7afa1776e92f11b74834}
-
-\item 
-\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_ad69614eed43d939d02cf11076f95adee}{object {\bfseries thread\-Sync} = new object ()}\label{class_turbo_wavelets_1_1_wavelet2_d_ad69614eed43d939d02cf11076f95adee}
-
-\item 
-\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_a41d9135f22a6b2cb661b2cc2ccb768ff}{\-Progress\-Delegate {\bfseries progress\-Delegate}}\label{class_turbo_wavelets_1_1_wavelet2_d_a41d9135f22a6b2cb661b2cc2ccb768ff}
-
-\item 
-\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_adb4984a01d9ab29c0056b18cbbcdef6f}{volatile bool {\bfseries progress\-Abort}}\label{class_turbo_wavelets_1_1_wavelet2_d_adb4984a01d9ab29c0056b18cbbcdef6f}
-
-\item 
-\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_a08a8ff6259f0d66913715c00ed6e167b}{object {\bfseries progress\-Sync} = null}\label{class_turbo_wavelets_1_1_wavelet2_d_a08a8ff6259f0d66913715c00ed6e167b}
-
-\item 
-\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_ad2fad1f07e9e5c4901c0cdc925991e49}{long {\bfseries progress\-Value}}\label{class_turbo_wavelets_1_1_wavelet2_d_ad2fad1f07e9e5c4901c0cdc925991e49}
-
-\item 
-\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_a7cbf7ce44310a48178f36101a4c03add}{long {\bfseries progress\-Max}}\label{class_turbo_wavelets_1_1_wavelet2_d_a7cbf7ce44310a48178f36101a4c03add}
-
-\end{DoxyCompactItemize}
 \subsection*{\-Properties}
 \begin{DoxyCompactItemize}
 \item 

@@ -99,9 +99,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a>  </div>
+<a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">TurboWavelets.Biorthogonal53Wavelet2D Class Reference</div>  </div>
 </div><!--header-->
@@ -113,13 +111,6 @@ Inheritance diagram for TurboWavelets.Biorthogonal53Wavelet2D:</div>
 <map name="_turbo_wavelets_8_biorthogonal53_wavelet2_d_inherit__map" id="_turbo_wavelets_8_biorthogonal53_wavelet2_d_inherit__map">
 <area shape="rect" id="node2" href="class_turbo_wavelets_1_1_wavelet2_d.html" title="Wavelet2D" alt="" coords="95,5,180,35"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
-<div class="dynheader">
-Collaboration diagram for TurboWavelets.Biorthogonal53Wavelet2D:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d__coll__graph.png" border="0" usemap="#_turbo_wavelets_8_biorthogonal53_wavelet2_d_coll__map" alt="Collaboration graph"/></div>
-<map name="_turbo_wavelets_8_biorthogonal53_wavelet2_d_coll__map" id="_turbo_wavelets_8_biorthogonal53_wavelet2_d_coll__map">
-<area shape="rect" id="node2" href="class_turbo_wavelets_1_1_wavelet2_d.html" title="Wavelet2D" alt="" coords="95,5,180,35"/></map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 
 <p><a href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d-members.html">List of all members.</a></p>
 <table class="memberdecls">
@@ -129,32 +120,6 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">A fast implementation of a two-dimensional biorthogonal 5/3 wavelet transformation for arbitary lenghts (works for all sizes, not just power of 2) using the lifting scheme. The implementation takes advantage of multiple CPU cores.  <a href="#a8783eb5b8e032cd8cf75c5a1bb80bba0"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#a2d9bf97c2211d5859b3a53835bea7888">Biorthogonal53Wavelet2D</a> (int width, int height, int minSize)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Initalizes a two dimensional wavelet transformation.  <a href="#a2d9bf97c2211d5859b3a53835bea7888"></a><br/></td></tr>
-<tr><td colspan="2"><h2><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acec9bb2730e6dee78c8f6d5c8d79a523"></a><!-- doxytag: member="TurboWavelets::Biorthogonal53Wavelet2D::TransformRow" ref="acec9bb2730e6dee78c8f6d5c8d79a523" args="(float[,] src, float[,] dst, int y, int length)" -->
-override void&#160;</td><td class="memItemRight" valign="bottom"><b>TransformRow</b> (float[,] src, float[,] dst, int y, int length)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa93cd7f9ac110e04678a5313336fb73f"></a><!-- doxytag: member="TurboWavelets::Biorthogonal53Wavelet2D::TransformCol" ref="aa93cd7f9ac110e04678a5313336fb73f" args="(float[,] src, float[,] dst, int x, int length)" -->
-override void&#160;</td><td class="memItemRight" valign="bottom"><b>TransformCol</b> (float[,] src, float[,] dst, int x, int length)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a74b2789642a900fcfab4f47e023329ed"></a><!-- doxytag: member="TurboWavelets::Biorthogonal53Wavelet2D::InvTransformRow" ref="a74b2789642a900fcfab4f47e023329ed" args="(float[,] src, float[,] dst, int y, int length)" -->
-override void&#160;</td><td class="memItemRight" valign="bottom"><b>InvTransformRow</b> (float[,] src, float[,] dst, int y, int length)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2f52053d7f8f2da84b0ca6964481bd06"></a><!-- doxytag: member="TurboWavelets::Biorthogonal53Wavelet2D::InvTransformCol" ref="a2f52053d7f8f2da84b0ca6964481bd06" args="(float[,] src, float[,] dst, int x, int length)" -->
-override void&#160;</td><td class="memItemRight" valign="bottom"><b>InvTransformCol</b> (float[,] src, float[,] dst, int x, int length)</td></tr>
-<tr><td colspan="2"><h2><a name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa6981c16a1765d4664747274676d5eba"></a><!-- doxytag: member="TurboWavelets::Biorthogonal53Wavelet2D::MINSIZE" ref="aa6981c16a1765d4664747274676d5eba" args="" -->
-const int&#160;</td><td class="memItemRight" valign="bottom"><b>MINSIZE</b> = 3</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af0ccd844200200f57839dea6823daaa6"></a><!-- doxytag: member="TurboWavelets::Biorthogonal53Wavelet2D::SCALE" ref="af0ccd844200200f57839dea6823daaa6" args="" -->
-const float&#160;</td><td class="memItemRight" valign="bottom"><b>SCALE</b> = 2.0f</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a035bc7a8559c9e4eb476c6a1c1d8cc9a"></a><!-- doxytag: member="TurboWavelets::Biorthogonal53Wavelet2D::SCALE_INV" ref="a035bc7a8559c9e4eb476c6a1c1d8cc9a" args="" -->
-const float&#160;</td><td class="memItemRight" valign="bottom"><b>SCALE_INV</b> = 0.5f</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab01bdb5e655a9f02b6ed6337ad88e4e4"></a><!-- doxytag: member="TurboWavelets::Biorthogonal53Wavelet2D::MEAN" ref="ab01bdb5e655a9f02b6ed6337ad88e4e4" args="" -->
-const float&#160;</td><td class="memItemRight" valign="bottom"><b>MEAN</b> = 0.5f</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a087508fa3e1f6e94477310a061d09784"></a><!-- doxytag: member="TurboWavelets::Biorthogonal53Wavelet2D::MEAN_INV" ref="a087508fa3e1f6e94477310a061d09784" args="" -->
-const float&#160;</td><td class="memItemRight" valign="bottom"><b>MEAN_INV</b> = 2.0f</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac608d0d31583d5c06c6dd7ab41880cb6"></a><!-- doxytag: member="TurboWavelets::Biorthogonal53Wavelet2D::SMOOTH" ref="ac608d0d31583d5c06c6dd7ab41880cb6" args="" -->
-const float&#160;</td><td class="memItemRight" valign="bottom"><b>SMOOTH</b> = 0.25f</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeb90da1672a5e2fd88863bf227ee6db9"></a><!-- doxytag: member="TurboWavelets::Biorthogonal53Wavelet2D::SMOOTH_INV" ref="aeb90da1672a5e2fd88863bf227ee6db9" args="" -->
-const float&#160;</td><td class="memItemRight" valign="bottom"><b>SMOOTH_INV</b> = 4.0f</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
@@ -256,7 +221,7 @@ const float&#160;</td><td class="memItemRight" valign="bottom"><b>SMOOTH_INV</b>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 19 2016 05:47:47 for TurboWavelets.Net by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 19 2016 05:58:24 for TurboWavelets.Net by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

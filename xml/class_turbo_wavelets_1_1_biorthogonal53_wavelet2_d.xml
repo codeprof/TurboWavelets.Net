@@ -301,26 +301,26 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="22">
+      <node id="14">
         <label>Wavelet2D</label>
         <link refid="class_turbo_wavelets_1_1_wavelet2_d"/>
       </node>
-      <node id="21">
+      <node id="13">
         <label>TurboWavelets.Biorthogonal53Wavelet2D</label>
         <link refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d"/>
-        <childnode refid="22" relation="public-inheritance">
+        <childnode refid="14" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="24">
+      <node id="16">
         <label>Wavelet2D</label>
         <link refid="class_turbo_wavelets_1_1_wavelet2_d"/>
       </node>
-      <node id="23">
+      <node id="15">
         <label>TurboWavelets.Biorthogonal53Wavelet2D</label>
         <link refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d"/>
-        <childnode refid="24" relation="public-inheritance">
+        <childnode refid="16" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

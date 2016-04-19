@@ -295,25 +295,25 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="25">
+      <node id="17">
         <label>TurboWavelets.HaarWavelet2D</label>
         <link refid="class_turbo_wavelets_1_1_haar_wavelet2_d"/>
-        <childnode refid="26" relation="public-inheritance">
+        <childnode refid="18" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="26">
+      <node id="18">
         <label>Wavelet2D</label>
         <link refid="class_turbo_wavelets_1_1_wavelet2_d"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="27">
+      <node id="19">
         <label>TurboWavelets.HaarWavelet2D</label>
         <link refid="class_turbo_wavelets_1_1_haar_wavelet2_d"/>
-        <childnode refid="28" relation="public-inheritance">
+        <childnode refid="20" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="28">
+      <node id="20">
         <label>Wavelet2D</label>
         <link refid="class_turbo_wavelets_1_1_wavelet2_d"/>
       </node>

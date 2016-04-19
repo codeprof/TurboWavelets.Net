@@ -922,26 +922,26 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="35">
+      <node id="27">
         <label>TurboWavelets.HaarWavelet2D</label>
         <link refid="class_turbo_wavelets_1_1_haar_wavelet2_d"/>
-        <childnode refid="33" relation="public-inheritance">
+        <childnode refid="25" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="36">
+      <node id="28">
         <label>TurboWavelets.OrderWavelet2D</label>
         <link refid="class_turbo_wavelets_1_1_order_wavelet2_d"/>
-        <childnode refid="33" relation="public-inheritance">
+        <childnode refid="25" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="33">
+      <node id="25">
         <label>TurboWavelets.Wavelet2D</label>
         <link refid="class_turbo_wavelets_1_1_wavelet2_d"/>
       </node>
-      <node id="34">
+      <node id="26">
         <label>TurboWavelets.Biorthogonal53Wavelet2D</label>
         <link refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d"/>
-        <childnode refid="33" relation="public-inheritance">
+        <childnode refid="25" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>

@@ -100,8 +100,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#properties">Properties</a>  </div>
   <div class="headertitle">
 <div class="title">TurboWavelets.Wavelet2D Class Reference</div>  </div>
@@ -119,8 +117,6 @@ Inheritance diagram for TurboWavelets.Wavelet2D:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aec52fe74aa08e073119064ef4ac3fe93"></a><!-- doxytag: member="TurboWavelets::Wavelet2D::ProgressDelegate" ref="aec52fe74aa08e073119064ef4ac3fe93" args="(float progress)" -->
-delegate bool&#160;</td><td class="memItemRight" valign="bottom"><b>ProgressDelegate</b> (float progress)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#a5156da3a3376121d64967dd8cd75725b">Wavelet2D</a> (int minSize, int allowedMinSize, int width, int height)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Initalizes a two dimensional wavelet cascade transformation.  <a href="#a5156da3a3376121d64967dd8cd75725b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#a727e557f207cf861b10c38f1f1a91b52">FlushCache</a> ()</td></tr>
@@ -137,54 +133,6 @@ delegate bool&#160;</td><td class="memItemRight" valign="bottom"><b>ProgressDele
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set all coefficient with an absolute value smaller then "minAbsoluteValue" to zero (deadzone)  <a href="#a9abbbf0cffd0d8dca5d78d6ad4dad399"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#ad25227565f3b5e5953e951ad5b375654">getCoefficientsRange</a> (float[,] src, out float min, out float max, ProgressDelegate progressDelegate=null)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">get the minimum and maximum amplitude (absolute values) of all coefficient values  <a href="#ad25227565f3b5e5953e951ad5b375654"></a><br/></td></tr>
-<tr><td colspan="2"><h2><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3dc6269869eb9c864f615e42d7822153"></a><!-- doxytag: member="TurboWavelets::Wavelet2D::getTempArray" ref="a3dc6269869eb9c864f615e42d7822153" args="()" -->
-float[,]&#160;</td><td class="memItemRight" valign="bottom"><b>getTempArray</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af0339475762d327f9d8ec019079cdc28"></a><!-- doxytag: member="TurboWavelets::Wavelet2D::TransformRow" ref="af0339475762d327f9d8ec019079cdc28" args="(float[,] src, float[,] dst, int y, int length)" -->
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>TransformRow</b> (float[,] src, float[,] dst, int y, int length)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6a6c334fb499d248b72215001ff5e9d4"></a><!-- doxytag: member="TurboWavelets::Wavelet2D::TransformCol" ref="a6a6c334fb499d248b72215001ff5e9d4" args="(float[,] src, float[,] dst, int x, int length)" -->
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>TransformCol</b> (float[,] src, float[,] dst, int x, int length)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac0b65a648f05436b54aa4d925812e1d5"></a><!-- doxytag: member="TurboWavelets::Wavelet2D::InvTransformRow" ref="ac0b65a648f05436b54aa4d925812e1d5" args="(float[,] src, float[,] dst, int y, int length)" -->
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>InvTransformRow</b> (float[,] src, float[,] dst, int y, int length)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9897e5e3f830ab7ea106e6bcf367fa07"></a><!-- doxytag: member="TurboWavelets::Wavelet2D::InvTransformCol" ref="a9897e5e3f830ab7ea106e6bcf367fa07" args="(float[,] src, float[,] dst, int x, int length)" -->
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>InvTransformCol</b> (float[,] src, float[,] dst, int x, int length)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a95e430713dc5e27ebf7b254d1346777e"></a><!-- doxytag: member="TurboWavelets::Wavelet2D::TransformRows" ref="a95e430713dc5e27ebf7b254d1346777e" args="(float[,] src, float[,] dst, int w, int h)" -->
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>TransformRows</b> (float[,] src, float[,] dst, int w, int h)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7aae90825e937ebb7822c2daa976d22a"></a><!-- doxytag: member="TurboWavelets::Wavelet2D::TransformCols" ref="a7aae90825e937ebb7822c2daa976d22a" args="(float[,] src, float[,] dst, int w, int h)" -->
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>TransformCols</b> (float[,] src, float[,] dst, int w, int h)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9109cf50d757e7cda895ce0965134f76"></a><!-- doxytag: member="TurboWavelets::Wavelet2D::InvTransformRows" ref="a9109cf50d757e7cda895ce0965134f76" args="(float[,] src, float[,] dst, int w, int h)" -->
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>InvTransformRows</b> (float[,] src, float[,] dst, int w, int h)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a08ab1e9de65415589726214fa8b45ae2"></a><!-- doxytag: member="TurboWavelets::Wavelet2D::InvTransformCols" ref="a08ab1e9de65415589726214fa8b45ae2" args="(float[,] src, float[,] dst, int w, int h)" -->
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>InvTransformCols</b> (float[,] src, float[,] dst, int w, int h)</td></tr>
-<tr><td colspan="2"><h2><a name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa4b3711957fe1798980e6891331a08d"></a><!-- doxytag: member="TurboWavelets::Wavelet2D::width" ref="aaa4b3711957fe1798980e6891331a08d" args="" -->
-int&#160;</td><td class="memItemRight" valign="bottom"><b>width</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afb2aa87b89b82f329357cbdc0cde18a8"></a><!-- doxytag: member="TurboWavelets::Wavelet2D::height" ref="afb2aa87b89b82f329357cbdc0cde18a8" args="" -->
-int&#160;</td><td class="memItemRight" valign="bottom"><b>height</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af5148ef1a46dd5694ccea13aa8f1b9e2"></a><!-- doxytag: member="TurboWavelets::Wavelet2D::minSize" ref="af5148ef1a46dd5694ccea13aa8f1b9e2" args="" -->
-int&#160;</td><td class="memItemRight" valign="bottom"><b>minSize</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a949bac2b4f540092cf7cc8916968cdc0"></a><!-- doxytag: member="TurboWavelets::Wavelet2D::allowedMinSize" ref="a949bac2b4f540092cf7cc8916968cdc0" args="" -->
-int&#160;</td><td class="memItemRight" valign="bottom"><b>allowedMinSize</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a742fff705da3ff5a4b6d67e9a56637be"></a><!-- doxytag: member="TurboWavelets::Wavelet2D::enableParallel" ref="a742fff705da3ff5a4b6d67e9a56637be" args="" -->
-volatile bool&#160;</td><td class="memItemRight" valign="bottom"><b>enableParallel</b> = true</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2b5e1636f40bab5b6ee88f6e8bb1b653"></a><!-- doxytag: member="TurboWavelets::Wavelet2D::enableCacheing" ref="a2b5e1636f40bab5b6ee88f6e8bb1b653" args="" -->
-volatile bool&#160;</td><td class="memItemRight" valign="bottom"><b>enableCacheing</b> = false</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a07949ac8b81d7afa1776e92f11b74834"></a><!-- doxytag: member="TurboWavelets::Wavelet2D::cachedArray" ref="a07949ac8b81d7afa1776e92f11b74834" args="" -->
-volatile float[,]&#160;</td><td class="memItemRight" valign="bottom"><b>cachedArray</b> = null</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad69614eed43d939d02cf11076f95adee"></a><!-- doxytag: member="TurboWavelets::Wavelet2D::threadSync" ref="ad69614eed43d939d02cf11076f95adee" args="" -->
-object&#160;</td><td class="memItemRight" valign="bottom"><b>threadSync</b> = new object ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a41d9135f22a6b2cb661b2cc2ccb768ff"></a><!-- doxytag: member="TurboWavelets::Wavelet2D::progressDelegate" ref="a41d9135f22a6b2cb661b2cc2ccb768ff" args="" -->
-ProgressDelegate&#160;</td><td class="memItemRight" valign="bottom"><b>progressDelegate</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adb4984a01d9ab29c0056b18cbbcdef6f"></a><!-- doxytag: member="TurboWavelets::Wavelet2D::progressAbort" ref="adb4984a01d9ab29c0056b18cbbcdef6f" args="" -->
-volatile bool&#160;</td><td class="memItemRight" valign="bottom"><b>progressAbort</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a08a8ff6259f0d66913715c00ed6e167b"></a><!-- doxytag: member="TurboWavelets::Wavelet2D::progressSync" ref="a08a8ff6259f0d66913715c00ed6e167b" args="" -->
-object&#160;</td><td class="memItemRight" valign="bottom"><b>progressSync</b> = null</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad2fad1f07e9e5c4901c0cdc925991e49"></a><!-- doxytag: member="TurboWavelets::Wavelet2D::progressValue" ref="ad2fad1f07e9e5c4901c0cdc925991e49" args="" -->
-long&#160;</td><td class="memItemRight" valign="bottom"><b>progressValue</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7cbf7ce44310a48178f36101a4c03add"></a><!-- doxytag: member="TurboWavelets::Wavelet2D::progressMax" ref="a7cbf7ce44310a48178f36101a4c03add" args="" -->
-long&#160;</td><td class="memItemRight" valign="bottom"><b>progressMax</b></td></tr>
 <tr><td colspan="2"><h2><a name="properties"></a>
 Properties</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#a30058c5e0e5bd95b29bc080efbcf9083">Width</a><code> [get]</code></td></tr>
@@ -597,7 +545,7 @@ Properties</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 19 2016 05:47:47 for TurboWavelets.Net by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 19 2016 05:58:24 for TurboWavelets.Net by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>
