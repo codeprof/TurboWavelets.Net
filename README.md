@@ -1,4 +1,4 @@
-# TurboWavelets.Net<img src="https://raw.githubusercontent.com/codeprof/TurboWavelets.Net/master/turbowavelets-logo.png" align="right" width="120px">
+# TurboWavelets.Net<img src="https://raw.githubusercontent.com/codeprof/TurboWavelets.Net/master/turbowavelets-logo-mini.png" align="right" width="120px">
 <a href="https://ci.appveyor.com/project/codeprof/turbowavelets-net"><img src="https://ci.appveyor.com/api/projects/status/5j9nc0pqnd7aibbh?svg=true"></a>
 &nbsp;
 <a href="http://codeprof.github.io/TurboWavelets.Net/html/index.html"><img src="https://github.com/codeprof/TurboWavelets.Net/blob/gh-pages/html/doxygen.png"></a>
