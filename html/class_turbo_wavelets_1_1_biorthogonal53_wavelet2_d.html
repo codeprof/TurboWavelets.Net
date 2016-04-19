@@ -30,7 +30,7 @@
    <div id="projectname">TurboWavelets.Net
    
    </div>
-   
+   <div id="projectbrief">Compact C# Implementation for very fast and flexible wavelet transformations</div>
   </td>
   
   
@@ -81,7 +81,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Properties</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Properties</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -125,25 +125,36 @@ Collaboration diagram for TurboWavelets.Biorthogonal53Wavelet2D:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#a8783eb5b8e032cd8cf75c5a1bb80bba0">Biorthogonal53Wavelet2D</a> (int <a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#aaa4b3711957fe1798980e6891331a08d">width</a>, int <a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#afb2aa87b89b82f329357cbdc0cde18a8">height</a>)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#a8783eb5b8e032cd8cf75c5a1bb80bba0">Biorthogonal53Wavelet2D</a> (int width, int height)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">A fast implementation of a two-dimensional biorthogonal 5/3 wavelet transformation for arbitary lenghts (works for all sizes, not just power of 2) using the lifting scheme. The implementation takes advantage of multiple CPU cores.  <a href="#a8783eb5b8e032cd8cf75c5a1bb80bba0"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#a2d9bf97c2211d5859b3a53835bea7888">Biorthogonal53Wavelet2D</a> (int <a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#aaa4b3711957fe1798980e6891331a08d">width</a>, int <a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#afb2aa87b89b82f329357cbdc0cde18a8">height</a>, int <a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#af5148ef1a46dd5694ccea13aa8f1b9e2">minSize</a>)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#a2d9bf97c2211d5859b3a53835bea7888">Biorthogonal53Wavelet2D</a> (int width, int height, int minSize)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Initalizes a two dimensional wavelet transformation.  <a href="#a2d9bf97c2211d5859b3a53835bea7888"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#acec9bb2730e6dee78c8f6d5c8d79a523">TransformRow</a> (float[,] src, float[,] dst, int y, int length)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#aa93cd7f9ac110e04678a5313336fb73f">TransformCol</a> (float[,] src, float[,] dst, int x, int length)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#a74b2789642a900fcfab4f47e023329ed">InvTransformRow</a> (float[,] src, float[,] dst, int y, int length)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#a2f52053d7f8f2da84b0ca6964481bd06">InvTransformCol</a> (float[,] src, float[,] dst, int x, int length)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acec9bb2730e6dee78c8f6d5c8d79a523"></a><!-- doxytag: member="TurboWavelets::Biorthogonal53Wavelet2D::TransformRow" ref="acec9bb2730e6dee78c8f6d5c8d79a523" args="(float[,] src, float[,] dst, int y, int length)" -->
+override void&#160;</td><td class="memItemRight" valign="bottom"><b>TransformRow</b> (float[,] src, float[,] dst, int y, int length)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa93cd7f9ac110e04678a5313336fb73f"></a><!-- doxytag: member="TurboWavelets::Biorthogonal53Wavelet2D::TransformCol" ref="aa93cd7f9ac110e04678a5313336fb73f" args="(float[,] src, float[,] dst, int x, int length)" -->
+override void&#160;</td><td class="memItemRight" valign="bottom"><b>TransformCol</b> (float[,] src, float[,] dst, int x, int length)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a74b2789642a900fcfab4f47e023329ed"></a><!-- doxytag: member="TurboWavelets::Biorthogonal53Wavelet2D::InvTransformRow" ref="a74b2789642a900fcfab4f47e023329ed" args="(float[,] src, float[,] dst, int y, int length)" -->
+override void&#160;</td><td class="memItemRight" valign="bottom"><b>InvTransformRow</b> (float[,] src, float[,] dst, int y, int length)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2f52053d7f8f2da84b0ca6964481bd06"></a><!-- doxytag: member="TurboWavelets::Biorthogonal53Wavelet2D::InvTransformCol" ref="a2f52053d7f8f2da84b0ca6964481bd06" args="(float[,] src, float[,] dst, int x, int length)" -->
+override void&#160;</td><td class="memItemRight" valign="bottom"><b>InvTransformCol</b> (float[,] src, float[,] dst, int x, int length)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#aa6981c16a1765d4664747274676d5eba">MINSIZE</a> = 3</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#af0ccd844200200f57839dea6823daaa6">SCALE</a> = 2.0f</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#a035bc7a8559c9e4eb476c6a1c1d8cc9a">SCALE_INV</a> = 0.5f</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#ab01bdb5e655a9f02b6ed6337ad88e4e4">MEAN</a> = 0.5f</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#a087508fa3e1f6e94477310a061d09784">MEAN_INV</a> = 2.0f</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#ac608d0d31583d5c06c6dd7ab41880cb6">SMOOTH</a> = 0.25f</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#aeb90da1672a5e2fd88863bf227ee6db9">SMOOTH_INV</a> = 4.0f</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa6981c16a1765d4664747274676d5eba"></a><!-- doxytag: member="TurboWavelets::Biorthogonal53Wavelet2D::MINSIZE" ref="aa6981c16a1765d4664747274676d5eba" args="" -->
+const int&#160;</td><td class="memItemRight" valign="bottom"><b>MINSIZE</b> = 3</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af0ccd844200200f57839dea6823daaa6"></a><!-- doxytag: member="TurboWavelets::Biorthogonal53Wavelet2D::SCALE" ref="af0ccd844200200f57839dea6823daaa6" args="" -->
+const float&#160;</td><td class="memItemRight" valign="bottom"><b>SCALE</b> = 2.0f</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a035bc7a8559c9e4eb476c6a1c1d8cc9a"></a><!-- doxytag: member="TurboWavelets::Biorthogonal53Wavelet2D::SCALE_INV" ref="a035bc7a8559c9e4eb476c6a1c1d8cc9a" args="" -->
+const float&#160;</td><td class="memItemRight" valign="bottom"><b>SCALE_INV</b> = 0.5f</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab01bdb5e655a9f02b6ed6337ad88e4e4"></a><!-- doxytag: member="TurboWavelets::Biorthogonal53Wavelet2D::MEAN" ref="ab01bdb5e655a9f02b6ed6337ad88e4e4" args="" -->
+const float&#160;</td><td class="memItemRight" valign="bottom"><b>MEAN</b> = 0.5f</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a087508fa3e1f6e94477310a061d09784"></a><!-- doxytag: member="TurboWavelets::Biorthogonal53Wavelet2D::MEAN_INV" ref="a087508fa3e1f6e94477310a061d09784" args="" -->
+const float&#160;</td><td class="memItemRight" valign="bottom"><b>MEAN_INV</b> = 2.0f</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac608d0d31583d5c06c6dd7ab41880cb6"></a><!-- doxytag: member="TurboWavelets::Biorthogonal53Wavelet2D::SMOOTH" ref="ac608d0d31583d5c06c6dd7ab41880cb6" args="" -->
+const float&#160;</td><td class="memItemRight" valign="bottom"><b>SMOOTH</b> = 0.25f</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeb90da1672a5e2fd88863bf227ee6db9"></a><!-- doxytag: member="TurboWavelets::Biorthogonal53Wavelet2D::SMOOTH_INV" ref="aeb90da1672a5e2fd88863bf227ee6db9" args="" -->
+const float&#160;</td><td class="memItemRight" valign="bottom"><b>SMOOTH_INV</b> = 4.0f</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
@@ -224,285 +235,6 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a2f52053d7f8f2da84b0ca6964481bd06"></a><!-- doxytag: member="TurboWavelets::Biorthogonal53Wavelet2D::InvTransformCol" ref="a2f52053d7f8f2da84b0ca6964481bd06" args="(float[,] src, float[,] dst, int x, int length)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">override void <a class="el" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#a2f52053d7f8f2da84b0ca6964481bd06">TurboWavelets.Biorthogonal53Wavelet2D.InvTransformCol</a> </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>src</em>[,], </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>dst</em>[,], </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>length</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td><code> [protected, virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Reimplemented from <a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#a9897e5e3f830ab7ea106e6bcf367fa07">TurboWavelets.Wavelet2D</a>.</p>
-
-<p>Definition at line <a class="el" href="_biorthogonal53_wavelet2_d_8cs_source.html#l00225">225</a> of file <a class="el" href="_biorthogonal53_wavelet2_d_8cs_source.html">Biorthogonal53Wavelet2D.cs</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a74b2789642a900fcfab4f47e023329ed"></a><!-- doxytag: member="TurboWavelets::Biorthogonal53Wavelet2D::InvTransformRow" ref="a74b2789642a900fcfab4f47e023329ed" args="(float[,] src, float[,] dst, int y, int length)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">override void <a class="el" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#a74b2789642a900fcfab4f47e023329ed">TurboWavelets.Biorthogonal53Wavelet2D.InvTransformRow</a> </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>src</em>[,], </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>dst</em>[,], </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>length</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td><code> [protected, virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Reimplemented from <a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#ac0b65a648f05436b54aa4d925812e1d5">TurboWavelets.Wavelet2D</a>.</p>
-
-<p>Definition at line <a class="el" href="_biorthogonal53_wavelet2_d_8cs_source.html#l00165">165</a> of file <a class="el" href="_biorthogonal53_wavelet2_d_8cs_source.html">Biorthogonal53Wavelet2D.cs</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aa93cd7f9ac110e04678a5313336fb73f"></a><!-- doxytag: member="TurboWavelets::Biorthogonal53Wavelet2D::TransformCol" ref="aa93cd7f9ac110e04678a5313336fb73f" args="(float[,] src, float[,] dst, int x, int length)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">override void <a class="el" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#aa93cd7f9ac110e04678a5313336fb73f">TurboWavelets.Biorthogonal53Wavelet2D.TransformCol</a> </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>src</em>[,], </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>dst</em>[,], </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>length</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td><code> [protected, virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Reimplemented from <a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#a6a6c334fb499d248b72215001ff5e9d4">TurboWavelets.Wavelet2D</a>.</p>
-
-<p>Definition at line <a class="el" href="_biorthogonal53_wavelet2_d_8cs_source.html#l00114">114</a> of file <a class="el" href="_biorthogonal53_wavelet2_d_8cs_source.html">Biorthogonal53Wavelet2D.cs</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="acec9bb2730e6dee78c8f6d5c8d79a523"></a><!-- doxytag: member="TurboWavelets::Biorthogonal53Wavelet2D::TransformRow" ref="acec9bb2730e6dee78c8f6d5c8d79a523" args="(float[,] src, float[,] dst, int y, int length)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">override void <a class="el" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#acec9bb2730e6dee78c8f6d5c8d79a523">TurboWavelets.Biorthogonal53Wavelet2D.TransformRow</a> </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>src</em>[,], </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>dst</em>[,], </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>length</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td><code> [protected, virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Reimplemented from <a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#af0339475762d327f9d8ec019079cdc28">TurboWavelets.Wavelet2D</a>.</p>
-
-<p>Definition at line <a class="el" href="_biorthogonal53_wavelet2_d_8cs_source.html#l00062">62</a> of file <a class="el" href="_biorthogonal53_wavelet2_d_8cs_source.html">Biorthogonal53Wavelet2D.cs</a>.</p>
-
-</div>
-</div>
-<hr/><h2>Member Data Documentation</h2>
-<a class="anchor" id="ab01bdb5e655a9f02b6ed6337ad88e4e4"></a><!-- doxytag: member="TurboWavelets::Biorthogonal53Wavelet2D::MEAN" ref="ab01bdb5e655a9f02b6ed6337ad88e4e4" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const float <a class="el" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#ab01bdb5e655a9f02b6ed6337ad88e4e4">TurboWavelets.Biorthogonal53Wavelet2D.MEAN</a> = 0.5f<code> [protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Definition at line <a class="el" href="_biorthogonal53_wavelet2_d_8cs_source.html#l00038">38</a> of file <a class="el" href="_biorthogonal53_wavelet2_d_8cs_source.html">Biorthogonal53Wavelet2D.cs</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a087508fa3e1f6e94477310a061d09784"></a><!-- doxytag: member="TurboWavelets::Biorthogonal53Wavelet2D::MEAN_INV" ref="a087508fa3e1f6e94477310a061d09784" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const float <a class="el" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#a087508fa3e1f6e94477310a061d09784">TurboWavelets.Biorthogonal53Wavelet2D.MEAN_INV</a> = 2.0f<code> [protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Definition at line <a class="el" href="_biorthogonal53_wavelet2_d_8cs_source.html#l00039">39</a> of file <a class="el" href="_biorthogonal53_wavelet2_d_8cs_source.html">Biorthogonal53Wavelet2D.cs</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aa6981c16a1765d4664747274676d5eba"></a><!-- doxytag: member="TurboWavelets::Biorthogonal53Wavelet2D::MINSIZE" ref="aa6981c16a1765d4664747274676d5eba" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int <a class="el" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#aa6981c16a1765d4664747274676d5eba">TurboWavelets.Biorthogonal53Wavelet2D.MINSIZE</a> = 3<code> [protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Definition at line <a class="el" href="_biorthogonal53_wavelet2_d_8cs_source.html#l00035">35</a> of file <a class="el" href="_biorthogonal53_wavelet2_d_8cs_source.html">Biorthogonal53Wavelet2D.cs</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="af0ccd844200200f57839dea6823daaa6"></a><!-- doxytag: member="TurboWavelets::Biorthogonal53Wavelet2D::SCALE" ref="af0ccd844200200f57839dea6823daaa6" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const float <a class="el" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#af0ccd844200200f57839dea6823daaa6">TurboWavelets.Biorthogonal53Wavelet2D.SCALE</a> = 2.0f<code> [protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Definition at line <a class="el" href="_biorthogonal53_wavelet2_d_8cs_source.html#l00036">36</a> of file <a class="el" href="_biorthogonal53_wavelet2_d_8cs_source.html">Biorthogonal53Wavelet2D.cs</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a035bc7a8559c9e4eb476c6a1c1d8cc9a"></a><!-- doxytag: member="TurboWavelets::Biorthogonal53Wavelet2D::SCALE_INV" ref="a035bc7a8559c9e4eb476c6a1c1d8cc9a" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const float <a class="el" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#a035bc7a8559c9e4eb476c6a1c1d8cc9a">TurboWavelets.Biorthogonal53Wavelet2D.SCALE_INV</a> = 0.5f<code> [protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Definition at line <a class="el" href="_biorthogonal53_wavelet2_d_8cs_source.html#l00037">37</a> of file <a class="el" href="_biorthogonal53_wavelet2_d_8cs_source.html">Biorthogonal53Wavelet2D.cs</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ac608d0d31583d5c06c6dd7ab41880cb6"></a><!-- doxytag: member="TurboWavelets::Biorthogonal53Wavelet2D::SMOOTH" ref="ac608d0d31583d5c06c6dd7ab41880cb6" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const float <a class="el" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#ac608d0d31583d5c06c6dd7ab41880cb6">TurboWavelets.Biorthogonal53Wavelet2D.SMOOTH</a> = 0.25f<code> [protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Definition at line <a class="el" href="_biorthogonal53_wavelet2_d_8cs_source.html#l00040">40</a> of file <a class="el" href="_biorthogonal53_wavelet2_d_8cs_source.html">Biorthogonal53Wavelet2D.cs</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aeb90da1672a5e2fd88863bf227ee6db9"></a><!-- doxytag: member="TurboWavelets::Biorthogonal53Wavelet2D::SMOOTH_INV" ref="aeb90da1672a5e2fd88863bf227ee6db9" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const float <a class="el" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#aeb90da1672a5e2fd88863bf227ee6db9">TurboWavelets.Biorthogonal53Wavelet2D.SMOOTH_INV</a> = 4.0f<code> [protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Definition at line <a class="el" href="_biorthogonal53_wavelet2_d_8cs_source.html#l00041">41</a> of file <a class="el" href="_biorthogonal53_wavelet2_d_8cs_source.html">Biorthogonal53Wavelet2D.cs</a>.</p>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>TurboWavelets/<a class="el" href="_biorthogonal53_wavelet2_d_8cs_source.html">Biorthogonal53Wavelet2D.cs</a></li>
 </ul>
@@ -512,7 +244,7 @@ Protected Attributes</h2></td></tr>
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Properties</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Properties</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -524,7 +256,7 @@ Protected Attributes</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 18 2016 07:26:28 for TurboWavelets.Net by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 19 2016 05:47:47 for TurboWavelets.Net by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

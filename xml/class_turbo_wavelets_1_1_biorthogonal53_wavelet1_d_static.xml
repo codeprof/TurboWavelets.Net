@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="class_turbo_wavelets_1_1_biorthogonal53_wavelet1_d_static" kind="class" prot="public">
+    <compoundname>TurboWavelets::Biorthogonal53Wavelet1DStatic</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_turbo_wavelets_1_1_biorthogonal53_wavelet1_d_static_1ae7119dd839f9c317e69f7cceadf6da82" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void TurboWavelets.Biorthogonal53Wavelet1DStatic.wavelet53_1d</definition>
+        <argsstring>(float[] src, float[] dst, int length)</argsstring>
+        <name>wavelet53_1d</name>
+        <param>
+          <type>float[]</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>float[]</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>A fast implementation of a 1 dimensional biorthogonal 5/3 wavelet transformation for arbitary lenghts (works for all sizes, not just power of 2) using the lifting scheme. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source values which should be transformed</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The resulting values after the transformation</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>None</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet1DStatic.cs" line="44" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet1DStatic.cs" bodystart="43" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="class_turbo_wavelets_1_1_biorthogonal53_wavelet1_d_static_1a9fd288d382428a089990d1e3f6367657" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void TurboWavelets.Biorthogonal53Wavelet1DStatic.wavelet53_1d_inverse</definition>
+        <argsstring>(float[] src, float[] dst, int length)</argsstring>
+        <name>wavelet53_1d_inverse</name>
+        <param>
+          <type>float[]</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>float[]</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>A fast implementation of a 1 dimensional biorthogonal 5/3 wavelet back-transformation for arbitary lenghts (works for all sizes, not just power of 2) using the lifting scheme. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source values which should be back-transformed</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The resulting values after the back-transformation</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>None</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet1DStatic.cs" line="103" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet1DStatic.cs" bodystart="102" bodyend="160"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet1DStatic.cs" line="34" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet1DStatic.cs" bodystart="33" bodyend="161"/>
+    <listofallmembers>
+      <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet1_d_static_1ae7119dd839f9c317e69f7cceadf6da82" prot="public" virt="non-virtual"><scope>TurboWavelets::Biorthogonal53Wavelet1DStatic</scope><name>wavelet53_1d</name></member>
+      <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet1_d_static_1a9fd288d382428a089990d1e3f6367657" prot="public" virt="non-virtual"><scope>TurboWavelets::Biorthogonal53Wavelet1DStatic</scope><name>wavelet53_1d_inverse</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

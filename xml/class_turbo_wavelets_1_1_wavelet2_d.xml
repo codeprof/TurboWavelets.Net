@@ -1,0 +1,992 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="class_turbo_wavelets_1_1_wavelet2_d" kind="class" prot="public">
+    <compoundname>TurboWavelets::Wavelet2D</compoundname>
+    <derivedcompoundref refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d" prot="public" virt="non-virtual">TurboWavelets.Biorthogonal53Wavelet2D</derivedcompoundref>
+    <derivedcompoundref refid="class_turbo_wavelets_1_1_haar_wavelet2_d" prot="public" virt="non-virtual">TurboWavelets.HaarWavelet2D</derivedcompoundref>
+    <derivedcompoundref refid="class_turbo_wavelets_1_1_order_wavelet2_d" prot="public" virt="non-virtual">TurboWavelets.OrderWavelet2D</derivedcompoundref>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_turbo_wavelets_1_1_wavelet2_d_1aaa4b3711957fe1798980e6891331a08d" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TurboWavelets.Wavelet2D.width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="39" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_turbo_wavelets_1_1_wavelet2_d_1afb2aa87b89b82f329357cbdc0cde18a8" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TurboWavelets.Wavelet2D.height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="40" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_turbo_wavelets_1_1_wavelet2_d_1af5148ef1a46dd5694ccea13aa8f1b9e2" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TurboWavelets.Wavelet2D.minSize</definition>
+        <argsstring></argsstring>
+        <name>minSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="41" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_turbo_wavelets_1_1_wavelet2_d_1a949bac2b4f540092cf7cc8916968cdc0" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TurboWavelets.Wavelet2D.allowedMinSize</definition>
+        <argsstring></argsstring>
+        <name>allowedMinSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="42" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_turbo_wavelets_1_1_wavelet2_d_1a742fff705da3ff5a4b6d67e9a56637be" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>volatile bool TurboWavelets.Wavelet2D.enableParallel</definition>
+        <argsstring></argsstring>
+        <name>enableParallel</name>
+        <initializer> true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="43" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_turbo_wavelets_1_1_wavelet2_d_1a2b5e1636f40bab5b6ee88f6e8bb1b653" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>volatile bool TurboWavelets.Wavelet2D.enableCacheing</definition>
+        <argsstring></argsstring>
+        <name>enableCacheing</name>
+        <initializer> false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="44" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_turbo_wavelets_1_1_wavelet2_d_1a07949ac8b81d7afa1776e92f11b74834" prot="protected" static="no" mutable="no">
+        <type>float[,]</type>
+        <definition>volatile float [,] TurboWavelets.Wavelet2D.cachedArray</definition>
+        <argsstring></argsstring>
+        <name>cachedArray</name>
+        <initializer> null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="45" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_turbo_wavelets_1_1_wavelet2_d_1ad69614eed43d939d02cf11076f95adee" prot="protected" static="no" mutable="no">
+        <type>object</type>
+        <definition>object TurboWavelets.Wavelet2D.threadSync</definition>
+        <argsstring></argsstring>
+        <name>threadSync</name>
+        <initializer> new object ()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="49" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_turbo_wavelets_1_1_wavelet2_d_1a41d9135f22a6b2cb661b2cc2ccb768ff" prot="protected" static="no" mutable="no">
+        <type>ProgressDelegate</type>
+        <definition>ProgressDelegate TurboWavelets.Wavelet2D.progressDelegate</definition>
+        <argsstring></argsstring>
+        <name>progressDelegate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="50" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_turbo_wavelets_1_1_wavelet2_d_1adb4984a01d9ab29c0056b18cbbcdef6f" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>volatile bool TurboWavelets.Wavelet2D.progressAbort</definition>
+        <argsstring></argsstring>
+        <name>progressAbort</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="51" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_turbo_wavelets_1_1_wavelet2_d_1a08a8ff6259f0d66913715c00ed6e167b" prot="protected" static="no" mutable="no">
+        <type>object</type>
+        <definition>object TurboWavelets.Wavelet2D.progressSync</definition>
+        <argsstring></argsstring>
+        <name>progressSync</name>
+        <initializer> null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="52" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_turbo_wavelets_1_1_wavelet2_d_1ad2fad1f07e9e5c4901c0cdc925991e49" prot="protected" static="no" mutable="no">
+        <type>long</type>
+        <definition>long TurboWavelets.Wavelet2D.progressValue</definition>
+        <argsstring></argsstring>
+        <name>progressValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="53" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_turbo_wavelets_1_1_wavelet2_d_1a7cbf7ce44310a48178f36101a4c03add" prot="protected" static="no" mutable="no">
+        <type>long</type>
+        <definition>long TurboWavelets.Wavelet2D.progressMax</definition>
+        <argsstring></argsstring>
+        <name>progressMax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="54" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_turbo_wavelets_1_1_wavelet2_d_1a30058c5e0e5bd95b29bc080efbcf9083" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>int</type>
+        <definition>int TurboWavelets.Wavelet2D.Width</definition>
+        <argsstring></argsstring>
+        <name>Width</name>
+        <briefdescription>
+<para>returns the width for the two dimensional wavelet transformation </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="129" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_turbo_wavelets_1_1_wavelet2_d_1a277d0f89d73f839350c64a83ccd76ff6" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>int</type>
+        <definition>int TurboWavelets.Wavelet2D.Height</definition>
+        <argsstring></argsstring>
+        <name>Height</name>
+        <briefdescription>
+<para>returns the height for the two dimensional wavelet transformation </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="138" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_turbo_wavelets_1_1_wavelet2_d_1abbd41e51d24f8a7912ae47dd364ed4fb" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>bool</type>
+        <definition>bool TurboWavelets.Wavelet2D.EnableCaching</definition>
+        <argsstring></argsstring>
+        <name>EnableCaching</name>
+        <briefdescription>
+<para>enables or disables caching of memory (disabled by default) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="153" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_turbo_wavelets_1_1_wavelet2_d_1abec21e54c6ab8cce0e02ef3ad64ae5af" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>bool</type>
+        <definition>bool TurboWavelets.Wavelet2D.EnableParallel</definition>
+        <argsstring></argsstring>
+        <name>EnableParallel</name>
+        <briefdescription>
+<para>enables or disables parallel execution (enabled by default) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="165" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_turbo_wavelets_1_1_wavelet2_d_1aec52fe74aa08e073119064ef4ac3fe93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate bool</type>
+        <definition>delegate bool TurboWavelets.Wavelet2D.ProgressDelegate</definition>
+        <argsstring>(float progress)</argsstring>
+        <name>ProgressDelegate</name>
+        <param>
+          <type>float</type>
+          <declname>progress</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_turbo_wavelets_1_1_wavelet2_d_1a5156da3a3376121d64967dd8cd75725b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TurboWavelets.Wavelet2D.Wavelet2D</definition>
+        <argsstring>(int minSize, int allowedMinSize, int width, int height)</argsstring>
+        <name>Wavelet2D</name>
+        <param>
+          <type>int</type>
+          <declname>minSize</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>allowedMinSize</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+<para>Initalizes a two dimensional wavelet cascade transformation. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>minSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>minimum size up to a transformation is applied (can be set arbitary)</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>allowedMinSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>minimum size up to a transformation can be applied (implementation depended)</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>starting width of the transformation</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>starting height of the transformation</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="106" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="105" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="class_turbo_wavelets_1_1_wavelet2_d_1a727e557f207cf861b10c38f1f1a91b52" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TurboWavelets.Wavelet2D.FlushCache</definition>
+        <argsstring>()</argsstring>
+        <name>FlushCache</name>
+        <briefdescription>
+<para>Frees all cached memory. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="171" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="170" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="class_turbo_wavelets_1_1_wavelet2_d_1ac647a989c2b66ca08a8b7e4196cbc547" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void TurboWavelets.Wavelet2D.TransformIsotropic2D</definition>
+        <argsstring>(float[,] src, ProgressDelegate progressDelegate=null)</argsstring>
+        <name>TransformIsotropic2D</name>
+        <param>
+          <type>float</type>
+          <declname>src</declname>
+          <array>[,]</array>
+        </param>
+        <param>
+          <type>ProgressDelegate</type>
+          <declname>progressDelegate</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+<para>Perfroms a two dimensional isotropic wavelet transformation for an array. The result is copied back to the declared array. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>two dimensional float array to perform the the wavelet transformation on</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="312" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="311" bodyend="329"/>
+      </memberdef>
+      <memberdef kind="function" id="class_turbo_wavelets_1_1_wavelet2_d_1ac1644fb0d5f8a2ba8f265b445cba454b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void TurboWavelets.Wavelet2D.BacktransformIsotropic2D</definition>
+        <argsstring>(float[,] src, ProgressDelegate progressDelegate=null)</argsstring>
+        <name>BacktransformIsotropic2D</name>
+        <param>
+          <type>float</type>
+          <declname>src</declname>
+          <array>[,]</array>
+        </param>
+        <param>
+          <type>ProgressDelegate</type>
+          <declname>progressDelegate</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+<para>Perfroms a two dimensional isotropic wavelet transformation for an array. The result is copied back to the declared array. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="335" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="334" bodyend="365"/>
+      </memberdef>
+      <memberdef kind="function" id="class_turbo_wavelets_1_1_wavelet2_d_1a55e3f96cb79da6cc4621ccc1118a0d6f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void TurboWavelets.Wavelet2D.ScaleCoefficients</definition>
+        <argsstring>(float[,] src, float[] scaleFactors, int gridSize, ProgressDelegate progressDelegate=null)</argsstring>
+        <name>ScaleCoefficients</name>
+        <param>
+          <type>float</type>
+          <declname>src</declname>
+          <array>[,]</array>
+        </param>
+        <param>
+          <type>float[]</type>
+          <declname>scaleFactors</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>gridSize</declname>
+        </param>
+        <param>
+          <type>ProgressDelegate</type>
+          <declname>progressDelegate</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+<para>Scales the n (length of the scaleFactors array) greatest coefficinets (for a defined grid size) by the value declared in scaleFactors. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="478" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="477" bodyend="488"/>
+      </memberdef>
+      <memberdef kind="function" id="class_turbo_wavelets_1_1_wavelet2_d_1aa1e399d2ab5f85843185a2895bf7f7ad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void TurboWavelets.Wavelet2D.CropCoefficients</definition>
+        <argsstring>(float[,] src, int n, int gridSize, ProgressDelegate progressDelegate=null)</argsstring>
+        <name>CropCoefficients</name>
+        <param>
+          <type>float</type>
+          <declname>src</declname>
+          <array>[,]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>gridSize</declname>
+        </param>
+        <param>
+          <type>ProgressDelegate</type>
+          <declname>progressDelegate</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+<para>Set all but the greatest n coefficient to zero in the defined grid size. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="494" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="493" bodyend="498"/>
+      </memberdef>
+      <memberdef kind="function" id="class_turbo_wavelets_1_1_wavelet2_d_1a9abbbf0cffd0d8dca5d78d6ad4dad399" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void TurboWavelets.Wavelet2D.CropCoefficients</definition>
+        <argsstring>(float[,] src, float minAbsoluteValue, ProgressDelegate progressDelegate=null)</argsstring>
+        <name>CropCoefficients</name>
+        <param>
+          <type>float</type>
+          <declname>src</declname>
+          <array>[,]</array>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>minAbsoluteValue</declname>
+        </param>
+        <param>
+          <type>ProgressDelegate</type>
+          <declname>progressDelegate</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+<para>Set all coefficient with an absolute value smaller then &quot;minAbsoluteValue&quot; to zero (deadzone) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="504" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="503" bodyend="535"/>
+      </memberdef>
+      <memberdef kind="function" id="class_turbo_wavelets_1_1_wavelet2_d_1ad25227565f3b5e5953e951ad5b375654" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void TurboWavelets.Wavelet2D.getCoefficientsRange</definition>
+        <argsstring>(float[,] src, out float min, out float max, ProgressDelegate progressDelegate=null)</argsstring>
+        <name>getCoefficientsRange</name>
+        <param>
+          <type>float</type>
+          <declname>src</declname>
+          <array>[,]</array>
+        </param>
+        <param>
+          <type>out float</type>
+          <declname>min</declname>
+        </param>
+        <param>
+          <type>out float</type>
+          <declname>max</declname>
+        </param>
+        <param>
+          <type>ProgressDelegate</type>
+          <declname>progressDelegate</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+<para>get the minimum and maximum amplitude (absolute values) of all coefficient values </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="541" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="540" bodyend="597"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_turbo_wavelets_1_1_wavelet2_d_1aca8c6e617c9d428a22e566edd986f6f9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TurboWavelets.Wavelet2D.initProgress</definition>
+        <argsstring>(ProgressDelegate progressDelegate, long maxValue=0)</argsstring>
+        <name>initProgress</name>
+        <param>
+          <type>ProgressDelegate</type>
+          <declname>progressDelegate</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>maxValue</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="57" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="56" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="class_turbo_wavelets_1_1_wavelet2_d_1a355cbea784a3b078fec87e6ff4c186e4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TurboWavelets.Wavelet2D.updateProgress</definition>
+        <argsstring>(long increment)</argsstring>
+        <name>updateProgress</name>
+        <param>
+          <type>long</type>
+          <declname>increment</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="79" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="78" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="class_turbo_wavelets_1_1_wavelet2_d_1a1dad0a0576f0d0e10d44c1ae645dc951" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TurboWavelets.Wavelet2D.checkArrayArgument</definition>
+        <argsstring>(float[,] src, string name)</argsstring>
+        <name>checkArrayArgument</name>
+        <param>
+          <type>float</type>
+          <declname>src</declname>
+          <array>[,]</array>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="295" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="294" bodyend="305"/>
+      </memberdef>
+      <memberdef kind="function" id="class_turbo_wavelets_1_1_wavelet2_d_1a534341c94386ce78b597ca970e78db2e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TurboWavelets.Wavelet2D.ModfiyBlock</definition>
+        <argsstring>(float[,] src, int n, float[] scaleFactorsMajors, float scaleFactorsMinors, int gridSize, int startX, int startY)</argsstring>
+        <name>ModfiyBlock</name>
+        <param>
+          <type>float</type>
+          <declname>src</declname>
+          <array>[,]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>float[]</type>
+          <declname>scaleFactorsMajors</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>scaleFactorsMinors</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>gridSize</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>startX</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>startY</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="368" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="367" bodyend="419"/>
+      </memberdef>
+      <memberdef kind="function" id="class_turbo_wavelets_1_1_wavelet2_d_1aa56d99219f0bf8ef33eb28841f10f45c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TurboWavelets.Wavelet2D.ModifyCoefficients</definition>
+        <argsstring>(float[,] src, int n, float[] scaleFactorsMajors, float scaleFactorsMinors, int gridSize, ProgressDelegate progressDelegate)</argsstring>
+        <name>ModifyCoefficients</name>
+        <param>
+          <type>float</type>
+          <declname>src</declname>
+          <array>[,]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>float[]</type>
+          <declname>scaleFactorsMajors</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>scaleFactorsMinors</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>gridSize</declname>
+        </param>
+        <param>
+          <type>ProgressDelegate</type>
+          <declname>progressDelegate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="422" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="421" bodyend="472"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_turbo_wavelets_1_1_wavelet2_d_1a3dc6269869eb9c864f615e42d7822153" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float[,]</type>
+        <definition>float [,] TurboWavelets.Wavelet2D.getTempArray</definition>
+        <argsstring>()</argsstring>
+        <name>getTempArray</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="178" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="177" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="class_turbo_wavelets_1_1_wavelet2_d_1af0339475762d327f9d8ec019079cdc28" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void TurboWavelets.Wavelet2D.TransformRow</definition>
+        <argsstring>(float[,] src, float[,] dst, int y, int length)</argsstring>
+        <name>TransformRow</name>
+        <reimplementedby refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1acec9bb2730e6dee78c8f6d5c8d79a523">TransformRow</reimplementedby>
+        <reimplementedby refid="class_turbo_wavelets_1_1_order_wavelet2_d_1af45baa14b0d867362b989db7d41f14dc">TransformRow</reimplementedby>
+        <reimplementedby refid="class_turbo_wavelets_1_1_haar_wavelet2_d_1a55f6abb99bf5d87017e715b63f64cc15">TransformRow</reimplementedby>
+        <param>
+          <type>float</type>
+          <declname>src</declname>
+          <array>[,]</array>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>dst</declname>
+          <array>[,]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="195" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="194" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="class_turbo_wavelets_1_1_wavelet2_d_1a6a6c334fb499d248b72215001ff5e9d4" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void TurboWavelets.Wavelet2D.TransformCol</definition>
+        <argsstring>(float[,] src, float[,] dst, int x, int length)</argsstring>
+        <name>TransformCol</name>
+        <reimplementedby refid="class_turbo_wavelets_1_1_order_wavelet2_d_1a94c72dd8852fe900901bcffd12c37272">TransformCol</reimplementedby>
+        <reimplementedby refid="class_turbo_wavelets_1_1_haar_wavelet2_d_1a5695f7a35bbbae2f64d5c92212cd1f83">TransformCol</reimplementedby>
+        <reimplementedby refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1aa93cd7f9ac110e04678a5313336fb73f">TransformCol</reimplementedby>
+        <param>
+          <type>float</type>
+          <declname>src</declname>
+          <array>[,]</array>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>dst</declname>
+          <array>[,]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="200" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="199" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="class_turbo_wavelets_1_1_wavelet2_d_1ac0b65a648f05436b54aa4d925812e1d5" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void TurboWavelets.Wavelet2D.InvTransformRow</definition>
+        <argsstring>(float[,] src, float[,] dst, int y, int length)</argsstring>
+        <name>InvTransformRow</name>
+        <reimplementedby refid="class_turbo_wavelets_1_1_order_wavelet2_d_1a67a15c5e174f2bf762d153a976f86b36">InvTransformRow</reimplementedby>
+        <reimplementedby refid="class_turbo_wavelets_1_1_haar_wavelet2_d_1a870ff202a886a34c54013b867e56f6e6">InvTransformRow</reimplementedby>
+        <reimplementedby refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1a74b2789642a900fcfab4f47e023329ed">InvTransformRow</reimplementedby>
+        <param>
+          <type>float</type>
+          <declname>src</declname>
+          <array>[,]</array>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>dst</declname>
+          <array>[,]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="205" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="204" bodyend="207"/>
+      </memberdef>
+      <memberdef kind="function" id="class_turbo_wavelets_1_1_wavelet2_d_1a9897e5e3f830ab7ea106e6bcf367fa07" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void TurboWavelets.Wavelet2D.InvTransformCol</definition>
+        <argsstring>(float[,] src, float[,] dst, int x, int length)</argsstring>
+        <name>InvTransformCol</name>
+        <reimplementedby refid="class_turbo_wavelets_1_1_order_wavelet2_d_1ae7e013e9ee79f1d0932de6fa2e1854de">InvTransformCol</reimplementedby>
+        <reimplementedby refid="class_turbo_wavelets_1_1_haar_wavelet2_d_1a780d0ea14dea6a587c8ebf21f19670d0">InvTransformCol</reimplementedby>
+        <reimplementedby refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1a2f52053d7f8f2da84b0ca6964481bd06">InvTransformCol</reimplementedby>
+        <param>
+          <type>float</type>
+          <declname>src</declname>
+          <array>[,]</array>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>dst</declname>
+          <array>[,]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="210" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="209" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="function" id="class_turbo_wavelets_1_1_wavelet2_d_1a95e430713dc5e27ebf7b254d1346777e" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void TurboWavelets.Wavelet2D.TransformRows</definition>
+        <argsstring>(float[,] src, float[,] dst, int w, int h)</argsstring>
+        <name>TransformRows</name>
+        <param>
+          <type>float</type>
+          <declname>src</declname>
+          <array>[,]</array>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>dst</declname>
+          <array>[,]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>h</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="215" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="214" bodyend="232"/>
+      </memberdef>
+      <memberdef kind="function" id="class_turbo_wavelets_1_1_wavelet2_d_1a7aae90825e937ebb7822c2daa976d22a" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void TurboWavelets.Wavelet2D.TransformCols</definition>
+        <argsstring>(float[,] src, float[,] dst, int w, int h)</argsstring>
+        <name>TransformCols</name>
+        <param>
+          <type>float</type>
+          <declname>src</declname>
+          <array>[,]</array>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>dst</declname>
+          <array>[,]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>h</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="235" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="234" bodyend="252"/>
+      </memberdef>
+      <memberdef kind="function" id="class_turbo_wavelets_1_1_wavelet2_d_1a9109cf50d757e7cda895ce0965134f76" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void TurboWavelets.Wavelet2D.InvTransformRows</definition>
+        <argsstring>(float[,] src, float[,] dst, int w, int h)</argsstring>
+        <name>InvTransformRows</name>
+        <param>
+          <type>float</type>
+          <declname>src</declname>
+          <array>[,]</array>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>dst</declname>
+          <array>[,]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>h</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="255" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="254" bodyend="272"/>
+      </memberdef>
+      <memberdef kind="function" id="class_turbo_wavelets_1_1_wavelet2_d_1a08ab1e9de65415589726214fa8b45ae2" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void TurboWavelets.Wavelet2D.InvTransformCols</definition>
+        <argsstring>(float[,] src, float[,] dst, int w, int h)</argsstring>
+        <name>InvTransformCols</name>
+        <param>
+          <type>float</type>
+          <declname>src</declname>
+          <array>[,]</array>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>dst</declname>
+          <array>[,]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>h</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="275" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="274" bodyend="292"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="35">
+        <label>TurboWavelets.HaarWavelet2D</label>
+        <link refid="class_turbo_wavelets_1_1_haar_wavelet2_d"/>
+        <childnode refid="33" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>TurboWavelets.OrderWavelet2D</label>
+        <link refid="class_turbo_wavelets_1_1_order_wavelet2_d"/>
+        <childnode refid="33" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>TurboWavelets.Wavelet2D</label>
+        <link refid="class_turbo_wavelets_1_1_wavelet2_d"/>
+      </node>
+      <node id="34">
+        <label>TurboWavelets.Biorthogonal53Wavelet2D</label>
+        <link refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d"/>
+        <childnode refid="33" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="36" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="35" bodyend="598"/>
+    <listofallmembers>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a949bac2b4f540092cf7cc8916968cdc0" prot="protected" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>allowedMinSize</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1ac1644fb0d5f8a2ba8f265b445cba454b" prot="public" virt="virtual"><scope>TurboWavelets::Wavelet2D</scope><name>BacktransformIsotropic2D</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a07949ac8b81d7afa1776e92f11b74834" prot="protected" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>cachedArray</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a1dad0a0576f0d0e10d44c1ae645dc951" prot="private" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>checkArrayArgument</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1aa1e399d2ab5f85843185a2895bf7f7ad" prot="public" virt="virtual"><scope>TurboWavelets::Wavelet2D</scope><name>CropCoefficients</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a9abbbf0cffd0d8dca5d78d6ad4dad399" prot="public" virt="virtual"><scope>TurboWavelets::Wavelet2D</scope><name>CropCoefficients</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a2b5e1636f40bab5b6ee88f6e8bb1b653" prot="protected" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>enableCacheing</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1abbd41e51d24f8a7912ae47dd364ed4fb" prot="public" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>EnableCaching</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1abec21e54c6ab8cce0e02ef3ad64ae5af" prot="public" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>EnableParallel</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a742fff705da3ff5a4b6d67e9a56637be" prot="protected" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>enableParallel</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a727e557f207cf861b10c38f1f1a91b52" prot="public" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>FlushCache</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1ad25227565f3b5e5953e951ad5b375654" prot="public" virt="virtual"><scope>TurboWavelets::Wavelet2D</scope><name>getCoefficientsRange</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a3dc6269869eb9c864f615e42d7822153" prot="protected" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>getTempArray</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1afb2aa87b89b82f329357cbdc0cde18a8" prot="protected" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>height</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a277d0f89d73f839350c64a83ccd76ff6" prot="public" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>Height</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1aca8c6e617c9d428a22e566edd986f6f9" prot="private" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>initProgress</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a9897e5e3f830ab7ea106e6bcf367fa07" prot="protected" virt="virtual"><scope>TurboWavelets::Wavelet2D</scope><name>InvTransformCol</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a08ab1e9de65415589726214fa8b45ae2" prot="protected" virt="virtual"><scope>TurboWavelets::Wavelet2D</scope><name>InvTransformCols</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1ac0b65a648f05436b54aa4d925812e1d5" prot="protected" virt="virtual"><scope>TurboWavelets::Wavelet2D</scope><name>InvTransformRow</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a9109cf50d757e7cda895ce0965134f76" prot="protected" virt="virtual"><scope>TurboWavelets::Wavelet2D</scope><name>InvTransformRows</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1af5148ef1a46dd5694ccea13aa8f1b9e2" prot="protected" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>minSize</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a534341c94386ce78b597ca970e78db2e" prot="private" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>ModfiyBlock</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1aa56d99219f0bf8ef33eb28841f10f45c" prot="private" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>ModifyCoefficients</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1adb4984a01d9ab29c0056b18cbbcdef6f" prot="protected" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>progressAbort</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a41d9135f22a6b2cb661b2cc2ccb768ff" prot="protected" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>progressDelegate</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1aec52fe74aa08e073119064ef4ac3fe93" prot="public" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>ProgressDelegate</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a7cbf7ce44310a48178f36101a4c03add" prot="protected" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>progressMax</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a08a8ff6259f0d66913715c00ed6e167b" prot="protected" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>progressSync</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1ad2fad1f07e9e5c4901c0cdc925991e49" prot="protected" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>progressValue</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a55e3f96cb79da6cc4621ccc1118a0d6f" prot="public" virt="virtual"><scope>TurboWavelets::Wavelet2D</scope><name>ScaleCoefficients</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1ad69614eed43d939d02cf11076f95adee" prot="protected" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>threadSync</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a6a6c334fb499d248b72215001ff5e9d4" prot="protected" virt="virtual"><scope>TurboWavelets::Wavelet2D</scope><name>TransformCol</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a7aae90825e937ebb7822c2daa976d22a" prot="protected" virt="virtual"><scope>TurboWavelets::Wavelet2D</scope><name>TransformCols</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1ac647a989c2b66ca08a8b7e4196cbc547" prot="public" virt="virtual"><scope>TurboWavelets::Wavelet2D</scope><name>TransformIsotropic2D</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1af0339475762d327f9d8ec019079cdc28" prot="protected" virt="virtual"><scope>TurboWavelets::Wavelet2D</scope><name>TransformRow</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a95e430713dc5e27ebf7b254d1346777e" prot="protected" virt="virtual"><scope>TurboWavelets::Wavelet2D</scope><name>TransformRows</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a355cbea784a3b078fec87e6ff4c186e4" prot="private" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>updateProgress</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a5156da3a3376121d64967dd8cd75725b" prot="public" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>Wavelet2D</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1aaa4b3711957fe1798980e6891331a08d" prot="protected" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>width</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a30058c5e0e5bd95b29bc080efbcf9083" prot="public" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>Width</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="namespace_turbo_wavelets" kind="namespace">
+    <compoundname>TurboWavelets</compoundname>
+    <innerclass refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet1_d_static" prot="public">TurboWavelets::Biorthogonal53Wavelet1DStatic</innerclass>
+    <innerclass refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d" prot="public">TurboWavelets::Biorthogonal53Wavelet2D</innerclass>
+    <innerclass refid="class_turbo_wavelets_1_1_haar_wavelet2_d" prot="public">TurboWavelets::HaarWavelet2D</innerclass>
+    <innerclass refid="class_turbo_wavelets_1_1_order_wavelet2_d" prot="public">TurboWavelets::OrderWavelet2D</innerclass>
+    <innerclass refid="class_turbo_wavelets_1_1_wavelet2_d" prot="public">TurboWavelets::Wavelet2D</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet1DStatic.cs" line="32"/>
+  </compounddef>
+</doxygen>

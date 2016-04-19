@@ -65,7 +65,65 @@ Parsing file /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavele
 Preprocessing /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Properties/AssemblyInfo.cs...
 Parsing file /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Properties/AssemblyInfo.cs...
 Preprocessing /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs...
-Par/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet1DStatic.cs:35: warning: The following parameters of TurboWavelets::Biorthogonal53Wavelet1DStatic::wavelet53_1d(float[] src, float[] dst, int length) are not documented:
+Par/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet1DStatic.cs:34: warning: Compound TurboWavelets::Biorthogonal53Wavelet1DStatic is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs:33: warning: Compound TurboWavelets::HaarWavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs:34: warning: Compound TurboWavelets::OrderWavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs:34: warning: Compound TurboWavelets::Biorthogonal53Wavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs:36: warning: Compound TurboWavelets::Wavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet1DStatic.cs:35: warning: The following parameters of TurboWavelets::Biorthogonal53Wavelet1DStatic::wavelet53_1d(float[] src, float[] dst, int length) are not documented:
+  parameter 'length'
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet1DStatic.cs:94: warning: The following parameters of TurboWavelets::Biorthogonal53Wavelet1DStatic::wavelet53_1d_inverse(float[] src, float[] dst, int length) are not documented:
+  parameter 'length'
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs:63: warning: Member TransformRow(float[,] src, float[,] dst, int y, int length) (function) of class TurboWavelets::Biorthogonal53Wavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs:115: warning: Member TransformCol(float[,] src, float[,] dst, int x, int length) (function) of class TurboWavelets::Biorthogonal53Wavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs:166: warning: Member InvTransformRow(float[,] src, float[,] dst, int y, int length) (function) of class TurboWavelets::Biorthogonal53Wavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs:226: warning: Member InvTransformCol(float[,] src, float[,] dst, int x, int length) (function) of class TurboWavelets::Biorthogonal53Wavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs:35: warning: Member MINSIZE (variable) of class TurboWavelets::Biorthogonal53Wavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs:36: warning: Member SCALE (variable) of class TurboWavelets::Biorthogonal53Wavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs:37: warning: Member SCALE_INV (variable) of class TurboWavelets::Biorthogonal53Wavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs:38: warning: Member MEAN (variable) of class TurboWavelets::Biorthogonal53Wavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs:39: warning: Member MEAN_INV (variable) of class TurboWavelets::Biorthogonal53Wavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs:40: warning: Member SMOOTH (variable) of class TurboWavelets::Biorthogonal53Wavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs:41: warning: Member SMOOTH_INV (variable) of class TurboWavelets::Biorthogonal53Wavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs:66: warning: Member TransformRow(float[,] src, float[,] dst, int y, int length) (function) of class TurboWavelets::HaarWavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs:92: warning: Member TransformCol(float[,] src, float[,] dst, int x, int length) (function) of class TurboWavelets::HaarWavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs:118: warning: Member InvTransformRow(float[,] src, float[,] dst, int y, int length) (function) of class TurboWavelets::HaarWavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs:142: warning: Member InvTransformCol(float[,] src, float[,] dst, int x, int length) (function) of class TurboWavelets::HaarWavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs:34: warning: Member MINSIZE (variable) of class TurboWavelets::HaarWavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs:35: warning: Member SCALE (variable) of class TurboWavelets::HaarWavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs:36: warning: Member SCALE_INV (variable) of class TurboWavelets::HaarWavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs:37: warning: Member MEAN (variable) of class TurboWavelets::HaarWavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs:38: warning: Member MEAN_INV (variable) of class TurboWavelets::HaarWavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs:65: warning: Member TransformRow(float[,] src, float[,] dst, int y, int length) (function) of class TurboWavelets::OrderWavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs:86: warning: Member TransformCol(float[,] src, float[,] dst, int x, int length) (function) of class TurboWavelets::OrderWavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs:107: warning: Member InvTransformRow(float[,] src, float[,] dst, int y, int length) (function) of class TurboWavelets::OrderWavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs:128: warning: Member InvTransformCol(float[,] src, float[,] dst, int x, int length) (function) of class TurboWavelets::OrderWavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs:37: warning: Member ProgressDelegate(float progress) (function) of class TurboWavelets::Wavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs:178: warning: Member getTempArray() (function) of class TurboWavelets::Wavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs:195: warning: Member TransformRow(float[,] src, float[,] dst, int y, int length) (function) of class TurboWavelets::Wavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs:200: warning: Member TransformCol(float[,] src, float[,] dst, int x, int length) (function) of class TurboWavelets::Wavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs:205: warning: Member InvTransformRow(float[,] src, float[,] dst, int y, int length) (function) of class TurboWavelets::Wavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs:210: warning: Member InvTransformCol(float[,] src, float[,] dst, int x, int length) (function) of class TurboWavelets::Wavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs:215: warning: Member TransformRows(float[,] src, float[,] dst, int w, int h) (function) of class TurboWavelets::Wavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs:235: warning: Member TransformCols(float[,] src, float[,] dst, int w, int h) (function) of class TurboWavelets::Wavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs:255: warning: Member InvTransformRows(float[,] src, float[,] dst, int w, int h) (function) of class TurboWavelets::Wavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs:275: warning: Member InvTransformCols(float[,] src, float[,] dst, int w, int h) (function) of class TurboWavelets::Wavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs:39: warning: Member width (variable) of class TurboWavelets::Wavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs:40: warning: Member height (variable) of class TurboWavelets::Wavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs:41: warning: Member minSize (variable) of class TurboWavelets::Wavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs:42: warning: Member allowedMinSize (variable) of class TurboWavelets::Wavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs:43: warning: Member enableParallel (variable) of class TurboWavelets::Wavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs:44: warning: Member enableCacheing (variable) of class TurboWavelets::Wavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs:45: warning: Member cachedArray (variable) of class TurboWavelets::Wavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs:49: warning: Member threadSync (variable) of class TurboWavelets::Wavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs:50: warning: Member progressDelegate (variable) of class TurboWavelets::Wavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs:51: warning: Member progressAbort (variable) of class TurboWavelets::Wavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs:52: warning: Member progressSync (variable) of class TurboWavelets::Wavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs:53: warning: Member progressValue (variable) of class TurboWavelets::Wavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs:54: warning: Member progressMax (variable) of class TurboWavelets::Wavelet2D is not documented.
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs:307: warning: The following parameters of TurboWavelets::Wavelet2D::TransformIsotropic2D(float src[,], ProgressDelegate progressDelegate=null) are not documented:
+  parameter 'progressDelegate'
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet1DStatic.cs:35: warning: The following parameters of TurboWavelets::Biorthogonal53Wavelet1DStatic::wavelet53_1d(float[] src, float[] dst, int length) are not documented:
   parameter 'length'
 /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet1DStatic.cs:94: warning: The following parameters of TurboWavelets::Biorthogonal53Wavelet1DStatic::wavelet53_1d_inverse(float[] src, float[] dst, int length) are not documented:
   parameter 'length'
@@ -128,12 +186,6 @@ Generating code for file TurboWavelets/OrderWavelet2D.cs...
 Generating code for file TurboWavelets/Properties/AssemblyInfo.cs...
 Generating code for file TurboWavelets/Wavelet2D.cs...
 Generating file documentation...
-Generating docs for file TurboWavelets/Biorthogonal53Wavelet1DStatic.cs...
-Generating docs for file TurboWavelets/Biorthogonal53Wavelet2D.cs...
-Generating docs for file TurboWavelets/HaarWavelet2D.cs...
-Generating docs for file TurboWavelets/OrderWavelet2D.cs...
-Generating docs for file TurboWavelets/Properties/AssemblyInfo.cs...
-Generating docs for file TurboWavelets/Wavelet2D.cs...
 Generating page documentation...
 Generating group documentation...
 Generating class documentation...
@@ -159,24 +211,52 @@ Generating file index...
 Generating file member index...
 Generating example index...
 finalizing index lists...
-Generating dot graphs using 26 parallel threads...
-Running dot for graph 1/17
-Running dot for graph 2/17
-Running dot for graph 3/17
-Running dot for graph 4/17
-Running dot for graph 5/17
-Running dot for graph 6/17
-Running dot for graph 7/17
-Running dot for graph 8/17
-Running dot for graph 9/17
-Running dot for graph 10/17
-Running dot for graph 11/17
-Running dot for graph 12/17
-Running dot for graph 13/17
-Running dot for graph 14/17
-Running dot for graph 15/17
-Running dot for graph 16/17
-Running dot for graph 17/17
+Generating XML output...
+Generating XML output for class TurboWavelets::Biorthogonal53Wavelet1DStatic
+Generating XML output for class TurboWavelets::Biorthogonal53Wavelet2D
+Generating XML output for class TurboWavelets::HaarWavelet2D
+Generating XML output for class TurboWavelets::OrderWavelet2D
+Generating XML output for class TurboWavelets::Wavelet2D
+Generating XML output for namespace System
+Generating XML output for namespace System::Reflection
+Generating XML output for namespace System::Runtime::CompilerServices
+Generating XML output for namespace System::Threading
+Generating XML output for namespace System::Threading::Tasks
+Generating XML output for namespace TurboWavelets
+Generating XML output for file Biorthogonal53Wavelet1DStatic.cs
+Generating XML output for file Biorthogonal53Wavelet2D.cs
+Generating XML output for file HaarWavelet2D.cs
+Generating XML output for file OrderWavelet2D.cs
+Generating XML output for file AssemblyInfo.cs
+Generating XML output for file Wavelet2D.cs
+Generate XML output for dir /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Properties/
+Generate XML output for dir /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/
+Combining RTF output...
+Generating dot graphs using 33 parallel threads...
+Running dot for graph 1/24
+Running dot for graph 2/24
+Running dot for graph 3/24
+Running dot for graph 4/24
+Running dot for graph 5/24
+Running dot for graph 6/24
+Running dot for graph 7/24
+Running dot for graph 8/24
+Running dot for graph 9/24
+Running dot for graph 10/24
+Running dot for graph 11/24
+Running dot for graph 12/24
+Running dot for graph 13/24
+Running dot for graph 14/24
+Running dot for graph 15/24
+Running dot for graph 16/24
+Running dot for graph 17/24
+Running dot for graph 18/24
+Running dot for graph 19/24
+Running dot for graph 20/24
+Running dot for graph 21/24
+Running dot for graph 22/24
+Running dot for graph 23/24
+Running dot for graph 24/24
 Patching output file 1/9
 Patching output file 2/9
 Patching output file 3/9
@@ -186,6 +266,6 @@ Patching output file 6/9
 Patching output file 7/9
 Patching output file 8/9
 Patching output file 9/9
-symbol cache used 72/65536 hits=3872 misses=72
-lookup cache used 157/65536 hits=762 misses=160
+symbol cache used 72/65536 hits=4415 misses=72
+lookup cache used 144/65536 hits=1496 misses=147
 finished...

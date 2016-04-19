@@ -1,0 +1,375 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d" kind="class" prot="public">
+    <compoundname>TurboWavelets::Biorthogonal53Wavelet2D</compoundname>
+    <basecompoundref refid="class_turbo_wavelets_1_1_wavelet2_d" prot="public" virt="non-virtual">TurboWavelets.Wavelet2D</basecompoundref>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1aa6981c16a1765d4664747274676d5eba" prot="protected" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int TurboWavelets.Biorthogonal53Wavelet2D.MINSIZE</definition>
+        <argsstring></argsstring>
+        <name>MINSIZE</name>
+        <initializer> 3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" line="35" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1af0ccd844200200f57839dea6823daaa6" prot="protected" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float TurboWavelets.Biorthogonal53Wavelet2D.SCALE</definition>
+        <argsstring></argsstring>
+        <name>SCALE</name>
+        <initializer> 2.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" line="36" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1a035bc7a8559c9e4eb476c6a1c1d8cc9a" prot="protected" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float TurboWavelets.Biorthogonal53Wavelet2D.SCALE_INV</definition>
+        <argsstring></argsstring>
+        <name>SCALE_INV</name>
+        <initializer> 0.5f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" line="37" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1ab01bdb5e655a9f02b6ed6337ad88e4e4" prot="protected" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float TurboWavelets.Biorthogonal53Wavelet2D.MEAN</definition>
+        <argsstring></argsstring>
+        <name>MEAN</name>
+        <initializer> 0.5f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" line="38" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1a087508fa3e1f6e94477310a061d09784" prot="protected" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float TurboWavelets.Biorthogonal53Wavelet2D.MEAN_INV</definition>
+        <argsstring></argsstring>
+        <name>MEAN_INV</name>
+        <initializer> 2.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" line="39" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1ac608d0d31583d5c06c6dd7ab41880cb6" prot="protected" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float TurboWavelets.Biorthogonal53Wavelet2D.SMOOTH</definition>
+        <argsstring></argsstring>
+        <name>SMOOTH</name>
+        <initializer> 0.25f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" line="40" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1aeb90da1672a5e2fd88863bf227ee6db9" prot="protected" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float TurboWavelets.Biorthogonal53Wavelet2D.SMOOTH_INV</definition>
+        <argsstring></argsstring>
+        <name>SMOOTH_INV</name>
+        <initializer> 4.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" line="41" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1a8783eb5b8e032cd8cf75c5a1bb80bba0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TurboWavelets.Biorthogonal53Wavelet2D.Biorthogonal53Wavelet2D</definition>
+        <argsstring>(int width, int height)</argsstring>
+        <name>Biorthogonal53Wavelet2D</name>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+<para>A fast implementation of a two-dimensional biorthogonal 5/3 wavelet transformation for arbitary lenghts (works for all sizes, not just power of 2) using the lifting scheme. The implementation takes advantage of multiple CPU cores. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The width of the transformation</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The width of the transformation</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" line="51" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" bodystart="49" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1a2d9bf97c2211d5859b3a53835bea7888" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TurboWavelets.Biorthogonal53Wavelet2D.Biorthogonal53Wavelet2D</definition>
+        <argsstring>(int width, int height, int minSize)</argsstring>
+        <name>Biorthogonal53Wavelet2D</name>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>minSize</declname>
+        </param>
+        <briefdescription>
+<para>Initalizes a two dimensional wavelet transformation. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" line="59" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" bodystart="57" bodyend="60"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1acec9bb2730e6dee78c8f6d5c8d79a523" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void TurboWavelets.Biorthogonal53Wavelet2D.TransformRow</definition>
+        <argsstring>(float[,] src, float[,] dst, int y, int length)</argsstring>
+        <name>TransformRow</name>
+        <reimplements refid="class_turbo_wavelets_1_1_wavelet2_d_1af0339475762d327f9d8ec019079cdc28">TransformRow</reimplements>
+        <param>
+          <type>float</type>
+          <declname>src</declname>
+          <array>[,]</array>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>dst</declname>
+          <array>[,]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" line="63" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" bodystart="62" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1aa93cd7f9ac110e04678a5313336fb73f" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void TurboWavelets.Biorthogonal53Wavelet2D.TransformCol</definition>
+        <argsstring>(float[,] src, float[,] dst, int x, int length)</argsstring>
+        <name>TransformCol</name>
+        <reimplements refid="class_turbo_wavelets_1_1_wavelet2_d_1a6a6c334fb499d248b72215001ff5e9d4">TransformCol</reimplements>
+        <param>
+          <type>float</type>
+          <declname>src</declname>
+          <array>[,]</array>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>dst</declname>
+          <array>[,]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" line="115" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" bodystart="114" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1a74b2789642a900fcfab4f47e023329ed" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void TurboWavelets.Biorthogonal53Wavelet2D.InvTransformRow</definition>
+        <argsstring>(float[,] src, float[,] dst, int y, int length)</argsstring>
+        <name>InvTransformRow</name>
+        <reimplements refid="class_turbo_wavelets_1_1_wavelet2_d_1ac0b65a648f05436b54aa4d925812e1d5">InvTransformRow</reimplements>
+        <param>
+          <type>float</type>
+          <declname>src</declname>
+          <array>[,]</array>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>dst</declname>
+          <array>[,]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" line="166" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" bodystart="165" bodyend="223"/>
+      </memberdef>
+      <memberdef kind="function" id="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1a2f52053d7f8f2da84b0ca6964481bd06" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void TurboWavelets.Biorthogonal53Wavelet2D.InvTransformCol</definition>
+        <argsstring>(float[,] src, float[,] dst, int x, int length)</argsstring>
+        <name>InvTransformCol</name>
+        <reimplements refid="class_turbo_wavelets_1_1_wavelet2_d_1a9897e5e3f830ab7ea106e6bcf367fa07">InvTransformCol</reimplements>
+        <param>
+          <type>float</type>
+          <declname>src</declname>
+          <array>[,]</array>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>dst</declname>
+          <array>[,]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" line="226" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" bodystart="225" bodyend="283"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="22">
+        <label>Wavelet2D</label>
+        <link refid="class_turbo_wavelets_1_1_wavelet2_d"/>
+      </node>
+      <node id="21">
+        <label>TurboWavelets.Biorthogonal53Wavelet2D</label>
+        <link refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d"/>
+        <childnode refid="22" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="24">
+        <label>Wavelet2D</label>
+        <link refid="class_turbo_wavelets_1_1_wavelet2_d"/>
+      </node>
+      <node id="23">
+        <label>TurboWavelets.Biorthogonal53Wavelet2D</label>
+        <link refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d"/>
+        <childnode refid="24" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" line="34" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" bodystart="33" bodyend="284"/>
+    <listofallmembers>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a949bac2b4f540092cf7cc8916968cdc0" prot="protected" virt="non-virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>allowedMinSize</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1ac1644fb0d5f8a2ba8f265b445cba454b" prot="public" virt="virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>BacktransformIsotropic2D</name></member>
+      <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1a8783eb5b8e032cd8cf75c5a1bb80bba0" prot="public" virt="non-virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>Biorthogonal53Wavelet2D</name></member>
+      <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1a2d9bf97c2211d5859b3a53835bea7888" prot="public" virt="non-virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>Biorthogonal53Wavelet2D</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a07949ac8b81d7afa1776e92f11b74834" prot="protected" virt="non-virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>cachedArray</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1aa1e399d2ab5f85843185a2895bf7f7ad" prot="public" virt="virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>CropCoefficients</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a9abbbf0cffd0d8dca5d78d6ad4dad399" prot="public" virt="virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>CropCoefficients</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a2b5e1636f40bab5b6ee88f6e8bb1b653" prot="protected" virt="non-virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>enableCacheing</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1abbd41e51d24f8a7912ae47dd364ed4fb" prot="public" virt="non-virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>EnableCaching</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a742fff705da3ff5a4b6d67e9a56637be" prot="protected" virt="non-virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>enableParallel</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1abec21e54c6ab8cce0e02ef3ad64ae5af" prot="public" virt="non-virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>EnableParallel</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a727e557f207cf861b10c38f1f1a91b52" prot="public" virt="non-virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>FlushCache</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1ad25227565f3b5e5953e951ad5b375654" prot="public" virt="virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>getCoefficientsRange</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a3dc6269869eb9c864f615e42d7822153" prot="protected" virt="non-virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>getTempArray</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a277d0f89d73f839350c64a83ccd76ff6" prot="public" virt="non-virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>Height</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1afb2aa87b89b82f329357cbdc0cde18a8" prot="protected" virt="non-virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>height</name></member>
+      <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1a2f52053d7f8f2da84b0ca6964481bd06" prot="protected" virt="virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>InvTransformCol</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a08ab1e9de65415589726214fa8b45ae2" prot="protected" virt="virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>InvTransformCols</name></member>
+      <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1a74b2789642a900fcfab4f47e023329ed" prot="protected" virt="virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>InvTransformRow</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a9109cf50d757e7cda895ce0965134f76" prot="protected" virt="virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>InvTransformRows</name></member>
+      <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1ab01bdb5e655a9f02b6ed6337ad88e4e4" prot="protected" virt="non-virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>MEAN</name></member>
+      <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1a087508fa3e1f6e94477310a061d09784" prot="protected" virt="non-virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>MEAN_INV</name></member>
+      <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1aa6981c16a1765d4664747274676d5eba" prot="protected" virt="non-virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>MINSIZE</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1af5148ef1a46dd5694ccea13aa8f1b9e2" prot="protected" virt="non-virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>minSize</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1adb4984a01d9ab29c0056b18cbbcdef6f" prot="protected" virt="non-virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>progressAbort</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a41d9135f22a6b2cb661b2cc2ccb768ff" prot="protected" virt="non-virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>progressDelegate</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1aec52fe74aa08e073119064ef4ac3fe93" prot="public" virt="non-virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>ProgressDelegate</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a7cbf7ce44310a48178f36101a4c03add" prot="protected" virt="non-virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>progressMax</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a08a8ff6259f0d66913715c00ed6e167b" prot="protected" virt="non-virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>progressSync</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1ad2fad1f07e9e5c4901c0cdc925991e49" prot="protected" virt="non-virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>progressValue</name></member>
+      <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1af0ccd844200200f57839dea6823daaa6" prot="protected" virt="non-virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>SCALE</name></member>
+      <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1a035bc7a8559c9e4eb476c6a1c1d8cc9a" prot="protected" virt="non-virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>SCALE_INV</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a55e3f96cb79da6cc4621ccc1118a0d6f" prot="public" virt="virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>ScaleCoefficients</name></member>
+      <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1ac608d0d31583d5c06c6dd7ab41880cb6" prot="protected" virt="non-virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>SMOOTH</name></member>
+      <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1aeb90da1672a5e2fd88863bf227ee6db9" prot="protected" virt="non-virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>SMOOTH_INV</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1ad69614eed43d939d02cf11076f95adee" prot="protected" virt="non-virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>threadSync</name></member>
+      <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1aa93cd7f9ac110e04678a5313336fb73f" prot="protected" virt="virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>TransformCol</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a7aae90825e937ebb7822c2daa976d22a" prot="protected" virt="virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>TransformCols</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1ac647a989c2b66ca08a8b7e4196cbc547" prot="public" virt="virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>TransformIsotropic2D</name></member>
+      <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1acec9bb2730e6dee78c8f6d5c8d79a523" prot="protected" virt="virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>TransformRow</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a95e430713dc5e27ebf7b254d1346777e" prot="protected" virt="virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>TransformRows</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a5156da3a3376121d64967dd8cd75725b" prot="public" virt="non-virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>Wavelet2D</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a30058c5e0e5bd95b29bc080efbcf9083" prot="public" virt="non-virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>Width</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1aaa4b3711957fe1798980e6891331a08d" prot="protected" virt="non-virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>width</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -30,7 +30,7 @@
    <div id="projectname">TurboWavelets.Net
    
    </div>
-   
+   <div id="projectbrief">Compact C# Implementation for very fast and flexible wavelet transformations</div>
   </td>
   
   
@@ -79,7 +79,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">TurboWavelets/HaarWavelet2D.cs</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_haar_wavelet2_d_8cs.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// </span>
+<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// </span>
 <a name="l00002"></a>00002 <span class="comment">// HaarWavelet2D.cs</span>
 <a name="l00003"></a>00003 <span class="comment">//  </span>
 <a name="l00004"></a>00004 <span class="comment">// Author:</span>
@@ -112,25 +112,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00031"></a>00031 {
 <a name="l00032"></a><a class="code" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html">00032</a>     <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html">HaarWavelet2D</a> : <a class="code" href="class_turbo_wavelets_1_1_wavelet2_d.html">Wavelet2D</a>
 <a name="l00033"></a>00033     {
-<a name="l00034"></a><a class="code" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#a841ed0ce87560b5a4e5b94e4b2630765">00034</a>         <span class="keyword">protected</span> <span class="keyword">const</span> <span class="keywordtype">int</span>   <a class="code" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#a841ed0ce87560b5a4e5b94e4b2630765">MINSIZE</a>   = 2;
-<a name="l00035"></a><a class="code" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#a1c6cc94e0c41dd74fc3c8f7e36bf123f">00035</a>         <span class="keyword">protected</span> <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#a1c6cc94e0c41dd74fc3c8f7e36bf123f">SCALE</a>     = 2.0f;
-<a name="l00036"></a><a class="code" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#adbc2c681478c8bd315a77b6ddf57e9bd">00036</a>         <span class="keyword">protected</span> <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#adbc2c681478c8bd315a77b6ddf57e9bd">SCALE_INV</a> = 0.5f;
-<a name="l00037"></a><a class="code" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#af0a09712e36a5e8abcaf67e9352c7529">00037</a>         <span class="keyword">protected</span> <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#af0a09712e36a5e8abcaf67e9352c7529">MEAN</a>      = 0.5f;
-<a name="l00038"></a><a class="code" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#aca358f40b15421e2ad216236fa000cce">00038</a>         <span class="keyword">protected</span> <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#aca358f40b15421e2ad216236fa000cce">MEAN_INV</a>  = 2.0f;
+<a name="l00034"></a>00034         <span class="keyword">protected</span> <span class="keyword">const</span> <span class="keywordtype">int</span>   MINSIZE   = 2;
+<a name="l00035"></a>00035         <span class="keyword">protected</span> <span class="keyword">const</span> <span class="keywordtype">float</span> SCALE     = 2.0f;
+<a name="l00036"></a>00036         <span class="keyword">protected</span> <span class="keyword">const</span> <span class="keywordtype">float</span> SCALE_INV = 0.5f;
+<a name="l00037"></a>00037         <span class="keyword">protected</span> <span class="keyword">const</span> <span class="keywordtype">float</span> MEAN      = 0.5f;
+<a name="l00038"></a>00038         <span class="keyword">protected</span> <span class="keyword">const</span> <span class="keywordtype">float</span> MEAN_INV  = 2.0f;
 <a name="l00039"></a>00039 
-<a name="l00047"></a><a class="code" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#ab55a20658fe1f22b6e756418b4e1dc29">00047</a>         <span class="keyword">public</span> <a class="code" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#ab55a20658fe1f22b6e756418b4e1dc29" title="A fast implementation of a two-dimensional haar transformation for arbitary lenghts (works for all si...">HaarWavelet2D</a> (<span class="keywordtype">int</span> <a class="code" href="class_turbo_wavelets_1_1_wavelet2_d.html#aaa4b3711957fe1798980e6891331a08d">width</a>, <span class="keywordtype">int</span> <a class="code" href="class_turbo_wavelets_1_1_wavelet2_d.html#afb2aa87b89b82f329357cbdc0cde18a8">height</a>)
-<a name="l00048"></a>00048             : base(<a class="code" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#a841ed0ce87560b5a4e5b94e4b2630765">MINSIZE</a>, <a class="code" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#a841ed0ce87560b5a4e5b94e4b2630765">MINSIZE</a>, width, height)
+<a name="l00047"></a><a class="code" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#ab55a20658fe1f22b6e756418b4e1dc29">00047</a>         <span class="keyword">public</span> <a class="code" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#ab55a20658fe1f22b6e756418b4e1dc29" title="A fast implementation of a two-dimensional haar transformation for arbitary lenghts (works for all si...">HaarWavelet2D</a> (<span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height)
+<a name="l00048"></a>00048             : base(MINSIZE, MINSIZE, width, height)
 <a name="l00049"></a>00049         {   
 <a name="l00050"></a>00050         }
 <a name="l00051"></a>00051 
-<a name="l00060"></a><a class="code" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#a8064166eec2c0a4b66378896b882bd47">00060</a>         <span class="keyword">public</span> <a class="code" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#ab55a20658fe1f22b6e756418b4e1dc29" title="A fast implementation of a two-dimensional haar transformation for arbitary lenghts (works for all si...">HaarWavelet2D</a> (<span class="keywordtype">int</span> <a class="code" href="class_turbo_wavelets_1_1_wavelet2_d.html#aaa4b3711957fe1798980e6891331a08d">width</a>, <span class="keywordtype">int</span> <a class="code" href="class_turbo_wavelets_1_1_wavelet2_d.html#afb2aa87b89b82f329357cbdc0cde18a8">height</a>, <span class="keywordtype">int</span> <a class="code" href="class_turbo_wavelets_1_1_wavelet2_d.html#af5148ef1a46dd5694ccea13aa8f1b9e2">minSize</a>)
-<a name="l00061"></a>00061             : base(minSize, <a class="code" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#a841ed0ce87560b5a4e5b94e4b2630765">MINSIZE</a>, width, height)
+<a name="l00060"></a><a class="code" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#a8064166eec2c0a4b66378896b882bd47">00060</a>         <span class="keyword">public</span> <a class="code" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#ab55a20658fe1f22b6e756418b4e1dc29" title="A fast implementation of a two-dimensional haar transformation for arbitary lenghts (works for all si...">HaarWavelet2D</a> (<span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height, <span class="keywordtype">int</span> minSize)
+<a name="l00061"></a>00061             : base(minSize, MINSIZE, width, height)
 <a name="l00062"></a>00062         {
 <a name="l00063"></a>00063         }
 <a name="l00064"></a>00064 
-<a name="l00065"></a><a class="code" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#a55f6abb99bf5d87017e715b63f64cc15">00065</a>         <span class="keyword">override</span> <span class="keyword">protected</span> <span class="keywordtype">void</span> <a class="code" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#a55f6abb99bf5d87017e715b63f64cc15">TransformRow</a> (<span class="keywordtype">float</span>[,] src, <span class="keywordtype">float</span>[,] dst, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> length)
+<a name="l00065"></a>00065         <span class="keyword">override</span> <span class="keyword">protected</span> <span class="keywordtype">void</span> TransformRow (<span class="keywordtype">float</span>[,] src, <span class="keywordtype">float</span>[,] dst, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> length)
 <a name="l00066"></a>00066         {
-<a name="l00067"></a>00067             <span class="keywordflow">if</span> (length &gt;= <a class="code" href="class_turbo_wavelets_1_1_wavelet2_d.html#a949bac2b4f540092cf7cc8916968cdc0">allowedMinSize</a>) {
+<a name="l00067"></a>00067             <span class="keywordflow">if</span> (length &gt;= allowedMinSize) {
 <a name="l00068"></a>00068                 <span class="keywordtype">int</span> half = length &gt;&gt; 1;
 <a name="l00069"></a>00069                 <span class="keywordtype">int</span> offSrc = 0;
 <a name="l00070"></a>00070                 <span class="comment">// number of low-pass values</span>
@@ -142,11 +142,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00076"></a>00076                     <span class="comment">//calculate the mean of a and b and scale with factor 2</span>
 <a name="l00077"></a>00077                     <span class="comment">//So no multiplication needed at all</span>
 <a name="l00078"></a>00078                     dst [i              , y] = (a + b);
-<a name="l00079"></a>00079                     dst [i + numLFValues, y] = (b - a) * <a class="code" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#af0a09712e36a5e8abcaf67e9352c7529">MEAN</a>;
+<a name="l00079"></a>00079                     dst [i + numLFValues, y] = (b - a) * MEAN;
 <a name="l00080"></a>00080                     offSrc += 2;
 <a name="l00081"></a>00081                 }                           
 <a name="l00082"></a>00082                 <span class="keywordflow">if</span> ((length &amp; 1) != 0) {
-<a name="l00083"></a>00083                     dst [numLFValues - 1, y] = src [length - 1, y] * <a class="code" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#a1c6cc94e0c41dd74fc3c8f7e36bf123f">SCALE</a>;
+<a name="l00083"></a>00083                     dst [numLFValues - 1, y] = src [length - 1, y] * SCALE;
 <a name="l00084"></a>00084                 }       
 <a name="l00085"></a>00085             } <span class="keywordflow">else</span> {
 <a name="l00086"></a>00086                 <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; length; i++)
@@ -154,9 +154,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00088"></a>00088             }
 <a name="l00089"></a>00089         }
 <a name="l00090"></a>00090 
-<a name="l00091"></a><a class="code" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#a5695f7a35bbbae2f64d5c92212cd1f83">00091</a>         <span class="keyword">override</span> <span class="keyword">protected</span> <span class="keywordtype">void</span> <a class="code" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#a5695f7a35bbbae2f64d5c92212cd1f83">TransformCol</a> (<span class="keywordtype">float</span>[,] src, <span class="keywordtype">float</span>[,] dst, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> length)
+<a name="l00091"></a>00091         <span class="keyword">override</span> <span class="keyword">protected</span> <span class="keywordtype">void</span> TransformCol (<span class="keywordtype">float</span>[,] src, <span class="keywordtype">float</span>[,] dst, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> length)
 <a name="l00092"></a>00092         {
-<a name="l00093"></a>00093             <span class="keywordflow">if</span> (length &gt;= <a class="code" href="class_turbo_wavelets_1_1_wavelet2_d.html#a949bac2b4f540092cf7cc8916968cdc0">allowedMinSize</a>) {
+<a name="l00093"></a>00093             <span class="keywordflow">if</span> (length &gt;= allowedMinSize) {
 <a name="l00094"></a>00094                 <span class="keywordtype">int</span> half = length &gt;&gt; 1;
 <a name="l00095"></a>00095                 <span class="keywordtype">int</span> offSrc = 0;
 <a name="l00096"></a>00096                 <span class="comment">// number of low-pass values</span>
@@ -168,11 +168,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00102"></a>00102                     <span class="comment">//calculate the mean of a and b and scale with factor 2</span>
 <a name="l00103"></a>00103                     <span class="comment">//So no multiplication needed at all</span>
 <a name="l00104"></a>00104                     dst [x, i              ] = (a + b);
-<a name="l00105"></a>00105                     dst [x, i + numLFValues] = (b - a) * <a class="code" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#af0a09712e36a5e8abcaf67e9352c7529">MEAN</a>;
+<a name="l00105"></a>00105                     dst [x, i + numLFValues] = (b - a) * MEAN;
 <a name="l00106"></a>00106                     offSrc += 2;
 <a name="l00107"></a>00107                 }                           
 <a name="l00108"></a>00108                 <span class="keywordflow">if</span> ((length &amp; 1) != 0) {
-<a name="l00109"></a>00109                     dst [x, numLFValues - 1] = src [x, length - 1] * <a class="code" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#a1c6cc94e0c41dd74fc3c8f7e36bf123f">SCALE</a>;
+<a name="l00109"></a>00109                     dst [x, numLFValues - 1] = src [x, length - 1] * SCALE;
 <a name="l00110"></a>00110                 }   
 <a name="l00111"></a>00111             } <span class="keywordflow">else</span> {
 <a name="l00112"></a>00112                 <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; length; i++)
@@ -180,23 +180,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00114"></a>00114             }
 <a name="l00115"></a>00115         }
 <a name="l00116"></a>00116 
-<a name="l00117"></a><a class="code" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#a870ff202a886a34c54013b867e56f6e6">00117</a>         <span class="keyword">override</span> <span class="keyword">protected</span> <span class="keywordtype">void</span> <a class="code" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#a870ff202a886a34c54013b867e56f6e6">InvTransformRow</a> (<span class="keywordtype">float</span>[,] src, <span class="keywordtype">float</span>[,] dst, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> length)
+<a name="l00117"></a>00117         <span class="keyword">override</span> <span class="keyword">protected</span> <span class="keywordtype">void</span> InvTransformRow (<span class="keywordtype">float</span>[,] src, <span class="keywordtype">float</span>[,] dst, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> length)
 <a name="l00118"></a>00118         {
-<a name="l00119"></a>00119             <span class="keywordflow">if</span> (length &gt;= <a class="code" href="class_turbo_wavelets_1_1_wavelet2_d.html#a949bac2b4f540092cf7cc8916968cdc0">allowedMinSize</a>) {
+<a name="l00119"></a>00119             <span class="keywordflow">if</span> (length &gt;= allowedMinSize) {
 <a name="l00120"></a>00120                 <span class="keywordtype">int</span> half = length &gt;&gt; 1;
 <a name="l00121"></a>00121                 <span class="keywordtype">int</span> offDst = 0;
 <a name="l00122"></a>00122                 <span class="comment">// number of low-pass values</span>
 <a name="l00123"></a>00123                 <span class="keywordtype">int</span> numLFValues = half + (length &amp; 1);
 <a name="l00124"></a>00124 
 <a name="l00125"></a>00125                 <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; half; i++) {
-<a name="l00126"></a>00126                     <span class="keywordtype">float</span> a = src [i, y              ] * <a class="code" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#adbc2c681478c8bd315a77b6ddf57e9bd">SCALE_INV</a>;
+<a name="l00126"></a>00126                     <span class="keywordtype">float</span> a = src [i, y              ] * SCALE_INV;
 <a name="l00127"></a>00127                     <span class="keywordtype">float</span> b = src [i + numLFValues, y];
 <a name="l00128"></a>00128                     dst [offDst,     y] = a - b;
 <a name="l00129"></a>00129                     dst [offDst + 1, y] = a + b;
 <a name="l00130"></a>00130                     offDst += 2;
 <a name="l00131"></a>00131                 }                           
 <a name="l00132"></a>00132                 <span class="keywordflow">if</span> ((length &amp; 1) != 0) {
-<a name="l00133"></a>00133                     dst [length - 1, y] = src [numLFValues - 1, y] * <a class="code" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#adbc2c681478c8bd315a77b6ddf57e9bd">SCALE_INV</a>; 
+<a name="l00133"></a>00133                     dst [length - 1, y] = src [numLFValues - 1, y] * SCALE_INV; 
 <a name="l00134"></a>00134                 }
 <a name="l00135"></a>00135             } <span class="keywordflow">else</span> {
 <a name="l00136"></a>00136                 <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; length; i++)
@@ -204,23 +204,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00138"></a>00138             }
 <a name="l00139"></a>00139         }
 <a name="l00140"></a>00140 
-<a name="l00141"></a><a class="code" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#a780d0ea14dea6a587c8ebf21f19670d0">00141</a>         <span class="keyword">override</span> <span class="keyword">protected</span> <span class="keywordtype">void</span> <a class="code" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#a780d0ea14dea6a587c8ebf21f19670d0">InvTransformCol</a> (<span class="keywordtype">float</span>[,] src, <span class="keywordtype">float</span>[,] dst, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> length)
+<a name="l00141"></a>00141         <span class="keyword">override</span> <span class="keyword">protected</span> <span class="keywordtype">void</span> InvTransformCol (<span class="keywordtype">float</span>[,] src, <span class="keywordtype">float</span>[,] dst, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> length)
 <a name="l00142"></a>00142         {
-<a name="l00143"></a>00143             <span class="keywordflow">if</span> (length &gt;= <a class="code" href="class_turbo_wavelets_1_1_wavelet2_d.html#a949bac2b4f540092cf7cc8916968cdc0">allowedMinSize</a>) {
+<a name="l00143"></a>00143             <span class="keywordflow">if</span> (length &gt;= allowedMinSize) {
 <a name="l00144"></a>00144                 <span class="keywordtype">int</span> half = length &gt;&gt; 1;
 <a name="l00145"></a>00145                 <span class="keywordtype">int</span> offDst = 0;
 <a name="l00146"></a>00146                 <span class="comment">// number of low-pass values</span>
 <a name="l00147"></a>00147                 <span class="keywordtype">int</span> numLFValues = half + (length &amp; 1);
 <a name="l00148"></a>00148 
 <a name="l00149"></a>00149                 <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; half; i++) {
-<a name="l00150"></a>00150                     <span class="keywordtype">float</span> a = src [x, i              ] * <a class="code" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#adbc2c681478c8bd315a77b6ddf57e9bd">SCALE_INV</a>;
+<a name="l00150"></a>00150                     <span class="keywordtype">float</span> a = src [x, i              ] * SCALE_INV;
 <a name="l00151"></a>00151                     <span class="keywordtype">float</span> b = src [x, i + numLFValues];
 <a name="l00152"></a>00152                     dst [x,     offDst] = a - b;
 <a name="l00153"></a>00153                     dst [x, offDst + 1] = a + b;
 <a name="l00154"></a>00154                     offDst += 2;
 <a name="l00155"></a>00155                 }                           
 <a name="l00156"></a>00156                 <span class="keywordflow">if</span> ((length &amp; 1) != 0) {
-<a name="l00157"></a>00157                     dst [x, length - 1] = src [x, numLFValues - 1] * <a class="code" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#adbc2c681478c8bd315a77b6ddf57e9bd">SCALE_INV</a>;
+<a name="l00157"></a>00157                     dst [x, length - 1] = src [x, numLFValues - 1] * SCALE_INV;
 <a name="l00158"></a>00158                 } 
 <a name="l00159"></a>00159             } <span class="keywordflow">else</span> {
 <a name="l00160"></a>00160                 <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; length; i++)
@@ -235,7 +235,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Properties</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Properties</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -247,7 +247,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 18 2016 07:26:28 for TurboWavelets.Net by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 19 2016 05:47:47 for TurboWavelets.Net by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

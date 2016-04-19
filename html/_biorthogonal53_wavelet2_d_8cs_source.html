@@ -30,7 +30,7 @@
    <div id="projectname">TurboWavelets.Net
    
    </div>
-   
+   <div id="projectbrief">Compact C# Implementation for very fast and flexible wavelet transformations</div>
   </td>
   
   
@@ -79,7 +79,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">TurboWavelets/Biorthogonal53Wavelet2D.cs</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_biorthogonal53_wavelet2_d_8cs.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// </span>
+<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// </span>
 <a name="l00002"></a>00002 <span class="comment">// Biorthogonal53Wavelet2D.cs</span>
 <a name="l00003"></a>00003 <span class="comment">//  </span>
 <a name="l00004"></a>00004 <span class="comment">// Author:</span>
@@ -113,26 +113,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00032"></a>00032 {
 <a name="l00033"></a><a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html">00033</a>     <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html">Biorthogonal53Wavelet2D</a> : <a class="code" href="class_turbo_wavelets_1_1_wavelet2_d.html">Wavelet2D</a>
 <a name="l00034"></a>00034     {
-<a name="l00035"></a><a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#aa6981c16a1765d4664747274676d5eba">00035</a>         <span class="keyword">protected</span> <span class="keyword">const</span> <span class="keywordtype">int</span>   <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#aa6981c16a1765d4664747274676d5eba">MINSIZE</a>    = 3;
-<a name="l00036"></a><a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#af0ccd844200200f57839dea6823daaa6">00036</a>         <span class="keyword">protected</span> <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#af0ccd844200200f57839dea6823daaa6">SCALE</a>      = 2.0f;
-<a name="l00037"></a><a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#a035bc7a8559c9e4eb476c6a1c1d8cc9a">00037</a>         <span class="keyword">protected</span> <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#a035bc7a8559c9e4eb476c6a1c1d8cc9a">SCALE_INV</a>  = 0.5f;
-<a name="l00038"></a><a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#ab01bdb5e655a9f02b6ed6337ad88e4e4">00038</a>         <span class="keyword">protected</span> <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#ab01bdb5e655a9f02b6ed6337ad88e4e4">MEAN</a>       = 0.5f;
-<a name="l00039"></a><a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#a087508fa3e1f6e94477310a061d09784">00039</a>         <span class="keyword">protected</span> <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#a087508fa3e1f6e94477310a061d09784">MEAN_INV</a>   = 2.0f;
-<a name="l00040"></a><a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#ac608d0d31583d5c06c6dd7ab41880cb6">00040</a>         <span class="keyword">protected</span> <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#ac608d0d31583d5c06c6dd7ab41880cb6">SMOOTH</a>     = 0.25f;
-<a name="l00041"></a><a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#aeb90da1672a5e2fd88863bf227ee6db9">00041</a>         <span class="keyword">protected</span> <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#aeb90da1672a5e2fd88863bf227ee6db9">SMOOTH_INV</a> = 4.0f;
-<a name="l00049"></a><a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#a8783eb5b8e032cd8cf75c5a1bb80bba0">00049</a>         <span class="keyword">public</span> <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#a8783eb5b8e032cd8cf75c5a1bb80bba0" title="A fast implementation of a two-dimensional biorthogonal 5/3 wavelet transformation for arbitary lengh...">Biorthogonal53Wavelet2D</a> (<span class="keywordtype">int</span> <a class="code" href="class_turbo_wavelets_1_1_wavelet2_d.html#aaa4b3711957fe1798980e6891331a08d">width</a>, <span class="keywordtype">int</span> <a class="code" href="class_turbo_wavelets_1_1_wavelet2_d.html#afb2aa87b89b82f329357cbdc0cde18a8">height</a>)
-<a name="l00050"></a>00050             : base(<a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#aa6981c16a1765d4664747274676d5eba">MINSIZE</a>, <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#aa6981c16a1765d4664747274676d5eba">MINSIZE</a>, width, height)
+<a name="l00035"></a>00035         <span class="keyword">protected</span> <span class="keyword">const</span> <span class="keywordtype">int</span>   MINSIZE    = 3;
+<a name="l00036"></a>00036         <span class="keyword">protected</span> <span class="keyword">const</span> <span class="keywordtype">float</span> SCALE      = 2.0f;
+<a name="l00037"></a>00037         <span class="keyword">protected</span> <span class="keyword">const</span> <span class="keywordtype">float</span> SCALE_INV  = 0.5f;
+<a name="l00038"></a>00038         <span class="keyword">protected</span> <span class="keyword">const</span> <span class="keywordtype">float</span> MEAN       = 0.5f;
+<a name="l00039"></a>00039         <span class="keyword">protected</span> <span class="keyword">const</span> <span class="keywordtype">float</span> MEAN_INV   = 2.0f;
+<a name="l00040"></a>00040         <span class="keyword">protected</span> <span class="keyword">const</span> <span class="keywordtype">float</span> SMOOTH     = 0.25f;
+<a name="l00041"></a>00041         <span class="keyword">protected</span> <span class="keyword">const</span> <span class="keywordtype">float</span> SMOOTH_INV = 4.0f;
+<a name="l00049"></a><a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#a8783eb5b8e032cd8cf75c5a1bb80bba0">00049</a>         <span class="keyword">public</span> <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#a8783eb5b8e032cd8cf75c5a1bb80bba0" title="A fast implementation of a two-dimensional biorthogonal 5/3 wavelet transformation for arbitary lengh...">Biorthogonal53Wavelet2D</a> (<span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height)
+<a name="l00050"></a>00050             : base(MINSIZE, MINSIZE, width, height)
 <a name="l00051"></a>00051         {   
 <a name="l00052"></a>00052         }
 <a name="l00053"></a>00053 
-<a name="l00057"></a><a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#a2d9bf97c2211d5859b3a53835bea7888">00057</a>         <span class="keyword">public</span> <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#a8783eb5b8e032cd8cf75c5a1bb80bba0" title="A fast implementation of a two-dimensional biorthogonal 5/3 wavelet transformation for arbitary lengh...">Biorthogonal53Wavelet2D</a> (<span class="keywordtype">int</span> <a class="code" href="class_turbo_wavelets_1_1_wavelet2_d.html#aaa4b3711957fe1798980e6891331a08d">width</a>, <span class="keywordtype">int</span> <a class="code" href="class_turbo_wavelets_1_1_wavelet2_d.html#afb2aa87b89b82f329357cbdc0cde18a8">height</a>, <span class="keywordtype">int</span> <a class="code" href="class_turbo_wavelets_1_1_wavelet2_d.html#af5148ef1a46dd5694ccea13aa8f1b9e2">minSize</a>)
-<a name="l00058"></a>00058             : base(minSize, <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#aa6981c16a1765d4664747274676d5eba">MINSIZE</a>, width, height)
+<a name="l00057"></a><a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#a2d9bf97c2211d5859b3a53835bea7888">00057</a>         <span class="keyword">public</span> <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#a8783eb5b8e032cd8cf75c5a1bb80bba0" title="A fast implementation of a two-dimensional biorthogonal 5/3 wavelet transformation for arbitary lengh...">Biorthogonal53Wavelet2D</a> (<span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height, <span class="keywordtype">int</span> minSize)
+<a name="l00058"></a>00058             : base(minSize, MINSIZE, width, height)
 <a name="l00059"></a>00059         {
 <a name="l00060"></a>00060         }
 <a name="l00061"></a>00061 
-<a name="l00062"></a><a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#acec9bb2730e6dee78c8f6d5c8d79a523">00062</a>         <span class="keyword">override</span> <span class="keyword">protected</span> <span class="keywordtype">void</span> <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#acec9bb2730e6dee78c8f6d5c8d79a523">TransformRow</a> (<span class="keywordtype">float</span>[,] src, <span class="keywordtype">float</span>[,] dst, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> length)
+<a name="l00062"></a>00062         <span class="keyword">override</span> <span class="keyword">protected</span> <span class="keywordtype">void</span> TransformRow (<span class="keywordtype">float</span>[,] src, <span class="keywordtype">float</span>[,] dst, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> length)
 <a name="l00063"></a>00063         {
-<a name="l00064"></a>00064             <span class="keywordflow">if</span> (length &gt;= <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#aa6981c16a1765d4664747274676d5eba">MINSIZE</a>) {
+<a name="l00064"></a>00064             <span class="keywordflow">if</span> (length &gt;= MINSIZE) {
 <a name="l00065"></a>00065                 <span class="keywordtype">int</span> half = length &gt;&gt; 1;
 <a name="l00066"></a>00066                 <span class="comment">//if the length is even then subtract 1 from &quot;half&quot;</span>
 <a name="l00067"></a>00067                 <span class="comment">//as there is the same number of low and high-pass values</span>
@@ -151,26 +151,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00080"></a>00080                 <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; half; i++) {
 <a name="l00081"></a>00081                     <span class="comment">//calculate the high-pass value by</span>
 <a name="l00082"></a>00082                     <span class="comment">//subtracting the mean of the immediate neighbors for every second value</span>
-<a name="l00083"></a>00083                     <span class="keywordtype">float</span> hf = src [offSrc + 1, y] - (src [offSrc, y] + src [offSrc + 2, y]) * <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#ab01bdb5e655a9f02b6ed6337ad88e4e4">MEAN</a>;
+<a name="l00083"></a>00083                     <span class="keywordtype">float</span> hf = src [offSrc + 1, y] - (src [offSrc, y] + src [offSrc + 2, y]) * MEAN;
 <a name="l00084"></a>00084                     <span class="comment">//smoothing the low-pass value, scale by factor 2 </span>
 <a name="l00085"></a>00085                     <span class="comment">//(instead of scaling low frequencies by factor sqrt(2) and</span>
 <a name="l00086"></a>00086                     <span class="comment">//shrinking high frequencies by factor sqrt(2)</span>
 <a name="l00087"></a>00087                     <span class="comment">//and reposition to have all low frequencies on the left side</span>
-<a name="l00088"></a>00088                     dst [i, y] = <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#af0ccd844200200f57839dea6823daaa6">SCALE</a> * (src [offSrc, y] + (lastHF + hf) * <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#ac608d0d31583d5c06c6dd7ab41880cb6">SMOOTH</a>);
+<a name="l00088"></a>00088                     dst [i, y] = SCALE * (src [offSrc, y] + (lastHF + hf) * SMOOTH);
 <a name="l00089"></a>00089                     dst [offdst++, y] = hf;
 <a name="l00090"></a>00090                     lastHF = hf;
 <a name="l00091"></a>00091                     offSrc += 2; 
 <a name="l00092"></a>00092                 } 
 <a name="l00093"></a>00093                 <span class="keywordflow">if</span> ((length &amp; 1) == 0) {
 <a name="l00094"></a>00094                     <span class="comment">//the secound last value in the array is our last low-pass value</span>
-<a name="l00095"></a>00095                     dst [numLFValues - 1, y] = <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#af0ccd844200200f57839dea6823daaa6">SCALE</a> * src [length - 2, y]; 
+<a name="l00095"></a>00095                     dst [numLFValues - 1, y] = SCALE * src [length - 2, y]; 
 <a name="l00096"></a>00096                     <span class="comment">//the last value is a high-pass value</span>
 <a name="l00097"></a>00097                     <span class="comment">//however here we just subtract the previos value (so not really a</span>
 <a name="l00098"></a>00098                     <span class="comment">//biorthogonal 5/3 transformation)</span>
 <a name="l00099"></a>00099                     <span class="comment">//This is done because the 5/3 wavelet cannot be calculated at the boundary</span>
 <a name="l00100"></a>00100                     dst [length - 1, y] = src [length - 1, y] - src [length - 2, y];
 <a name="l00101"></a>00101                 } <span class="keywordflow">else</span> {
-<a name="l00102"></a>00102                     dst [numLFValues - 1, y] = <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#af0ccd844200200f57839dea6823daaa6">SCALE</a> * src [length - 1, y]; 
+<a name="l00102"></a>00102                     dst [numLFValues - 1, y] = SCALE * src [length - 1, y]; 
 <a name="l00103"></a>00103                 }
 <a name="l00104"></a>00104             } <span class="keywordflow">else</span> {
 <a name="l00105"></a>00105                 <span class="comment">//We cannot perform the biorthogonal 5/3 wavelet transformation</span>
@@ -182,9 +182,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00111"></a>00111             
 <a name="l00112"></a>00112         }
 <a name="l00113"></a>00113 
-<a name="l00114"></a><a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#aa93cd7f9ac110e04678a5313336fb73f">00114</a>         <span class="keyword">override</span> <span class="keyword">protected</span> <span class="keywordtype">void</span> <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#aa93cd7f9ac110e04678a5313336fb73f">TransformCol</a> (<span class="keywordtype">float</span>[,] src, <span class="keywordtype">float</span>[,] dst, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> length)
+<a name="l00114"></a>00114         <span class="keyword">override</span> <span class="keyword">protected</span> <span class="keywordtype">void</span> TransformCol (<span class="keywordtype">float</span>[,] src, <span class="keywordtype">float</span>[,] dst, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> length)
 <a name="l00115"></a>00115         {
-<a name="l00116"></a>00116             <span class="keywordflow">if</span> (length &gt;= <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#aa6981c16a1765d4664747274676d5eba">MINSIZE</a>) {
+<a name="l00116"></a>00116             <span class="keywordflow">if</span> (length &gt;= MINSIZE) {
 <a name="l00117"></a>00117                 <span class="keywordtype">int</span> half = length &gt;&gt; 1;
 <a name="l00118"></a>00118                 <span class="comment">//if the length is even then subtract 1 from &quot;half&quot;</span>
 <a name="l00119"></a>00119                 <span class="comment">//as there is the same number of low and high-pass values</span>
@@ -203,26 +203,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00132"></a>00132                 <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; half; i++) {
 <a name="l00133"></a>00133                     <span class="comment">//calculate the high-pass value by</span>
 <a name="l00134"></a>00134                     <span class="comment">//subtracting the mean of the immediate neighbors for every second value</span>
-<a name="l00135"></a>00135                     <span class="keywordtype">float</span> hf = src [x, offSrc + 1] - (src [x, offSrc] + src [x, offSrc + 2]) * <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#ab01bdb5e655a9f02b6ed6337ad88e4e4">MEAN</a>;
+<a name="l00135"></a>00135                     <span class="keywordtype">float</span> hf = src [x, offSrc + 1] - (src [x, offSrc] + src [x, offSrc + 2]) * MEAN;
 <a name="l00136"></a>00136                     <span class="comment">//smoothing the low-pass value, scale by factor 2 </span>
 <a name="l00137"></a>00137                     <span class="comment">//(instead of scaling low frequencies by factor sqrt(2) and</span>
 <a name="l00138"></a>00138                     <span class="comment">//shrinking high frequencies by factor sqrt(2)</span>
 <a name="l00139"></a>00139                     <span class="comment">//and reposition to have all low frequencies on the left side</span>
-<a name="l00140"></a>00140                     dst [x, i] = <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#af0ccd844200200f57839dea6823daaa6">SCALE</a> * (src [x, offSrc] + (lastHF + hf) * <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#ac608d0d31583d5c06c6dd7ab41880cb6">SMOOTH</a>);
+<a name="l00140"></a>00140                     dst [x, i] = SCALE * (src [x, offSrc] + (lastHF + hf) * SMOOTH);
 <a name="l00141"></a>00141                     dst [x, offdst++] = hf;
 <a name="l00142"></a>00142                     lastHF = hf;
 <a name="l00143"></a>00143                     offSrc += 2; 
 <a name="l00144"></a>00144                 } 
 <a name="l00145"></a>00145                 <span class="keywordflow">if</span> ((length &amp; 1) == 0) {
 <a name="l00146"></a>00146                     <span class="comment">//the secound last value in the array is our last low-pass value</span>
-<a name="l00147"></a>00147                     dst [x, numLFValues - 1] = src [x, length - 2] * <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#af0ccd844200200f57839dea6823daaa6">SCALE</a>; 
+<a name="l00147"></a>00147                     dst [x, numLFValues - 1] = src [x, length - 2] * SCALE; 
 <a name="l00148"></a>00148                     <span class="comment">//the last value is a high-pass value</span>
 <a name="l00149"></a>00149                     <span class="comment">//however here we just subtract the previos value (so not really a</span>
 <a name="l00150"></a>00150                     <span class="comment">//biorthogonal 5/3 transformation)</span>
 <a name="l00151"></a>00151                     <span class="comment">//This is done because the 5/3 wavelet cannot be calculated at the boundary</span>
 <a name="l00152"></a>00152                     dst [x, length - 1] = src [x, length - 1] - src [x, length - 2];
 <a name="l00153"></a>00153                 } <span class="keywordflow">else</span> {
-<a name="l00154"></a>00154                     dst [x, numLFValues - 1] = src [x, length - 1] * <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#af0ccd844200200f57839dea6823daaa6">SCALE</a>; 
+<a name="l00154"></a>00154                     dst [x, numLFValues - 1] = src [x, length - 1] * SCALE; 
 <a name="l00155"></a>00155                 }
 <a name="l00156"></a>00156             } <span class="keywordflow">else</span> {
 <a name="l00157"></a>00157                 <span class="comment">//We cannot perform the biorthogonal 5/3 wavelet transformation</span>
@@ -233,9 +233,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00162"></a>00162             }
 <a name="l00163"></a>00163         }
 <a name="l00164"></a>00164 
-<a name="l00165"></a><a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#a74b2789642a900fcfab4f47e023329ed">00165</a>         <span class="keyword">override</span> <span class="keyword">protected</span> <span class="keywordtype">void</span> <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#a74b2789642a900fcfab4f47e023329ed">InvTransformRow</a> (<span class="keywordtype">float</span>[,] src, <span class="keywordtype">float</span>[,] dst, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> length)
+<a name="l00165"></a>00165         <span class="keyword">override</span> <span class="keyword">protected</span> <span class="keywordtype">void</span> InvTransformRow (<span class="keywordtype">float</span>[,] src, <span class="keywordtype">float</span>[,] dst, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> length)
 <a name="l00166"></a>00166         {
-<a name="l00167"></a>00167             <span class="keywordflow">if</span> (length &gt;= <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#aa6981c16a1765d4664747274676d5eba">MINSIZE</a>) {
+<a name="l00167"></a>00167             <span class="keywordflow">if</span> (length &gt;= MINSIZE) {
 <a name="l00168"></a>00168                 <span class="keywordtype">int</span> half = length &gt;&gt; 1;
 <a name="l00169"></a>00169                 <span class="comment">//if the length is even then subtract 1 from &quot;half&quot;</span>
 <a name="l00170"></a>00170                 <span class="comment">//as there is the same number of low and high-pass values</span>
@@ -248,11 +248,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00177"></a>00177                 <span class="comment">// number of low-pass values</span>
 <a name="l00178"></a>00178                 <span class="keywordtype">int</span> numLFValues = half + 1;
 <a name="l00179"></a>00179     
-<a name="l00180"></a>00180                 <span class="keywordtype">float</span> lastLF = <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#a035bc7a8559c9e4eb476c6a1c1d8cc9a">SCALE_INV</a> * src [0, y] - src [numLFValues, y] * <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#ac608d0d31583d5c06c6dd7ab41880cb6">SMOOTH</a>;
+<a name="l00180"></a>00180                 <span class="keywordtype">float</span> lastLF = SCALE_INV * src [0, y] - src [numLFValues, y] * SMOOTH;
 <a name="l00181"></a>00181                 <span class="keywordtype">float</span> lastHF = src [numLFValues, y];
 <a name="l00182"></a>00182                 <span class="comment">//Calculate the first two values outside the for loop (array bounds)</span>
 <a name="l00183"></a>00183                 dst [0, y] = lastLF;
-<a name="l00184"></a>00184                 dst [1, y] = lastHF + lastLF * <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#a035bc7a8559c9e4eb476c6a1c1d8cc9a">SCALE_INV</a>;
+<a name="l00184"></a>00184                 dst [1, y] = lastHF + lastLF * SCALE_INV;
 <a name="l00185"></a>00185                 <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; half; i++) {
 <a name="l00186"></a>00186                     <span class="keywordtype">float</span> hf = src [numLFValues + i, y];
 <a name="l00187"></a>00187                     <span class="keywordtype">float</span> lf = SCALE_INV * src [i, y];
@@ -260,11 +260,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00189"></a>00189                     <span class="keywordtype">float</span> lfReconst = lf - (hf + lastHF) * SMOOTH;
 <a name="l00190"></a>00190                     dst [2 * i, y] = lfReconst;
 <a name="l00191"></a>00191                     <span class="comment">//add reconstructed low-pass value (left side) and high-pass value</span>
-<a name="l00192"></a>00192                     dst [2 * i + 1, y] = lfReconst * <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#ab01bdb5e655a9f02b6ed6337ad88e4e4">MEAN</a> + hf;
+<a name="l00192"></a>00192                     dst [2 * i + 1, y] = lfReconst * MEAN + hf;
 <a name="l00193"></a>00193                     <span class="comment">//add other low-pass value (right side)</span>
 <a name="l00194"></a>00194                     <span class="comment">//This must be done one iteration later, as the</span>
 <a name="l00195"></a>00195                     <span class="comment">//reconstructed values is not known earlier</span>
-<a name="l00196"></a>00196                     dst [2 * i - 1, y] += lfReconst * <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#ab01bdb5e655a9f02b6ed6337ad88e4e4">MEAN</a>;
+<a name="l00196"></a>00196                     dst [2 * i - 1, y] += lfReconst * MEAN;
 <a name="l00197"></a>00197                     lastHF = hf;
 <a name="l00198"></a>00198                     lastLF = lfReconst;
 <a name="l00199"></a>00199                 }
@@ -272,17 +272,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00201"></a>00201                 <span class="keywordflow">if</span> ((length &amp; 1) == 0) {
 <a name="l00202"></a>00202                     <span class="comment">//restore the last 3 values outside the for loop</span>
 <a name="l00203"></a>00203                     <span class="comment">//adding the missing low-pass value (right side)</span>
-<a name="l00204"></a>00204                     dst [length - 3, y] += src [numLFValues - 1, y] * <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#ab01bdb5e655a9f02b6ed6337ad88e4e4">MEAN</a> * <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#a035bc7a8559c9e4eb476c6a1c1d8cc9a">SCALE_INV</a>;
+<a name="l00204"></a>00204                     dst [length - 3, y] += src [numLFValues - 1, y] * MEAN * SCALE_INV;
 <a name="l00205"></a>00205                     <span class="comment">//copy the last low-pass value</span>
-<a name="l00206"></a>00206                     dst [length - 2, y] = src [numLFValues - 1, y] * <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#a035bc7a8559c9e4eb476c6a1c1d8cc9a">SCALE_INV</a>;
+<a name="l00206"></a>00206                     dst [length - 2, y] = src [numLFValues - 1, y] * SCALE_INV;
 <a name="l00207"></a>00207                     <span class="comment">//restore the last value by adding last low-pass value</span>
-<a name="l00208"></a>00208                     dst [length - 1, y] = src [length - 1, y] + src [numLFValues - 1, y] * <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#a035bc7a8559c9e4eb476c6a1c1d8cc9a">SCALE_INV</a>; 
+<a name="l00208"></a>00208                     dst [length - 1, y] = src [length - 1, y] + src [numLFValues - 1, y] * SCALE_INV; 
 <a name="l00209"></a>00209                 } <span class="keywordflow">else</span> {
 <a name="l00210"></a>00210                     <span class="comment">//restore the last 2 values outside the for loop</span>
 <a name="l00211"></a>00211                     <span class="comment">//adding the missing low-pass value (right side)</span>
-<a name="l00212"></a>00212                     dst [length - 2, y] += src [numLFValues - 1, y] * <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#ab01bdb5e655a9f02b6ed6337ad88e4e4">MEAN</a> * <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#a035bc7a8559c9e4eb476c6a1c1d8cc9a">SCALE_INV</a>;
+<a name="l00212"></a>00212                     dst [length - 2, y] += src [numLFValues - 1, y] * MEAN * SCALE_INV;
 <a name="l00213"></a>00213                     <span class="comment">//copy the last low-pass value</span>
-<a name="l00214"></a>00214                     dst [length - 1, y] = src [numLFValues - 1, y] * <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#a035bc7a8559c9e4eb476c6a1c1d8cc9a">SCALE_INV</a>;
+<a name="l00214"></a>00214                     dst [length - 1, y] = src [numLFValues - 1, y] * SCALE_INV;
 <a name="l00215"></a>00215                 }
 <a name="l00216"></a>00216             } <span class="keywordflow">else</span> {
 <a name="l00217"></a>00217                 <span class="comment">//We cannot perform the biorthogonal 5/3 wavelet transformation</span>
@@ -293,9 +293,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00222"></a>00222             }
 <a name="l00223"></a>00223         }
 <a name="l00224"></a>00224 
-<a name="l00225"></a><a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#a2f52053d7f8f2da84b0ca6964481bd06">00225</a>         <span class="keyword">override</span> <span class="keyword">protected</span> <span class="keywordtype">void</span> <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#a2f52053d7f8f2da84b0ca6964481bd06">InvTransformCol</a> (<span class="keywordtype">float</span>[,] src, <span class="keywordtype">float</span>[,] dst, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> length)
+<a name="l00225"></a>00225         <span class="keyword">override</span> <span class="keyword">protected</span> <span class="keywordtype">void</span> InvTransformCol (<span class="keywordtype">float</span>[,] src, <span class="keywordtype">float</span>[,] dst, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> length)
 <a name="l00226"></a>00226         {
-<a name="l00227"></a>00227             <span class="keywordflow">if</span> (length &gt;= <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#aa6981c16a1765d4664747274676d5eba">MINSIZE</a>) {
+<a name="l00227"></a>00227             <span class="keywordflow">if</span> (length &gt;= MINSIZE) {
 <a name="l00228"></a>00228                 <span class="keywordtype">int</span> half = length &gt;&gt; 1;
 <a name="l00229"></a>00229                 <span class="comment">//if the length is even then subtract 1 from &quot;half&quot;</span>
 <a name="l00230"></a>00230                 <span class="comment">//as there is the same number of low and high-pass values</span>
@@ -308,11 +308,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00237"></a>00237                 <span class="comment">// number of low-pass values</span>
 <a name="l00238"></a>00238                 <span class="keywordtype">int</span> numLFValues = half + 1;
 <a name="l00239"></a>00239     
-<a name="l00240"></a>00240                 <span class="keywordtype">float</span> lastLF = <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#a035bc7a8559c9e4eb476c6a1c1d8cc9a">SCALE_INV</a> * src [x, 0] - src [x, numLFValues] * <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#ac608d0d31583d5c06c6dd7ab41880cb6">SMOOTH</a>;
+<a name="l00240"></a>00240                 <span class="keywordtype">float</span> lastLF = SCALE_INV * src [x, 0] - src [x, numLFValues] * SMOOTH;
 <a name="l00241"></a>00241                 <span class="keywordtype">float</span> lastHF = src [x, numLFValues];
 <a name="l00242"></a>00242                 <span class="comment">//Calculate the first two values outside the for loop (array bounds)</span>
 <a name="l00243"></a>00243                 dst [x, 0] = lastLF;
-<a name="l00244"></a>00244                 dst [x, 1] = lastHF + lastLF * <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#a035bc7a8559c9e4eb476c6a1c1d8cc9a">SCALE_INV</a>;
+<a name="l00244"></a>00244                 dst [x, 1] = lastHF + lastLF * SCALE_INV;
 <a name="l00245"></a>00245                 <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; half; i++) {
 <a name="l00246"></a>00246                     <span class="keywordtype">float</span> hf = src [x, numLFValues + i];
 <a name="l00247"></a>00247                     <span class="keywordtype">float</span> lf = SCALE_INV * src [x, i];
@@ -320,11 +320,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00249"></a>00249                     <span class="keywordtype">float</span> lfReconst = lf - (hf + lastHF) * SMOOTH;
 <a name="l00250"></a>00250                     dst [x, 2 * i] = lfReconst;
 <a name="l00251"></a>00251                     <span class="comment">//add reconstructed low-pass value (left side) and high-pass value</span>
-<a name="l00252"></a>00252                     dst [x, 2 * i + 1] = lfReconst * <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#ab01bdb5e655a9f02b6ed6337ad88e4e4">MEAN</a> + hf;
+<a name="l00252"></a>00252                     dst [x, 2 * i + 1] = lfReconst * MEAN + hf;
 <a name="l00253"></a>00253                     <span class="comment">//add other low-pass value (right side)</span>
 <a name="l00254"></a>00254                     <span class="comment">//This must be done one iteration later, as the</span>
 <a name="l00255"></a>00255                     <span class="comment">//reconstructed values is not known earlier</span>
-<a name="l00256"></a>00256                     dst [x, 2 * i - 1] += lfReconst * <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#ab01bdb5e655a9f02b6ed6337ad88e4e4">MEAN</a>;
+<a name="l00256"></a>00256                     dst [x, 2 * i - 1] += lfReconst * MEAN;
 <a name="l00257"></a>00257                     lastHF = hf;
 <a name="l00258"></a>00258                     lastLF = lfReconst;
 <a name="l00259"></a>00259                 }
@@ -332,17 +332,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00261"></a>00261                 <span class="keywordflow">if</span> ((length &amp; 1) == 0) {
 <a name="l00262"></a>00262                     <span class="comment">//restore the last 3 values outside the for loop</span>
 <a name="l00263"></a>00263                     <span class="comment">//adding the missing low-pass value (right side)</span>
-<a name="l00264"></a>00264                     dst [x, length - 3] += src [x, numLFValues - 1] * <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#ab01bdb5e655a9f02b6ed6337ad88e4e4">MEAN</a> * <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#a035bc7a8559c9e4eb476c6a1c1d8cc9a">SCALE_INV</a>;
+<a name="l00264"></a>00264                     dst [x, length - 3] += src [x, numLFValues - 1] * MEAN * SCALE_INV;
 <a name="l00265"></a>00265                     <span class="comment">//copy the last low-pass value</span>
-<a name="l00266"></a>00266                     dst [x, length - 2] = src [x, numLFValues - 1] * <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#a035bc7a8559c9e4eb476c6a1c1d8cc9a">SCALE_INV</a>;
+<a name="l00266"></a>00266                     dst [x, length - 2] = src [x, numLFValues - 1] * SCALE_INV;
 <a name="l00267"></a>00267                     <span class="comment">//restore the last value by adding last low-pass value</span>
-<a name="l00268"></a>00268                     dst [x, length - 1] = src [x, length - 1] + src [x, numLFValues - 1] * <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#a035bc7a8559c9e4eb476c6a1c1d8cc9a">SCALE_INV</a>; 
+<a name="l00268"></a>00268                     dst [x, length - 1] = src [x, length - 1] + src [x, numLFValues - 1] * SCALE_INV; 
 <a name="l00269"></a>00269                 } <span class="keywordflow">else</span> {
 <a name="l00270"></a>00270                     <span class="comment">//restore the last 2 values outside the for loop</span>
 <a name="l00271"></a>00271                     <span class="comment">//adding the missing low-pass value (right side)</span>
-<a name="l00272"></a>00272                     dst [x, length - 2] += src [x, numLFValues - 1] * <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#ab01bdb5e655a9f02b6ed6337ad88e4e4">MEAN</a> * <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#a035bc7a8559c9e4eb476c6a1c1d8cc9a">SCALE_INV</a>;
+<a name="l00272"></a>00272                     dst [x, length - 2] += src [x, numLFValues - 1] * MEAN * SCALE_INV;
 <a name="l00273"></a>00273                     <span class="comment">//copy the last low-pass value</span>
-<a name="l00274"></a>00274                     dst [x, length - 1] = src [x, numLFValues - 1] * <a class="code" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#a035bc7a8559c9e4eb476c6a1c1d8cc9a">SCALE_INV</a>;
+<a name="l00274"></a>00274                     dst [x, length - 1] = src [x, numLFValues - 1] * SCALE_INV;
 <a name="l00275"></a>00275                 }
 <a name="l00276"></a>00276             } <span class="keywordflow">else</span> {
 <a name="l00277"></a>00277                 <span class="comment">//We cannot perform the biorthogonal 5/3 wavelet transformation</span>
@@ -360,7 +360,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Properties</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Properties</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -372,7 +372,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 18 2016 07:26:28 for TurboWavelets.Net by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 19 2016 05:47:47 for TurboWavelets.Net by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

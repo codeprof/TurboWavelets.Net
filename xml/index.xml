@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.7.6.1">
+  <compound refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet1_d_static" kind="class"><name>TurboWavelets::Biorthogonal53Wavelet1DStatic</name>
+    <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet1_d_static_1ae7119dd839f9c317e69f7cceadf6da82" kind="function"><name>wavelet53_1d</name></member>
+    <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet1_d_static_1a9fd288d382428a089990d1e3f6367657" kind="function"><name>wavelet53_1d_inverse</name></member>
+  </compound>
+  <compound refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d" kind="class"><name>TurboWavelets::Biorthogonal53Wavelet2D</name>
+    <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1aa6981c16a1765d4664747274676d5eba" kind="variable"><name>MINSIZE</name></member>
+    <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1af0ccd844200200f57839dea6823daaa6" kind="variable"><name>SCALE</name></member>
+    <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1a035bc7a8559c9e4eb476c6a1c1d8cc9a" kind="variable"><name>SCALE_INV</name></member>
+    <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1ab01bdb5e655a9f02b6ed6337ad88e4e4" kind="variable"><name>MEAN</name></member>
+    <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1a087508fa3e1f6e94477310a061d09784" kind="variable"><name>MEAN_INV</name></member>
+    <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1ac608d0d31583d5c06c6dd7ab41880cb6" kind="variable"><name>SMOOTH</name></member>
+    <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1aeb90da1672a5e2fd88863bf227ee6db9" kind="variable"><name>SMOOTH_INV</name></member>
+    <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1a8783eb5b8e032cd8cf75c5a1bb80bba0" kind="function"><name>Biorthogonal53Wavelet2D</name></member>
+    <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1a2d9bf97c2211d5859b3a53835bea7888" kind="function"><name>Biorthogonal53Wavelet2D</name></member>
+    <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1acec9bb2730e6dee78c8f6d5c8d79a523" kind="function"><name>TransformRow</name></member>
+    <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1aa93cd7f9ac110e04678a5313336fb73f" kind="function"><name>TransformCol</name></member>
+    <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1a74b2789642a900fcfab4f47e023329ed" kind="function"><name>InvTransformRow</name></member>
+    <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1a2f52053d7f8f2da84b0ca6964481bd06" kind="function"><name>InvTransformCol</name></member>
+  </compound>
+  <compound refid="class_turbo_wavelets_1_1_haar_wavelet2_d" kind="class"><name>TurboWavelets::HaarWavelet2D</name>
+    <member refid="class_turbo_wavelets_1_1_haar_wavelet2_d_1a841ed0ce87560b5a4e5b94e4b2630765" kind="variable"><name>MINSIZE</name></member>
+    <member refid="class_turbo_wavelets_1_1_haar_wavelet2_d_1a1c6cc94e0c41dd74fc3c8f7e36bf123f" kind="variable"><name>SCALE</name></member>
+    <member refid="class_turbo_wavelets_1_1_haar_wavelet2_d_1adbc2c681478c8bd315a77b6ddf57e9bd" kind="variable"><name>SCALE_INV</name></member>
+    <member refid="class_turbo_wavelets_1_1_haar_wavelet2_d_1af0a09712e36a5e8abcaf67e9352c7529" kind="variable"><name>MEAN</name></member>
+    <member refid="class_turbo_wavelets_1_1_haar_wavelet2_d_1aca358f40b15421e2ad216236fa000cce" kind="variable"><name>MEAN_INV</name></member>
+    <member refid="class_turbo_wavelets_1_1_haar_wavelet2_d_1ab55a20658fe1f22b6e756418b4e1dc29" kind="function"><name>HaarWavelet2D</name></member>
+    <member refid="class_turbo_wavelets_1_1_haar_wavelet2_d_1a8064166eec2c0a4b66378896b882bd47" kind="function"><name>HaarWavelet2D</name></member>
+    <member refid="class_turbo_wavelets_1_1_haar_wavelet2_d_1a55f6abb99bf5d87017e715b63f64cc15" kind="function"><name>TransformRow</name></member>
+    <member refid="class_turbo_wavelets_1_1_haar_wavelet2_d_1a5695f7a35bbbae2f64d5c92212cd1f83" kind="function"><name>TransformCol</name></member>
+    <member refid="class_turbo_wavelets_1_1_haar_wavelet2_d_1a870ff202a886a34c54013b867e56f6e6" kind="function"><name>InvTransformRow</name></member>
+    <member refid="class_turbo_wavelets_1_1_haar_wavelet2_d_1a780d0ea14dea6a587c8ebf21f19670d0" kind="function"><name>InvTransformCol</name></member>
+  </compound>
+  <compound refid="class_turbo_wavelets_1_1_order_wavelet2_d" kind="class"><name>TurboWavelets::OrderWavelet2D</name>
+    <member refid="class_turbo_wavelets_1_1_order_wavelet2_d_1aed357d3d66affbf094ee6e104ac75f1f" kind="function"><name>OrderWavelet2D</name></member>
+    <member refid="class_turbo_wavelets_1_1_order_wavelet2_d_1a22aec9d1c8fd7f56ac480a305ce4e9cd" kind="function"><name>OrderWavelet2D</name></member>
+    <member refid="class_turbo_wavelets_1_1_order_wavelet2_d_1af45baa14b0d867362b989db7d41f14dc" kind="function"><name>TransformRow</name></member>
+    <member refid="class_turbo_wavelets_1_1_order_wavelet2_d_1a94c72dd8852fe900901bcffd12c37272" kind="function"><name>TransformCol</name></member>
+    <member refid="class_turbo_wavelets_1_1_order_wavelet2_d_1a67a15c5e174f2bf762d153a976f86b36" kind="function"><name>InvTransformRow</name></member>
+    <member refid="class_turbo_wavelets_1_1_order_wavelet2_d_1ae7e013e9ee79f1d0932de6fa2e1854de" kind="function"><name>InvTransformCol</name></member>
+  </compound>
+  <compound refid="class_turbo_wavelets_1_1_wavelet2_d" kind="class"><name>TurboWavelets::Wavelet2D</name>
+    <member refid="class_turbo_wavelets_1_1_wavelet2_d_1aaa4b3711957fe1798980e6891331a08d" kind="variable"><name>width</name></member>
+    <member refid="class_turbo_wavelets_1_1_wavelet2_d_1afb2aa87b89b82f329357cbdc0cde18a8" kind="variable"><name>height</name></member>
+    <member refid="class_turbo_wavelets_1_1_wavelet2_d_1af5148ef1a46dd5694ccea13aa8f1b9e2" kind="variable"><name>minSize</name></member>
+    <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a949bac2b4f540092cf7cc8916968cdc0" kind="variable"><name>allowedMinSize</name></member>
+    <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a742fff705da3ff5a4b6d67e9a56637be" kind="variable"><name>enableParallel</name></member>
+    <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a2b5e1636f40bab5b6ee88f6e8bb1b653" kind="variable"><name>enableCacheing</name></member>
+    <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a07949ac8b81d7afa1776e92f11b74834" kind="variable"><name>cachedArray</name></member>
+    <member refid="class_turbo_wavelets_1_1_wavelet2_d_1ad69614eed43d939d02cf11076f95adee" kind="variable"><name>threadSync</name></member>
+    <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a41d9135f22a6b2cb661b2cc2ccb768ff" kind="variable"><name>progressDelegate</name></member>
+    <member refid="class_turbo_wavelets_1_1_wavelet2_d_1adb4984a01d9ab29c0056b18cbbcdef6f" kind="variable"><name>progressAbort</name></member>
+    <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a08a8ff6259f0d66913715c00ed6e167b" kind="variable"><name>progressSync</name></member>
+    <member refid="class_turbo_wavelets_1_1_wavelet2_d_1ad2fad1f07e9e5c4901c0cdc925991e49" kind="variable"><name>progressValue</name></member>
+    <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a7cbf7ce44310a48178f36101a4c03add" kind="variable"><name>progressMax</name></member>
+    <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a30058c5e0e5bd95b29bc080efbcf9083" kind="property"><name>Width</name></member>
+    <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a277d0f89d73f839350c64a83ccd76ff6" kind="property"><name>Height</name></member>
+    <member refid="class_turbo_wavelets_1_1_wavelet2_d_1abbd41e51d24f8a7912ae47dd364ed4fb" kind="property"><name>EnableCaching</name></member>
+    <member refid="class_turbo_wavelets_1_1_wavelet2_d_1abec21e54c6ab8cce0e02ef3ad64ae5af" kind="property"><name>EnableParallel</name></member>
+    <member refid="class_turbo_wavelets_1_1_wavelet2_d_1aec52fe74aa08e073119064ef4ac3fe93" kind="function"><name>ProgressDelegate</name></member>
+    <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a5156da3a3376121d64967dd8cd75725b" kind="function"><name>Wavelet2D</name></member>
+    <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a727e557f207cf861b10c38f1f1a91b52" kind="function"><name>FlushCache</name></member>
+    <member refid="class_turbo_wavelets_1_1_wavelet2_d_1ac647a989c2b66ca08a8b7e4196cbc547" kind="function"><name>TransformIsotropic2D</name></member>
+    <member refid="class_turbo_wavelets_1_1_wavelet2_d_1ac1644fb0d5f8a2ba8f265b445cba454b" kind="function"><name>BacktransformIsotropic2D</name></member>
+    <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a55e3f96cb79da6cc4621ccc1118a0d6f" kind="function"><name>ScaleCoefficients</name></member>
+    <member refid="class_turbo_wavelets_1_1_wavelet2_d_1aa1e399d2ab5f85843185a2895bf7f7ad" kind="function"><name>CropCoefficients</name></member>
+    <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a9abbbf0cffd0d8dca5d78d6ad4dad399" kind="function"><name>CropCoefficients</name></member>
+    <member refid="class_turbo_wavelets_1_1_wavelet2_d_1ad25227565f3b5e5953e951ad5b375654" kind="function"><name>getCoefficientsRange</name></member>
+    <member refid="class_turbo_wavelets_1_1_wavelet2_d_1aca8c6e617c9d428a22e566edd986f6f9" kind="function"><name>initProgress</name></member>
+    <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a355cbea784a3b078fec87e6ff4c186e4" kind="function"><name>updateProgress</name></member>
+    <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a1dad0a0576f0d0e10d44c1ae645dc951" kind="function"><name>checkArrayArgument</name></member>
+    <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a534341c94386ce78b597ca970e78db2e" kind="function"><name>ModfiyBlock</name></member>
+    <member refid="class_turbo_wavelets_1_1_wavelet2_d_1aa56d99219f0bf8ef33eb28841f10f45c" kind="function"><name>ModifyCoefficients</name></member>
+    <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a3dc6269869eb9c864f615e42d7822153" kind="function"><name>getTempArray</name></member>
+    <member refid="class_turbo_wavelets_1_1_wavelet2_d_1af0339475762d327f9d8ec019079cdc28" kind="function"><name>TransformRow</name></member>
+    <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a6a6c334fb499d248b72215001ff5e9d4" kind="function"><name>TransformCol</name></member>
+    <member refid="class_turbo_wavelets_1_1_wavelet2_d_1ac0b65a648f05436b54aa4d925812e1d5" kind="function"><name>InvTransformRow</name></member>
+    <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a9897e5e3f830ab7ea106e6bcf367fa07" kind="function"><name>InvTransformCol</name></member>
+    <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a95e430713dc5e27ebf7b254d1346777e" kind="function"><name>TransformRows</name></member>
+    <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a7aae90825e937ebb7822c2daa976d22a" kind="function"><name>TransformCols</name></member>
+    <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a9109cf50d757e7cda895ce0965134f76" kind="function"><name>InvTransformRows</name></member>
+    <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a08ab1e9de65415589726214fa8b45ae2" kind="function"><name>InvTransformCols</name></member>
+  </compound>
+  <compound refid="namespace_system" kind="namespace"><name>System</name>
+  </compound>
+  <compound refid="namespace_system_1_1_reflection" kind="namespace"><name>System::Reflection</name>
+  </compound>
+  <compound refid="namespace_system_1_1_runtime_1_1_compiler_services" kind="namespace"><name>System::Runtime::CompilerServices</name>
+  </compound>
+  <compound refid="namespace_system_1_1_threading" kind="namespace"><name>System::Threading</name>
+  </compound>
+  <compound refid="namespace_system_1_1_threading_1_1_tasks" kind="namespace"><name>System::Threading::Tasks</name>
+  </compound>
+  <compound refid="namespace_turbo_wavelets" kind="namespace"><name>TurboWavelets</name>
+  </compound>
+  <compound refid="_biorthogonal53_wavelet1_d_static_8cs" kind="file"><name>Biorthogonal53Wavelet1DStatic.cs</name>
+  </compound>
+  <compound refid="_biorthogonal53_wavelet2_d_8cs" kind="file"><name>Biorthogonal53Wavelet2D.cs</name>
+  </compound>
+  <compound refid="_haar_wavelet2_d_8cs" kind="file"><name>HaarWavelet2D.cs</name>
+  </compound>
+  <compound refid="_order_wavelet2_d_8cs" kind="file"><name>OrderWavelet2D.cs</name>
+  </compound>
+  <compound refid="_assembly_info_8cs" kind="file"><name>AssemblyInfo.cs</name>
+  </compound>
+  <compound refid="_wavelet2_d_8cs" kind="file"><name>Wavelet2D.cs</name>
+  </compound>
+  <compound refid="dir_a065655fc4ad14acd5e6b96e3522355b" kind="dir"><name>TurboWavelets/Properties/</name>
+  </compound>
+  <compound refid="dir_91148112ec6573d6a350d4bfd28e6758" kind="dir"><name>TurboWavelets/</name>
+  </compound>
+</doxygenindex>

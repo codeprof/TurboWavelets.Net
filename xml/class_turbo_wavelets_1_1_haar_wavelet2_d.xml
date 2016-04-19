@@ -1,0 +1,367 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="class_turbo_wavelets_1_1_haar_wavelet2_d" kind="class" prot="public">
+    <compoundname>TurboWavelets::HaarWavelet2D</compoundname>
+    <basecompoundref refid="class_turbo_wavelets_1_1_wavelet2_d" prot="public" virt="non-virtual">TurboWavelets.Wavelet2D</basecompoundref>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_turbo_wavelets_1_1_haar_wavelet2_d_1a841ed0ce87560b5a4e5b94e4b2630765" prot="protected" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int TurboWavelets.HaarWavelet2D.MINSIZE</definition>
+        <argsstring></argsstring>
+        <name>MINSIZE</name>
+        <initializer> 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" line="34" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_turbo_wavelets_1_1_haar_wavelet2_d_1a1c6cc94e0c41dd74fc3c8f7e36bf123f" prot="protected" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float TurboWavelets.HaarWavelet2D.SCALE</definition>
+        <argsstring></argsstring>
+        <name>SCALE</name>
+        <initializer> 2.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" line="35" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_turbo_wavelets_1_1_haar_wavelet2_d_1adbc2c681478c8bd315a77b6ddf57e9bd" prot="protected" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float TurboWavelets.HaarWavelet2D.SCALE_INV</definition>
+        <argsstring></argsstring>
+        <name>SCALE_INV</name>
+        <initializer> 0.5f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" line="36" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_turbo_wavelets_1_1_haar_wavelet2_d_1af0a09712e36a5e8abcaf67e9352c7529" prot="protected" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float TurboWavelets.HaarWavelet2D.MEAN</definition>
+        <argsstring></argsstring>
+        <name>MEAN</name>
+        <initializer> 0.5f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" line="37" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_turbo_wavelets_1_1_haar_wavelet2_d_1aca358f40b15421e2ad216236fa000cce" prot="protected" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float TurboWavelets.HaarWavelet2D.MEAN_INV</definition>
+        <argsstring></argsstring>
+        <name>MEAN_INV</name>
+        <initializer> 2.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" line="38" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_turbo_wavelets_1_1_haar_wavelet2_d_1ab55a20658fe1f22b6e756418b4e1dc29" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TurboWavelets.HaarWavelet2D.HaarWavelet2D</definition>
+        <argsstring>(int width, int height)</argsstring>
+        <name>HaarWavelet2D</name>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+<para>A fast implementation of a two-dimensional haar transformation for arbitary lenghts (works for all sizes, not just power of 2) The implementation takes advantage of multiple CPU cores. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The width of the transformation</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The width of the transformation</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" line="49" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" bodystart="47" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="class_turbo_wavelets_1_1_haar_wavelet2_d_1a8064166eec2c0a4b66378896b882bd47" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TurboWavelets.HaarWavelet2D.HaarWavelet2D</definition>
+        <argsstring>(int width, int height, int minSize)</argsstring>
+        <name>HaarWavelet2D</name>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>minSize</declname>
+        </param>
+        <briefdescription>
+<para>A fast implementation of a two-dimensional haar transformation for arbitary lenghts (works for all sizes, not just power of 2) The implementation takes advantage of multiple CPU cores. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The width of the transformation</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The width of the transformation</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>minSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minimum width/height up to the transformation should be applied</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" line="62" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" bodystart="60" bodyend="63"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_turbo_wavelets_1_1_haar_wavelet2_d_1a55f6abb99bf5d87017e715b63f64cc15" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void TurboWavelets.HaarWavelet2D.TransformRow</definition>
+        <argsstring>(float[,] src, float[,] dst, int y, int length)</argsstring>
+        <name>TransformRow</name>
+        <reimplements refid="class_turbo_wavelets_1_1_wavelet2_d_1af0339475762d327f9d8ec019079cdc28">TransformRow</reimplements>
+        <param>
+          <type>float</type>
+          <declname>src</declname>
+          <array>[,]</array>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>dst</declname>
+          <array>[,]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" line="66" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" bodystart="65" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="class_turbo_wavelets_1_1_haar_wavelet2_d_1a5695f7a35bbbae2f64d5c92212cd1f83" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void TurboWavelets.HaarWavelet2D.TransformCol</definition>
+        <argsstring>(float[,] src, float[,] dst, int x, int length)</argsstring>
+        <name>TransformCol</name>
+        <reimplements refid="class_turbo_wavelets_1_1_wavelet2_d_1a6a6c334fb499d248b72215001ff5e9d4">TransformCol</reimplements>
+        <param>
+          <type>float</type>
+          <declname>src</declname>
+          <array>[,]</array>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>dst</declname>
+          <array>[,]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" line="92" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" bodystart="91" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="class_turbo_wavelets_1_1_haar_wavelet2_d_1a870ff202a886a34c54013b867e56f6e6" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void TurboWavelets.HaarWavelet2D.InvTransformRow</definition>
+        <argsstring>(float[,] src, float[,] dst, int y, int length)</argsstring>
+        <name>InvTransformRow</name>
+        <reimplements refid="class_turbo_wavelets_1_1_wavelet2_d_1ac0b65a648f05436b54aa4d925812e1d5">InvTransformRow</reimplements>
+        <param>
+          <type>float</type>
+          <declname>src</declname>
+          <array>[,]</array>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>dst</declname>
+          <array>[,]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" line="118" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" bodystart="117" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="class_turbo_wavelets_1_1_haar_wavelet2_d_1a780d0ea14dea6a587c8ebf21f19670d0" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void TurboWavelets.HaarWavelet2D.InvTransformCol</definition>
+        <argsstring>(float[,] src, float[,] dst, int x, int length)</argsstring>
+        <name>InvTransformCol</name>
+        <reimplements refid="class_turbo_wavelets_1_1_wavelet2_d_1a9897e5e3f830ab7ea106e6bcf367fa07">InvTransformCol</reimplements>
+        <param>
+          <type>float</type>
+          <declname>src</declname>
+          <array>[,]</array>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>dst</declname>
+          <array>[,]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" line="142" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" bodystart="141" bodyend="163"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="25">
+        <label>TurboWavelets.HaarWavelet2D</label>
+        <link refid="class_turbo_wavelets_1_1_haar_wavelet2_d"/>
+        <childnode refid="26" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>Wavelet2D</label>
+        <link refid="class_turbo_wavelets_1_1_wavelet2_d"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="27">
+        <label>TurboWavelets.HaarWavelet2D</label>
+        <link refid="class_turbo_wavelets_1_1_haar_wavelet2_d"/>
+        <childnode refid="28" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>Wavelet2D</label>
+        <link refid="class_turbo_wavelets_1_1_wavelet2_d"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" line="33" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" bodystart="32" bodyend="164"/>
+    <listofallmembers>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a949bac2b4f540092cf7cc8916968cdc0" prot="protected" virt="non-virtual"><scope>TurboWavelets::HaarWavelet2D</scope><name>allowedMinSize</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1ac1644fb0d5f8a2ba8f265b445cba454b" prot="public" virt="virtual"><scope>TurboWavelets::HaarWavelet2D</scope><name>BacktransformIsotropic2D</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a07949ac8b81d7afa1776e92f11b74834" prot="protected" virt="non-virtual"><scope>TurboWavelets::HaarWavelet2D</scope><name>cachedArray</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1aa1e399d2ab5f85843185a2895bf7f7ad" prot="public" virt="virtual"><scope>TurboWavelets::HaarWavelet2D</scope><name>CropCoefficients</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a9abbbf0cffd0d8dca5d78d6ad4dad399" prot="public" virt="virtual"><scope>TurboWavelets::HaarWavelet2D</scope><name>CropCoefficients</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a2b5e1636f40bab5b6ee88f6e8bb1b653" prot="protected" virt="non-virtual"><scope>TurboWavelets::HaarWavelet2D</scope><name>enableCacheing</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1abbd41e51d24f8a7912ae47dd364ed4fb" prot="public" virt="non-virtual"><scope>TurboWavelets::HaarWavelet2D</scope><name>EnableCaching</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a742fff705da3ff5a4b6d67e9a56637be" prot="protected" virt="non-virtual"><scope>TurboWavelets::HaarWavelet2D</scope><name>enableParallel</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1abec21e54c6ab8cce0e02ef3ad64ae5af" prot="public" virt="non-virtual"><scope>TurboWavelets::HaarWavelet2D</scope><name>EnableParallel</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a727e557f207cf861b10c38f1f1a91b52" prot="public" virt="non-virtual"><scope>TurboWavelets::HaarWavelet2D</scope><name>FlushCache</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1ad25227565f3b5e5953e951ad5b375654" prot="public" virt="virtual"><scope>TurboWavelets::HaarWavelet2D</scope><name>getCoefficientsRange</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a3dc6269869eb9c864f615e42d7822153" prot="protected" virt="non-virtual"><scope>TurboWavelets::HaarWavelet2D</scope><name>getTempArray</name></member>
+      <member refid="class_turbo_wavelets_1_1_haar_wavelet2_d_1ab55a20658fe1f22b6e756418b4e1dc29" prot="public" virt="non-virtual"><scope>TurboWavelets::HaarWavelet2D</scope><name>HaarWavelet2D</name></member>
+      <member refid="class_turbo_wavelets_1_1_haar_wavelet2_d_1a8064166eec2c0a4b66378896b882bd47" prot="public" virt="non-virtual"><scope>TurboWavelets::HaarWavelet2D</scope><name>HaarWavelet2D</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a277d0f89d73f839350c64a83ccd76ff6" prot="public" virt="non-virtual"><scope>TurboWavelets::HaarWavelet2D</scope><name>Height</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1afb2aa87b89b82f329357cbdc0cde18a8" prot="protected" virt="non-virtual"><scope>TurboWavelets::HaarWavelet2D</scope><name>height</name></member>
+      <member refid="class_turbo_wavelets_1_1_haar_wavelet2_d_1a780d0ea14dea6a587c8ebf21f19670d0" prot="protected" virt="virtual"><scope>TurboWavelets::HaarWavelet2D</scope><name>InvTransformCol</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a08ab1e9de65415589726214fa8b45ae2" prot="protected" virt="virtual"><scope>TurboWavelets::HaarWavelet2D</scope><name>InvTransformCols</name></member>
+      <member refid="class_turbo_wavelets_1_1_haar_wavelet2_d_1a870ff202a886a34c54013b867e56f6e6" prot="protected" virt="virtual"><scope>TurboWavelets::HaarWavelet2D</scope><name>InvTransformRow</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a9109cf50d757e7cda895ce0965134f76" prot="protected" virt="virtual"><scope>TurboWavelets::HaarWavelet2D</scope><name>InvTransformRows</name></member>
+      <member refid="class_turbo_wavelets_1_1_haar_wavelet2_d_1af0a09712e36a5e8abcaf67e9352c7529" prot="protected" virt="non-virtual"><scope>TurboWavelets::HaarWavelet2D</scope><name>MEAN</name></member>
+      <member refid="class_turbo_wavelets_1_1_haar_wavelet2_d_1aca358f40b15421e2ad216236fa000cce" prot="protected" virt="non-virtual"><scope>TurboWavelets::HaarWavelet2D</scope><name>MEAN_INV</name></member>
+      <member refid="class_turbo_wavelets_1_1_haar_wavelet2_d_1a841ed0ce87560b5a4e5b94e4b2630765" prot="protected" virt="non-virtual"><scope>TurboWavelets::HaarWavelet2D</scope><name>MINSIZE</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1af5148ef1a46dd5694ccea13aa8f1b9e2" prot="protected" virt="non-virtual"><scope>TurboWavelets::HaarWavelet2D</scope><name>minSize</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1adb4984a01d9ab29c0056b18cbbcdef6f" prot="protected" virt="non-virtual"><scope>TurboWavelets::HaarWavelet2D</scope><name>progressAbort</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a41d9135f22a6b2cb661b2cc2ccb768ff" prot="protected" virt="non-virtual"><scope>TurboWavelets::HaarWavelet2D</scope><name>progressDelegate</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1aec52fe74aa08e073119064ef4ac3fe93" prot="public" virt="non-virtual"><scope>TurboWavelets::HaarWavelet2D</scope><name>ProgressDelegate</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a7cbf7ce44310a48178f36101a4c03add" prot="protected" virt="non-virtual"><scope>TurboWavelets::HaarWavelet2D</scope><name>progressMax</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a08a8ff6259f0d66913715c00ed6e167b" prot="protected" virt="non-virtual"><scope>TurboWavelets::HaarWavelet2D</scope><name>progressSync</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1ad2fad1f07e9e5c4901c0cdc925991e49" prot="protected" virt="non-virtual"><scope>TurboWavelets::HaarWavelet2D</scope><name>progressValue</name></member>
+      <member refid="class_turbo_wavelets_1_1_haar_wavelet2_d_1a1c6cc94e0c41dd74fc3c8f7e36bf123f" prot="protected" virt="non-virtual"><scope>TurboWavelets::HaarWavelet2D</scope><name>SCALE</name></member>
+      <member refid="class_turbo_wavelets_1_1_haar_wavelet2_d_1adbc2c681478c8bd315a77b6ddf57e9bd" prot="protected" virt="non-virtual"><scope>TurboWavelets::HaarWavelet2D</scope><name>SCALE_INV</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a55e3f96cb79da6cc4621ccc1118a0d6f" prot="public" virt="virtual"><scope>TurboWavelets::HaarWavelet2D</scope><name>ScaleCoefficients</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1ad69614eed43d939d02cf11076f95adee" prot="protected" virt="non-virtual"><scope>TurboWavelets::HaarWavelet2D</scope><name>threadSync</name></member>
+      <member refid="class_turbo_wavelets_1_1_haar_wavelet2_d_1a5695f7a35bbbae2f64d5c92212cd1f83" prot="protected" virt="virtual"><scope>TurboWavelets::HaarWavelet2D</scope><name>TransformCol</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a7aae90825e937ebb7822c2daa976d22a" prot="protected" virt="virtual"><scope>TurboWavelets::HaarWavelet2D</scope><name>TransformCols</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1ac647a989c2b66ca08a8b7e4196cbc547" prot="public" virt="virtual"><scope>TurboWavelets::HaarWavelet2D</scope><name>TransformIsotropic2D</name></member>
+      <member refid="class_turbo_wavelets_1_1_haar_wavelet2_d_1a55f6abb99bf5d87017e715b63f64cc15" prot="protected" virt="virtual"><scope>TurboWavelets::HaarWavelet2D</scope><name>TransformRow</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a95e430713dc5e27ebf7b254d1346777e" prot="protected" virt="virtual"><scope>TurboWavelets::HaarWavelet2D</scope><name>TransformRows</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a5156da3a3376121d64967dd8cd75725b" prot="public" virt="non-virtual"><scope>TurboWavelets::HaarWavelet2D</scope><name>Wavelet2D</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a30058c5e0e5bd95b29bc080efbcf9083" prot="public" virt="non-virtual"><scope>TurboWavelets::HaarWavelet2D</scope><name>Width</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1aaa4b3711957fe1798980e6891331a08d" prot="protected" virt="non-virtual"><scope>TurboWavelets::HaarWavelet2D</scope><name>width</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

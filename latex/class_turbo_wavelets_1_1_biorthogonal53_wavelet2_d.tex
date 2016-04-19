@@ -24,37 +24,48 @@
 \subsection*{\-Public \-Member \-Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_a8783eb5b8e032cd8cf75c5a1bb80bba0}{\-Biorthogonal53\-Wavelet2\-D} (int \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_aaa4b3711957fe1798980e6891331a08d}{width}, int \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_afb2aa87b89b82f329357cbdc0cde18a8}{height})
+\hyperlink{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_a8783eb5b8e032cd8cf75c5a1bb80bba0}{\-Biorthogonal53\-Wavelet2\-D} (int width, int height)
 \begin{DoxyCompactList}\small\item\em \-A fast implementation of a two-\/dimensional biorthogonal 5/3 wavelet transformation for arbitary lenghts (works for all sizes, not just power of 2) using the lifting scheme. \-The implementation takes advantage of multiple \-C\-P\-U cores. \end{DoxyCompactList}\item 
-\hyperlink{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_a2d9bf97c2211d5859b3a53835bea7888}{\-Biorthogonal53\-Wavelet2\-D} (int \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_aaa4b3711957fe1798980e6891331a08d}{width}, int \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_afb2aa87b89b82f329357cbdc0cde18a8}{height}, int \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_af5148ef1a46dd5694ccea13aa8f1b9e2}{min\-Size})
+\hyperlink{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_a2d9bf97c2211d5859b3a53835bea7888}{\-Biorthogonal53\-Wavelet2\-D} (int width, int height, int min\-Size)
 \begin{DoxyCompactList}\small\item\em \-Initalizes a two dimensional wavelet transformation. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{\-Protected \-Member \-Functions}
 \begin{DoxyCompactItemize}
 \item 
-override void \hyperlink{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_acec9bb2730e6dee78c8f6d5c8d79a523}{\-Transform\-Row} (float\mbox{[},\mbox{]} src, float\mbox{[},\mbox{]} dst, int y, int length)
+\hypertarget{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_acec9bb2730e6dee78c8f6d5c8d79a523}{override void {\bfseries \-Transform\-Row} (float\mbox{[},\mbox{]} src, float\mbox{[},\mbox{]} dst, int y, int length)}\label{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_acec9bb2730e6dee78c8f6d5c8d79a523}
+
 \item 
-override void \hyperlink{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_aa93cd7f9ac110e04678a5313336fb73f}{\-Transform\-Col} (float\mbox{[},\mbox{]} src, float\mbox{[},\mbox{]} dst, int x, int length)
+\hypertarget{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_aa93cd7f9ac110e04678a5313336fb73f}{override void {\bfseries \-Transform\-Col} (float\mbox{[},\mbox{]} src, float\mbox{[},\mbox{]} dst, int x, int length)}\label{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_aa93cd7f9ac110e04678a5313336fb73f}
+
 \item 
-override void \hyperlink{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_a74b2789642a900fcfab4f47e023329ed}{\-Inv\-Transform\-Row} (float\mbox{[},\mbox{]} src, float\mbox{[},\mbox{]} dst, int y, int length)
+\hypertarget{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_a74b2789642a900fcfab4f47e023329ed}{override void {\bfseries \-Inv\-Transform\-Row} (float\mbox{[},\mbox{]} src, float\mbox{[},\mbox{]} dst, int y, int length)}\label{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_a74b2789642a900fcfab4f47e023329ed}
+
 \item 
-override void \hyperlink{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_a2f52053d7f8f2da84b0ca6964481bd06}{\-Inv\-Transform\-Col} (float\mbox{[},\mbox{]} src, float\mbox{[},\mbox{]} dst, int x, int length)
+\hypertarget{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_a2f52053d7f8f2da84b0ca6964481bd06}{override void {\bfseries \-Inv\-Transform\-Col} (float\mbox{[},\mbox{]} src, float\mbox{[},\mbox{]} dst, int x, int length)}\label{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_a2f52053d7f8f2da84b0ca6964481bd06}
+
 \end{DoxyCompactItemize}
 \subsection*{\-Protected \-Attributes}
 \begin{DoxyCompactItemize}
 \item 
-const int \hyperlink{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_aa6981c16a1765d4664747274676d5eba}{\-M\-I\-N\-S\-I\-Z\-E} = 3
+\hypertarget{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_aa6981c16a1765d4664747274676d5eba}{const int {\bfseries \-M\-I\-N\-S\-I\-Z\-E} = 3}\label{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_aa6981c16a1765d4664747274676d5eba}
+
 \item 
-const float \hyperlink{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_af0ccd844200200f57839dea6823daaa6}{\-S\-C\-A\-L\-E} = 2.\-0f
+\hypertarget{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_af0ccd844200200f57839dea6823daaa6}{const float {\bfseries \-S\-C\-A\-L\-E} = 2.\-0f}\label{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_af0ccd844200200f57839dea6823daaa6}
+
 \item 
-const float \hyperlink{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_a035bc7a8559c9e4eb476c6a1c1d8cc9a}{\-S\-C\-A\-L\-E\-\_\-\-I\-N\-V} = 0.\-5f
+\hypertarget{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_a035bc7a8559c9e4eb476c6a1c1d8cc9a}{const float {\bfseries \-S\-C\-A\-L\-E\-\_\-\-I\-N\-V} = 0.\-5f}\label{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_a035bc7a8559c9e4eb476c6a1c1d8cc9a}
+
 \item 
-const float \hyperlink{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_ab01bdb5e655a9f02b6ed6337ad88e4e4}{\-M\-E\-A\-N} = 0.\-5f
+\hypertarget{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_ab01bdb5e655a9f02b6ed6337ad88e4e4}{const float {\bfseries \-M\-E\-A\-N} = 0.\-5f}\label{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_ab01bdb5e655a9f02b6ed6337ad88e4e4}
+
 \item 
-const float \hyperlink{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_a087508fa3e1f6e94477310a061d09784}{\-M\-E\-A\-N\-\_\-\-I\-N\-V} = 2.\-0f
+\hypertarget{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_a087508fa3e1f6e94477310a061d09784}{const float {\bfseries \-M\-E\-A\-N\-\_\-\-I\-N\-V} = 2.\-0f}\label{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_a087508fa3e1f6e94477310a061d09784}
+
 \item 
-const float \hyperlink{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_ac608d0d31583d5c06c6dd7ab41880cb6}{\-S\-M\-O\-O\-T\-H} = 0.\-25f
+\hypertarget{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_ac608d0d31583d5c06c6dd7ab41880cb6}{const float {\bfseries \-S\-M\-O\-O\-T\-H} = 0.\-25f}\label{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_ac608d0d31583d5c06c6dd7ab41880cb6}
+
 \item 
-const float \hyperlink{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_aeb90da1672a5e2fd88863bf227ee6db9}{\-S\-M\-O\-O\-T\-H\-\_\-\-I\-N\-V} = 4.\-0f
+\hypertarget{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_aeb90da1672a5e2fd88863bf227ee6db9}{const float {\bfseries \-S\-M\-O\-O\-T\-H\-\_\-\-I\-N\-V} = 4.\-0f}\label{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_aeb90da1672a5e2fd88863bf227ee6db9}
+
 \end{DoxyCompactItemize}
 
 
@@ -108,133 +119,6 @@ const float \hyperlink{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_aeb90d
 
 
 
-\subsection{\-Member \-Function \-Documentation}
-\hypertarget{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_a2f52053d7f8f2da84b0ca6964481bd06}{\index{\-Turbo\-Wavelets\-::\-Biorthogonal53\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Biorthogonal53\-Wavelet2\-D}!\-Inv\-Transform\-Col@{\-Inv\-Transform\-Col}}
-\index{\-Inv\-Transform\-Col@{\-Inv\-Transform\-Col}!TurboWavelets::Biorthogonal53Wavelet2D@{\-Turbo\-Wavelets\-::\-Biorthogonal53\-Wavelet2\-D}}
-\subsubsection[{\-Inv\-Transform\-Col}]{\setlength{\rightskip}{0pt plus 5cm}override void {\bf \-Turbo\-Wavelets.\-Biorthogonal53\-Wavelet2\-D.\-Inv\-Transform\-Col} (
-\begin{DoxyParamCaption}
-\item[{float}]{src\mbox{[},\mbox{]}, }
-\item[{float}]{dst\mbox{[},\mbox{]}, }
-\item[{int}]{x, }
-\item[{int}]{length}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}\label{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_a2f52053d7f8f2da84b0ca6964481bd06}
-
-
-\-Reimplemented from \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a9897e5e3f830ab7ea106e6bcf367fa07}{\-Turbo\-Wavelets.\-Wavelet2\-D}.
-
-
-
-\-Definition at line 225 of file \-Biorthogonal53\-Wavelet2\-D.\-cs.
-
-\hypertarget{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_a74b2789642a900fcfab4f47e023329ed}{\index{\-Turbo\-Wavelets\-::\-Biorthogonal53\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Biorthogonal53\-Wavelet2\-D}!\-Inv\-Transform\-Row@{\-Inv\-Transform\-Row}}
-\index{\-Inv\-Transform\-Row@{\-Inv\-Transform\-Row}!TurboWavelets::Biorthogonal53Wavelet2D@{\-Turbo\-Wavelets\-::\-Biorthogonal53\-Wavelet2\-D}}
-\subsubsection[{\-Inv\-Transform\-Row}]{\setlength{\rightskip}{0pt plus 5cm}override void {\bf \-Turbo\-Wavelets.\-Biorthogonal53\-Wavelet2\-D.\-Inv\-Transform\-Row} (
-\begin{DoxyParamCaption}
-\item[{float}]{src\mbox{[},\mbox{]}, }
-\item[{float}]{dst\mbox{[},\mbox{]}, }
-\item[{int}]{y, }
-\item[{int}]{length}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}\label{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_a74b2789642a900fcfab4f47e023329ed}
-
-
-\-Reimplemented from \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_ac0b65a648f05436b54aa4d925812e1d5}{\-Turbo\-Wavelets.\-Wavelet2\-D}.
-
-
-
-\-Definition at line 165 of file \-Biorthogonal53\-Wavelet2\-D.\-cs.
-
-\hypertarget{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_aa93cd7f9ac110e04678a5313336fb73f}{\index{\-Turbo\-Wavelets\-::\-Biorthogonal53\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Biorthogonal53\-Wavelet2\-D}!\-Transform\-Col@{\-Transform\-Col}}
-\index{\-Transform\-Col@{\-Transform\-Col}!TurboWavelets::Biorthogonal53Wavelet2D@{\-Turbo\-Wavelets\-::\-Biorthogonal53\-Wavelet2\-D}}
-\subsubsection[{\-Transform\-Col}]{\setlength{\rightskip}{0pt plus 5cm}override void {\bf \-Turbo\-Wavelets.\-Biorthogonal53\-Wavelet2\-D.\-Transform\-Col} (
-\begin{DoxyParamCaption}
-\item[{float}]{src\mbox{[},\mbox{]}, }
-\item[{float}]{dst\mbox{[},\mbox{]}, }
-\item[{int}]{x, }
-\item[{int}]{length}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}\label{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_aa93cd7f9ac110e04678a5313336fb73f}
-
-
-\-Reimplemented from \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a6a6c334fb499d248b72215001ff5e9d4}{\-Turbo\-Wavelets.\-Wavelet2\-D}.
-
-
-
-\-Definition at line 114 of file \-Biorthogonal53\-Wavelet2\-D.\-cs.
-
-\hypertarget{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_acec9bb2730e6dee78c8f6d5c8d79a523}{\index{\-Turbo\-Wavelets\-::\-Biorthogonal53\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Biorthogonal53\-Wavelet2\-D}!\-Transform\-Row@{\-Transform\-Row}}
-\index{\-Transform\-Row@{\-Transform\-Row}!TurboWavelets::Biorthogonal53Wavelet2D@{\-Turbo\-Wavelets\-::\-Biorthogonal53\-Wavelet2\-D}}
-\subsubsection[{\-Transform\-Row}]{\setlength{\rightskip}{0pt plus 5cm}override void {\bf \-Turbo\-Wavelets.\-Biorthogonal53\-Wavelet2\-D.\-Transform\-Row} (
-\begin{DoxyParamCaption}
-\item[{float}]{src\mbox{[},\mbox{]}, }
-\item[{float}]{dst\mbox{[},\mbox{]}, }
-\item[{int}]{y, }
-\item[{int}]{length}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}\label{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_acec9bb2730e6dee78c8f6d5c8d79a523}
-
-
-\-Reimplemented from \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_af0339475762d327f9d8ec019079cdc28}{\-Turbo\-Wavelets.\-Wavelet2\-D}.
-
-
-
-\-Definition at line 62 of file \-Biorthogonal53\-Wavelet2\-D.\-cs.
-
-
-
-\subsection{\-Member \-Data \-Documentation}
-\hypertarget{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_ab01bdb5e655a9f02b6ed6337ad88e4e4}{\index{\-Turbo\-Wavelets\-::\-Biorthogonal53\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Biorthogonal53\-Wavelet2\-D}!\-M\-E\-A\-N@{\-M\-E\-A\-N}}
-\index{\-M\-E\-A\-N@{\-M\-E\-A\-N}!TurboWavelets::Biorthogonal53Wavelet2D@{\-Turbo\-Wavelets\-::\-Biorthogonal53\-Wavelet2\-D}}
-\subsubsection[{\-M\-E\-A\-N}]{\setlength{\rightskip}{0pt plus 5cm}const float {\bf \-Turbo\-Wavelets.\-Biorthogonal53\-Wavelet2\-D.\-M\-E\-A\-N} = 0.\-5f\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_ab01bdb5e655a9f02b6ed6337ad88e4e4}
-
-
-\-Definition at line 38 of file \-Biorthogonal53\-Wavelet2\-D.\-cs.
-
-\hypertarget{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_a087508fa3e1f6e94477310a061d09784}{\index{\-Turbo\-Wavelets\-::\-Biorthogonal53\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Biorthogonal53\-Wavelet2\-D}!\-M\-E\-A\-N\-\_\-\-I\-N\-V@{\-M\-E\-A\-N\-\_\-\-I\-N\-V}}
-\index{\-M\-E\-A\-N\-\_\-\-I\-N\-V@{\-M\-E\-A\-N\-\_\-\-I\-N\-V}!TurboWavelets::Biorthogonal53Wavelet2D@{\-Turbo\-Wavelets\-::\-Biorthogonal53\-Wavelet2\-D}}
-\subsubsection[{\-M\-E\-A\-N\-\_\-\-I\-N\-V}]{\setlength{\rightskip}{0pt plus 5cm}const float {\bf \-Turbo\-Wavelets.\-Biorthogonal53\-Wavelet2\-D.\-M\-E\-A\-N\-\_\-\-I\-N\-V} = 2.\-0f\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_a087508fa3e1f6e94477310a061d09784}
-
-
-\-Definition at line 39 of file \-Biorthogonal53\-Wavelet2\-D.\-cs.
-
-\hypertarget{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_aa6981c16a1765d4664747274676d5eba}{\index{\-Turbo\-Wavelets\-::\-Biorthogonal53\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Biorthogonal53\-Wavelet2\-D}!\-M\-I\-N\-S\-I\-Z\-E@{\-M\-I\-N\-S\-I\-Z\-E}}
-\index{\-M\-I\-N\-S\-I\-Z\-E@{\-M\-I\-N\-S\-I\-Z\-E}!TurboWavelets::Biorthogonal53Wavelet2D@{\-Turbo\-Wavelets\-::\-Biorthogonal53\-Wavelet2\-D}}
-\subsubsection[{\-M\-I\-N\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}const int {\bf \-Turbo\-Wavelets.\-Biorthogonal53\-Wavelet2\-D.\-M\-I\-N\-S\-I\-Z\-E} = 3\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_aa6981c16a1765d4664747274676d5eba}
-
-
-\-Definition at line 35 of file \-Biorthogonal53\-Wavelet2\-D.\-cs.
-
-\hypertarget{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_af0ccd844200200f57839dea6823daaa6}{\index{\-Turbo\-Wavelets\-::\-Biorthogonal53\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Biorthogonal53\-Wavelet2\-D}!\-S\-C\-A\-L\-E@{\-S\-C\-A\-L\-E}}
-\index{\-S\-C\-A\-L\-E@{\-S\-C\-A\-L\-E}!TurboWavelets::Biorthogonal53Wavelet2D@{\-Turbo\-Wavelets\-::\-Biorthogonal53\-Wavelet2\-D}}
-\subsubsection[{\-S\-C\-A\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}const float {\bf \-Turbo\-Wavelets.\-Biorthogonal53\-Wavelet2\-D.\-S\-C\-A\-L\-E} = 2.\-0f\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_af0ccd844200200f57839dea6823daaa6}
-
-
-\-Definition at line 36 of file \-Biorthogonal53\-Wavelet2\-D.\-cs.
-
-\hypertarget{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_a035bc7a8559c9e4eb476c6a1c1d8cc9a}{\index{\-Turbo\-Wavelets\-::\-Biorthogonal53\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Biorthogonal53\-Wavelet2\-D}!\-S\-C\-A\-L\-E\-\_\-\-I\-N\-V@{\-S\-C\-A\-L\-E\-\_\-\-I\-N\-V}}
-\index{\-S\-C\-A\-L\-E\-\_\-\-I\-N\-V@{\-S\-C\-A\-L\-E\-\_\-\-I\-N\-V}!TurboWavelets::Biorthogonal53Wavelet2D@{\-Turbo\-Wavelets\-::\-Biorthogonal53\-Wavelet2\-D}}
-\subsubsection[{\-S\-C\-A\-L\-E\-\_\-\-I\-N\-V}]{\setlength{\rightskip}{0pt plus 5cm}const float {\bf \-Turbo\-Wavelets.\-Biorthogonal53\-Wavelet2\-D.\-S\-C\-A\-L\-E\-\_\-\-I\-N\-V} = 0.\-5f\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_a035bc7a8559c9e4eb476c6a1c1d8cc9a}
-
-
-\-Definition at line 37 of file \-Biorthogonal53\-Wavelet2\-D.\-cs.
-
-\hypertarget{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_ac608d0d31583d5c06c6dd7ab41880cb6}{\index{\-Turbo\-Wavelets\-::\-Biorthogonal53\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Biorthogonal53\-Wavelet2\-D}!\-S\-M\-O\-O\-T\-H@{\-S\-M\-O\-O\-T\-H}}
-\index{\-S\-M\-O\-O\-T\-H@{\-S\-M\-O\-O\-T\-H}!TurboWavelets::Biorthogonal53Wavelet2D@{\-Turbo\-Wavelets\-::\-Biorthogonal53\-Wavelet2\-D}}
-\subsubsection[{\-S\-M\-O\-O\-T\-H}]{\setlength{\rightskip}{0pt plus 5cm}const float {\bf \-Turbo\-Wavelets.\-Biorthogonal53\-Wavelet2\-D.\-S\-M\-O\-O\-T\-H} = 0.\-25f\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_ac608d0d31583d5c06c6dd7ab41880cb6}
-
-
-\-Definition at line 40 of file \-Biorthogonal53\-Wavelet2\-D.\-cs.
-
-\hypertarget{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_aeb90da1672a5e2fd88863bf227ee6db9}{\index{\-Turbo\-Wavelets\-::\-Biorthogonal53\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Biorthogonal53\-Wavelet2\-D}!\-S\-M\-O\-O\-T\-H\-\_\-\-I\-N\-V@{\-S\-M\-O\-O\-T\-H\-\_\-\-I\-N\-V}}
-\index{\-S\-M\-O\-O\-T\-H\-\_\-\-I\-N\-V@{\-S\-M\-O\-O\-T\-H\-\_\-\-I\-N\-V}!TurboWavelets::Biorthogonal53Wavelet2D@{\-Turbo\-Wavelets\-::\-Biorthogonal53\-Wavelet2\-D}}
-\subsubsection[{\-S\-M\-O\-O\-T\-H\-\_\-\-I\-N\-V}]{\setlength{\rightskip}{0pt plus 5cm}const float {\bf \-Turbo\-Wavelets.\-Biorthogonal53\-Wavelet2\-D.\-S\-M\-O\-O\-T\-H\-\_\-\-I\-N\-V} = 4.\-0f\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_aeb90da1672a5e2fd88863bf227ee6db9}
-
-
-\-Definition at line 41 of file \-Biorthogonal53\-Wavelet2\-D.\-cs.
-
-
-
 \-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
 \item 
-\-Turbo\-Wavelets/\hyperlink{_biorthogonal53_wavelet2_d_8cs}{\-Biorthogonal53\-Wavelet2\-D.\-cs}\end{DoxyCompactItemize}
+\-Turbo\-Wavelets/\-Biorthogonal53\-Wavelet2\-D.\-cs\end{DoxyCompactItemize}
