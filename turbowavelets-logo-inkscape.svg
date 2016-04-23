@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="2953.5657"
+   height="1370.3516"
+   viewBox="0 0 2362.8525 1096.2812"
+   version="1.1"
+   id="svg2"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="turbowavelets-logo.svg">
+  <metadata
+     id="metadata13">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs11" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="720"
+     id="namedview9"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.089717496"
+     inkscape:cx="1591.8949"
+     inkscape:cy="953.90161"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <path
+     sodipodi:nodetypes="cccccccc"
+     inkscape:connector-curvature="0"
+     id="path5"
+     d="m 45.352478,825.6473 641.723872,0 398.27615,0 320,210.4658 160,-841.86315 160,841.86315 320,-210.4658 317.5,0"
+     style="fill:none;stroke:#0000ff;stroke-width:72.5371933;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path7"
+     d="m 45.352478,825.6473 1040.000022,0 320,210.4658 160,-841.86315 160,841.86315 320,-210.4658 317.5,0"
+     style="fill:none;stroke:#ffffff;stroke-width:22.66787338;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
+     sodipodi:nodetypes="ccccccc" />
+  <text
+     xml:space="preserve"
+     style="font-size:136px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+     x="0.5859375"
+     y="395.48639"
+     id="text3780"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan3782"
+       x="0.5859375"
+       y="395.48639"
+       style="font-size:200px;line-height:125%;letter-spacing:-3.20000005px;word-spacing:0px">TurboWavelets</tspan><tspan
+       sodipodi:role="line"
+       x="0.5859375"
+       y="645.48645"
+       id="tspan3784" /></text>
+  <text
+     xml:space="preserve"
+     style="font-size:32px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+     x="924.73743"
+     y="646.5177"
+     id="text3786"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan3788"
+       x="924.73743"
+       y="646.5177"
+       style="font-size:240px">.Net</tspan></text>
+</svg>
