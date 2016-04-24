@@ -81,7 +81,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Properties</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Properties</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -99,7 +99,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">TurboWavelets.OrderWavelet2D Class Reference</div>  </div>
 </div><!--header-->
@@ -109,21 +111,36 @@ Inheritance diagram for TurboWavelets.OrderWavelet2D:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_turbo_wavelets_1_1_order_wavelet2_d__inherit__graph.png" border="0" usemap="#_turbo_wavelets_8_order_wavelet2_d_inherit__map" alt="Inheritance graph"/></div>
 <map name="_turbo_wavelets_8_order_wavelet2_d_inherit__map" id="_turbo_wavelets_8_order_wavelet2_d_inherit__map">
-<area shape="rect" id="node2" href="class_turbo_wavelets_1_1_wavelet2_d.html" title="Wavelet2D" alt="" coords="68,5,153,35"/></map>
+<area shape="rect" id="node2" href="class_turbo_wavelets_1_1_wavelet2_d.html" title="A abstract basis class which provides common functionality for different implementations of a &quot;2D Wav..." alt="" coords="68,5,153,35"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 
 <p><a href="class_turbo_wavelets_1_1_order_wavelet2_d-members.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_order_wavelet2_d.html#aed357d3d66affbf094ee6e104ac75f1f">OrderWavelet2D</a> (int width, int height)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_order_wavelet2_d.html#aed357d3d66affbf094ee6e104ac75f1f">OrderWavelet2D</a> (int <a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#aaa4b3711957fe1798980e6891331a08d">width</a>, int <a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#afb2aa87b89b82f329357cbdc0cde18a8">height</a>)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">A fast implementation of a two-dimensional ordering transformation for arbitary lenghts (works for all sizes, not just power of 2) This does not perform a complete wavelet transformation. It just does the cascade ordering of the values. The implementation takes advantage of multiple CPU cores.  <a href="#aed357d3d66affbf094ee6e104ac75f1f"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_order_wavelet2_d.html#a22aec9d1c8fd7f56ac480a305ce4e9cd">OrderWavelet2D</a> (int width, int height, int minSize)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_order_wavelet2_d.html#a22aec9d1c8fd7f56ac480a305ce4e9cd">OrderWavelet2D</a> (int <a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#aaa4b3711957fe1798980e6891331a08d">width</a>, int <a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#afb2aa87b89b82f329357cbdc0cde18a8">height</a>, int <a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#af5148ef1a46dd5694ccea13aa8f1b9e2">minSize</a>)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">A fast implementation of a two-dimensional ordering transformation for arbitary lenghts (works for all sizes, not just power of 2) This does not perform a complete wavelet transformation. It just does the cascade ordering of the values. The implementation takes advantage of multiple CPU cores.  <a href="#a22aec9d1c8fd7f56ac480a305ce4e9cd"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_order_wavelet2_d.html#af45baa14b0d867362b989db7d41f14dc">TransformRow</a> (float[,] src, float[,] dst, int y, int length)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a single horizontal transformation (transformation of a single row)  <a href="#af45baa14b0d867362b989db7d41f14dc"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_order_wavelet2_d.html#a94c72dd8852fe900901bcffd12c37272">TransformCol</a> (float[,] src, float[,] dst, int x, int length)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a single vertical transformation (transformation of a single column)  <a href="#a94c72dd8852fe900901bcffd12c37272"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_order_wavelet2_d.html#a67a15c5e174f2bf762d153a976f86b36">InvTransformRow</a> (float[,] src, float[,] dst, int y, int length)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a single inverse horizontal transformation (transformation of a single row)  <a href="#a67a15c5e174f2bf762d153a976f86b36"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_order_wavelet2_d.html#ae7e013e9ee79f1d0932de6fa2e1854de">InvTransformCol</a> (float[,] src, float[,] dst, int x, int length)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a single inverse vertical transformation (transformation of a single column)  <a href="#ae7e013e9ee79f1d0932de6fa2e1854de"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac2ad88fd5eadcb04baa930a58d791568"></a><!-- doxytag: member="TurboWavelets::OrderWavelet2D::AllowedMinSize" ref="ac2ad88fd5eadcb04baa930a58d791568" args="" -->
+const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_order_wavelet2_d.html#ac2ad88fd5eadcb04baa930a58d791568">AllowedMinSize</a> = 2</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The allowed minimum transformation (limitation of the algorithmn implementation) &lt;/supmmary&gt; <br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_order_wavelet2_d_8cs_source.html#l00033">33</a> of file <a class="el" href="_order_wavelet2_d_8cs_source.html">OrderWavelet2D.cs</a>.</p>
+<p>Definition at line <a class="el" href="_order_wavelet2_d_8cs_source.html#l00031">31</a> of file <a class="el" href="_order_wavelet2_d_8cs_source.html">OrderWavelet2D.cs</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aed357d3d66affbf094ee6e104ac75f1f"></a><!-- doxytag: member="TurboWavelets::OrderWavelet2D::OrderWavelet2D" ref="aed357d3d66affbf094ee6e104ac75f1f" args="(int width, int height)" -->
 <div class="memitem">
@@ -159,7 +176,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_order_wavelet2_d_8cs_source.html#l00044">44</a> of file <a class="el" href="_order_wavelet2_d_8cs_source.html">OrderWavelet2D.cs</a>.</p>
+<p>Definition at line <a class="el" href="_order_wavelet2_d_8cs_source.html#l00047">47</a> of file <a class="el" href="_order_wavelet2_d_8cs_source.html">OrderWavelet2D.cs</a>.</p>
 
 </div>
 </div>
@@ -204,7 +221,224 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_order_wavelet2_d_8cs_source.html#l00059">59</a> of file <a class="el" href="_order_wavelet2_d_8cs_source.html">OrderWavelet2D.cs</a>.</p>
+<p>Definition at line <a class="el" href="_order_wavelet2_d_8cs_source.html#l00062">62</a> of file <a class="el" href="_order_wavelet2_d_8cs_source.html">OrderWavelet2D.cs</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="ae7e013e9ee79f1d0932de6fa2e1854de"></a><!-- doxytag: member="TurboWavelets::OrderWavelet2D::InvTransformCol" ref="ae7e013e9ee79f1d0932de6fa2e1854de" args="(float[,] src, float[,] dst, int x, int length)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void <a class="el" href="class_turbo_wavelets_1_1_order_wavelet2_d.html#ae7e013e9ee79f1d0932de6fa2e1854de">TurboWavelets.OrderWavelet2D.InvTransformCol</a> </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>src</em>[,], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>dst</em>[,], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Performs a single inverse vertical transformation (transformation of a single column) </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>2d float array on which should be used as source for the transformation</td></tr>
+    <tr><td class="paramname">dst</td><td>2d float array on which should be used as destination for the transformation</td></tr>
+    <tr><td class="paramname">x</td><td>index of the row which should be transformed</td></tr>
+    <tr><td class="paramname">length</td><td>number of entries to transform</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#a9897e5e3f830ab7ea106e6bcf367fa07">TurboWavelets.Wavelet2D</a>.</p>
+
+<p>Definition at line <a class="el" href="_order_wavelet2_d_8cs_source.html#l00131">131</a> of file <a class="el" href="_order_wavelet2_d_8cs_source.html">OrderWavelet2D.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a67a15c5e174f2bf762d153a976f86b36"></a><!-- doxytag: member="TurboWavelets::OrderWavelet2D::InvTransformRow" ref="a67a15c5e174f2bf762d153a976f86b36" args="(float[,] src, float[,] dst, int y, int length)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void <a class="el" href="class_turbo_wavelets_1_1_order_wavelet2_d.html#a67a15c5e174f2bf762d153a976f86b36">TurboWavelets.OrderWavelet2D.InvTransformRow</a> </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>src</em>[,], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>dst</em>[,], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Performs a single inverse horizontal transformation (transformation of a single row) </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>2d float array on which should be used as source for the transformation</td></tr>
+    <tr><td class="paramname">dst</td><td>2d float array on which should be used as destination for the transformation</td></tr>
+    <tr><td class="paramname">y</td><td>index of the row which should be transformed</td></tr>
+    <tr><td class="paramname">length</td><td>number of entries to transform</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#ac0b65a648f05436b54aa4d925812e1d5">TurboWavelets.Wavelet2D</a>.</p>
+
+<p>Definition at line <a class="el" href="_order_wavelet2_d_8cs_source.html#l00110">110</a> of file <a class="el" href="_order_wavelet2_d_8cs_source.html">OrderWavelet2D.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a94c72dd8852fe900901bcffd12c37272"></a><!-- doxytag: member="TurboWavelets::OrderWavelet2D::TransformCol" ref="a94c72dd8852fe900901bcffd12c37272" args="(float[,] src, float[,] dst, int x, int length)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void <a class="el" href="class_turbo_wavelets_1_1_order_wavelet2_d.html#a94c72dd8852fe900901bcffd12c37272">TurboWavelets.OrderWavelet2D.TransformCol</a> </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>src</em>[,], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>dst</em>[,], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Performs a single vertical transformation (transformation of a single column) </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>2d float array on which should be used as source for the transformation</td></tr>
+    <tr><td class="paramname">dst</td><td>2d float array on which should be used as destination for the transformation</td></tr>
+    <tr><td class="paramname">x</td><td>index of the row which should be transformed</td></tr>
+    <tr><td class="paramname">length</td><td>number of entries to transform</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#a6a6c334fb499d248b72215001ff5e9d4">TurboWavelets.Wavelet2D</a>.</p>
+
+<p>Definition at line <a class="el" href="_order_wavelet2_d_8cs_source.html#l00089">89</a> of file <a class="el" href="_order_wavelet2_d_8cs_source.html">OrderWavelet2D.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af45baa14b0d867362b989db7d41f14dc"></a><!-- doxytag: member="TurboWavelets::OrderWavelet2D::TransformRow" ref="af45baa14b0d867362b989db7d41f14dc" args="(float[,] src, float[,] dst, int y, int length)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void <a class="el" href="class_turbo_wavelets_1_1_order_wavelet2_d.html#af45baa14b0d867362b989db7d41f14dc">TurboWavelets.OrderWavelet2D.TransformRow</a> </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>src</em>[,], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>dst</em>[,], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Performs a single horizontal transformation (transformation of a single row) </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>2d float array on which should be used as source for the transformation</td></tr>
+    <tr><td class="paramname">dst</td><td>2d float array on which should be used as destination for the transformation</td></tr>
+    <tr><td class="paramname">y</td><td>index of the row which should be transformed</td></tr>
+    <tr><td class="paramname">length</td><td>number of entries to transform</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#af0339475762d327f9d8ec019079cdc28">TurboWavelets.Wavelet2D</a>.</p>
+
+<p>Definition at line <a class="el" href="_order_wavelet2_d_8cs_source.html#l00068">68</a> of file <a class="el" href="_order_wavelet2_d_8cs_source.html">OrderWavelet2D.cs</a>.</p>
 
 </div>
 </div>
@@ -217,7 +451,7 @@ Public Member Functions</h2></td></tr>
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Properties</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Properties</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -229,7 +463,7 @@ Public Member Functions</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Apr 23 2016 07:59:15 for TurboWavelets.Net by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Apr 24 2016 18:03:49 for TurboWavelets.Net by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

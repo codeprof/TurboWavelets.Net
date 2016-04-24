@@ -12,12 +12,12 @@
         <argsstring></argsstring>
         <name>width</name>
         <briefdescription>
-        </briefdescription>
+<para>Width of the wavelet transformation. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="39" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="39" bodyend="-1"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="49" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="49" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_turbo_wavelets_1_1_wavelet2_d_1afb2aa87b89b82f329357cbdc0cde18a8" prot="protected" static="no" mutable="no">
         <type>int</type>
@@ -25,12 +25,12 @@
         <argsstring></argsstring>
         <name>height</name>
         <briefdescription>
-        </briefdescription>
+<para>Height of the wavelet transformation. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="40" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="40" bodyend="-1"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="53" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="53" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_turbo_wavelets_1_1_wavelet2_d_1af5148ef1a46dd5694ccea13aa8f1b9e2" prot="protected" static="no" mutable="no">
         <type>int</type>
@@ -38,12 +38,12 @@
         <argsstring></argsstring>
         <name>minSize</name>
         <briefdescription>
-        </briefdescription>
+<para>min. size for horizontal and vertical transformation </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="41" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="41" bodyend="-1"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="57" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="57" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_turbo_wavelets_1_1_wavelet2_d_1a949bac2b4f540092cf7cc8916968cdc0" prot="protected" static="no" mutable="no">
         <type>int</type>
@@ -51,56 +51,58 @@
         <argsstring></argsstring>
         <name>allowedMinSize</name>
         <briefdescription>
-        </briefdescription>
+<para>The allowed minimum value for minSize (limitation of the algorithmn implementation) &lt;/supmmary&gt; </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="42" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="42" bodyend="-1"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="61" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="61" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_turbo_wavelets_1_1_wavelet2_d_1a742fff705da3ff5a4b6d67e9a56637be" prot="protected" static="no" mutable="no">
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_turbo_wavelets_1_1_wavelet2_d_1a742fff705da3ff5a4b6d67e9a56637be" prot="private" static="no" mutable="no">
         <type>bool</type>
         <definition>volatile bool TurboWavelets.Wavelet2D.enableParallel</definition>
         <argsstring></argsstring>
         <name>enableParallel</name>
         <initializer> true</initializer>
         <briefdescription>
-        </briefdescription>
+<para>Setting whether threads should be used to accelerate execution. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="43" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="43" bodyend="-1"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="67" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="67" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_turbo_wavelets_1_1_wavelet2_d_1a2b5e1636f40bab5b6ee88f6e8bb1b653" prot="protected" static="no" mutable="no">
+      <memberdef kind="variable" id="class_turbo_wavelets_1_1_wavelet2_d_1a2b5e1636f40bab5b6ee88f6e8bb1b653" prot="private" static="no" mutable="no">
         <type>bool</type>
         <definition>volatile bool TurboWavelets.Wavelet2D.enableCacheing</definition>
         <argsstring></argsstring>
         <name>enableCacheing</name>
         <initializer> false</initializer>
         <briefdescription>
-        </briefdescription>
+<para>Setting whether temporary memory should cached (or allocated if needed) </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="44" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="44" bodyend="-1"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="71" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="71" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_turbo_wavelets_1_1_wavelet2_d_1a07949ac8b81d7afa1776e92f11b74834" prot="protected" static="no" mutable="no">
+      <memberdef kind="variable" id="class_turbo_wavelets_1_1_wavelet2_d_1a07949ac8b81d7afa1776e92f11b74834" prot="private" static="no" mutable="no">
         <type>float[,]</type>
         <definition>volatile float [,] TurboWavelets.Wavelet2D.cachedArray</definition>
         <argsstring></argsstring>
         <name>cachedArray</name>
         <initializer> null</initializer>
         <briefdescription>
-        </briefdescription>
+<para>temporary buffer used to store transformation results </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="45" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="45" bodyend="-1"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="75" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="75" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_turbo_wavelets_1_1_wavelet2_d_1ad69614eed43d939d02cf11076f95adee" prot="protected" static="no" mutable="no">
+      <memberdef kind="variable" id="class_turbo_wavelets_1_1_wavelet2_d_1ad69614eed43d939d02cf11076f95adee" prot="private" static="no" mutable="no">
         <type>object</type>
         <definition>object TurboWavelets.Wavelet2D.threadSync</definition>
         <argsstring></argsstring>
@@ -112,73 +114,73 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="49" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="49" bodyend="-1"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="81" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="81" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_turbo_wavelets_1_1_wavelet2_d_1a41d9135f22a6b2cb661b2cc2ccb768ff" prot="protected" static="no" mutable="no">
-        <type>ProgressDelegate</type>
+      <memberdef kind="variable" id="class_turbo_wavelets_1_1_wavelet2_d_1a41d9135f22a6b2cb661b2cc2ccb768ff" prot="private" static="no" mutable="no">
+        <type><ref refid="class_turbo_wavelets_1_1_wavelet2_d_1aec52fe74aa08e073119064ef4ac3fe93" kindref="member">ProgressDelegate</ref></type>
         <definition>ProgressDelegate TurboWavelets.Wavelet2D.progressDelegate</definition>
         <argsstring></argsstring>
         <name>progressDelegate</name>
         <briefdescription>
-        </briefdescription>
+<para>Delegate called to inform caller about progress and to provide possibility to abort. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="50" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="50" bodyend="-1"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="85" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="85" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_turbo_wavelets_1_1_wavelet2_d_1adb4984a01d9ab29c0056b18cbbcdef6f" prot="protected" static="no" mutable="no">
+      <memberdef kind="variable" id="class_turbo_wavelets_1_1_wavelet2_d_1adb4984a01d9ab29c0056b18cbbcdef6f" prot="private" static="no" mutable="no">
         <type>bool</type>
         <definition>volatile bool TurboWavelets.Wavelet2D.progressAbort</definition>
         <argsstring></argsstring>
         <name>progressAbort</name>
         <briefdescription>
-        </briefdescription>
+<para>Flag which indicates wheter the current task is aborted. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="51" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="51" bodyend="-1"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="89" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="89" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_turbo_wavelets_1_1_wavelet2_d_1a08a8ff6259f0d66913715c00ed6e167b" prot="protected" static="no" mutable="no">
+      <memberdef kind="variable" id="class_turbo_wavelets_1_1_wavelet2_d_1a08a8ff6259f0d66913715c00ed6e167b" prot="private" static="no" mutable="no">
         <type>object</type>
         <definition>object TurboWavelets.Wavelet2D.progressSync</definition>
         <argsstring></argsstring>
         <name>progressSync</name>
         <initializer> null</initializer>
         <briefdescription>
-        </briefdescription>
+<para>Synchronisaion object used for progress handling. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="52" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="52" bodyend="-1"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="93" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="93" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_turbo_wavelets_1_1_wavelet2_d_1ad2fad1f07e9e5c4901c0cdc925991e49" prot="protected" static="no" mutable="no">
+      <memberdef kind="variable" id="class_turbo_wavelets_1_1_wavelet2_d_1ad2fad1f07e9e5c4901c0cdc925991e49" prot="private" static="no" mutable="no">
         <type>long</type>
         <definition>long TurboWavelets.Wavelet2D.progressValue</definition>
         <argsstring></argsstring>
         <name>progressValue</name>
         <briefdescription>
-        </briefdescription>
+<para>The progress value of the current task. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="53" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="53" bodyend="-1"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="97" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="97" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_turbo_wavelets_1_1_wavelet2_d_1a7cbf7ce44310a48178f36101a4c03add" prot="protected" static="no" mutable="no">
+      <memberdef kind="variable" id="class_turbo_wavelets_1_1_wavelet2_d_1a7cbf7ce44310a48178f36101a4c03add" prot="private" static="no" mutable="no">
         <type>long</type>
         <definition>long TurboWavelets.Wavelet2D.progressMax</definition>
         <argsstring></argsstring>
         <name>progressMax</name>
         <briefdescription>
-        </briefdescription>
+<para>The maximal progress value of the current task. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="54" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="54" bodyend="-1"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="101" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="101" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="property">
@@ -193,7 +195,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="129" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="125" bodyend="-1"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="139" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="135" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_turbo_wavelets_1_1_wavelet2_d_1a277d0f89d73f839350c64a83ccd76ff6" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
         <type>int</type>
@@ -206,7 +208,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="138" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="134" bodyend="-1"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="148" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="144" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_turbo_wavelets_1_1_wavelet2_d_1abbd41e51d24f8a7912ae47dd364ed4fb" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
         <type>bool</type>
@@ -219,7 +221,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="153" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="143" bodyend="-1"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="163" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="153" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_turbo_wavelets_1_1_wavelet2_d_1abec21e54c6ab8cce0e02ef3ad64ae5af" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
         <type>bool</type>
@@ -232,7 +234,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="165" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="158" bodyend="-1"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="175" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="168" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -246,12 +248,12 @@
           <declname>progress</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Prototype of a delegate called to inform caller about progress and to provide possibility to abort &lt;/summary. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="37"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="44"/>
       </memberdef>
       <memberdef kind="function" id="class_turbo_wavelets_1_1_wavelet2_d_1a5156da3a3376121d64967dd8cd75725b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -275,14 +277,14 @@
           <declname>height</declname>
         </param>
         <briefdescription>
-<para>Initalizes a two dimensional wavelet cascade transformation. </para>        </briefdescription>
+<para>Initalizes a two dimensional wavelet cascade transformation. By the transformation the data is split up in a high- and a low-pass. The low-pass data is repeatedly transformed again until the horizontal or vertical length reaches &quot;minSize&quot;. </para>        </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>minSize</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>minimum size up to a transformation is applied (can be set arbitary)</para></parameterdescription>
+<para>minimum size up to a transformation is applied (can be set arbitrary)</para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
@@ -306,10 +308,18 @@
 <para>starting height of the transformation</para></parameterdescription>
 </parameteritem>
 </parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ArgumentException</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="106" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="105" bodyend="120"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="115" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="114" bodyend="129"/>
       </memberdef>
       <memberdef kind="function" id="class_turbo_wavelets_1_1_wavelet2_d_1a727e557f207cf861b10c38f1f1a91b52" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -322,7 +332,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="171" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="170" bodyend="175"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="181" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="180" bodyend="185"/>
       </memberdef>
       <memberdef kind="function" id="class_turbo_wavelets_1_1_wavelet2_d_1ac647a989c2b66ca08a8b7e4196cbc547" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -335,7 +345,7 @@
           <array>[,]</array>
         </param>
         <param>
-          <type>ProgressDelegate</type>
+          <type><ref refid="class_turbo_wavelets_1_1_wavelet2_d_1aec52fe74aa08e073119064ef4ac3fe93" kindref="member">ProgressDelegate</ref></type>
           <declname>progressDelegate</declname>
           <defval>null</defval>
         </param>
@@ -350,10 +360,18 @@
 <para>two dimensional float array to perform the the wavelet transformation on</para></parameterdescription>
 </parameteritem>
 </parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ArgumentException</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="312" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="311" bodyend="329"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="611" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="610" bodyend="628"/>
       </memberdef>
       <memberdef kind="function" id="class_turbo_wavelets_1_1_wavelet2_d_1ac1644fb0d5f8a2ba8f265b445cba454b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -366,17 +384,25 @@
           <array>[,]</array>
         </param>
         <param>
-          <type>ProgressDelegate</type>
+          <type><ref refid="class_turbo_wavelets_1_1_wavelet2_d_1aec52fe74aa08e073119064ef4ac3fe93" kindref="member">ProgressDelegate</ref></type>
           <declname>progressDelegate</declname>
           <defval>null</defval>
         </param>
         <briefdescription>
 <para>Perfroms a two dimensional isotropic wavelet transformation for an array. The result is copied back to the declared array. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ArgumentException</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="335" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="334" bodyend="365"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="635" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="634" bodyend="665"/>
       </memberdef>
       <memberdef kind="function" id="class_turbo_wavelets_1_1_wavelet2_d_1a55e3f96cb79da6cc4621ccc1118a0d6f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -397,17 +423,25 @@
           <declname>gridSize</declname>
         </param>
         <param>
-          <type>ProgressDelegate</type>
+          <type><ref refid="class_turbo_wavelets_1_1_wavelet2_d_1aec52fe74aa08e073119064ef4ac3fe93" kindref="member">ProgressDelegate</ref></type>
           <declname>progressDelegate</declname>
           <defval>null</defval>
         </param>
         <briefdescription>
 <para>Scales the n (length of the scaleFactors array) greatest coefficinets (for a defined grid size) by the value declared in scaleFactors. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ArgumentException</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="478" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="477" bodyend="488"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="672" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="671" bodyend="682"/>
       </memberdef>
       <memberdef kind="function" id="class_turbo_wavelets_1_1_wavelet2_d_1aa1e399d2ab5f85843185a2895bf7f7ad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -428,17 +462,25 @@
           <declname>gridSize</declname>
         </param>
         <param>
-          <type>ProgressDelegate</type>
+          <type><ref refid="class_turbo_wavelets_1_1_wavelet2_d_1aec52fe74aa08e073119064ef4ac3fe93" kindref="member">ProgressDelegate</ref></type>
           <declname>progressDelegate</declname>
           <defval>null</defval>
         </param>
         <briefdescription>
 <para>Set all but the greatest n coefficient to zero in the defined grid size. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ArgumentException</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="494" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="493" bodyend="498"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="689" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="688" bodyend="693"/>
       </memberdef>
       <memberdef kind="function" id="class_turbo_wavelets_1_1_wavelet2_d_1a9abbbf0cffd0d8dca5d78d6ad4dad399" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -455,17 +497,25 @@
           <declname>minAbsoluteValue</declname>
         </param>
         <param>
-          <type>ProgressDelegate</type>
+          <type><ref refid="class_turbo_wavelets_1_1_wavelet2_d_1aec52fe74aa08e073119064ef4ac3fe93" kindref="member">ProgressDelegate</ref></type>
           <declname>progressDelegate</declname>
           <defval>null</defval>
         </param>
         <briefdescription>
 <para>Set all coefficient with an absolute value smaller then &quot;minAbsoluteValue&quot; to zero (deadzone) </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ArgumentException</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="504" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="503" bodyend="535"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="700" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="699" bodyend="731"/>
       </memberdef>
       <memberdef kind="function" id="class_turbo_wavelets_1_1_wavelet2_d_1ad25227565f3b5e5953e951ad5b375654" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -486,17 +536,25 @@
           <declname>max</declname>
         </param>
         <param>
-          <type>ProgressDelegate</type>
+          <type><ref refid="class_turbo_wavelets_1_1_wavelet2_d_1aec52fe74aa08e073119064ef4ac3fe93" kindref="member">ProgressDelegate</ref></type>
           <declname>progressDelegate</declname>
           <defval>null</defval>
         </param>
         <briefdescription>
 <para>get the minimum and maximum amplitude (absolute values) of all coefficient values </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ArgumentException</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="541" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="540" bodyend="597"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="738" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="737" bodyend="744"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -506,7 +564,7 @@
         <argsstring>(ProgressDelegate progressDelegate, long maxValue=0)</argsstring>
         <name>initProgress</name>
         <param>
-          <type>ProgressDelegate</type>
+          <type><ref refid="class_turbo_wavelets_1_1_wavelet2_d_1aec52fe74aa08e073119064ef4ac3fe93" kindref="member">ProgressDelegate</ref></type>
           <declname>progressDelegate</declname>
         </param>
         <param>
@@ -515,12 +573,27 @@
           <defval>0</defval>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Updates the progress value of the current task by the declared increment and calls a callback to notify the caller about the progress and give the possiblily to abort the current task. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>progressDelegate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a delegate to notify the caller about the progress and to give the possiblity to abort the current task. Can be set to null if notification is not required</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maxValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The maximal progress value (to calculate progress percentage). Can be set to 0 if used with <ref refid="class_turbo_wavelets_1_1_wavelet2_d_1ac647a989c2b66ca08a8b7e4196cbc547" kindref="member">TransformIsotropic2D()</ref> or <ref refid="class_turbo_wavelets_1_1_wavelet2_d_1ac1644fb0d5f8a2ba8f265b445cba454b" kindref="member">BacktransformIsotropic2D()</ref> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="57" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="56" bodyend="76"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="197" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="196" bodyend="216"/>
       </memberdef>
       <memberdef kind="function" id="class_turbo_wavelets_1_1_wavelet2_d_1a355cbea784a3b078fec87e6ff4c186e4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -532,12 +605,20 @@
           <declname>increment</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Updates the progress value of the current task by the declared increment and calls a callback to notify the caller about the progress and give the possiblily to abort the current task. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>increment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value by which the progress is increased</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para><para>True if the current task should be aborted. False otherwise.</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="79" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="78" bodyend="96"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="226" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="225" bodyend="243"/>
       </memberdef>
       <memberdef kind="function" id="class_turbo_wavelets_1_1_wavelet2_d_1a1dad0a0576f0d0e10d44c1ae645dc951" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -554,12 +635,35 @@
           <declname>name</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Helper method to check a 2D float array to have the correct dimensions and is not null. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a 2D float array</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of src in the calling method</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ArgumentException</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="295" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="294" bodyend="305"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="273" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="272" bodyend="283"/>
       </memberdef>
       <memberdef kind="function" id="class_turbo_wavelets_1_1_wavelet2_d_1a534341c94386ce78b597ca970e78db2e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -596,12 +700,62 @@
           <declname>startY</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Private method to modify the coefficients of a single block of the declared grid size. The coefficients in the block are sorted by their absolute values (from high to low). The first n coefficients are multiplied with the coresponding value in the &quot;scaleFactorsMajors&quot;-array. If &quot;scaleFactorsMajors&quot; is null the values remain unchanged. The remaining coefficients are mulitplied with the fixed value &quot;scaleFactorsMinors&quot;. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a 2D float array</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>n greatest coefficients multiplied by the coresponding value in the &quot;scaleFactorsMajors&quot;-array or remaing unchanged if &quot;scaleFactorsMajors&quot; is null</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>scaleFactorsMajors</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>float array of size n with scaling factors</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>scaleFactorsMinors</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>scaling factor for remaining coefficients</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gridSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the grid (horizontally and vertically)</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>startX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>start position in first dimension</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>startY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>start position in second dimension</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="368" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="367" bodyend="419"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="300" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="299" bodyend="361"/>
       </memberdef>
       <memberdef kind="function" id="class_turbo_wavelets_1_1_wavelet2_d_1aa56d99219f0bf8ef33eb28841f10f45c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -630,7 +784,69 @@
           <declname>gridSize</declname>
         </param>
         <param>
-          <type>ProgressDelegate</type>
+          <type><ref refid="class_turbo_wavelets_1_1_wavelet2_d_1aec52fe74aa08e073119064ef4ac3fe93" kindref="member">ProgressDelegate</ref></type>
+          <declname>progressDelegate</declname>
+        </param>
+        <briefdescription>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ArgumentException</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="365" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="364" bodyend="415"/>
+      </memberdef>
+      <memberdef kind="function" id="class_turbo_wavelets_1_1_wavelet2_d_1a47ae6c79274176240f5955b2f5794610" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TurboWavelets.Wavelet2D.getBlockCoefficientsRange</definition>
+        <argsstring>(float[,] src, int offsetX, int offsetY, int width, int height, out float min, out float max, bool enableParallel, bool enableProgress, ProgressDelegate progressDelegate)</argsstring>
+        <name>getBlockCoefficientsRange</name>
+        <param>
+          <type>float</type>
+          <declname>src</declname>
+          <array>[,]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>offsetX</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>offsetY</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <type>out float</type>
+          <declname>min</declname>
+        </param>
+        <param>
+          <type>out float</type>
+          <declname>max</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>enableParallel</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>enableProgress</declname>
+        </param>
+        <param>
+          <type><ref refid="class_turbo_wavelets_1_1_wavelet2_d_1aec52fe74aa08e073119064ef4ac3fe93" kindref="member">ProgressDelegate</ref></type>
           <declname>progressDelegate</declname>
         </param>
         <briefdescription>
@@ -639,7 +855,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="422" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="421" bodyend="472"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="418" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="417" bodyend="474"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -649,21 +865,21 @@
         <argsstring>()</argsstring>
         <name>getTempArray</name>
         <briefdescription>
-        </briefdescription>
+<para>Provides a temporary 2D float array with the in the constructor declared dimensions. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="178" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="177" bodyend="192"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="250" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="249" bodyend="264"/>
       </memberdef>
       <memberdef kind="function" id="class_turbo_wavelets_1_1_wavelet2_d_1af0339475762d327f9d8ec019079cdc28" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
         <definition>virtual void TurboWavelets.Wavelet2D.TransformRow</definition>
         <argsstring>(float[,] src, float[,] dst, int y, int length)</argsstring>
         <name>TransformRow</name>
-        <reimplementedby refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1acec9bb2730e6dee78c8f6d5c8d79a523">TransformRow</reimplementedby>
         <reimplementedby refid="class_turbo_wavelets_1_1_order_wavelet2_d_1af45baa14b0d867362b989db7d41f14dc">TransformRow</reimplementedby>
         <reimplementedby refid="class_turbo_wavelets_1_1_haar_wavelet2_d_1a55f6abb99bf5d87017e715b63f64cc15">TransformRow</reimplementedby>
+        <reimplementedby refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1acec9bb2730e6dee78c8f6d5c8d79a523">TransformRow</reimplementedby>
         <param>
           <type>float</type>
           <declname>src</declname>
@@ -683,12 +899,41 @@
           <declname>length</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Performs a single horizontal transformation (transformation of a single row) </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2d float array on which should be used as source for the transformation</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2d float array on which should be used as destination for the transformation</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of the row which should be transformed</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of entries to transform</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="195" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="194" bodyend="197"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="485" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="484" bodyend="487"/>
       </memberdef>
       <memberdef kind="function" id="class_turbo_wavelets_1_1_wavelet2_d_1a6a6c334fb499d248b72215001ff5e9d4" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -717,12 +962,41 @@
           <declname>length</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Performs a single vertical transformation (transformation of a single column) </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2d float array on which should be used as source for the transformation</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2d float array on which should be used as destination for the transformation</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of the row which should be transformed</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of entries to transform</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="200" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="199" bodyend="202"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="497" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="496" bodyend="499"/>
       </memberdef>
       <memberdef kind="function" id="class_turbo_wavelets_1_1_wavelet2_d_1ac0b65a648f05436b54aa4d925812e1d5" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -751,12 +1025,41 @@
           <declname>length</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Performs a single inverse horizontal transformation (transformation of a single row) </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2d float array on which should be used as source for the transformation</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2d float array on which should be used as destination for the transformation</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of the row which should be transformed</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of entries to transform</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="205" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="204" bodyend="207"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="509" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="508" bodyend="511"/>
       </memberdef>
       <memberdef kind="function" id="class_turbo_wavelets_1_1_wavelet2_d_1a9897e5e3f830ab7ea106e6bcf367fa07" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -785,12 +1088,41 @@
           <declname>length</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Performs a single inverse vertical transformation (transformation of a single column) </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2d float array on which should be used as source for the transformation</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2d float array on which should be used as destination for the transformation</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of the row which should be transformed</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of entries to transform</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="210" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="209" bodyend="212"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="521" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="520" bodyend="523"/>
       </memberdef>
       <memberdef kind="function" id="class_turbo_wavelets_1_1_wavelet2_d_1a95e430713dc5e27ebf7b254d1346777e" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -821,7 +1153,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="215" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="214" bodyend="232"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="526" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="525" bodyend="543"/>
       </memberdef>
       <memberdef kind="function" id="class_turbo_wavelets_1_1_wavelet2_d_1a7aae90825e937ebb7822c2daa976d22a" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -852,7 +1184,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="235" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="234" bodyend="252"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="546" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="545" bodyend="563"/>
       </memberdef>
       <memberdef kind="function" id="class_turbo_wavelets_1_1_wavelet2_d_1a9109cf50d757e7cda895ce0965134f76" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -883,7 +1215,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="255" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="254" bodyend="272"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="566" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="565" bodyend="583"/>
       </memberdef>
       <memberdef kind="function" id="class_turbo_wavelets_1_1_wavelet2_d_1a08ab1e9de65415589726214fa8b45ae2" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -914,11 +1246,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="275" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="274" bodyend="292"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="586" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="585" bodyend="603"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para>A abstract basis class which provides common functionality for different implementations of a &quot;2D Wavelet transformation&quot;. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
@@ -945,19 +1277,20 @@
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="36" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="35" bodyend="598"/>
+    <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" line="40" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs" bodystart="39" bodyend="793"/>
     <listofallmembers>
       <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a949bac2b4f540092cf7cc8916968cdc0" prot="protected" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>allowedMinSize</name></member>
       <member refid="class_turbo_wavelets_1_1_wavelet2_d_1ac1644fb0d5f8a2ba8f265b445cba454b" prot="public" virt="virtual"><scope>TurboWavelets::Wavelet2D</scope><name>BacktransformIsotropic2D</name></member>
-      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a07949ac8b81d7afa1776e92f11b74834" prot="protected" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>cachedArray</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a07949ac8b81d7afa1776e92f11b74834" prot="private" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>cachedArray</name></member>
       <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a1dad0a0576f0d0e10d44c1ae645dc951" prot="private" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>checkArrayArgument</name></member>
       <member refid="class_turbo_wavelets_1_1_wavelet2_d_1aa1e399d2ab5f85843185a2895bf7f7ad" prot="public" virt="virtual"><scope>TurboWavelets::Wavelet2D</scope><name>CropCoefficients</name></member>
       <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a9abbbf0cffd0d8dca5d78d6ad4dad399" prot="public" virt="virtual"><scope>TurboWavelets::Wavelet2D</scope><name>CropCoefficients</name></member>
-      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a2b5e1636f40bab5b6ee88f6e8bb1b653" prot="protected" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>enableCacheing</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a2b5e1636f40bab5b6ee88f6e8bb1b653" prot="private" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>enableCacheing</name></member>
       <member refid="class_turbo_wavelets_1_1_wavelet2_d_1abbd41e51d24f8a7912ae47dd364ed4fb" prot="public" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>EnableCaching</name></member>
       <member refid="class_turbo_wavelets_1_1_wavelet2_d_1abec21e54c6ab8cce0e02ef3ad64ae5af" prot="public" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>EnableParallel</name></member>
-      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a742fff705da3ff5a4b6d67e9a56637be" prot="protected" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>enableParallel</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a742fff705da3ff5a4b6d67e9a56637be" prot="private" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>enableParallel</name></member>
       <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a727e557f207cf861b10c38f1f1a91b52" prot="public" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>FlushCache</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a47ae6c79274176240f5955b2f5794610" prot="private" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>getBlockCoefficientsRange</name></member>
       <member refid="class_turbo_wavelets_1_1_wavelet2_d_1ad25227565f3b5e5953e951ad5b375654" prot="public" virt="virtual"><scope>TurboWavelets::Wavelet2D</scope><name>getCoefficientsRange</name></member>
       <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a3dc6269869eb9c864f615e42d7822153" prot="protected" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>getTempArray</name></member>
       <member refid="class_turbo_wavelets_1_1_wavelet2_d_1afb2aa87b89b82f329357cbdc0cde18a8" prot="protected" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>height</name></member>
@@ -970,14 +1303,14 @@
       <member refid="class_turbo_wavelets_1_1_wavelet2_d_1af5148ef1a46dd5694ccea13aa8f1b9e2" prot="protected" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>minSize</name></member>
       <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a534341c94386ce78b597ca970e78db2e" prot="private" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>ModfiyBlock</name></member>
       <member refid="class_turbo_wavelets_1_1_wavelet2_d_1aa56d99219f0bf8ef33eb28841f10f45c" prot="private" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>ModifyCoefficients</name></member>
-      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1adb4984a01d9ab29c0056b18cbbcdef6f" prot="protected" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>progressAbort</name></member>
-      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a41d9135f22a6b2cb661b2cc2ccb768ff" prot="protected" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>progressDelegate</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1adb4984a01d9ab29c0056b18cbbcdef6f" prot="private" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>progressAbort</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a41d9135f22a6b2cb661b2cc2ccb768ff" prot="private" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>progressDelegate</name></member>
       <member refid="class_turbo_wavelets_1_1_wavelet2_d_1aec52fe74aa08e073119064ef4ac3fe93" prot="public" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>ProgressDelegate</name></member>
-      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a7cbf7ce44310a48178f36101a4c03add" prot="protected" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>progressMax</name></member>
-      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a08a8ff6259f0d66913715c00ed6e167b" prot="protected" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>progressSync</name></member>
-      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1ad2fad1f07e9e5c4901c0cdc925991e49" prot="protected" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>progressValue</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a7cbf7ce44310a48178f36101a4c03add" prot="private" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>progressMax</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a08a8ff6259f0d66913715c00ed6e167b" prot="private" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>progressSync</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1ad2fad1f07e9e5c4901c0cdc925991e49" prot="private" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>progressValue</name></member>
       <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a55e3f96cb79da6cc4621ccc1118a0d6f" prot="public" virt="virtual"><scope>TurboWavelets::Wavelet2D</scope><name>ScaleCoefficients</name></member>
-      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1ad69614eed43d939d02cf11076f95adee" prot="protected" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>threadSync</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1ad69614eed43d939d02cf11076f95adee" prot="private" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>threadSync</name></member>
       <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a6a6c334fb499d248b72215001ff5e9d4" prot="protected" virt="virtual"><scope>TurboWavelets::Wavelet2D</scope><name>TransformCol</name></member>
       <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a7aae90825e937ebb7822c2daa976d22a" prot="protected" virt="virtual"><scope>TurboWavelets::Wavelet2D</scope><name>TransformCols</name></member>
       <member refid="class_turbo_wavelets_1_1_wavelet2_d_1ac647a989c2b66ca08a8b7e4196cbc547" prot="public" virt="virtual"><scope>TurboWavelets::Wavelet2D</scope><name>TransformIsotropic2D</name></member>
@@ -985,8 +1318,8 @@
       <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a95e430713dc5e27ebf7b254d1346777e" prot="protected" virt="virtual"><scope>TurboWavelets::Wavelet2D</scope><name>TransformRows</name></member>
       <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a355cbea784a3b078fec87e6ff4c186e4" prot="private" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>updateProgress</name></member>
       <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a5156da3a3376121d64967dd8cd75725b" prot="public" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>Wavelet2D</name></member>
-      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1aaa4b3711957fe1798980e6891331a08d" prot="protected" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>width</name></member>
       <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a30058c5e0e5bd95b29bc080efbcf9083" prot="public" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>Width</name></member>
+      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1aaa4b3711957fe1798980e6891331a08d" prot="protected" virt="non-virtual"><scope>TurboWavelets::Wavelet2D</scope><name>width</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

@@ -3,6 +3,11 @@
 }
 
 
+\-A abstract basis class which provides common functionality for different implementations of a \char`\"{}2\-D Wavelet transformation\char`\"{}.  
+
+
+
+
 \-Inheritance diagram for \-Turbo\-Wavelets.\-Wavelet2\-D\-:
 \nopagebreak
 \begin{figure}[H]
@@ -14,22 +19,50 @@
 \subsection*{\-Public \-Member \-Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a5156da3a3376121d64967dd8cd75725b}{\-Wavelet2\-D} (int min\-Size, int allowed\-Min\-Size, int width, int height)
-\begin{DoxyCompactList}\small\item\em \-Initalizes a two dimensional wavelet cascade transformation. \end{DoxyCompactList}\item 
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_aec52fe74aa08e073119064ef4ac3fe93}{delegate bool \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_aec52fe74aa08e073119064ef4ac3fe93}{\-Progress\-Delegate} (float progress)}\label{class_turbo_wavelets_1_1_wavelet2_d_aec52fe74aa08e073119064ef4ac3fe93}
+
+\begin{DoxyCompactList}\small\item\em \-Prototype of a delegate called to inform caller about progress and to provide possibility to abort $<$/summary. \end{DoxyCompactList}\item 
+\hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a5156da3a3376121d64967dd8cd75725b}{\-Wavelet2\-D} (int \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_af5148ef1a46dd5694ccea13aa8f1b9e2}{min\-Size}, int \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a949bac2b4f540092cf7cc8916968cdc0}{allowed\-Min\-Size}, int \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_aaa4b3711957fe1798980e6891331a08d}{width}, int \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_afb2aa87b89b82f329357cbdc0cde18a8}{height})
+\begin{DoxyCompactList}\small\item\em \-Initalizes a two dimensional wavelet cascade transformation. \-By the transformation the data is split up in a high-\/ and a low-\/pass. \-The low-\/pass data is repeatedly transformed again until the horizontal or vertical length reaches \char`\"{}min\-Size\char`\"{}. \end{DoxyCompactList}\item 
 void \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a727e557f207cf861b10c38f1f1a91b52}{\-Flush\-Cache} ()
 \begin{DoxyCompactList}\small\item\em \-Frees all cached memory. \end{DoxyCompactList}\item 
-virtual void \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_ac647a989c2b66ca08a8b7e4196cbc547}{\-Transform\-Isotropic2\-D} (float\mbox{[},\mbox{]} src, \-Progress\-Delegate progress\-Delegate=null)
+virtual void \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_ac647a989c2b66ca08a8b7e4196cbc547}{\-Transform\-Isotropic2\-D} (float\mbox{[},\mbox{]} src, \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_aec52fe74aa08e073119064ef4ac3fe93}{\-Progress\-Delegate} progress\-Delegate=null)
 \begin{DoxyCompactList}\small\item\em \-Perfroms a two dimensional isotropic wavelet transformation for an array. \-The result is copied back to the declared array. \end{DoxyCompactList}\item 
-virtual void \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_ac1644fb0d5f8a2ba8f265b445cba454b}{\-Backtransform\-Isotropic2\-D} (float\mbox{[},\mbox{]} src, \-Progress\-Delegate progress\-Delegate=null)
+virtual void \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_ac1644fb0d5f8a2ba8f265b445cba454b}{\-Backtransform\-Isotropic2\-D} (float\mbox{[},\mbox{]} src, \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_aec52fe74aa08e073119064ef4ac3fe93}{\-Progress\-Delegate} progress\-Delegate=null)
 \begin{DoxyCompactList}\small\item\em \-Perfroms a two dimensional isotropic wavelet transformation for an array. \-The result is copied back to the declared array. \end{DoxyCompactList}\item 
-virtual void \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a55e3f96cb79da6cc4621ccc1118a0d6f}{\-Scale\-Coefficients} (float\mbox{[},\mbox{]} src, float\mbox{[}$\,$\mbox{]} scale\-Factors, int grid\-Size, \-Progress\-Delegate progress\-Delegate=null)
+virtual void \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a55e3f96cb79da6cc4621ccc1118a0d6f}{\-Scale\-Coefficients} (float\mbox{[},\mbox{]} src, float\mbox{[}$\,$\mbox{]} scale\-Factors, int grid\-Size, \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_aec52fe74aa08e073119064ef4ac3fe93}{\-Progress\-Delegate} progress\-Delegate=null)
 \begin{DoxyCompactList}\small\item\em \-Scales the n (length of the scale\-Factors array) greatest coefficinets (for a defined grid size) by the value declared in scale\-Factors. \end{DoxyCompactList}\item 
-virtual void \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_aa1e399d2ab5f85843185a2895bf7f7ad}{\-Crop\-Coefficients} (float\mbox{[},\mbox{]} src, int n, int grid\-Size, \-Progress\-Delegate progress\-Delegate=null)
+virtual void \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_aa1e399d2ab5f85843185a2895bf7f7ad}{\-Crop\-Coefficients} (float\mbox{[},\mbox{]} src, int n, int grid\-Size, \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_aec52fe74aa08e073119064ef4ac3fe93}{\-Progress\-Delegate} progress\-Delegate=null)
 \begin{DoxyCompactList}\small\item\em \-Set all but the greatest n coefficient to zero in the defined grid size. \end{DoxyCompactList}\item 
-virtual void \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a9abbbf0cffd0d8dca5d78d6ad4dad399}{\-Crop\-Coefficients} (float\mbox{[},\mbox{]} src, float min\-Absolute\-Value, \-Progress\-Delegate progress\-Delegate=null)
+virtual void \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a9abbbf0cffd0d8dca5d78d6ad4dad399}{\-Crop\-Coefficients} (float\mbox{[},\mbox{]} src, float min\-Absolute\-Value, \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_aec52fe74aa08e073119064ef4ac3fe93}{\-Progress\-Delegate} progress\-Delegate=null)
 \begin{DoxyCompactList}\small\item\em \-Set all coefficient with an absolute value smaller then \char`\"{}min\-Absolute\-Value\char`\"{} to zero (deadzone) \end{DoxyCompactList}\item 
-virtual void \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_ad25227565f3b5e5953e951ad5b375654}{get\-Coefficients\-Range} (float\mbox{[},\mbox{]} src, out float min, out float max, \-Progress\-Delegate progress\-Delegate=null)
+virtual void \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_ad25227565f3b5e5953e951ad5b375654}{get\-Coefficients\-Range} (float\mbox{[},\mbox{]} src, out float min, out float max, \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_aec52fe74aa08e073119064ef4ac3fe93}{\-Progress\-Delegate} progress\-Delegate=null)
 \begin{DoxyCompactList}\small\item\em get the minimum and maximum amplitude (absolute values) of all coefficient values \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+float\mbox{[},\mbox{]} \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a3dc6269869eb9c864f615e42d7822153}{get\-Temp\-Array} ()
+\begin{DoxyCompactList}\small\item\em \-Provides a temporary 2\-D float array with the in the constructor declared dimensions. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_af0339475762d327f9d8ec019079cdc28}{\-Transform\-Row} (float\mbox{[},\mbox{]} src, float\mbox{[},\mbox{]} dst, int y, int length)
+\begin{DoxyCompactList}\small\item\em \-Performs a single horizontal transformation (transformation of a single row) \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a6a6c334fb499d248b72215001ff5e9d4}{\-Transform\-Col} (float\mbox{[},\mbox{]} src, float\mbox{[},\mbox{]} dst, int x, int length)
+\begin{DoxyCompactList}\small\item\em \-Performs a single vertical transformation (transformation of a single column) \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_ac0b65a648f05436b54aa4d925812e1d5}{\-Inv\-Transform\-Row} (float\mbox{[},\mbox{]} src, float\mbox{[},\mbox{]} dst, int y, int length)
+\begin{DoxyCompactList}\small\item\em \-Performs a single inverse horizontal transformation (transformation of a single row) \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a9897e5e3f830ab7ea106e6bcf367fa07}{\-Inv\-Transform\-Col} (float\mbox{[},\mbox{]} src, float\mbox{[},\mbox{]} dst, int x, int length)
+\begin{DoxyCompactList}\small\item\em \-Performs a single inverse vertical transformation (transformation of a single column) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_aaa4b3711957fe1798980e6891331a08d}{width}
+\begin{DoxyCompactList}\small\item\em \-Width of the wavelet transformation. \end{DoxyCompactList}\item 
+int \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_afb2aa87b89b82f329357cbdc0cde18a8}{height}
+\begin{DoxyCompactList}\small\item\em \-Height of the wavelet transformation. \end{DoxyCompactList}\item 
+int \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_af5148ef1a46dd5694ccea13aa8f1b9e2}{min\-Size}
+\begin{DoxyCompactList}\small\item\em min. size for horizontal and vertical transformation \end{DoxyCompactList}\item 
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_a949bac2b4f540092cf7cc8916968cdc0}{int \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a949bac2b4f540092cf7cc8916968cdc0}{allowed\-Min\-Size}}\label{class_turbo_wavelets_1_1_wavelet2_d_a949bac2b4f540092cf7cc8916968cdc0}
+
+\begin{DoxyCompactList}\small\item\em \-The allowed minimum value for min\-Size (limitation of the algorithmn implementation) $<$/supmmary$>$ \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{\-Properties}
 \begin{DoxyCompactItemize}
 \item 
@@ -44,9 +77,11 @@ bool \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_abec21e54c6ab8cce0e02ef3ad64
 
 
 \subsection{\-Detailed \-Description}
+\-A abstract basis class which provides common functionality for different implementations of a \char`\"{}2\-D Wavelet transformation\char`\"{}. 
 
 
-\-Definition at line 35 of file \-Wavelet2\-D.\-cs.
+
+\-Definition at line 39 of file \-Wavelet2\-D.\-cs.
 
 
 
@@ -63,11 +98,11 @@ bool \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_abec21e54c6ab8cce0e02ef3ad64
 )}}\label{class_turbo_wavelets_1_1_wavelet2_d_a5156da3a3376121d64967dd8cd75725b}
 
 
-\-Initalizes a two dimensional wavelet cascade transformation. 
+\-Initalizes a two dimensional wavelet cascade transformation. \-By the transformation the data is split up in a high-\/ and a low-\/pass. \-The low-\/pass data is repeatedly transformed again until the horizontal or vertical length reaches \char`\"{}min\-Size\char`\"{}. 
 
 
 \begin{DoxyParams}{\-Parameters}
-{\em min\-Size} & minimum size up to a transformation is applied (can be set arbitary)\\
+{\em min\-Size} & minimum size up to a transformation is applied (can be set arbitrary)\\
 \hline
 {\em allowed\-Min\-Size} & minimum size up to a transformation can be applied (implementation depended)\\
 \hline
@@ -77,8 +112,13 @@ bool \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_abec21e54c6ab8cce0e02ef3ad64
 \hline
 \end{DoxyParams}
 
+\begin{DoxyExceptions}{\-Exceptions}
+{\em \-Argument\-Exception} & \\
+\hline
+\end{DoxyExceptions}
 
-\-Definition at line 105 of file \-Wavelet2\-D.\-cs.
+
+\-Definition at line 114 of file \-Wavelet2\-D.\-cs.
 
 
 
@@ -88,7 +128,7 @@ bool \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_abec21e54c6ab8cce0e02ef3ad64
 \subsubsection[{\-Backtransform\-Isotropic2\-D}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Turbo\-Wavelets.\-Wavelet2\-D.\-Backtransform\-Isotropic2\-D} (
 \begin{DoxyParamCaption}
 \item[{float}]{src\mbox{[},\mbox{]}, }
-\item[{\-Progress\-Delegate}]{progress\-Delegate = {\ttfamily null}}
+\item[{{\bf \-Progress\-Delegate}}]{progress\-Delegate = {\ttfamily null}}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_ac1644fb0d5f8a2ba8f265b445cba454b}
 
@@ -96,8 +136,13 @@ bool \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_abec21e54c6ab8cce0e02ef3ad64
 \-Perfroms a two dimensional isotropic wavelet transformation for an array. \-The result is copied back to the declared array. 
 
 
+\begin{DoxyExceptions}{\-Exceptions}
+{\em \-Argument\-Exception} & \\
+\hline
+\end{DoxyExceptions}
 
-\-Definition at line 334 of file \-Wavelet2\-D.\-cs.
+
+\-Definition at line 634 of file \-Wavelet2\-D.\-cs.
 
 \hypertarget{class_turbo_wavelets_1_1_wavelet2_d_aa1e399d2ab5f85843185a2895bf7f7ad}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!\-Crop\-Coefficients@{\-Crop\-Coefficients}}
 \index{\-Crop\-Coefficients@{\-Crop\-Coefficients}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
@@ -106,7 +151,7 @@ bool \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_abec21e54c6ab8cce0e02ef3ad64
 \item[{float}]{src\mbox{[},\mbox{]}, }
 \item[{int}]{n, }
 \item[{int}]{grid\-Size, }
-\item[{\-Progress\-Delegate}]{progress\-Delegate = {\ttfamily null}}
+\item[{{\bf \-Progress\-Delegate}}]{progress\-Delegate = {\ttfamily null}}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_aa1e399d2ab5f85843185a2895bf7f7ad}
 
@@ -114,8 +159,13 @@ bool \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_abec21e54c6ab8cce0e02ef3ad64
 \-Set all but the greatest n coefficient to zero in the defined grid size. 
 
 
+\begin{DoxyExceptions}{\-Exceptions}
+{\em \-Argument\-Exception} & \\
+\hline
+\end{DoxyExceptions}
 
-\-Definition at line 493 of file \-Wavelet2\-D.\-cs.
+
+\-Definition at line 688 of file \-Wavelet2\-D.\-cs.
 
 \hypertarget{class_turbo_wavelets_1_1_wavelet2_d_a9abbbf0cffd0d8dca5d78d6ad4dad399}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!\-Crop\-Coefficients@{\-Crop\-Coefficients}}
 \index{\-Crop\-Coefficients@{\-Crop\-Coefficients}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
@@ -123,7 +173,7 @@ bool \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_abec21e54c6ab8cce0e02ef3ad64
 \begin{DoxyParamCaption}
 \item[{float}]{src\mbox{[},\mbox{]}, }
 \item[{float}]{min\-Absolute\-Value, }
-\item[{\-Progress\-Delegate}]{progress\-Delegate = {\ttfamily null}}
+\item[{{\bf \-Progress\-Delegate}}]{progress\-Delegate = {\ttfamily null}}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_a9abbbf0cffd0d8dca5d78d6ad4dad399}
 
@@ -131,8 +181,13 @@ bool \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_abec21e54c6ab8cce0e02ef3ad64
 \-Set all coefficient with an absolute value smaller then \char`\"{}min\-Absolute\-Value\char`\"{} to zero (deadzone) 
 
 
+\begin{DoxyExceptions}{\-Exceptions}
+{\em \-Argument\-Exception} & \\
+\hline
+\end{DoxyExceptions}
 
-\-Definition at line 503 of file \-Wavelet2\-D.\-cs.
+
+\-Definition at line 699 of file \-Wavelet2\-D.\-cs.
 
 \hypertarget{class_turbo_wavelets_1_1_wavelet2_d_a727e557f207cf861b10c38f1f1a91b52}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!\-Flush\-Cache@{\-Flush\-Cache}}
 \index{\-Flush\-Cache@{\-Flush\-Cache}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
@@ -147,7 +202,7 @@ bool \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_abec21e54c6ab8cce0e02ef3ad64
 
 
 
-\-Definition at line 170 of file \-Wavelet2\-D.\-cs.
+\-Definition at line 180 of file \-Wavelet2\-D.\-cs.
 
 \hypertarget{class_turbo_wavelets_1_1_wavelet2_d_ad25227565f3b5e5953e951ad5b375654}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!get\-Coefficients\-Range@{get\-Coefficients\-Range}}
 \index{get\-Coefficients\-Range@{get\-Coefficients\-Range}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
@@ -156,7 +211,7 @@ bool \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_abec21e54c6ab8cce0e02ef3ad64
 \item[{float}]{src\mbox{[},\mbox{]}, }
 \item[{out float}]{min, }
 \item[{out float}]{max, }
-\item[{\-Progress\-Delegate}]{progress\-Delegate = {\ttfamily null}}
+\item[{{\bf \-Progress\-Delegate}}]{progress\-Delegate = {\ttfamily null}}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_ad25227565f3b5e5953e951ad5b375654}
 
@@ -164,8 +219,94 @@ bool \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_abec21e54c6ab8cce0e02ef3ad64
 get the minimum and maximum amplitude (absolute values) of all coefficient values 
 
 
+\begin{DoxyExceptions}{\-Exceptions}
+{\em \-Argument\-Exception} & \\
+\hline
+\end{DoxyExceptions}
 
-\-Definition at line 540 of file \-Wavelet2\-D.\-cs.
+
+\-Definition at line 737 of file \-Wavelet2\-D.\-cs.
+
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_a3dc6269869eb9c864f615e42d7822153}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!get\-Temp\-Array@{get\-Temp\-Array}}
+\index{get\-Temp\-Array@{get\-Temp\-Array}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
+\subsubsection[{get\-Temp\-Array}]{\setlength{\rightskip}{0pt plus 5cm}float \mbox{[},\mbox{]} {\bf \-Turbo\-Wavelets.\-Wavelet2\-D.\-get\-Temp\-Array} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_a3dc6269869eb9c864f615e42d7822153}
+
+
+\-Provides a temporary 2\-D float array with the in the constructor declared dimensions. 
+
+
+
+\-Definition at line 249 of file \-Wavelet2\-D.\-cs.
+
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_a9897e5e3f830ab7ea106e6bcf367fa07}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!\-Inv\-Transform\-Col@{\-Inv\-Transform\-Col}}
+\index{\-Inv\-Transform\-Col@{\-Inv\-Transform\-Col}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
+\subsubsection[{\-Inv\-Transform\-Col}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Turbo\-Wavelets.\-Wavelet2\-D.\-Inv\-Transform\-Col} (
+\begin{DoxyParamCaption}
+\item[{float}]{src\mbox{[},\mbox{]}, }
+\item[{float}]{dst\mbox{[},\mbox{]}, }
+\item[{int}]{x, }
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_a9897e5e3f830ab7ea106e6bcf367fa07}
+
+
+\-Performs a single inverse vertical transformation (transformation of a single column) 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em src} & 2d float array on which should be used as source for the transformation\\
+\hline
+{\em dst} & 2d float array on which should be used as destination for the transformation\\
+\hline
+{\em x} & index of the row which should be transformed\\
+\hline
+{\em length} & number of entries to transform\\
+\hline
+\end{DoxyParams}
+
+
+\-Reimplemented in \hyperlink{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_a2f52053d7f8f2da84b0ca6964481bd06}{\-Turbo\-Wavelets.\-Biorthogonal53\-Wavelet2\-D}, \hyperlink{class_turbo_wavelets_1_1_haar_wavelet2_d_a780d0ea14dea6a587c8ebf21f19670d0}{\-Turbo\-Wavelets.\-Haar\-Wavelet2\-D}, and \hyperlink{class_turbo_wavelets_1_1_order_wavelet2_d_ae7e013e9ee79f1d0932de6fa2e1854de}{\-Turbo\-Wavelets.\-Order\-Wavelet2\-D}.
+
+
+
+\-Definition at line 520 of file \-Wavelet2\-D.\-cs.
+
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_ac0b65a648f05436b54aa4d925812e1d5}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!\-Inv\-Transform\-Row@{\-Inv\-Transform\-Row}}
+\index{\-Inv\-Transform\-Row@{\-Inv\-Transform\-Row}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
+\subsubsection[{\-Inv\-Transform\-Row}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Turbo\-Wavelets.\-Wavelet2\-D.\-Inv\-Transform\-Row} (
+\begin{DoxyParamCaption}
+\item[{float}]{src\mbox{[},\mbox{]}, }
+\item[{float}]{dst\mbox{[},\mbox{]}, }
+\item[{int}]{y, }
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_ac0b65a648f05436b54aa4d925812e1d5}
+
+
+\-Performs a single inverse horizontal transformation (transformation of a single row) 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em src} & 2d float array on which should be used as source for the transformation\\
+\hline
+{\em dst} & 2d float array on which should be used as destination for the transformation\\
+\hline
+{\em y} & index of the row which should be transformed\\
+\hline
+{\em length} & number of entries to transform\\
+\hline
+\end{DoxyParams}
+
+
+\-Reimplemented in \hyperlink{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_a74b2789642a900fcfab4f47e023329ed}{\-Turbo\-Wavelets.\-Biorthogonal53\-Wavelet2\-D}, \hyperlink{class_turbo_wavelets_1_1_haar_wavelet2_d_a870ff202a886a34c54013b867e56f6e6}{\-Turbo\-Wavelets.\-Haar\-Wavelet2\-D}, and \hyperlink{class_turbo_wavelets_1_1_order_wavelet2_d_a67a15c5e174f2bf762d153a976f86b36}{\-Turbo\-Wavelets.\-Order\-Wavelet2\-D}.
+
+
+
+\-Definition at line 508 of file \-Wavelet2\-D.\-cs.
 
 \hypertarget{class_turbo_wavelets_1_1_wavelet2_d_a55e3f96cb79da6cc4621ccc1118a0d6f}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!\-Scale\-Coefficients@{\-Scale\-Coefficients}}
 \index{\-Scale\-Coefficients@{\-Scale\-Coefficients}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
@@ -174,7 +315,7 @@ get the minimum and maximum amplitude (absolute values) of all coefficient value
 \item[{float}]{src\mbox{[},\mbox{]}, }
 \item[{float\mbox{[}$\,$\mbox{]}}]{scale\-Factors, }
 \item[{int}]{grid\-Size, }
-\item[{\-Progress\-Delegate}]{progress\-Delegate = {\ttfamily null}}
+\item[{{\bf \-Progress\-Delegate}}]{progress\-Delegate = {\ttfamily null}}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_a55e3f96cb79da6cc4621ccc1118a0d6f}
 
@@ -182,15 +323,53 @@ get the minimum and maximum amplitude (absolute values) of all coefficient value
 \-Scales the n (length of the scale\-Factors array) greatest coefficinets (for a defined grid size) by the value declared in scale\-Factors. 
 
 
+\begin{DoxyExceptions}{\-Exceptions}
+{\em \-Argument\-Exception} & \\
+\hline
+\end{DoxyExceptions}
 
-\-Definition at line 477 of file \-Wavelet2\-D.\-cs.
+
+\-Definition at line 671 of file \-Wavelet2\-D.\-cs.
+
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_a6a6c334fb499d248b72215001ff5e9d4}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!\-Transform\-Col@{\-Transform\-Col}}
+\index{\-Transform\-Col@{\-Transform\-Col}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
+\subsubsection[{\-Transform\-Col}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Turbo\-Wavelets.\-Wavelet2\-D.\-Transform\-Col} (
+\begin{DoxyParamCaption}
+\item[{float}]{src\mbox{[},\mbox{]}, }
+\item[{float}]{dst\mbox{[},\mbox{]}, }
+\item[{int}]{x, }
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_a6a6c334fb499d248b72215001ff5e9d4}
+
+
+\-Performs a single vertical transformation (transformation of a single column) 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em src} & 2d float array on which should be used as source for the transformation\\
+\hline
+{\em dst} & 2d float array on which should be used as destination for the transformation\\
+\hline
+{\em x} & index of the row which should be transformed\\
+\hline
+{\em length} & number of entries to transform\\
+\hline
+\end{DoxyParams}
+
+
+\-Reimplemented in \hyperlink{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_aa93cd7f9ac110e04678a5313336fb73f}{\-Turbo\-Wavelets.\-Biorthogonal53\-Wavelet2\-D}, \hyperlink{class_turbo_wavelets_1_1_haar_wavelet2_d_a5695f7a35bbbae2f64d5c92212cd1f83}{\-Turbo\-Wavelets.\-Haar\-Wavelet2\-D}, and \hyperlink{class_turbo_wavelets_1_1_order_wavelet2_d_a94c72dd8852fe900901bcffd12c37272}{\-Turbo\-Wavelets.\-Order\-Wavelet2\-D}.
+
+
+
+\-Definition at line 496 of file \-Wavelet2\-D.\-cs.
 
 \hypertarget{class_turbo_wavelets_1_1_wavelet2_d_ac647a989c2b66ca08a8b7e4196cbc547}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!\-Transform\-Isotropic2\-D@{\-Transform\-Isotropic2\-D}}
 \index{\-Transform\-Isotropic2\-D@{\-Transform\-Isotropic2\-D}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
 \subsubsection[{\-Transform\-Isotropic2\-D}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Turbo\-Wavelets.\-Wavelet2\-D.\-Transform\-Isotropic2\-D} (
 \begin{DoxyParamCaption}
 \item[{float}]{src\mbox{[},\mbox{]}, }
-\item[{\-Progress\-Delegate}]{progress\-Delegate = {\ttfamily null}}
+\item[{{\bf \-Progress\-Delegate}}]{progress\-Delegate = {\ttfamily null}}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_ac647a989c2b66ca08a8b7e4196cbc547}
 
@@ -203,8 +382,82 @@ get the minimum and maximum amplitude (absolute values) of all coefficient value
 \hline
 \end{DoxyParams}
 
+\begin{DoxyExceptions}{\-Exceptions}
+{\em \-Argument\-Exception} & \\
+\hline
+\end{DoxyExceptions}
 
-\-Definition at line 311 of file \-Wavelet2\-D.\-cs.
+
+\-Definition at line 610 of file \-Wavelet2\-D.\-cs.
+
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_af0339475762d327f9d8ec019079cdc28}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!\-Transform\-Row@{\-Transform\-Row}}
+\index{\-Transform\-Row@{\-Transform\-Row}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
+\subsubsection[{\-Transform\-Row}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Turbo\-Wavelets.\-Wavelet2\-D.\-Transform\-Row} (
+\begin{DoxyParamCaption}
+\item[{float}]{src\mbox{[},\mbox{]}, }
+\item[{float}]{dst\mbox{[},\mbox{]}, }
+\item[{int}]{y, }
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_af0339475762d327f9d8ec019079cdc28}
+
+
+\-Performs a single horizontal transformation (transformation of a single row) 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em src} & 2d float array on which should be used as source for the transformation\\
+\hline
+{\em dst} & 2d float array on which should be used as destination for the transformation\\
+\hline
+{\em y} & index of the row which should be transformed\\
+\hline
+{\em length} & number of entries to transform\\
+\hline
+\end{DoxyParams}
+
+
+\-Reimplemented in \hyperlink{class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_acec9bb2730e6dee78c8f6d5c8d79a523}{\-Turbo\-Wavelets.\-Biorthogonal53\-Wavelet2\-D}, \hyperlink{class_turbo_wavelets_1_1_haar_wavelet2_d_a55f6abb99bf5d87017e715b63f64cc15}{\-Turbo\-Wavelets.\-Haar\-Wavelet2\-D}, and \hyperlink{class_turbo_wavelets_1_1_order_wavelet2_d_af45baa14b0d867362b989db7d41f14dc}{\-Turbo\-Wavelets.\-Order\-Wavelet2\-D}.
+
+
+
+\-Definition at line 484 of file \-Wavelet2\-D.\-cs.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_afb2aa87b89b82f329357cbdc0cde18a8}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!height@{height}}
+\index{height@{height}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
+\subsubsection[{height}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Turbo\-Wavelets.\-Wavelet2\-D.\-height}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_afb2aa87b89b82f329357cbdc0cde18a8}
+
+
+\-Height of the wavelet transformation. 
+
+
+
+\-Definition at line 53 of file \-Wavelet2\-D.\-cs.
+
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_af5148ef1a46dd5694ccea13aa8f1b9e2}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!min\-Size@{min\-Size}}
+\index{min\-Size@{min\-Size}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
+\subsubsection[{min\-Size}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Turbo\-Wavelets.\-Wavelet2\-D.\-min\-Size}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_af5148ef1a46dd5694ccea13aa8f1b9e2}
+
+
+min. size for horizontal and vertical transformation 
+
+
+
+\-Definition at line 57 of file \-Wavelet2\-D.\-cs.
+
+\hypertarget{class_turbo_wavelets_1_1_wavelet2_d_aaa4b3711957fe1798980e6891331a08d}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!width@{width}}
+\index{width@{width}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
+\subsubsection[{width}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Turbo\-Wavelets.\-Wavelet2\-D.\-width}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_turbo_wavelets_1_1_wavelet2_d_aaa4b3711957fe1798980e6891331a08d}
+
+
+\-Width of the wavelet transformation. 
+
+
+
+\-Definition at line 49 of file \-Wavelet2\-D.\-cs.
 
 
 
@@ -218,7 +471,7 @@ enables or disables caching of memory (disabled by default)
 
 
 
-\-Definition at line 143 of file \-Wavelet2\-D.\-cs.
+\-Definition at line 153 of file \-Wavelet2\-D.\-cs.
 
 \hypertarget{class_turbo_wavelets_1_1_wavelet2_d_abec21e54c6ab8cce0e02ef3ad64ae5af}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!\-Enable\-Parallel@{\-Enable\-Parallel}}
 \index{\-Enable\-Parallel@{\-Enable\-Parallel}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
@@ -229,7 +482,7 @@ enables or disables parallel execution (enabled by default)
 
 
 
-\-Definition at line 158 of file \-Wavelet2\-D.\-cs.
+\-Definition at line 168 of file \-Wavelet2\-D.\-cs.
 
 \hypertarget{class_turbo_wavelets_1_1_wavelet2_d_a277d0f89d73f839350c64a83ccd76ff6}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!\-Height@{\-Height}}
 \index{\-Height@{\-Height}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
@@ -240,7 +493,7 @@ returns the height for the two dimensional wavelet transformation
 
 
 
-\-Definition at line 134 of file \-Wavelet2\-D.\-cs.
+\-Definition at line 144 of file \-Wavelet2\-D.\-cs.
 
 \hypertarget{class_turbo_wavelets_1_1_wavelet2_d_a30058c5e0e5bd95b29bc080efbcf9083}{\index{\-Turbo\-Wavelets\-::\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}!\-Width@{\-Width}}
 \index{\-Width@{\-Width}!TurboWavelets::Wavelet2D@{\-Turbo\-Wavelets\-::\-Wavelet2\-D}}
@@ -251,7 +504,7 @@ returns the width for the two dimensional wavelet transformation
 
 
 
-\-Definition at line 125 of file \-Wavelet2\-D.\-cs.
+\-Definition at line 135 of file \-Wavelet2\-D.\-cs.
 
 
 

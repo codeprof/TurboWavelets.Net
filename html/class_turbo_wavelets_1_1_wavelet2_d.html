@@ -81,7 +81,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Properties</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Properties</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -100,12 +100,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#properties">Properties</a>  </div>
   <div class="headertitle">
 <div class="title">TurboWavelets.Wavelet2D Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<!-- doxytag: class="TurboWavelets::Wavelet2D" --><div class="dynheader">
+<!-- doxytag: class="TurboWavelets::Wavelet2D" -->
+<p>A abstract basis class which provides common functionality for different implementations of a "2D Wavelet transformation".  
+ <a href="class_turbo_wavelets_1_1_wavelet2_d.html#details">More...</a></p>
+<div class="dynheader">
 Inheritance diagram for TurboWavelets.Wavelet2D:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_turbo_wavelets_1_1_wavelet2_d__inherit__graph.png" border="0" usemap="#_turbo_wavelets_8_wavelet2_d_inherit__map" alt="Inheritance graph"/></div>
@@ -117,22 +122,48 @@ Inheritance diagram for TurboWavelets.Wavelet2D:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#a5156da3a3376121d64967dd8cd75725b">Wavelet2D</a> (int minSize, int allowedMinSize, int width, int height)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Initalizes a two dimensional wavelet cascade transformation.  <a href="#a5156da3a3376121d64967dd8cd75725b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aec52fe74aa08e073119064ef4ac3fe93"></a><!-- doxytag: member="TurboWavelets::Wavelet2D::ProgressDelegate" ref="aec52fe74aa08e073119064ef4ac3fe93" args="(float progress)" -->
+delegate bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#aec52fe74aa08e073119064ef4ac3fe93">ProgressDelegate</a> (float progress)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Prototype of a delegate called to inform caller about progress and to provide possibility to abort &lt;/summary. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#a5156da3a3376121d64967dd8cd75725b">Wavelet2D</a> (int <a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#af5148ef1a46dd5694ccea13aa8f1b9e2">minSize</a>, int <a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#a949bac2b4f540092cf7cc8916968cdc0">allowedMinSize</a>, int <a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#aaa4b3711957fe1798980e6891331a08d">width</a>, int <a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#afb2aa87b89b82f329357cbdc0cde18a8">height</a>)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Initalizes a two dimensional wavelet cascade transformation. By the transformation the data is split up in a high- and a low-pass. The low-pass data is repeatedly transformed again until the horizontal or vertical length reaches "minSize".  <a href="#a5156da3a3376121d64967dd8cd75725b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#a727e557f207cf861b10c38f1f1a91b52">FlushCache</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees all cached memory.  <a href="#a727e557f207cf861b10c38f1f1a91b52"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#ac647a989c2b66ca08a8b7e4196cbc547">TransformIsotropic2D</a> (float[,] src, ProgressDelegate progressDelegate=null)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#ac647a989c2b66ca08a8b7e4196cbc547">TransformIsotropic2D</a> (float[,] src, <a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#aec52fe74aa08e073119064ef4ac3fe93">ProgressDelegate</a> progressDelegate=null)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Perfroms a two dimensional isotropic wavelet transformation for an array. The result is copied back to the declared array.  <a href="#ac647a989c2b66ca08a8b7e4196cbc547"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#ac1644fb0d5f8a2ba8f265b445cba454b">BacktransformIsotropic2D</a> (float[,] src, ProgressDelegate progressDelegate=null)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#ac1644fb0d5f8a2ba8f265b445cba454b">BacktransformIsotropic2D</a> (float[,] src, <a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#aec52fe74aa08e073119064ef4ac3fe93">ProgressDelegate</a> progressDelegate=null)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Perfroms a two dimensional isotropic wavelet transformation for an array. The result is copied back to the declared array.  <a href="#ac1644fb0d5f8a2ba8f265b445cba454b"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#a55e3f96cb79da6cc4621ccc1118a0d6f">ScaleCoefficients</a> (float[,] src, float[] scaleFactors, int gridSize, ProgressDelegate progressDelegate=null)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#a55e3f96cb79da6cc4621ccc1118a0d6f">ScaleCoefficients</a> (float[,] src, float[] scaleFactors, int gridSize, <a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#aec52fe74aa08e073119064ef4ac3fe93">ProgressDelegate</a> progressDelegate=null)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Scales the n (length of the scaleFactors array) greatest coefficinets (for a defined grid size) by the value declared in scaleFactors.  <a href="#a55e3f96cb79da6cc4621ccc1118a0d6f"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#aa1e399d2ab5f85843185a2895bf7f7ad">CropCoefficients</a> (float[,] src, int n, int gridSize, ProgressDelegate progressDelegate=null)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#aa1e399d2ab5f85843185a2895bf7f7ad">CropCoefficients</a> (float[,] src, int n, int gridSize, <a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#aec52fe74aa08e073119064ef4ac3fe93">ProgressDelegate</a> progressDelegate=null)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set all but the greatest n coefficient to zero in the defined grid size.  <a href="#aa1e399d2ab5f85843185a2895bf7f7ad"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#a9abbbf0cffd0d8dca5d78d6ad4dad399">CropCoefficients</a> (float[,] src, float minAbsoluteValue, ProgressDelegate progressDelegate=null)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#a9abbbf0cffd0d8dca5d78d6ad4dad399">CropCoefficients</a> (float[,] src, float minAbsoluteValue, <a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#aec52fe74aa08e073119064ef4ac3fe93">ProgressDelegate</a> progressDelegate=null)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set all coefficient with an absolute value smaller then "minAbsoluteValue" to zero (deadzone)  <a href="#a9abbbf0cffd0d8dca5d78d6ad4dad399"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#ad25227565f3b5e5953e951ad5b375654">getCoefficientsRange</a> (float[,] src, out float min, out float max, ProgressDelegate progressDelegate=null)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#ad25227565f3b5e5953e951ad5b375654">getCoefficientsRange</a> (float[,] src, out float min, out float max, <a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#aec52fe74aa08e073119064ef4ac3fe93">ProgressDelegate</a> progressDelegate=null)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">get the minimum and maximum amplitude (absolute values) of all coefficient values  <a href="#ad25227565f3b5e5953e951ad5b375654"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">float[,]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#a3dc6269869eb9c864f615e42d7822153">getTempArray</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides a temporary 2D float array with the in the constructor declared dimensions.  <a href="#a3dc6269869eb9c864f615e42d7822153"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#af0339475762d327f9d8ec019079cdc28">TransformRow</a> (float[,] src, float[,] dst, int y, int length)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a single horizontal transformation (transformation of a single row)  <a href="#af0339475762d327f9d8ec019079cdc28"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#a6a6c334fb499d248b72215001ff5e9d4">TransformCol</a> (float[,] src, float[,] dst, int x, int length)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a single vertical transformation (transformation of a single column)  <a href="#a6a6c334fb499d248b72215001ff5e9d4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#ac0b65a648f05436b54aa4d925812e1d5">InvTransformRow</a> (float[,] src, float[,] dst, int y, int length)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a single inverse horizontal transformation (transformation of a single row)  <a href="#ac0b65a648f05436b54aa4d925812e1d5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#a9897e5e3f830ab7ea106e6bcf367fa07">InvTransformCol</a> (float[,] src, float[,] dst, int x, int length)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a single inverse vertical transformation (transformation of a single column)  <a href="#a9897e5e3f830ab7ea106e6bcf367fa07"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#aaa4b3711957fe1798980e6891331a08d">width</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Width of the wavelet transformation.  <a href="#aaa4b3711957fe1798980e6891331a08d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#afb2aa87b89b82f329357cbdc0cde18a8">height</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Height of the wavelet transformation.  <a href="#afb2aa87b89b82f329357cbdc0cde18a8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#af5148ef1a46dd5694ccea13aa8f1b9e2">minSize</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">min. size for horizontal and vertical transformation  <a href="#af5148ef1a46dd5694ccea13aa8f1b9e2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a949bac2b4f540092cf7cc8916968cdc0"></a><!-- doxytag: member="TurboWavelets::Wavelet2D::allowedMinSize" ref="a949bac2b4f540092cf7cc8916968cdc0" args="" -->
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#a949bac2b4f540092cf7cc8916968cdc0">allowedMinSize</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The allowed minimum value for minSize (limitation of the algorithmn implementation) &lt;/supmmary&gt; <br/></td></tr>
 <tr><td colspan="2"><h2><a name="properties"></a>
 Properties</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#a30058c5e0e5bd95b29bc080efbcf9083">Width</a><code> [get]</code></td></tr>
@@ -145,8 +176,9 @@ Properties</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">enables or disables parallel execution (enabled by default)  <a href="#abec21e54c6ab8cce0e02ef3ad64ae5af"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="_wavelet2_d_8cs_source.html#l00035">35</a> of file <a class="el" href="_wavelet2_d_8cs_source.html">Wavelet2D.cs</a>.</p>
+<div class="textblock"><p>A abstract basis class which provides common functionality for different implementations of a "2D Wavelet transformation". </p>
+
+<p>Definition at line <a class="el" href="_wavelet2_d_8cs_source.html#l00039">39</a> of file <a class="el" href="_wavelet2_d_8cs_source.html">Wavelet2D.cs</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a5156da3a3376121d64967dd8cd75725b"></a><!-- doxytag: member="TurboWavelets::Wavelet2D::Wavelet2D" ref="a5156da3a3376121d64967dd8cd75725b" args="(int minSize, int allowedMinSize, int width, int height)" -->
 <div class="memitem">
@@ -185,18 +217,24 @@ Properties</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Initalizes a two dimensional wavelet cascade transformation. </p>
+<p>Initalizes a two dimensional wavelet cascade transformation. By the transformation the data is split up in a high- and a low-pass. The low-pass data is repeatedly transformed again until the horizontal or vertical length reaches "minSize". </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">minSize</td><td>minimum size up to a transformation is applied (can be set arbitary)</td></tr>
+    <tr><td class="paramname">minSize</td><td>minimum size up to a transformation is applied (can be set arbitrary)</td></tr>
     <tr><td class="paramname">allowedMinSize</td><td>minimum size up to a transformation can be applied (implementation depended)</td></tr>
     <tr><td class="paramname">width</td><td>starting width of the transformation</td></tr>
     <tr><td class="paramname">height</td><td>starting height of the transformation</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="exception"><dt><b>Exceptions:</b></dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ArgumentException</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Definition at line <a class="el" href="_wavelet2_d_8cs_source.html#l00105">105</a> of file <a class="el" href="_wavelet2_d_8cs_source.html">Wavelet2D.cs</a>.</p>
+<p>Definition at line <a class="el" href="_wavelet2_d_8cs_source.html#l00114">114</a> of file <a class="el" href="_wavelet2_d_8cs_source.html">Wavelet2D.cs</a>.</p>
 
 </div>
 </div>
@@ -214,7 +252,7 @@ Properties</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">ProgressDelegate&#160;</td>
+          <td class="paramtype"><a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#aec52fe74aa08e073119064ef4ac3fe93">ProgressDelegate</a>&#160;</td>
           <td class="paramname"><em>progressDelegate</em> = <code>null</code>&#160;</td>
         </tr>
         <tr>
@@ -227,8 +265,14 @@ Properties</h2></td></tr>
 <div class="memdoc">
 
 <p>Perfroms a two dimensional isotropic wavelet transformation for an array. The result is copied back to the declared array. </p>
+<dl class="exception"><dt><b>Exceptions:</b></dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ArgumentException</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Definition at line <a class="el" href="_wavelet2_d_8cs_source.html#l00334">334</a> of file <a class="el" href="_wavelet2_d_8cs_source.html">Wavelet2D.cs</a>.</p>
+<p>Definition at line <a class="el" href="_wavelet2_d_8cs_source.html#l00634">634</a> of file <a class="el" href="_wavelet2_d_8cs_source.html">Wavelet2D.cs</a>.</p>
 
 </div>
 </div>
@@ -257,7 +301,7 @@ Properties</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">ProgressDelegate&#160;</td>
+          <td class="paramtype"><a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#aec52fe74aa08e073119064ef4ac3fe93">ProgressDelegate</a>&#160;</td>
           <td class="paramname"><em>progressDelegate</em> = <code>null</code>&#160;</td>
         </tr>
         <tr>
@@ -270,8 +314,14 @@ Properties</h2></td></tr>
 <div class="memdoc">
 
 <p>Set all but the greatest n coefficient to zero in the defined grid size. </p>
+<dl class="exception"><dt><b>Exceptions:</b></dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ArgumentException</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Definition at line <a class="el" href="_wavelet2_d_8cs_source.html#l00493">493</a> of file <a class="el" href="_wavelet2_d_8cs_source.html">Wavelet2D.cs</a>.</p>
+<p>Definition at line <a class="el" href="_wavelet2_d_8cs_source.html#l00688">688</a> of file <a class="el" href="_wavelet2_d_8cs_source.html">Wavelet2D.cs</a>.</p>
 
 </div>
 </div>
@@ -294,7 +344,7 @@ Properties</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">ProgressDelegate&#160;</td>
+          <td class="paramtype"><a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#aec52fe74aa08e073119064ef4ac3fe93">ProgressDelegate</a>&#160;</td>
           <td class="paramname"><em>progressDelegate</em> = <code>null</code>&#160;</td>
         </tr>
         <tr>
@@ -307,8 +357,14 @@ Properties</h2></td></tr>
 <div class="memdoc">
 
 <p>Set all coefficient with an absolute value smaller then "minAbsoluteValue" to zero (deadzone) </p>
+<dl class="exception"><dt><b>Exceptions:</b></dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ArgumentException</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Definition at line <a class="el" href="_wavelet2_d_8cs_source.html#l00503">503</a> of file <a class="el" href="_wavelet2_d_8cs_source.html">Wavelet2D.cs</a>.</p>
+<p>Definition at line <a class="el" href="_wavelet2_d_8cs_source.html#l00699">699</a> of file <a class="el" href="_wavelet2_d_8cs_source.html">Wavelet2D.cs</a>.</p>
 
 </div>
 </div>
@@ -328,7 +384,7 @@ Properties</h2></td></tr>
 
 <p>Frees all cached memory. </p>
 
-<p>Definition at line <a class="el" href="_wavelet2_d_8cs_source.html#l00170">170</a> of file <a class="el" href="_wavelet2_d_8cs_source.html">Wavelet2D.cs</a>.</p>
+<p>Definition at line <a class="el" href="_wavelet2_d_8cs_source.html#l00180">180</a> of file <a class="el" href="_wavelet2_d_8cs_source.html">Wavelet2D.cs</a>.</p>
 
 </div>
 </div>
@@ -357,7 +413,7 @@ Properties</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">ProgressDelegate&#160;</td>
+          <td class="paramtype"><a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#aec52fe74aa08e073119064ef4ac3fe93">ProgressDelegate</a>&#160;</td>
           <td class="paramname"><em>progressDelegate</em> = <code>null</code>&#160;</td>
         </tr>
         <tr>
@@ -370,8 +426,142 @@ Properties</h2></td></tr>
 <div class="memdoc">
 
 <p>get the minimum and maximum amplitude (absolute values) of all coefficient values </p>
+<dl class="exception"><dt><b>Exceptions:</b></dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ArgumentException</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Definition at line <a class="el" href="_wavelet2_d_8cs_source.html#l00540">540</a> of file <a class="el" href="_wavelet2_d_8cs_source.html">Wavelet2D.cs</a>.</p>
+<p>Definition at line <a class="el" href="_wavelet2_d_8cs_source.html#l00737">737</a> of file <a class="el" href="_wavelet2_d_8cs_source.html">Wavelet2D.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3dc6269869eb9c864f615e42d7822153"></a><!-- doxytag: member="TurboWavelets::Wavelet2D::getTempArray" ref="a3dc6269869eb9c864f615e42d7822153" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float [,] <a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#a3dc6269869eb9c864f615e42d7822153">TurboWavelets.Wavelet2D.getTempArray</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Provides a temporary 2D float array with the in the constructor declared dimensions. </p>
+
+<p>Definition at line <a class="el" href="_wavelet2_d_8cs_source.html#l00249">249</a> of file <a class="el" href="_wavelet2_d_8cs_source.html">Wavelet2D.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9897e5e3f830ab7ea106e6bcf367fa07"></a><!-- doxytag: member="TurboWavelets::Wavelet2D::InvTransformCol" ref="a9897e5e3f830ab7ea106e6bcf367fa07" args="(float[,] src, float[,] dst, int x, int length)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#a9897e5e3f830ab7ea106e6bcf367fa07">TurboWavelets.Wavelet2D.InvTransformCol</a> </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>src</em>[,], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>dst</em>[,], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Performs a single inverse vertical transformation (transformation of a single column) </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>2d float array on which should be used as source for the transformation</td></tr>
+    <tr><td class="paramname">dst</td><td>2d float array on which should be used as destination for the transformation</td></tr>
+    <tr><td class="paramname">x</td><td>index of the row which should be transformed</td></tr>
+    <tr><td class="paramname">length</td><td>number of entries to transform</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#a2f52053d7f8f2da84b0ca6964481bd06">TurboWavelets.Biorthogonal53Wavelet2D</a>, <a class="el" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#a780d0ea14dea6a587c8ebf21f19670d0">TurboWavelets.HaarWavelet2D</a>, and <a class="el" href="class_turbo_wavelets_1_1_order_wavelet2_d.html#ae7e013e9ee79f1d0932de6fa2e1854de">TurboWavelets.OrderWavelet2D</a>.</p>
+
+<p>Definition at line <a class="el" href="_wavelet2_d_8cs_source.html#l00520">520</a> of file <a class="el" href="_wavelet2_d_8cs_source.html">Wavelet2D.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac0b65a648f05436b54aa4d925812e1d5"></a><!-- doxytag: member="TurboWavelets::Wavelet2D::InvTransformRow" ref="ac0b65a648f05436b54aa4d925812e1d5" args="(float[,] src, float[,] dst, int y, int length)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#ac0b65a648f05436b54aa4d925812e1d5">TurboWavelets.Wavelet2D.InvTransformRow</a> </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>src</em>[,], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>dst</em>[,], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Performs a single inverse horizontal transformation (transformation of a single row) </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>2d float array on which should be used as source for the transformation</td></tr>
+    <tr><td class="paramname">dst</td><td>2d float array on which should be used as destination for the transformation</td></tr>
+    <tr><td class="paramname">y</td><td>index of the row which should be transformed</td></tr>
+    <tr><td class="paramname">length</td><td>number of entries to transform</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#a74b2789642a900fcfab4f47e023329ed">TurboWavelets.Biorthogonal53Wavelet2D</a>, <a class="el" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#a870ff202a886a34c54013b867e56f6e6">TurboWavelets.HaarWavelet2D</a>, and <a class="el" href="class_turbo_wavelets_1_1_order_wavelet2_d.html#a67a15c5e174f2bf762d153a976f86b36">TurboWavelets.OrderWavelet2D</a>.</p>
+
+<p>Definition at line <a class="el" href="_wavelet2_d_8cs_source.html#l00508">508</a> of file <a class="el" href="_wavelet2_d_8cs_source.html">Wavelet2D.cs</a>.</p>
 
 </div>
 </div>
@@ -400,7 +590,7 @@ Properties</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">ProgressDelegate&#160;</td>
+          <td class="paramtype"><a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#aec52fe74aa08e073119064ef4ac3fe93">ProgressDelegate</a>&#160;</td>
           <td class="paramname"><em>progressDelegate</em> = <code>null</code>&#160;</td>
         </tr>
         <tr>
@@ -413,8 +603,68 @@ Properties</h2></td></tr>
 <div class="memdoc">
 
 <p>Scales the n (length of the scaleFactors array) greatest coefficinets (for a defined grid size) by the value declared in scaleFactors. </p>
+<dl class="exception"><dt><b>Exceptions:</b></dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ArgumentException</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Definition at line <a class="el" href="_wavelet2_d_8cs_source.html#l00477">477</a> of file <a class="el" href="_wavelet2_d_8cs_source.html">Wavelet2D.cs</a>.</p>
+<p>Definition at line <a class="el" href="_wavelet2_d_8cs_source.html#l00671">671</a> of file <a class="el" href="_wavelet2_d_8cs_source.html">Wavelet2D.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6a6c334fb499d248b72215001ff5e9d4"></a><!-- doxytag: member="TurboWavelets::Wavelet2D::TransformCol" ref="a6a6c334fb499d248b72215001ff5e9d4" args="(float[,] src, float[,] dst, int x, int length)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#a6a6c334fb499d248b72215001ff5e9d4">TurboWavelets.Wavelet2D.TransformCol</a> </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>src</em>[,], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>dst</em>[,], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Performs a single vertical transformation (transformation of a single column) </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>2d float array on which should be used as source for the transformation</td></tr>
+    <tr><td class="paramname">dst</td><td>2d float array on which should be used as destination for the transformation</td></tr>
+    <tr><td class="paramname">x</td><td>index of the row which should be transformed</td></tr>
+    <tr><td class="paramname">length</td><td>number of entries to transform</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#aa93cd7f9ac110e04678a5313336fb73f">TurboWavelets.Biorthogonal53Wavelet2D</a>, <a class="el" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#a5695f7a35bbbae2f64d5c92212cd1f83">TurboWavelets.HaarWavelet2D</a>, and <a class="el" href="class_turbo_wavelets_1_1_order_wavelet2_d.html#a94c72dd8852fe900901bcffd12c37272">TurboWavelets.OrderWavelet2D</a>.</p>
+
+<p>Definition at line <a class="el" href="_wavelet2_d_8cs_source.html#l00496">496</a> of file <a class="el" href="_wavelet2_d_8cs_source.html">Wavelet2D.cs</a>.</p>
 
 </div>
 </div>
@@ -431,7 +681,7 @@ Properties</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">ProgressDelegate&#160;</td>
+          <td class="paramtype"><a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#aec52fe74aa08e073119064ef4ac3fe93">ProgressDelegate</a>&#160;</td>
           <td class="paramname"><em>progressDelegate</em> = <code>null</code>&#160;</td>
         </tr>
         <tr>
@@ -450,8 +700,120 @@ Properties</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="exception"><dt><b>Exceptions:</b></dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ArgumentException</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Definition at line <a class="el" href="_wavelet2_d_8cs_source.html#l00311">311</a> of file <a class="el" href="_wavelet2_d_8cs_source.html">Wavelet2D.cs</a>.</p>
+<p>Definition at line <a class="el" href="_wavelet2_d_8cs_source.html#l00610">610</a> of file <a class="el" href="_wavelet2_d_8cs_source.html">Wavelet2D.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af0339475762d327f9d8ec019079cdc28"></a><!-- doxytag: member="TurboWavelets::Wavelet2D::TransformRow" ref="af0339475762d327f9d8ec019079cdc28" args="(float[,] src, float[,] dst, int y, int length)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#af0339475762d327f9d8ec019079cdc28">TurboWavelets.Wavelet2D.TransformRow</a> </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>src</em>[,], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>dst</em>[,], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Performs a single horizontal transformation (transformation of a single row) </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>2d float array on which should be used as source for the transformation</td></tr>
+    <tr><td class="paramname">dst</td><td>2d float array on which should be used as destination for the transformation</td></tr>
+    <tr><td class="paramname">y</td><td>index of the row which should be transformed</td></tr>
+    <tr><td class="paramname">length</td><td>number of entries to transform</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d.html#acec9bb2730e6dee78c8f6d5c8d79a523">TurboWavelets.Biorthogonal53Wavelet2D</a>, <a class="el" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#a55f6abb99bf5d87017e715b63f64cc15">TurboWavelets.HaarWavelet2D</a>, and <a class="el" href="class_turbo_wavelets_1_1_order_wavelet2_d.html#af45baa14b0d867362b989db7d41f14dc">TurboWavelets.OrderWavelet2D</a>.</p>
+
+<p>Definition at line <a class="el" href="_wavelet2_d_8cs_source.html#l00484">484</a> of file <a class="el" href="_wavelet2_d_8cs_source.html">Wavelet2D.cs</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="afb2aa87b89b82f329357cbdc0cde18a8"></a><!-- doxytag: member="TurboWavelets::Wavelet2D::height" ref="afb2aa87b89b82f329357cbdc0cde18a8" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#afb2aa87b89b82f329357cbdc0cde18a8">TurboWavelets.Wavelet2D.height</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Height of the wavelet transformation. </p>
+
+<p>Definition at line <a class="el" href="_wavelet2_d_8cs_source.html#l00053">53</a> of file <a class="el" href="_wavelet2_d_8cs_source.html">Wavelet2D.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af5148ef1a46dd5694ccea13aa8f1b9e2"></a><!-- doxytag: member="TurboWavelets::Wavelet2D::minSize" ref="af5148ef1a46dd5694ccea13aa8f1b9e2" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#af5148ef1a46dd5694ccea13aa8f1b9e2">TurboWavelets.Wavelet2D.minSize</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>min. size for horizontal and vertical transformation </p>
+
+<p>Definition at line <a class="el" href="_wavelet2_d_8cs_source.html#l00057">57</a> of file <a class="el" href="_wavelet2_d_8cs_source.html">Wavelet2D.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aaa4b3711957fe1798980e6891331a08d"></a><!-- doxytag: member="TurboWavelets::Wavelet2D::width" ref="aaa4b3711957fe1798980e6891331a08d" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#aaa4b3711957fe1798980e6891331a08d">TurboWavelets.Wavelet2D.width</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Width of the wavelet transformation. </p>
+
+<p>Definition at line <a class="el" href="_wavelet2_d_8cs_source.html#l00049">49</a> of file <a class="el" href="_wavelet2_d_8cs_source.html">Wavelet2D.cs</a>.</p>
 
 </div>
 </div>
@@ -469,7 +831,7 @@ Properties</h2></td></tr>
 
 <p>enables or disables caching of memory (disabled by default) </p>
 
-<p>Definition at line <a class="el" href="_wavelet2_d_8cs_source.html#l00143">143</a> of file <a class="el" href="_wavelet2_d_8cs_source.html">Wavelet2D.cs</a>.</p>
+<p>Definition at line <a class="el" href="_wavelet2_d_8cs_source.html#l00153">153</a> of file <a class="el" href="_wavelet2_d_8cs_source.html">Wavelet2D.cs</a>.</p>
 
 </div>
 </div>
@@ -486,7 +848,7 @@ Properties</h2></td></tr>
 
 <p>enables or disables parallel execution (enabled by default) </p>
 
-<p>Definition at line <a class="el" href="_wavelet2_d_8cs_source.html#l00158">158</a> of file <a class="el" href="_wavelet2_d_8cs_source.html">Wavelet2D.cs</a>.</p>
+<p>Definition at line <a class="el" href="_wavelet2_d_8cs_source.html#l00168">168</a> of file <a class="el" href="_wavelet2_d_8cs_source.html">Wavelet2D.cs</a>.</p>
 
 </div>
 </div>
@@ -503,7 +865,7 @@ Properties</h2></td></tr>
 
 <p>returns the height for the two dimensional wavelet transformation </p>
 
-<p>Definition at line <a class="el" href="_wavelet2_d_8cs_source.html#l00134">134</a> of file <a class="el" href="_wavelet2_d_8cs_source.html">Wavelet2D.cs</a>.</p>
+<p>Definition at line <a class="el" href="_wavelet2_d_8cs_source.html#l00144">144</a> of file <a class="el" href="_wavelet2_d_8cs_source.html">Wavelet2D.cs</a>.</p>
 
 </div>
 </div>
@@ -520,7 +882,7 @@ Properties</h2></td></tr>
 
 <p>returns the width for the two dimensional wavelet transformation </p>
 
-<p>Definition at line <a class="el" href="_wavelet2_d_8cs_source.html#l00125">125</a> of file <a class="el" href="_wavelet2_d_8cs_source.html">Wavelet2D.cs</a>.</p>
+<p>Definition at line <a class="el" href="_wavelet2_d_8cs_source.html#l00135">135</a> of file <a class="el" href="_wavelet2_d_8cs_source.html">Wavelet2D.cs</a>.</p>
 
 </div>
 </div>
@@ -533,7 +895,7 @@ Properties</h2></td></tr>
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Properties</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Properties</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -545,7 +907,7 @@ Properties</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Apr 23 2016 07:59:15 for TurboWavelets.Net by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Apr 24 2016 18:03:49 for TurboWavelets.Net by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

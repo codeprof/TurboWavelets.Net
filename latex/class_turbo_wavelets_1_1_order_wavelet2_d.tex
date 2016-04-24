@@ -14,16 +14,33 @@
 \subsection*{\-Public \-Member \-Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_turbo_wavelets_1_1_order_wavelet2_d_aed357d3d66affbf094ee6e104ac75f1f}{\-Order\-Wavelet2\-D} (int width, int height)
+\hyperlink{class_turbo_wavelets_1_1_order_wavelet2_d_aed357d3d66affbf094ee6e104ac75f1f}{\-Order\-Wavelet2\-D} (int \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_aaa4b3711957fe1798980e6891331a08d}{width}, int \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_afb2aa87b89b82f329357cbdc0cde18a8}{height})
 \begin{DoxyCompactList}\small\item\em \-A fast implementation of a two-\/dimensional ordering transformation for arbitary lenghts (works for all sizes, not just power of 2) \-This does not perform a complete wavelet transformation. \-It just does the cascade ordering of the values. \-The implementation takes advantage of multiple \-C\-P\-U cores. \end{DoxyCompactList}\item 
-\hyperlink{class_turbo_wavelets_1_1_order_wavelet2_d_a22aec9d1c8fd7f56ac480a305ce4e9cd}{\-Order\-Wavelet2\-D} (int width, int height, int min\-Size)
+\hyperlink{class_turbo_wavelets_1_1_order_wavelet2_d_a22aec9d1c8fd7f56ac480a305ce4e9cd}{\-Order\-Wavelet2\-D} (int \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_aaa4b3711957fe1798980e6891331a08d}{width}, int \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_afb2aa87b89b82f329357cbdc0cde18a8}{height}, int \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_af5148ef1a46dd5694ccea13aa8f1b9e2}{min\-Size})
 \begin{DoxyCompactList}\small\item\em \-A fast implementation of a two-\/dimensional ordering transformation for arbitary lenghts (works for all sizes, not just power of 2) \-This does not perform a complete wavelet transformation. \-It just does the cascade ordering of the values. \-The implementation takes advantage of multiple \-C\-P\-U cores. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_turbo_wavelets_1_1_order_wavelet2_d_af45baa14b0d867362b989db7d41f14dc}{\-Transform\-Row} (float\mbox{[},\mbox{]} src, float\mbox{[},\mbox{]} dst, int y, int length)
+\begin{DoxyCompactList}\small\item\em \-Performs a single horizontal transformation (transformation of a single row) \end{DoxyCompactList}\item 
+override void \hyperlink{class_turbo_wavelets_1_1_order_wavelet2_d_a94c72dd8852fe900901bcffd12c37272}{\-Transform\-Col} (float\mbox{[},\mbox{]} src, float\mbox{[},\mbox{]} dst, int x, int length)
+\begin{DoxyCompactList}\small\item\em \-Performs a single vertical transformation (transformation of a single column) \end{DoxyCompactList}\item 
+override void \hyperlink{class_turbo_wavelets_1_1_order_wavelet2_d_a67a15c5e174f2bf762d153a976f86b36}{\-Inv\-Transform\-Row} (float\mbox{[},\mbox{]} src, float\mbox{[},\mbox{]} dst, int y, int length)
+\begin{DoxyCompactList}\small\item\em \-Performs a single inverse horizontal transformation (transformation of a single row) \end{DoxyCompactList}\item 
+override void \hyperlink{class_turbo_wavelets_1_1_order_wavelet2_d_ae7e013e9ee79f1d0932de6fa2e1854de}{\-Inv\-Transform\-Col} (float\mbox{[},\mbox{]} src, float\mbox{[},\mbox{]} dst, int x, int length)
+\begin{DoxyCompactList}\small\item\em \-Performs a single inverse vertical transformation (transformation of a single column) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_turbo_wavelets_1_1_order_wavelet2_d_ac2ad88fd5eadcb04baa930a58d791568}{const int \hyperlink{class_turbo_wavelets_1_1_order_wavelet2_d_ac2ad88fd5eadcb04baa930a58d791568}{\-Allowed\-Min\-Size} = 2}\label{class_turbo_wavelets_1_1_order_wavelet2_d_ac2ad88fd5eadcb04baa930a58d791568}
+
+\begin{DoxyCompactList}\small\item\em \-The allowed minimum transformation (limitation of the algorithmn implementation) $<$/supmmary$>$ \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{\-Detailed \-Description}
 
 
-\-Definition at line 33 of file \-Order\-Wavelet2\-D.\-cs.
+\-Definition at line 31 of file \-Order\-Wavelet2\-D.\-cs.
 
 
 
@@ -49,7 +66,7 @@
 \end{DoxyParams}
 
 
-\-Definition at line 44 of file \-Order\-Wavelet2\-D.\-cs.
+\-Definition at line 47 of file \-Order\-Wavelet2\-D.\-cs.
 
 \hypertarget{class_turbo_wavelets_1_1_order_wavelet2_d_a22aec9d1c8fd7f56ac480a305ce4e9cd}{\index{\-Turbo\-Wavelets\-::\-Order\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Order\-Wavelet2\-D}!\-Order\-Wavelet2\-D@{\-Order\-Wavelet2\-D}}
 \index{\-Order\-Wavelet2\-D@{\-Order\-Wavelet2\-D}!TurboWavelets::OrderWavelet2D@{\-Turbo\-Wavelets\-::\-Order\-Wavelet2\-D}}
@@ -75,7 +92,142 @@
 \end{DoxyParams}
 
 
-\-Definition at line 59 of file \-Order\-Wavelet2\-D.\-cs.
+\-Definition at line 62 of file \-Order\-Wavelet2\-D.\-cs.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_turbo_wavelets_1_1_order_wavelet2_d_ae7e013e9ee79f1d0932de6fa2e1854de}{\index{\-Turbo\-Wavelets\-::\-Order\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Order\-Wavelet2\-D}!\-Inv\-Transform\-Col@{\-Inv\-Transform\-Col}}
+\index{\-Inv\-Transform\-Col@{\-Inv\-Transform\-Col}!TurboWavelets::OrderWavelet2D@{\-Turbo\-Wavelets\-::\-Order\-Wavelet2\-D}}
+\subsubsection[{\-Inv\-Transform\-Col}]{\setlength{\rightskip}{0pt plus 5cm}override void {\bf \-Turbo\-Wavelets.\-Order\-Wavelet2\-D.\-Inv\-Transform\-Col} (
+\begin{DoxyParamCaption}
+\item[{float}]{src\mbox{[},\mbox{]}, }
+\item[{float}]{dst\mbox{[},\mbox{]}, }
+\item[{int}]{x, }
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}\label{class_turbo_wavelets_1_1_order_wavelet2_d_ae7e013e9ee79f1d0932de6fa2e1854de}
+
+
+\-Performs a single inverse vertical transformation (transformation of a single column) 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em src} & 2d float array on which should be used as source for the transformation\\
+\hline
+{\em dst} & 2d float array on which should be used as destination for the transformation\\
+\hline
+{\em x} & index of the row which should be transformed\\
+\hline
+{\em length} & number of entries to transform\\
+\hline
+\end{DoxyParams}
+
+
+\-Reimplemented from \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a9897e5e3f830ab7ea106e6bcf367fa07}{\-Turbo\-Wavelets.\-Wavelet2\-D}.
+
+
+
+\-Definition at line 131 of file \-Order\-Wavelet2\-D.\-cs.
+
+\hypertarget{class_turbo_wavelets_1_1_order_wavelet2_d_a67a15c5e174f2bf762d153a976f86b36}{\index{\-Turbo\-Wavelets\-::\-Order\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Order\-Wavelet2\-D}!\-Inv\-Transform\-Row@{\-Inv\-Transform\-Row}}
+\index{\-Inv\-Transform\-Row@{\-Inv\-Transform\-Row}!TurboWavelets::OrderWavelet2D@{\-Turbo\-Wavelets\-::\-Order\-Wavelet2\-D}}
+\subsubsection[{\-Inv\-Transform\-Row}]{\setlength{\rightskip}{0pt plus 5cm}override void {\bf \-Turbo\-Wavelets.\-Order\-Wavelet2\-D.\-Inv\-Transform\-Row} (
+\begin{DoxyParamCaption}
+\item[{float}]{src\mbox{[},\mbox{]}, }
+\item[{float}]{dst\mbox{[},\mbox{]}, }
+\item[{int}]{y, }
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}\label{class_turbo_wavelets_1_1_order_wavelet2_d_a67a15c5e174f2bf762d153a976f86b36}
+
+
+\-Performs a single inverse horizontal transformation (transformation of a single row) 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em src} & 2d float array on which should be used as source for the transformation\\
+\hline
+{\em dst} & 2d float array on which should be used as destination for the transformation\\
+\hline
+{\em y} & index of the row which should be transformed\\
+\hline
+{\em length} & number of entries to transform\\
+\hline
+\end{DoxyParams}
+
+
+\-Reimplemented from \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_ac0b65a648f05436b54aa4d925812e1d5}{\-Turbo\-Wavelets.\-Wavelet2\-D}.
+
+
+
+\-Definition at line 110 of file \-Order\-Wavelet2\-D.\-cs.
+
+\hypertarget{class_turbo_wavelets_1_1_order_wavelet2_d_a94c72dd8852fe900901bcffd12c37272}{\index{\-Turbo\-Wavelets\-::\-Order\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Order\-Wavelet2\-D}!\-Transform\-Col@{\-Transform\-Col}}
+\index{\-Transform\-Col@{\-Transform\-Col}!TurboWavelets::OrderWavelet2D@{\-Turbo\-Wavelets\-::\-Order\-Wavelet2\-D}}
+\subsubsection[{\-Transform\-Col}]{\setlength{\rightskip}{0pt plus 5cm}override void {\bf \-Turbo\-Wavelets.\-Order\-Wavelet2\-D.\-Transform\-Col} (
+\begin{DoxyParamCaption}
+\item[{float}]{src\mbox{[},\mbox{]}, }
+\item[{float}]{dst\mbox{[},\mbox{]}, }
+\item[{int}]{x, }
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}\label{class_turbo_wavelets_1_1_order_wavelet2_d_a94c72dd8852fe900901bcffd12c37272}
+
+
+\-Performs a single vertical transformation (transformation of a single column) 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em src} & 2d float array on which should be used as source for the transformation\\
+\hline
+{\em dst} & 2d float array on which should be used as destination for the transformation\\
+\hline
+{\em x} & index of the row which should be transformed\\
+\hline
+{\em length} & number of entries to transform\\
+\hline
+\end{DoxyParams}
+
+
+\-Reimplemented from \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_a6a6c334fb499d248b72215001ff5e9d4}{\-Turbo\-Wavelets.\-Wavelet2\-D}.
+
+
+
+\-Definition at line 89 of file \-Order\-Wavelet2\-D.\-cs.
+
+\hypertarget{class_turbo_wavelets_1_1_order_wavelet2_d_af45baa14b0d867362b989db7d41f14dc}{\index{\-Turbo\-Wavelets\-::\-Order\-Wavelet2\-D@{\-Turbo\-Wavelets\-::\-Order\-Wavelet2\-D}!\-Transform\-Row@{\-Transform\-Row}}
+\index{\-Transform\-Row@{\-Transform\-Row}!TurboWavelets::OrderWavelet2D@{\-Turbo\-Wavelets\-::\-Order\-Wavelet2\-D}}
+\subsubsection[{\-Transform\-Row}]{\setlength{\rightskip}{0pt plus 5cm}override void {\bf \-Turbo\-Wavelets.\-Order\-Wavelet2\-D.\-Transform\-Row} (
+\begin{DoxyParamCaption}
+\item[{float}]{src\mbox{[},\mbox{]}, }
+\item[{float}]{dst\mbox{[},\mbox{]}, }
+\item[{int}]{y, }
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}\label{class_turbo_wavelets_1_1_order_wavelet2_d_af45baa14b0d867362b989db7d41f14dc}
+
+
+\-Performs a single horizontal transformation (transformation of a single row) 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em src} & 2d float array on which should be used as source for the transformation\\
+\hline
+{\em dst} & 2d float array on which should be used as destination for the transformation\\
+\hline
+{\em y} & index of the row which should be transformed\\
+\hline
+{\em length} & number of entries to transform\\
+\hline
+\end{DoxyParams}
+
+
+\-Reimplemented from \hyperlink{class_turbo_wavelets_1_1_wavelet2_d_af0339475762d327f9d8ec019079cdc28}{\-Turbo\-Wavelets.\-Wavelet2\-D}.
+
+
+
+\-Definition at line 68 of file \-Order\-Wavelet2\-D.\-cs.
 
 
 

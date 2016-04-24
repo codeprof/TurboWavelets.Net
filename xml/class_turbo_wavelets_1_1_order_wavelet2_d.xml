@@ -3,6 +3,22 @@
   <compounddef id="class_turbo_wavelets_1_1_order_wavelet2_d" kind="class" prot="public">
     <compoundname>TurboWavelets::OrderWavelet2D</compoundname>
     <basecompoundref refid="class_turbo_wavelets_1_1_wavelet2_d" prot="public" virt="non-virtual">TurboWavelets.Wavelet2D</basecompoundref>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_turbo_wavelets_1_1_order_wavelet2_d_1ac2ad88fd5eadcb04baa930a58d791568" prot="protected" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int TurboWavelets.OrderWavelet2D.AllowedMinSize</definition>
+        <argsstring></argsstring>
+        <name>AllowedMinSize</name>
+        <initializer> 2</initializer>
+        <briefdescription>
+<para>The allowed minimum transformation (limitation of the algorithmn implementation) &lt;/supmmary&gt; </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" line="36" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="public-func">
       <memberdef kind="function" id="class_turbo_wavelets_1_1_order_wavelet2_d_1aed357d3d66affbf094ee6e104ac75f1f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -38,7 +54,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" line="46" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" bodystart="44" bodyend="47"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" line="49" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" bodystart="47" bodyend="50"/>
       </memberdef>
       <memberdef kind="function" id="class_turbo_wavelets_1_1_order_wavelet2_d_1a22aec9d1c8fd7f56ac480a305ce4e9cd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -85,7 +101,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" line="61" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" bodystart="59" bodyend="62"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" line="64" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" bodystart="62" bodyend="65"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -114,12 +130,41 @@
           <declname>length</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Performs a single horizontal transformation (transformation of a single row) </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2d float array on which should be used as source for the transformation</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2d float array on which should be used as destination for the transformation</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of the row which should be transformed</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of entries to transform</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" line="65" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" bodystart="64" bodyend="83"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" line="69" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" bodystart="68" bodyend="87"/>
       </memberdef>
       <memberdef kind="function" id="class_turbo_wavelets_1_1_order_wavelet2_d_1a94c72dd8852fe900901bcffd12c37272" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>override void</type>
@@ -146,12 +191,41 @@
           <declname>length</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Performs a single vertical transformation (transformation of a single column) </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2d float array on which should be used as source for the transformation</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2d float array on which should be used as destination for the transformation</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of the row which should be transformed</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of entries to transform</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" line="86" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" bodystart="85" bodyend="104"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" line="90" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" bodystart="89" bodyend="108"/>
       </memberdef>
       <memberdef kind="function" id="class_turbo_wavelets_1_1_order_wavelet2_d_1a67a15c5e174f2bf762d153a976f86b36" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>override void</type>
@@ -178,12 +252,41 @@
           <declname>length</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Performs a single inverse horizontal transformation (transformation of a single row) </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2d float array on which should be used as source for the transformation</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2d float array on which should be used as destination for the transformation</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of the row which should be transformed</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of entries to transform</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" line="107" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" bodystart="106" bodyend="125"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" line="111" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" bodystart="110" bodyend="129"/>
       </memberdef>
       <memberdef kind="function" id="class_turbo_wavelets_1_1_order_wavelet2_d_1ae7e013e9ee79f1d0932de6fa2e1854de" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>override void</type>
@@ -210,12 +313,41 @@
           <declname>length</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Performs a single inverse vertical transformation (transformation of a single column) </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2d float array on which should be used as source for the transformation</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2d float array on which should be used as destination for the transformation</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of the row which should be transformed</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of entries to transform</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" line="128" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" bodystart="127" bodyend="146"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" line="132" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" bodystart="131" bodyend="150"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -246,16 +378,14 @@
         <link refid="class_turbo_wavelets_1_1_wavelet2_d"/>
       </node>
     </collaborationgraph>
-    <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" line="34" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" bodystart="33" bodyend="147"/>
+    <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" line="32" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" bodystart="31" bodyend="152"/>
     <listofallmembers>
+      <member refid="class_turbo_wavelets_1_1_order_wavelet2_d_1ac2ad88fd5eadcb04baa930a58d791568" prot="protected" virt="non-virtual"><scope>TurboWavelets::OrderWavelet2D</scope><name>AllowedMinSize</name></member>
       <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a949bac2b4f540092cf7cc8916968cdc0" prot="protected" virt="non-virtual"><scope>TurboWavelets::OrderWavelet2D</scope><name>allowedMinSize</name></member>
       <member refid="class_turbo_wavelets_1_1_wavelet2_d_1ac1644fb0d5f8a2ba8f265b445cba454b" prot="public" virt="virtual"><scope>TurboWavelets::OrderWavelet2D</scope><name>BacktransformIsotropic2D</name></member>
-      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a07949ac8b81d7afa1776e92f11b74834" prot="protected" virt="non-virtual"><scope>TurboWavelets::OrderWavelet2D</scope><name>cachedArray</name></member>
       <member refid="class_turbo_wavelets_1_1_wavelet2_d_1aa1e399d2ab5f85843185a2895bf7f7ad" prot="public" virt="virtual"><scope>TurboWavelets::OrderWavelet2D</scope><name>CropCoefficients</name></member>
       <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a9abbbf0cffd0d8dca5d78d6ad4dad399" prot="public" virt="virtual"><scope>TurboWavelets::OrderWavelet2D</scope><name>CropCoefficients</name></member>
-      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a2b5e1636f40bab5b6ee88f6e8bb1b653" prot="protected" virt="non-virtual"><scope>TurboWavelets::OrderWavelet2D</scope><name>enableCacheing</name></member>
       <member refid="class_turbo_wavelets_1_1_wavelet2_d_1abbd41e51d24f8a7912ae47dd364ed4fb" prot="public" virt="non-virtual"><scope>TurboWavelets::OrderWavelet2D</scope><name>EnableCaching</name></member>
-      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a742fff705da3ff5a4b6d67e9a56637be" prot="protected" virt="non-virtual"><scope>TurboWavelets::OrderWavelet2D</scope><name>enableParallel</name></member>
       <member refid="class_turbo_wavelets_1_1_wavelet2_d_1abec21e54c6ab8cce0e02ef3ad64ae5af" prot="public" virt="non-virtual"><scope>TurboWavelets::OrderWavelet2D</scope><name>EnableParallel</name></member>
       <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a727e557f207cf861b10c38f1f1a91b52" prot="public" virt="non-virtual"><scope>TurboWavelets::OrderWavelet2D</scope><name>FlushCache</name></member>
       <member refid="class_turbo_wavelets_1_1_wavelet2_d_1ad25227565f3b5e5953e951ad5b375654" prot="public" virt="virtual"><scope>TurboWavelets::OrderWavelet2D</scope><name>getCoefficientsRange</name></member>
@@ -269,14 +399,8 @@
       <member refid="class_turbo_wavelets_1_1_wavelet2_d_1af5148ef1a46dd5694ccea13aa8f1b9e2" prot="protected" virt="non-virtual"><scope>TurboWavelets::OrderWavelet2D</scope><name>minSize</name></member>
       <member refid="class_turbo_wavelets_1_1_order_wavelet2_d_1aed357d3d66affbf094ee6e104ac75f1f" prot="public" virt="non-virtual"><scope>TurboWavelets::OrderWavelet2D</scope><name>OrderWavelet2D</name></member>
       <member refid="class_turbo_wavelets_1_1_order_wavelet2_d_1a22aec9d1c8fd7f56ac480a305ce4e9cd" prot="public" virt="non-virtual"><scope>TurboWavelets::OrderWavelet2D</scope><name>OrderWavelet2D</name></member>
-      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1adb4984a01d9ab29c0056b18cbbcdef6f" prot="protected" virt="non-virtual"><scope>TurboWavelets::OrderWavelet2D</scope><name>progressAbort</name></member>
       <member refid="class_turbo_wavelets_1_1_wavelet2_d_1aec52fe74aa08e073119064ef4ac3fe93" prot="public" virt="non-virtual"><scope>TurboWavelets::OrderWavelet2D</scope><name>ProgressDelegate</name></member>
-      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a41d9135f22a6b2cb661b2cc2ccb768ff" prot="protected" virt="non-virtual"><scope>TurboWavelets::OrderWavelet2D</scope><name>progressDelegate</name></member>
-      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a7cbf7ce44310a48178f36101a4c03add" prot="protected" virt="non-virtual"><scope>TurboWavelets::OrderWavelet2D</scope><name>progressMax</name></member>
-      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a08a8ff6259f0d66913715c00ed6e167b" prot="protected" virt="non-virtual"><scope>TurboWavelets::OrderWavelet2D</scope><name>progressSync</name></member>
-      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1ad2fad1f07e9e5c4901c0cdc925991e49" prot="protected" virt="non-virtual"><scope>TurboWavelets::OrderWavelet2D</scope><name>progressValue</name></member>
       <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a55e3f96cb79da6cc4621ccc1118a0d6f" prot="public" virt="virtual"><scope>TurboWavelets::OrderWavelet2D</scope><name>ScaleCoefficients</name></member>
-      <member refid="class_turbo_wavelets_1_1_wavelet2_d_1ad69614eed43d939d02cf11076f95adee" prot="protected" virt="non-virtual"><scope>TurboWavelets::OrderWavelet2D</scope><name>threadSync</name></member>
       <member refid="class_turbo_wavelets_1_1_order_wavelet2_d_1a94c72dd8852fe900901bcffd12c37272" prot="protected" virt="virtual"><scope>TurboWavelets::OrderWavelet2D</scope><name>TransformCol</name></member>
       <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a7aae90825e937ebb7822c2daa976d22a" prot="protected" virt="virtual"><scope>TurboWavelets::OrderWavelet2D</scope><name>TransformCols</name></member>
       <member refid="class_turbo_wavelets_1_1_wavelet2_d_1ac647a989c2b66ca08a8b7e4196cbc547" prot="public" virt="virtual"><scope>TurboWavelets::OrderWavelet2D</scope><name>TransformIsotropic2D</name></member>

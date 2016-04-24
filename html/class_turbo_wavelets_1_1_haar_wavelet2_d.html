@@ -81,7 +81,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Properties</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Properties</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -99,7 +99,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">TurboWavelets.HaarWavelet2D Class Reference</div>  </div>
 </div><!--header-->
@@ -109,21 +111,44 @@ Inheritance diagram for TurboWavelets.HaarWavelet2D:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_turbo_wavelets_1_1_haar_wavelet2_d__inherit__graph.png" border="0" usemap="#_turbo_wavelets_8_haar_wavelet2_d_inherit__map" alt="Inheritance graph"/></div>
 <map name="_turbo_wavelets_8_haar_wavelet2_d_inherit__map" id="_turbo_wavelets_8_haar_wavelet2_d_inherit__map">
-<area shape="rect" id="node2" href="class_turbo_wavelets_1_1_wavelet2_d.html" title="Wavelet2D" alt="" coords="65,5,151,35"/></map>
+<area shape="rect" id="node2" href="class_turbo_wavelets_1_1_wavelet2_d.html" title="A abstract basis class which provides common functionality for different implementations of a &quot;2D Wav..." alt="" coords="65,5,151,35"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 
 <p><a href="class_turbo_wavelets_1_1_haar_wavelet2_d-members.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#ab55a20658fe1f22b6e756418b4e1dc29">HaarWavelet2D</a> (int width, int height)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#ab55a20658fe1f22b6e756418b4e1dc29">HaarWavelet2D</a> (int <a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#aaa4b3711957fe1798980e6891331a08d">width</a>, int <a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#afb2aa87b89b82f329357cbdc0cde18a8">height</a>)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">A fast implementation of a two-dimensional haar transformation for arbitary lenghts (works for all sizes, not just power of 2) The implementation takes advantage of multiple CPU cores.  <a href="#ab55a20658fe1f22b6e756418b4e1dc29"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#a8064166eec2c0a4b66378896b882bd47">HaarWavelet2D</a> (int width, int height, int minSize)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#a8064166eec2c0a4b66378896b882bd47">HaarWavelet2D</a> (int <a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#aaa4b3711957fe1798980e6891331a08d">width</a>, int <a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#afb2aa87b89b82f329357cbdc0cde18a8">height</a>, int <a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#af5148ef1a46dd5694ccea13aa8f1b9e2">minSize</a>)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">A fast implementation of a two-dimensional haar transformation for arbitary lenghts (works for all sizes, not just power of 2) The implementation takes advantage of multiple CPU cores.  <a href="#a8064166eec2c0a4b66378896b882bd47"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#a55f6abb99bf5d87017e715b63f64cc15">TransformRow</a> (float[,] src, float[,] dst, int y, int length)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a single horizontal transformation (transformation of a single row)  <a href="#a55f6abb99bf5d87017e715b63f64cc15"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#a5695f7a35bbbae2f64d5c92212cd1f83">TransformCol</a> (float[,] src, float[,] dst, int x, int length)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a single vertical transformation (transformation of a single column)  <a href="#a5695f7a35bbbae2f64d5c92212cd1f83"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#a870ff202a886a34c54013b867e56f6e6">InvTransformRow</a> (float[,] src, float[,] dst, int y, int length)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a single inverse horizontal transformation (transformation of a single row)  <a href="#a870ff202a886a34c54013b867e56f6e6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#a780d0ea14dea6a587c8ebf21f19670d0">InvTransformCol</a> (float[,] src, float[,] dst, int x, int length)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a single inverse vertical transformation (transformation of a single column)  <a href="#a780d0ea14dea6a587c8ebf21f19670d0"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae5d11cf5767f2bc0e7326922dc601a8e"></a><!-- doxytag: member="TurboWavelets::HaarWavelet2D::AllowedMinSize" ref="ae5d11cf5767f2bc0e7326922dc601a8e" args="" -->
+const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#ae5d11cf5767f2bc0e7326922dc601a8e">AllowedMinSize</a> = 3</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The allowed minimum transformation (limitation of the algorithmn implementation) &lt;/supmmary&gt; <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#abb9a814259b4977ed274dde12f878f12">Scale</a> = 2.0f</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">scale factor  <a href="#abb9a814259b4977ed274dde12f878f12"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#ab2fa94eb968bd48292856758c241b186">InvScale</a> = 0.5f</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">inverse scale factor  <a href="#ab2fa94eb968bd48292856758c241b186"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#ae874d9a5f34ead2fbf4dc8efc4fc3e70">Mean</a> = 0.5f</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">factor for the mean of two values  <a href="#ae874d9a5f34ead2fbf4dc8efc4fc3e70"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#aea88909dad98e2812d5b065da35ec361">InvMean</a> = 2.0f</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">inverse factor for the mean of two values  <a href="#aea88909dad98e2812d5b065da35ec361"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_haar_wavelet2_d_8cs_source.html#l00032">32</a> of file <a class="el" href="_haar_wavelet2_d_8cs_source.html">HaarWavelet2D.cs</a>.</p>
+<p>Definition at line <a class="el" href="_haar_wavelet2_d_8cs_source.html#l00031">31</a> of file <a class="el" href="_haar_wavelet2_d_8cs_source.html">HaarWavelet2D.cs</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ab55a20658fe1f22b6e756418b4e1dc29"></a><!-- doxytag: member="TurboWavelets::HaarWavelet2D::HaarWavelet2D" ref="ab55a20658fe1f22b6e756418b4e1dc29" args="(int width, int height)" -->
 <div class="memitem">
@@ -159,7 +184,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_haar_wavelet2_d_8cs_source.html#l00047">47</a> of file <a class="el" href="_haar_wavelet2_d_8cs_source.html">HaarWavelet2D.cs</a>.</p>
+<p>Definition at line <a class="el" href="_haar_wavelet2_d_8cs_source.html#l00061">61</a> of file <a class="el" href="_haar_wavelet2_d_8cs_source.html">HaarWavelet2D.cs</a>.</p>
 
 </div>
 </div>
@@ -204,7 +229,293 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_haar_wavelet2_d_8cs_source.html#l00060">60</a> of file <a class="el" href="_haar_wavelet2_d_8cs_source.html">HaarWavelet2D.cs</a>.</p>
+<p>Definition at line <a class="el" href="_haar_wavelet2_d_8cs_source.html#l00074">74</a> of file <a class="el" href="_haar_wavelet2_d_8cs_source.html">HaarWavelet2D.cs</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a780d0ea14dea6a587c8ebf21f19670d0"></a><!-- doxytag: member="TurboWavelets::HaarWavelet2D::InvTransformCol" ref="a780d0ea14dea6a587c8ebf21f19670d0" args="(float[,] src, float[,] dst, int x, int length)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void <a class="el" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#a780d0ea14dea6a587c8ebf21f19670d0">TurboWavelets.HaarWavelet2D.InvTransformCol</a> </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>src</em>[,], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>dst</em>[,], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Performs a single inverse vertical transformation (transformation of a single column) </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>2d float array on which should be used as source for the transformation</td></tr>
+    <tr><td class="paramname">dst</td><td>2d float array on which should be used as destination for the transformation</td></tr>
+    <tr><td class="paramname">x</td><td>index of the row which should be transformed</td></tr>
+    <tr><td class="paramname">length</td><td>number of entries to transform</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#a9897e5e3f830ab7ea106e6bcf367fa07">TurboWavelets.Wavelet2D</a>.</p>
+
+<p>Definition at line <a class="el" href="_haar_wavelet2_d_8cs_source.html#l00156">156</a> of file <a class="el" href="_haar_wavelet2_d_8cs_source.html">HaarWavelet2D.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a870ff202a886a34c54013b867e56f6e6"></a><!-- doxytag: member="TurboWavelets::HaarWavelet2D::InvTransformRow" ref="a870ff202a886a34c54013b867e56f6e6" args="(float[,] src, float[,] dst, int y, int length)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void <a class="el" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#a870ff202a886a34c54013b867e56f6e6">TurboWavelets.HaarWavelet2D.InvTransformRow</a> </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>src</em>[,], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>dst</em>[,], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Performs a single inverse horizontal transformation (transformation of a single row) </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>2d float array on which should be used as source for the transformation</td></tr>
+    <tr><td class="paramname">dst</td><td>2d float array on which should be used as destination for the transformation</td></tr>
+    <tr><td class="paramname">y</td><td>index of the row which should be transformed</td></tr>
+    <tr><td class="paramname">length</td><td>number of entries to transform</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#ac0b65a648f05436b54aa4d925812e1d5">TurboWavelets.Wavelet2D</a>.</p>
+
+<p>Definition at line <a class="el" href="_haar_wavelet2_d_8cs_source.html#l00132">132</a> of file <a class="el" href="_haar_wavelet2_d_8cs_source.html">HaarWavelet2D.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5695f7a35bbbae2f64d5c92212cd1f83"></a><!-- doxytag: member="TurboWavelets::HaarWavelet2D::TransformCol" ref="a5695f7a35bbbae2f64d5c92212cd1f83" args="(float[,] src, float[,] dst, int x, int length)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void <a class="el" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#a5695f7a35bbbae2f64d5c92212cd1f83">TurboWavelets.HaarWavelet2D.TransformCol</a> </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>src</em>[,], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>dst</em>[,], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Performs a single vertical transformation (transformation of a single column) </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>2d float array on which should be used as source for the transformation</td></tr>
+    <tr><td class="paramname">dst</td><td>2d float array on which should be used as destination for the transformation</td></tr>
+    <tr><td class="paramname">x</td><td>index of the row which should be transformed</td></tr>
+    <tr><td class="paramname">length</td><td>number of entries to transform</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#a6a6c334fb499d248b72215001ff5e9d4">TurboWavelets.Wavelet2D</a>.</p>
+
+<p>Definition at line <a class="el" href="_haar_wavelet2_d_8cs_source.html#l00106">106</a> of file <a class="el" href="_haar_wavelet2_d_8cs_source.html">HaarWavelet2D.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a55f6abb99bf5d87017e715b63f64cc15"></a><!-- doxytag: member="TurboWavelets::HaarWavelet2D::TransformRow" ref="a55f6abb99bf5d87017e715b63f64cc15" args="(float[,] src, float[,] dst, int y, int length)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void <a class="el" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#a55f6abb99bf5d87017e715b63f64cc15">TurboWavelets.HaarWavelet2D.TransformRow</a> </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>src</em>[,], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>dst</em>[,], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Performs a single horizontal transformation (transformation of a single row) </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>2d float array on which should be used as source for the transformation</td></tr>
+    <tr><td class="paramname">dst</td><td>2d float array on which should be used as destination for the transformation</td></tr>
+    <tr><td class="paramname">y</td><td>index of the row which should be transformed</td></tr>
+    <tr><td class="paramname">length</td><td>number of entries to transform</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="class_turbo_wavelets_1_1_wavelet2_d.html#af0339475762d327f9d8ec019079cdc28">TurboWavelets.Wavelet2D</a>.</p>
+
+<p>Definition at line <a class="el" href="_haar_wavelet2_d_8cs_source.html#l00080">80</a> of file <a class="el" href="_haar_wavelet2_d_8cs_source.html">HaarWavelet2D.cs</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="aea88909dad98e2812d5b065da35ec361"></a><!-- doxytag: member="TurboWavelets::HaarWavelet2D::InvMean" ref="aea88909dad98e2812d5b065da35ec361" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float <a class="el" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#aea88909dad98e2812d5b065da35ec361">TurboWavelets.HaarWavelet2D.InvMean</a> = 2.0f<code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>inverse factor for the mean of two values </p>
+
+<p>Definition at line <a class="el" href="_haar_wavelet2_d_8cs_source.html#l00052">52</a> of file <a class="el" href="_haar_wavelet2_d_8cs_source.html">HaarWavelet2D.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab2fa94eb968bd48292856758c241b186"></a><!-- doxytag: member="TurboWavelets::HaarWavelet2D::InvScale" ref="ab2fa94eb968bd48292856758c241b186" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float <a class="el" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#ab2fa94eb968bd48292856758c241b186">TurboWavelets.HaarWavelet2D.InvScale</a> = 0.5f<code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>inverse scale factor </p>
+
+<p>Definition at line <a class="el" href="_haar_wavelet2_d_8cs_source.html#l00044">44</a> of file <a class="el" href="_haar_wavelet2_d_8cs_source.html">HaarWavelet2D.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae874d9a5f34ead2fbf4dc8efc4fc3e70"></a><!-- doxytag: member="TurboWavelets::HaarWavelet2D::Mean" ref="ae874d9a5f34ead2fbf4dc8efc4fc3e70" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float <a class="el" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#ae874d9a5f34ead2fbf4dc8efc4fc3e70">TurboWavelets.HaarWavelet2D.Mean</a> = 0.5f<code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>factor for the mean of two values </p>
+
+<p>Definition at line <a class="el" href="_haar_wavelet2_d_8cs_source.html#l00048">48</a> of file <a class="el" href="_haar_wavelet2_d_8cs_source.html">HaarWavelet2D.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abb9a814259b4977ed274dde12f878f12"></a><!-- doxytag: member="TurboWavelets::HaarWavelet2D::Scale" ref="abb9a814259b4977ed274dde12f878f12" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float <a class="el" href="class_turbo_wavelets_1_1_haar_wavelet2_d.html#abb9a814259b4977ed274dde12f878f12">TurboWavelets.HaarWavelet2D.Scale</a> = 2.0f<code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>scale factor </p>
+
+<p>Definition at line <a class="el" href="_haar_wavelet2_d_8cs_source.html#l00040">40</a> of file <a class="el" href="_haar_wavelet2_d_8cs_source.html">HaarWavelet2D.cs</a>.</p>
 
 </div>
 </div>
@@ -217,7 +528,7 @@ Public Member Functions</h2></td></tr>
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Properties</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Properties</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -229,7 +540,7 @@ Public Member Functions</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Apr 23 2016 07:59:15 for TurboWavelets.Net by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Apr 24 2016 18:03:49 for TurboWavelets.Net by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

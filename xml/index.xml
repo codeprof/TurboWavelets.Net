@@ -5,13 +5,13 @@
     <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet1_d_static_1a9fd288d382428a089990d1e3f6367657" kind="function"><name>wavelet53_1d_inverse</name></member>
   </compound>
   <compound refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d" kind="class"><name>TurboWavelets::Biorthogonal53Wavelet2D</name>
-    <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1aa6981c16a1765d4664747274676d5eba" kind="variable"><name>MINSIZE</name></member>
-    <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1af0ccd844200200f57839dea6823daaa6" kind="variable"><name>SCALE</name></member>
-    <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1a035bc7a8559c9e4eb476c6a1c1d8cc9a" kind="variable"><name>SCALE_INV</name></member>
-    <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1ab01bdb5e655a9f02b6ed6337ad88e4e4" kind="variable"><name>MEAN</name></member>
-    <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1a087508fa3e1f6e94477310a061d09784" kind="variable"><name>MEAN_INV</name></member>
-    <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1ac608d0d31583d5c06c6dd7ab41880cb6" kind="variable"><name>SMOOTH</name></member>
-    <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1aeb90da1672a5e2fd88863bf227ee6db9" kind="variable"><name>SMOOTH_INV</name></member>
+    <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1a73738d4d11ccf4963deca1270953f4a0" kind="variable"><name>AllowedMinSize</name></member>
+    <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1a18ab552c3e524a02a6115ac6ba9dc9dd" kind="variable"><name>Scale</name></member>
+    <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1a02e708dc75d423093b1a022cc93f0388" kind="variable"><name>InvScale</name></member>
+    <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1adc5fbcbea59e2154e77c9507cea584e2" kind="variable"><name>Mean</name></member>
+    <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1a60d0110965f0ac833e932ad39b3d6f46" kind="variable"><name>InvMean</name></member>
+    <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1af84189cc1bd640074755c2ce84041c93" kind="variable"><name>Smooth</name></member>
+    <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1aef40af813a0abea998b61fdb7ce34f5d" kind="variable"><name>InvSmooth</name></member>
     <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1a8783eb5b8e032cd8cf75c5a1bb80bba0" kind="function"><name>Biorthogonal53Wavelet2D</name></member>
     <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1a2d9bf97c2211d5859b3a53835bea7888" kind="function"><name>Biorthogonal53Wavelet2D</name></member>
     <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1acec9bb2730e6dee78c8f6d5c8d79a523" kind="function"><name>TransformRow</name></member>
@@ -20,11 +20,11 @@
     <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1a2f52053d7f8f2da84b0ca6964481bd06" kind="function"><name>InvTransformCol</name></member>
   </compound>
   <compound refid="class_turbo_wavelets_1_1_haar_wavelet2_d" kind="class"><name>TurboWavelets::HaarWavelet2D</name>
-    <member refid="class_turbo_wavelets_1_1_haar_wavelet2_d_1a841ed0ce87560b5a4e5b94e4b2630765" kind="variable"><name>MINSIZE</name></member>
-    <member refid="class_turbo_wavelets_1_1_haar_wavelet2_d_1a1c6cc94e0c41dd74fc3c8f7e36bf123f" kind="variable"><name>SCALE</name></member>
-    <member refid="class_turbo_wavelets_1_1_haar_wavelet2_d_1adbc2c681478c8bd315a77b6ddf57e9bd" kind="variable"><name>SCALE_INV</name></member>
-    <member refid="class_turbo_wavelets_1_1_haar_wavelet2_d_1af0a09712e36a5e8abcaf67e9352c7529" kind="variable"><name>MEAN</name></member>
-    <member refid="class_turbo_wavelets_1_1_haar_wavelet2_d_1aca358f40b15421e2ad216236fa000cce" kind="variable"><name>MEAN_INV</name></member>
+    <member refid="class_turbo_wavelets_1_1_haar_wavelet2_d_1ae5d11cf5767f2bc0e7326922dc601a8e" kind="variable"><name>AllowedMinSize</name></member>
+    <member refid="class_turbo_wavelets_1_1_haar_wavelet2_d_1abb9a814259b4977ed274dde12f878f12" kind="variable"><name>Scale</name></member>
+    <member refid="class_turbo_wavelets_1_1_haar_wavelet2_d_1ab2fa94eb968bd48292856758c241b186" kind="variable"><name>InvScale</name></member>
+    <member refid="class_turbo_wavelets_1_1_haar_wavelet2_d_1ae874d9a5f34ead2fbf4dc8efc4fc3e70" kind="variable"><name>Mean</name></member>
+    <member refid="class_turbo_wavelets_1_1_haar_wavelet2_d_1aea88909dad98e2812d5b065da35ec361" kind="variable"><name>InvMean</name></member>
     <member refid="class_turbo_wavelets_1_1_haar_wavelet2_d_1ab55a20658fe1f22b6e756418b4e1dc29" kind="function"><name>HaarWavelet2D</name></member>
     <member refid="class_turbo_wavelets_1_1_haar_wavelet2_d_1a8064166eec2c0a4b66378896b882bd47" kind="function"><name>HaarWavelet2D</name></member>
     <member refid="class_turbo_wavelets_1_1_haar_wavelet2_d_1a55f6abb99bf5d87017e715b63f64cc15" kind="function"><name>TransformRow</name></member>
@@ -33,6 +33,7 @@
     <member refid="class_turbo_wavelets_1_1_haar_wavelet2_d_1a780d0ea14dea6a587c8ebf21f19670d0" kind="function"><name>InvTransformCol</name></member>
   </compound>
   <compound refid="class_turbo_wavelets_1_1_order_wavelet2_d" kind="class"><name>TurboWavelets::OrderWavelet2D</name>
+    <member refid="class_turbo_wavelets_1_1_order_wavelet2_d_1ac2ad88fd5eadcb04baa930a58d791568" kind="variable"><name>AllowedMinSize</name></member>
     <member refid="class_turbo_wavelets_1_1_order_wavelet2_d_1aed357d3d66affbf094ee6e104ac75f1f" kind="function"><name>OrderWavelet2D</name></member>
     <member refid="class_turbo_wavelets_1_1_order_wavelet2_d_1a22aec9d1c8fd7f56ac480a305ce4e9cd" kind="function"><name>OrderWavelet2D</name></member>
     <member refid="class_turbo_wavelets_1_1_order_wavelet2_d_1af45baa14b0d867362b989db7d41f14dc" kind="function"><name>TransformRow</name></member>
@@ -72,6 +73,7 @@
     <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a1dad0a0576f0d0e10d44c1ae645dc951" kind="function"><name>checkArrayArgument</name></member>
     <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a534341c94386ce78b597ca970e78db2e" kind="function"><name>ModfiyBlock</name></member>
     <member refid="class_turbo_wavelets_1_1_wavelet2_d_1aa56d99219f0bf8ef33eb28841f10f45c" kind="function"><name>ModifyCoefficients</name></member>
+    <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a47ae6c79274176240f5955b2f5794610" kind="function"><name>getBlockCoefficientsRange</name></member>
     <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a3dc6269869eb9c864f615e42d7822153" kind="function"><name>getTempArray</name></member>
     <member refid="class_turbo_wavelets_1_1_wavelet2_d_1af0339475762d327f9d8ec019079cdc28" kind="function"><name>TransformRow</name></member>
     <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a6a6c334fb499d248b72215001ff5e9d4" kind="function"><name>TransformCol</name></member>
