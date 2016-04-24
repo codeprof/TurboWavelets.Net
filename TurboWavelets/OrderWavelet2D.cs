@@ -4,7 +4,7 @@
 // Author:
 //       Stefan Moebius
 // Date:
-//       2016-04-17
+//       2016-04-24
 // 
 // Copyright (c) 2016 Stefan Moebius
 // 
@@ -33,6 +33,11 @@ namespace TurboWavelets
 	public class OrderWavelet2D : Wavelet2D
 	{
 		/// <summary>
+		/// The allowed minimum transformation (limitation of the algorithmn implementation)
+		/// </supmmary>
+		protected const int AllowedMinSize = 2;
+
+		/// <summary>
 		/// A fast implementation of a two-dimensional ordering transformation
 		/// for arbitary lenghts (works for all sizes, not just power of 2)
 		/// This does not perform a complete wavelet transformation. It
@@ -42,7 +47,7 @@ namespace TurboWavelets
 		/// <param name="width">The width of the transformation</param>
 		/// <param name="height">The width of the transformation</param>
 		public OrderWavelet2D (int width, int height)
-            : base(2, 2, width, height)
+            : base(AllowedMinSize, AllowedMinSize, width, height)
 		{   
 		}
 
@@ -57,10 +62,11 @@ namespace TurboWavelets
 		/// <param name="height">The width of the transformation</param>
 		/// <param name="minSize">Minimum width/height up to the transformation should be applied</param>
 		public OrderWavelet2D (int width, int height, int minSize)
-            : base(minSize, 2, width, height)
+            : base(minSize, AllowedMinSize, width, height)
 		{
 		}
 
+        #pragma warning disable 1591 // do not show compiler warnings of the missing descriptions
 		override protected void TransformRow (float[,] src, float[,] dst, int y, int length)
 		{
 			if (length >= allowedMinSize) {
@@ -144,5 +150,6 @@ namespace TurboWavelets
 					dst [x, i] = src [x, i];
 			}
 		}
+        #pragma warning restore 1591
 	}
 }

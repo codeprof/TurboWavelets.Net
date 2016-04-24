@@ -282,6 +282,20 @@ namespace TurboWavelets
 			}
 		}
 
+		/// <summary>
+		/// Private method to modify the coefficients of a single block of the declared grid size.
+		/// The coefficients in the block are sorted by their absolute values (from high to low).
+		/// The first n coefficients are multiplied with the coresponding value in the "scaleFactorsMajors"-array.
+		/// If "scaleFactorsMajors" is null the values remain unchanged.
+		/// The remaining coefficients are mulitplied with the fixed value "scaleFactorsMinors".
+		/// </summary>
+		/// <param name="src">a 2D float array</param>
+		/// <param name="n">n greatest coefficients multiplied by the coresponding value in the "scaleFactorsMajors"-array or remaing unchanged if "scaleFactorsMajors" is null</param>
+		/// <param name="scaleFactorsMajors">float array of size n with scaling factors</param>
+		/// <param name="scaleFactorsMinors">scaling factor for remaining coefficients</param>
+		/// <param name="gridSize">Size of the grid (horizontally and vertically)</param>
+		/// <param name="startX">start position in first dimension</param>
+		/// <param name="startY">start position in second dimension</param>	
 		private void ModfiyBlock (float[,] src, int n, float[] scaleFactorsMajors, float scaleFactorsMinors, int gridSize, int startX, int startY)
 		{
 			//Note: ModfiyBlock should not be called directly, as
@@ -728,7 +742,8 @@ namespace TurboWavelets
 				getBlockCoefficientsRange (src, 0, 0, width, height, out min, out max, enableParallel, true, progressDelegate);
 			}
 		}
-		/*
+
+
 		virtual public float getQuantil(float[,] src, float p)
 		{
 			int numCoeffs = p * width * height;
