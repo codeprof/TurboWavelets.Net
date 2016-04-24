@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TurboWavelets-Samples", "Tu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contrast-based-adaptive-deadzone", "TurboWavelets-Samples\Contrast-based-adaptive-deadzone\Contrast-based-adaptive-deadzone\Contrast-based-adaptive-deadzone.csproj", "{01E65A1A-8C95-4E79-90E6-E40EFCCAF332}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contrast-based-adaptive-sharpening", "TurboWavelets-Samples\Contrast-based-adaptive-sharpening\Contrast-based-adaptive-sharpening\Contrast-based-adaptive-sharpening.csproj", "{08BA1610-AC76-4528-9902-0CE354A42083}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{01E65A1A-8C95-4E79-90E6-E40EFCCAF332}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01E65A1A-8C95-4E79-90E6-E40EFCCAF332}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01E65A1A-8C95-4E79-90E6-E40EFCCAF332}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08BA1610-AC76-4528-9902-0CE354A42083}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08BA1610-AC76-4528-9902-0CE354A42083}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08BA1610-AC76-4528-9902-0CE354A42083}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08BA1610-AC76-4528-9902-0CE354A42083}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1E7A9FFF-4D2D-4608-98CF-051E3F883266}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1E7A9FFF-4D2D-4608-98CF-051E3F883266}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E7A9FFF-4D2D-4608-98CF-051E3F883266}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -30,6 +36,7 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{01E65A1A-8C95-4E79-90E6-E40EFCCAF332} = {CFFD2939-872D-46BD-BAE9-9C4999F2F6DD}
+		{08BA1610-AC76-4528-9902-0CE354A42083} = {CFFD2939-872D-46BD-BAE9-9C4999F2F6DD}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = TurboWavelets-Samples\Contrast-based-adaptive-deadzone\Contrast-based-adaptive-deadzone\Contrast-based-adaptive-deadzone.csproj

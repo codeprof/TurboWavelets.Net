@@ -395,7 +395,7 @@ namespace TurboWavelets
 				for (int y = 0; y <  gridSize; y++) {
 					for (int x = 0; x <  gridSize; x++) {
 						if (!keep [x, y])
-						if (tmpBlock [x, y] >= max) {
+						if (tmpBlock [x, y] > max) {
 							max = tmpBlock [x, y];
 							maxIdxX = x;
 							maxIdxY = y;
@@ -405,8 +405,18 @@ namespace TurboWavelets
 				keep [maxIdxX, maxIdxY] = true;
 				//Scale all major coefficients (with greater amplitutes)
 				//by the coresponding scale factor 
-				if (scaleFactorsMajors != null)
-					src [startX + maxIdxX, startY + maxIdxY] *= scaleFactorsMajors [k];
+				if (scaleFactorsMajors != null) {
+					int x = startX + maxIdxX;
+					int y = startY + maxIdxY;
+					//x and y can be out of bounds!
+					if (x > endX - 1) {
+						x = endX - 1;
+					}
+					if (y > endY - 1) {
+						y = endY - 1;
+					}
+					src [x, y] *= scaleFactorsMajors [k];
+				}
 			}
 			//all minor coefficients (with small amplitutes)
 			//are multiplied by a certain factor (for denoising typically zero)
@@ -442,7 +452,7 @@ namespace TurboWavelets
 			if ((width % gridSize) != 0) {
 				w++;
 			}
-			int h = width / gridSize;
+			int h = height / gridSize;
 			if ((height % gridSize) != 0) {
 				h++;
 			}

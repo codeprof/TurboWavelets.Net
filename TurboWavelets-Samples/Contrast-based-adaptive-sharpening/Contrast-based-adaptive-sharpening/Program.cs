@@ -5,10 +5,10 @@ using TurboWavelets;
 
 namespace TurbowaveletsSamples
 {
-	class ContrastBasedAdaptiveDeadzoneClass
+	class ContrastBasedAdaptiveShapeningClass
 	{
 		
-		private static void applyAdaptiveDeadzone (float[,] array, int numCoeffs)
+		private static void applyAdaptiveShapening (float[,] array, float position)
 		{
 			int width = array.GetLength (0);
 			int height = array.GetLength (1);
@@ -20,9 +20,12 @@ namespace TurbowaveletsSamples
 			wavelet53.TransformIsotropic2D (array);
 			//Reverse the ordering of the coefficients
 			waveletOrder.BacktransformIsotropic2D (array);
-			//Use numCoeffs cofficient out of 64 (8x8) -> for e.g. numCoeffs = 5 this
-			//means a compression to 7,8% of the original size
-			waveletOrder.CropCoefficients (array, 7, 8);
+			float[] scale = new float[8 * 8];
+
+			for (int x=0; x < 8*8; x++) {
+				scale [x] = 1.0f + 2.0f / ( (position - x) * (position- x) + 1.0f);
+			}
+			waveletOrder.ScaleCoefficients(array, scale, 8);
 			waveletOrder.TransformIsotropic2D (array);
 			wavelet53.BacktransformIsotropic2D (array);
 		}
@@ -36,11 +39,7 @@ namespace TurbowaveletsSamples
 			float[,] aArray = new float[bmp.Width, bmp.Height];
 
 			ImageArrayConverter.BitmapToAYCbCrArrays (bmp, aArray, yArray, cbArray, crArray); 
-			//setting ~95% of luminance coefficients to zero
-			applyAdaptiveDeadzone (yArray, 3);
-			//compress chroma even more (98,4%)
-			applyAdaptiveDeadzone (cbArray, 1);
-			applyAdaptiveDeadzone (crArray, 1);
+			applyAdaptiveShapening (yArray, 5.0f);
 			ImageArrayConverter.AYCbCrArraysToBitmap (aArray, yArray, cbArray, crArray, bmp);
 			bmp.Save ("test.png", ImageFormat.Png);
 		}
