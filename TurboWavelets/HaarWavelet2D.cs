@@ -36,7 +36,7 @@ namespace TurboWavelets
 		/// <summary>
 		/// The allowed minimum transformation (limitation of the algorithmn implementation)
 		/// </supmmary>
-		protected const int   AllowedMinSize    = 3;
+		protected const int   AllowedMinSize    = 2;
         /// <summary>
         /// scale factor
         /// </summary>
