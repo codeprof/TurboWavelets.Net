@@ -71,7 +71,7 @@ Par/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/Tur
 /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs:37: warning: Unsupported xml/html tag </supmmary> found
 /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs:37: warning: Unsupported xml/html tag </supmmary> found
 /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs:37: warning: Unsupported xml/html tag </supmmary> found
-/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs:78: warning: Unsupported xml/html tag </supmmary> found
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs:60: warning: Unsupported xml/html tag </supmmary> found
 /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet1DStatic.cs:35: warning: The following parameters of TurboWavelets::Biorthogonal53Wavelet1DStatic::wavelet53_1d(float[] src, float[] dst, int length) are not documented:
   parameter 'length'
 /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet1DStatic.cs:94: warning: The following parameters of TurboWavelets::Biorthogonal53Wavelet1DStatic::wavelet53_1d_inverse(float[] src, float[] dst, int length) are not documented:
@@ -79,8 +79,8 @@ Par/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/Tur
 /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs:37: warning: Unsupported xml/html tag </supmmary> found
 /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs:37: warning: Unsupported xml/html tag </supmmary> found
 /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs:37: warning: Unsupported xml/html tag </supmmary> found
-/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs:78: warning: Unsupported xml/html tag </supmmary> found
-/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs:624: warning: The following parameters of TurboWavelets::Wavelet2D::TransformIsotropic2D(float src[,], ProgressDelegate progressDelegate=null) are not documented:
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs:60: warning: Unsupported xml/html tag </supmmary> found
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs:606: warning: The following parameters of TurboWavelets::Wavelet2D::TransformIsotropic2D(float src[,], ProgressDelegate progressDelegate=null) are not documented:
   parameter 'progressDelegate'
 /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet1DStatic.cs:35: warning: The following parameters of TurboWavelets::Biorthogonal53Wavelet1DStatic::wavelet53_1d(float[] src, float[] dst, int length) are not documented:
   parameter 'length'
@@ -89,8 +89,8 @@ Par/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/Tur
 /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs:37: warning: Unsupported xml/html tag </supmmary> found
 /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs:37: warning: Unsupported xml/html tag </supmmary> found
 /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs:37: warning: Unsupported xml/html tag </supmmary> found
-/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs:78: warning: Unsupported xml/html tag </supmmary> found
-/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs:624: warning: The following parameters of TurboWavelets::Wavelet2D::TransformIsotropic2D(float src[,], ProgressDelegate progressDelegate=null) are not documented:
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs:60: warning: Unsupported xml/html tag </supmmary> found
+/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs:606: warning: The following parameters of TurboWavelets::Wavelet2D::TransformIsotropic2D(float src[,], ProgressDelegate progressDelegate=null) are not documented:
   parameter 'progressDelegate'
 sing file /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Wavelet2D.cs...
 Building group list...
@@ -194,7 +194,6 @@ Generating XML output for file AssemblyInfo.cs
 Generating XML output for file Wavelet2D.cs
 Generate XML output for dir /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Properties/
 Generate XML output for dir /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/
-Generating XML output for the main page
 Combining RTF output...
 Generating dot graphs using 24 parallel threads...
 Running dot for graph 1/15
