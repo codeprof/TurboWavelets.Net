@@ -26,7 +26,8 @@ warning: ignoring unsupported tag `DIA_PATH               =' at line 2126, file 
 warning: ignoring unsupported tag `UML_LIMIT_NUM_FIELDS   =' at line 2220, file /home/travis/build/codeprof/TurboWavelets.Net/Doxyfile
 warning: ignoring unsupported tag `DIAFILE_DIRS           =' at line 2334, file /home/travis/build/codeprof/TurboWavelets.Net/Doxyfile
 warning: ignoring unsupported tag `PLANTUML_JAR_PATH      =' at line 2343, file /home/travis/build/codeprof/TurboWavelets.Net/Doxyfile
-warning: ignoring unsupported tag `USE_MDFILE_AS_MAINPAGE =' at line 2406, file /home/travis/build/codeprof/TurboWavelets.Net/Doxyfile
+warning: tag INPUT: input source `mainpage.dox' does not exist
+warning: source mainpage.dox is not a readable file or directory... skipping.
 Searching for include files...
 Searching for example files...
 Searching for images...
