@@ -9,7 +9,7 @@
         <definition>const int TurboWavelets.HaarWavelet2D.AllowedMinSize</definition>
         <argsstring></argsstring>
         <name>AllowedMinSize</name>
-        <initializer> 3</initializer>
+        <initializer> 2</initializer>
         <briefdescription>
 <para>The allowed minimum transformation (limitation of the algorithmn implementation) &lt;/supmmary&gt; </para>        </briefdescription>
         <detaileddescription>
