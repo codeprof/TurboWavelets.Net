@@ -56,7 +56,7 @@ namespace TurboWavelets
 		/// </summary>
 		protected int minSize;
 		/// <summary>
-		/// The allowed minimum value for allowedMinSize (limitation of the algorithmn implementation)
+		/// The allowed minimum value for minSize (limitation of the algorithmn implementation)
 		/// </supmmary>
 		protected int allowedMinSize;
 		#endregion
@@ -743,7 +743,7 @@ namespace TurboWavelets
 			}
 		}
 
-
+/*
 		virtual public float getQuantil(float[,] src, float p)
 		{
 			int numCoeffs = p * width * height;

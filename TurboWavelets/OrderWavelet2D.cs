@@ -26,8 +26,6 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-using System;
-
 namespace TurboWavelets
 {
 	public class OrderWavelet2D : Wavelet2D
@@ -69,7 +67,7 @@ namespace TurboWavelets
         #pragma warning disable 1591 // do not show compiler warnings of the missing descriptions
 		override protected void TransformRow (float[,] src, float[,] dst, int y, int length)
 		{
-			if (length >= allowedMinSize) {
+			if (length >= AllowedMinSize) {
 				int half = length >> 1;
 				int offSrc = 0;
 				// number of low-pass values
@@ -90,7 +88,7 @@ namespace TurboWavelets
 
 		override protected void TransformCol (float[,] src, float[,] dst, int x, int length)
 		{
-			if (length >= allowedMinSize) {
+			if (length >= AllowedMinSize) {
 				int half = length >> 1;
 				int offSrc = 0;
 				// number of low-pass values
@@ -111,7 +109,7 @@ namespace TurboWavelets
 
 		override protected void InvTransformRow (float[,] src, float[,] dst, int y, int length)
 		{
-			if (length >= allowedMinSize) {
+			if (length >= AllowedMinSize) {
 				int half = length >> 1;
 				int offDst = 0;
 				// number of low-pass values
@@ -132,7 +130,7 @@ namespace TurboWavelets
 
 		override protected void InvTransformCol (float[,] src, float[,] dst, int x, int length)
 		{
-			if (length >= allowedMinSize) {
+			if (length >= AllowedMinSize) {
 				int half = length >> 1;
 				int offDst = 0;
 				// number of low-pass values

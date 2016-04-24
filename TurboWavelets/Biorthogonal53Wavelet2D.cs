@@ -25,8 +25,6 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
-using System;
-using System.Threading.Tasks;
 
 namespace TurboWavelets
 {
@@ -111,7 +109,7 @@ namespace TurboWavelets
 					//(instead of scaling low frequencies by factor sqrt(2) and
 					//shrinking high frequencies by factor sqrt(2)
 					//and reposition to have all low frequencies on the left side
-					dst [i, y] = Scale * (src [offSrc, y] + (lastHF + hf) * Smooth);
+					dst [i, y] = (src [offSrc, y] + (lastHF + hf) * Smooth) * Scale;
 					dst [offdst++, y] = hf;
 					lastHF = hf;
 					offSrc += 2; 
@@ -163,7 +161,7 @@ namespace TurboWavelets
 					//(instead of scaling low frequencies by factor sqrt(2) and
 					//shrinking high frequencies by factor sqrt(2)
 					//and reposition to have all low frequencies on the left side
-					dst [x, i] = Scale * (src [x, offSrc] + (lastHF + hf) * Smooth);
+					dst [x, i] = (src [x, offSrc] + (lastHF + hf) * Smooth) * Scale;
 					dst [x, offdst++] = hf;
 					lastHF = hf;
 					offSrc += 2; 
