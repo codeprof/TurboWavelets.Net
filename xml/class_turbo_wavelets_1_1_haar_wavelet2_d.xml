@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" line="36" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" bodystart="36" bodyend="-1"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" line="39" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" bodystart="39" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_turbo_wavelets_1_1_haar_wavelet2_d_1abb9a814259b4977ed274dde12f878f12" prot="protected" static="no" mutable="no">
         <type>const float</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" line="40" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" bodystart="40" bodyend="-1"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" line="43" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" bodystart="43" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_turbo_wavelets_1_1_haar_wavelet2_d_1ab2fa94eb968bd48292856758c241b186" prot="protected" static="no" mutable="no">
         <type>const float</type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" line="44" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" bodystart="44" bodyend="-1"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" line="47" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" bodystart="47" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_turbo_wavelets_1_1_haar_wavelet2_d_1ae874d9a5f34ead2fbf4dc8efc4fc3e70" prot="protected" static="no" mutable="no">
         <type>const float</type>
@@ -58,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" line="48" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" bodystart="48" bodyend="-1"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" line="51" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" bodystart="51" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_turbo_wavelets_1_1_haar_wavelet2_d_1aea88909dad98e2812d5b065da35ec361" prot="protected" static="no" mutable="no">
         <type>const float</type>
@@ -72,7 +72,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" line="52" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" bodystart="52" bodyend="-1"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" line="55" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" bodystart="55" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -110,7 +110,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" line="63" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" bodystart="61" bodyend="64"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" line="66" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" bodystart="64" bodyend="67"/>
       </memberdef>
       <memberdef kind="function" id="class_turbo_wavelets_1_1_haar_wavelet2_d_1a8064166eec2c0a4b66378896b882bd47" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -157,7 +157,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" line="76" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" bodystart="74" bodyend="77"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" line="79" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" bodystart="77" bodyend="80"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -220,7 +220,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" line="81" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" bodystart="80" bodyend="104"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" line="84" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" bodystart="83" bodyend="107"/>
       </memberdef>
       <memberdef kind="function" id="class_turbo_wavelets_1_1_haar_wavelet2_d_1a5695f7a35bbbae2f64d5c92212cd1f83" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>override void</type>
@@ -281,7 +281,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" line="107" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" bodystart="106" bodyend="130"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" line="110" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" bodystart="109" bodyend="133"/>
       </memberdef>
       <memberdef kind="function" id="class_turbo_wavelets_1_1_haar_wavelet2_d_1a870ff202a886a34c54013b867e56f6e6" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>override void</type>
@@ -342,7 +342,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" line="133" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" bodystart="132" bodyend="154"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" line="136" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" bodystart="135" bodyend="157"/>
       </memberdef>
       <memberdef kind="function" id="class_turbo_wavelets_1_1_haar_wavelet2_d_1a780d0ea14dea6a587c8ebf21f19670d0" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>override void</type>
@@ -403,11 +403,11 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" line="157" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" bodystart="156" bodyend="178"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" line="160" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" bodystart="159" bodyend="181"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para>Implements the two dimensional haar wavelet transformation for arbitrary sizes. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
@@ -434,7 +434,7 @@
         <link refid="class_turbo_wavelets_1_1_wavelet2_d"/>
       </node>
     </collaborationgraph>
-    <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" line="32" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" bodystart="31" bodyend="180"/>
+    <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" line="35" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs" bodystart="34" bodyend="183"/>
     <listofallmembers>
       <member refid="class_turbo_wavelets_1_1_haar_wavelet2_d_1ae5d11cf5767f2bc0e7326922dc601a8e" prot="protected" virt="non-virtual"><scope>TurboWavelets::HaarWavelet2D</scope><name>AllowedMinSize</name></member>
       <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a949bac2b4f540092cf7cc8916968cdc0" prot="protected" virt="non-virtual"><scope>TurboWavelets::HaarWavelet2D</scope><name>allowedMinSize</name></member>

@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" line="36" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" bodystart="36" bodyend="-1"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" line="39" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" bodystart="39" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1a18ab552c3e524a02a6115ac6ba9dc9dd" prot="protected" static="no" mutable="no">
         <type>const float</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" line="40" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" bodystart="40" bodyend="-1"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" line="43" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" bodystart="43" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1a02e708dc75d423093b1a022cc93f0388" prot="protected" static="no" mutable="no">
         <type>const float</type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" line="44" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" bodystart="44" bodyend="-1"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" line="47" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" bodystart="47" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1adc5fbcbea59e2154e77c9507cea584e2" prot="protected" static="no" mutable="no">
         <type>const float</type>
@@ -58,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" line="48" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" bodystart="48" bodyend="-1"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" line="51" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" bodystart="51" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1a60d0110965f0ac833e932ad39b3d6f46" prot="protected" static="no" mutable="no">
         <type>const float</type>
@@ -72,7 +72,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" line="52" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" bodystart="52" bodyend="-1"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" line="55" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" bodystart="55" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1af84189cc1bd640074755c2ce84041c93" prot="protected" static="no" mutable="no">
         <type>const float</type>
@@ -86,7 +86,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" line="56" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" bodystart="56" bodyend="-1"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" line="59" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" bodystart="59" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1aef40af813a0abea998b61fdb7ce34f5d" prot="protected" static="no" mutable="no">
         <type>const float</type>
@@ -100,7 +100,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" line="60" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" bodystart="60" bodyend="-1"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" line="63" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" bodystart="63" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -138,7 +138,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" line="71" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" bodystart="69" bodyend="72"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" line="74" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" bodystart="72" bodyend="75"/>
       </memberdef>
       <memberdef kind="function" id="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1a2d9bf97c2211d5859b3a53835bea7888" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -185,7 +185,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" line="82" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" bodystart="80" bodyend="83"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" line="85" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" bodystart="83" bodyend="86"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -248,7 +248,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" line="87" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" bodystart="86" bodyend="136"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" line="90" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" bodystart="89" bodyend="139"/>
       </memberdef>
       <memberdef kind="function" id="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1aa93cd7f9ac110e04678a5313336fb73f" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>override void</type>
@@ -309,7 +309,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" line="139" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" bodystart="138" bodyend="187"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" line="142" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" bodystart="141" bodyend="190"/>
       </memberdef>
       <memberdef kind="function" id="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1a74b2789642a900fcfab4f47e023329ed" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>override void</type>
@@ -370,7 +370,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" line="190" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" bodystart="189" bodyend="247"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" line="193" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" bodystart="192" bodyend="250"/>
       </memberdef>
       <memberdef kind="function" id="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1a2f52053d7f8f2da84b0ca6964481bd06" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>override void</type>
@@ -431,11 +431,11 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" line="250" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" bodystart="249" bodyend="307"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" line="253" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" bodystart="252" bodyend="310"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para>Implements the two dimensional biorthogonal 5/3 wavelet transformation for arbitrary sizes. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
@@ -462,7 +462,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" line="32" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" bodystart="31" bodyend="309"/>
+    <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" line="35" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs" bodystart="34" bodyend="312"/>
     <listofallmembers>
       <member refid="class_turbo_wavelets_1_1_biorthogonal53_wavelet2_d_1a73738d4d11ccf4963deca1270953f4a0" prot="protected" virt="non-virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>AllowedMinSize</name></member>
       <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a949bac2b4f540092cf7cc8916968cdc0" prot="protected" virt="non-virtual"><scope>TurboWavelets::Biorthogonal53Wavelet2D</scope><name>allowedMinSize</name></member>

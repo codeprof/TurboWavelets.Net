@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" line="36" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" bodystart="36" bodyend="-1"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" line="39" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" bodystart="39" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -54,7 +54,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" line="49" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" bodystart="47" bodyend="50"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" line="52" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" bodystart="50" bodyend="53"/>
       </memberdef>
       <memberdef kind="function" id="class_turbo_wavelets_1_1_order_wavelet2_d_1a22aec9d1c8fd7f56ac480a305ce4e9cd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -101,7 +101,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" line="64" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" bodystart="62" bodyend="65"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" line="67" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" bodystart="65" bodyend="68"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -164,7 +164,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" line="69" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" bodystart="68" bodyend="87"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" line="72" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" bodystart="71" bodyend="90"/>
       </memberdef>
       <memberdef kind="function" id="class_turbo_wavelets_1_1_order_wavelet2_d_1a94c72dd8852fe900901bcffd12c37272" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>override void</type>
@@ -225,7 +225,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" line="90" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" bodystart="89" bodyend="108"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" line="93" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" bodystart="92" bodyend="111"/>
       </memberdef>
       <memberdef kind="function" id="class_turbo_wavelets_1_1_order_wavelet2_d_1a67a15c5e174f2bf762d153a976f86b36" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>override void</type>
@@ -286,7 +286,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" line="111" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" bodystart="110" bodyend="129"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" line="114" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" bodystart="113" bodyend="132"/>
       </memberdef>
       <memberdef kind="function" id="class_turbo_wavelets_1_1_order_wavelet2_d_1ae7e013e9ee79f1d0932de6fa2e1854de" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>override void</type>
@@ -347,11 +347,11 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" line="132" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" bodystart="131" bodyend="150"/>
+        <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" line="135" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" bodystart="134" bodyend="153"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para>Implements the two dimensional ordering transformation for arbitrary sizes. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
@@ -378,7 +378,7 @@
         <link refid="class_turbo_wavelets_1_1_wavelet2_d"/>
       </node>
     </collaborationgraph>
-    <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" line="32" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" bodystart="31" bodyend="152"/>
+    <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" line="35" bodyfile="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs" bodystart="34" bodyend="155"/>
     <listofallmembers>
       <member refid="class_turbo_wavelets_1_1_order_wavelet2_d_1ac2ad88fd5eadcb04baa930a58d791568" prot="protected" virt="non-virtual"><scope>TurboWavelets::OrderWavelet2D</scope><name>AllowedMinSize</name></member>
       <member refid="class_turbo_wavelets_1_1_wavelet2_d_1a949bac2b4f540092cf7cc8916968cdc0" prot="protected" virt="non-virtual"><scope>TurboWavelets::OrderWavelet2D</scope><name>allowedMinSize</name></member>
