@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>TurboWavelets.Net documentation</title>
+    <detaileddescription>
+<para>TurboWavelets.Net provides very fast, flexible and compact implementations of discrete wavelet transformations in C#. Unlike others this implementation has no limitation is sizes for the transformation (lengths like 39, 739,... are possible, not just power of two numbers) At the moment only floating point numbers are supported.</para><para>Features:<itemizedlist>
+<listitem><para>1D biorthogonal 5/3 wavelet using the lifting scheme (for arbitrary sizes, not just power of 2)</para></listitem><listitem><para>2D biorthogonal 5/3 wavelet using the lifting scheme (for arbitrary sizes, not just power of 2)</para></listitem><listitem><para>2D haar wavelet (for arbitrary sizes, not just power of 2)</para></listitem><listitem><para>2D cascade sorting of coefficients (for arbitrary sizes, not just power of 2)</para></listitem><listitem><para>Scale/Crop coefficients in a defined grid</para></listitem><listitem><para>apply a deadzone</para></listitem><listitem><para>Multithreaded and threadsafe</para></listitem></itemizedlist>
+</para><para>Licence: MIT License (MIT) </para>    </detaileddescription>
+  </compounddef>
+</doxygen>
