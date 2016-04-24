@@ -69,7 +69,6 @@ Par/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/Tur
 /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs:32: warning: Compound TurboWavelets::HaarWavelet2D is not documented.
 /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs:32: warning: Compound TurboWavelets::OrderWavelet2D is not documented.
 /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs:32: warning: Compound TurboWavelets::Biorthogonal53Wavelet2D is not documented.
-Project logo './graphics/turbowavelets-logo-mini.png' specified by PROJECT_LOGO does not exist!
 /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/Biorthogonal53Wavelet2D.cs:34: warning: Unsupported xml/html tag </supmmary> found
 /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/HaarWavelet2D.cs:34: warning: Unsupported xml/html tag </supmmary> found
 /home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/TurboWavelets/OrderWavelet2D.cs:34: warning: Unsupported xml/html tag </supmmary> found
