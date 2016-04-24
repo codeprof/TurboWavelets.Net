@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#<sp/>TurboWavelets.Net&lt;img<sp/>src=&quot;https://raw.githubusercontent.com/codeprof/TurboWavelets.Net/master/graphics/turbowavelets-logo-mini.png&quot;<sp/>align=&quot;right&quot;<sp/>width=&quot;120px&quot;&gt;</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="normal">&lt;a<sp/>href=</highlight><highlight class="stringliteral">&quot;https://ci.appveyor.com/project/codeprof/turbowavelets-net&quot;</highlight><highlight class="normal">&gt;&lt;img<sp/>src=</highlight><highlight class="stringliteral">&quot;https://ci.appveyor.com/api/projects/status/5j9nc0pqnd7aibbh?svg=true&quot;</highlight><highlight class="normal">&gt;&lt;/a&gt;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal">&amp;nbsp;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">&lt;a<sp/>href=</highlight><highlight class="stringliteral">&quot;http://codeprof.github.io/TurboWavelets.Net/html/index.html&quot;</highlight><highlight class="normal">&gt;&lt;img<sp/>src=</highlight><highlight class="stringliteral">&quot;https://github.com/codeprof/TurboWavelets.Net/blob/gh-pages/html/doxygen.png&quot;</highlight><highlight class="normal">&gt;&lt;/a&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">&lt;/br&gt;&lt;/br&gt;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">TurboWavelets.Net<sp/>provides<sp/>very<sp/>fast,<sp/>flexible<sp/>and<sp/>compact<sp/>implementations<sp/>of<sp/>discrete<sp/>wavelet<sp/>transformations<sp/>in<sp/>C#.</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">Unlike<sp/>others<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>implementation<sp/>has<sp/>no<sp/>limitation<sp/>is<sp/>sizes<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>the<sp/>transformation<sp/>(lengths<sp/>like<sp/>39,<sp/>739,...<sp/>are<sp/>possible,<sp/>not<sp/>just<sp/>power<sp/>of<sp/>two<sp/>numbers)<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">At<sp/>the<sp/>moment<sp/>only<sp/>floating<sp/>point<sp/>numbers<sp/>are<sp/>supported.</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">#<sp/>Features:</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">-<sp/>1D<sp/>biorthogonal<sp/>5/3<sp/>wavelet<sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>the<sp/>lifting<sp/>scheme<sp/>(</highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>arbitrary<sp/>sizes,<sp/>not<sp/>just<sp/>power<sp/>of<sp/>2)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">-<sp/>2D<sp/>biorthogonal<sp/>5/3<sp/>wavelet<sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>the<sp/>lifting<sp/>scheme<sp/>(</highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>arbitrary<sp/>sizes,<sp/>not<sp/>just<sp/>power<sp/>of<sp/>2)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">-<sp/>2D<sp/>haar<sp/>wavelet<sp/>(</highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>arbitrary<sp/>sizes,<sp/>not<sp/>just<sp/>power<sp/>of<sp/>2)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">-<sp/>2D<sp/>cascade<sp/>sorting<sp/>of<sp/>coefficients<sp/><sp/>(</highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>arbitrary<sp/>sizes,<sp/>not<sp/>just<sp/>power<sp/>of<sp/>2)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">-<sp/>Scale/Crop<sp/>coefficients<sp/>in<sp/>a<sp/>defined<sp/>grid</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">-<sp/>apply<sp/>a<sp/>deadzone</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">-<sp/>Multithreaded<sp/>and<sp/>threadsafe</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>Licence</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="normal">MIT<sp/>License<sp/>(MIT)</highlight></codeline>
+    </programlisting>
+    <location file="/home/travis/build/codeprof/TurboWavelets.Net/code_docs/TurboWavelets.Net/README.md"/>
+  </compounddef>
+</doxygen>

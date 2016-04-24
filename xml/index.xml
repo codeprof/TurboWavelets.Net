@@ -96,6 +96,8 @@
   </compound>
   <compound refid="namespace_turbo_wavelets" kind="namespace"><name>TurboWavelets</name>
   </compound>
+  <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
   <compound refid="_biorthogonal53_wavelet1_d_static_8cs" kind="file"><name>Biorthogonal53Wavelet1DStatic.cs</name>
   </compound>
   <compound refid="_biorthogonal53_wavelet2_d_8cs" kind="file"><name>Biorthogonal53Wavelet2D.cs</name>
