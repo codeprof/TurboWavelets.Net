@@ -5,10 +5,10 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{B306E3FD-A05A-47BD-AE88-73DE05C75871}</ProjectGuid>
+    <ProjectGuid>{01E65A1A-8C95-4E79-90E6-E40EFCCAF332}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Contrastbasedadaptivequantisation</RootNamespace>
-    <AssemblyName>Contrast-based-adaptive-quantisation</AssemblyName>
+    <RootNamespace>Contrastbasedadaptivedeadzone</RootNamespace>
+    <AssemblyName>Contrast-based-adaptive-deadzone</AssemblyName>
     <ReleaseVersion>0.2</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -17,6 +17,7 @@
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug</OutputPath>
     <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Externalconsole>true</Externalconsole>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
@@ -25,6 +26,7 @@
     <DebugType>full</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Externalconsole>true</Externalconsole>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
@@ -40,12 +42,12 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <None Include="sample.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\TurboWavelets\TurboWavelets.csproj">
+    <ProjectReference Include="..\..\..\TurboWavelets\TurboWavelets.csproj">
       <Project>{1E7A9FFF-4D2D-4608-98CF-051E3F883266}</Project>
       <Name>TurboWavelets</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="sample.png" />
   </ItemGroup>
 </Project>
