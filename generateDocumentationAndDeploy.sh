@@ -71,7 +71,7 @@ rm -rf *
 
 cp ../source/$GH_REPO_NAME/TurboWavelets/ TurboWavelets -rf
 cp ../source/$GH_REPO_NAME/Doxyfile Doxyfile
-cp ../source/$GH_REPO_NAME/graphics/turbowavelets-logo-mini.svg turbowavelets-logo-mini.svg
+cp ../source/$GH_REPO_NAME/graphics/turbowavelets-logo-mini.png turbowavelets-logo-mini.png
 ls
 
 # Need to create a .nojekyll file to allow filenames starting with an underscore

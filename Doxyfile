@@ -51,7 +51,7 @@ PROJECT_BRIEF          = "Compact C# Implementation for very fast and flexible w
 # and the maximum width should not exceed 200 pixels. Doxygen will copy the logo
 # to the output directory.
 
-PROJECT_LOGO           = ./graphics/turbowavelets-logo-mini.png
+PROJECT_LOGO           = ./turbowavelets-logo-mini.png
 
 # The OUTPUT_DIRECTORY tag is used to specify the (relative or absolute) path
 # into which the generated documentation will be written. If a relative path is
@@ -2401,3 +2401,8 @@ GENERATE_LEGEND        = YES
 # This tag requires that the tag HAVE_DOT is set to YES.
 
 DOT_CLEANUP            = YES
+
+#INPUT += README.md
+#USE_MDFILE_AS_MAINPAGE = README.md
+
+INPUT += mainpage.dox
