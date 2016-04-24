@@ -28,6 +28,9 @@
 
 namespace TurboWavelets
 {
+	/// <summary>
+	/// Implements the two dimensional biorthogonal 5/3 wavelet transformation for arbitrary sizes
+	/// </summary>
 	public class Biorthogonal53Wavelet2D : Wavelet2D
 	{
 		/// <summary>

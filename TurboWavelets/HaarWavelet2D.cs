@@ -28,6 +28,9 @@
 
 namespace TurboWavelets
 {
+	/// <summary>
+	/// Implements the two dimensional haar wavelet transformation for arbitrary sizes
+	/// </summary>
 	public class HaarWavelet2D : Wavelet2D
 	{
 		/// <summary>

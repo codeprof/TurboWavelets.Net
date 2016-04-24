@@ -28,6 +28,9 @@
 
 namespace TurboWavelets
 {
+	/// <summary>
+	/// Implements the two dimensional ordering transformation for arbitrary sizes
+	/// </summary>
 	public class OrderWavelet2D : Wavelet2D
 	{
 		/// <summary>
