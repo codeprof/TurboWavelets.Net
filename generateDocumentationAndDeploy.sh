@@ -71,7 +71,6 @@ rm -rf *
 
 cp ../source/$GH_REPO_NAME/TurboWavelets/ TurboWavelets -rf
 cp ../source/$GH_REPO_NAME/Doxyfile Doxyfile
-cp ../source/$GH_REPO_NAME/mainpage.dox mainpage.dox
 cp ../source/$GH_REPO_NAME/graphics/turbowavelets-logo-mini.png turbowavelets-logo-mini.png
 ls
 
