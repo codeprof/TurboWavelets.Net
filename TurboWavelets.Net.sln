@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contrast-based-adaptive-dea
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contrast-based-adaptive-sharpening", "TurboWavelets-Samples\Contrast-based-adaptive-sharpening\Contrast-based-adaptive-sharpening\Contrast-based-adaptive-sharpening.csproj", "{08BA1610-AC76-4528-9902-0CE354A42083}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wavelet-image-upscaling", "TurboWavelets-Samples\Wavelet-image-upscaling\Wavelet-image-upscaling\Wavelet-image-upscaling.csproj", "{824F0C83-9719-4068-9B64-8CD79C56E28A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,13 +35,18 @@ Global
 		{5C7CD59F-8311-41F2-93D4-058913CEEA91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C7CD59F-8311-41F2-93D4-058913CEEA91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C7CD59F-8311-41F2-93D4-058913CEEA91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{824F0C83-9719-4068-9B64-8CD79C56E28A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{824F0C83-9719-4068-9B64-8CD79C56E28A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{824F0C83-9719-4068-9B64-8CD79C56E28A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{824F0C83-9719-4068-9B64-8CD79C56E28A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{01E65A1A-8C95-4E79-90E6-E40EFCCAF332} = {CFFD2939-872D-46BD-BAE9-9C4999F2F6DD}
 		{08BA1610-AC76-4528-9902-0CE354A42083} = {CFFD2939-872D-46BD-BAE9-9C4999F2F6DD}
+		{824F0C83-9719-4068-9B64-8CD79C56E28A} = {CFFD2939-872D-46BD-BAE9-9C4999F2F6DD}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = TurboWavelets-Samples\Contrast-based-adaptive-deadzone\Contrast-based-adaptive-deadzone\Contrast-based-adaptive-deadzone.csproj
+		StartupItem = TurboWavelets-Samples\Wavelet-image-upscaling\Wavelet-image-upscaling\Wavelet-image-upscaling.csproj
 		Policies = $0
 		$0.DotNetNamingPolicy = $1
 		$1.DirectoryNamespaceAssociation = None
