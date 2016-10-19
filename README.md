@@ -4,7 +4,7 @@
 <a href="http://codeprof.github.io/TurboWavelets.Net/html/index.html"><img src="https://github.com/codeprof/TurboWavelets.Net/blob/gh-pages/html/doxygen.png"></a>
 </br></br>
 TurboWavelets.Net provides very fast, flexible and compact implementations of discrete wavelet transformations in C#.
-Unlike others this implementation has no limitation is sizes for the transformation (lengths like 39, 739,... are possible, not just power of two numbers) 
+Unlike others this implementation has no limitation in sizes for the transformation (lengths like 39, 739,... are possible, not just power of two numbers) 
 At the moment only floating point numbers are supported.
 # Features:
 - 1D biorthogonal 5/3 wavelet using the lifting scheme (for arbitrary sizes, not just power of 2)
