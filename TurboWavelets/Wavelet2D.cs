@@ -28,7 +28,7 @@
 
 /*! \mainpage TurboWavelets.Net documentation
  * TurboWavelets.Net provides very fast, flexible and compact implementations of discrete wavelet transformations in C#.
- * Unlike others this implementation has no limitation is sizes for the transformation (lengths like 39, 739,... are possible, not just power of two numbers) 
+ * Unlike others this implementation has no limitation in sizes for the transformation (lengths like 39, 739,... are possible, not just power of two numbers) 
  * At the moment only floating point numbers are supported.
 
  * \section Features
