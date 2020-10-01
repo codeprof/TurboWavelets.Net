@@ -10,7 +10,7 @@ namespace TurbowaveletsSamples
 		
 		public static void Main (string[] args)
 		{
-			Bitmap bmp = new Bitmap ("../../sample.png");
+			Bitmap bmp = new Bitmap ("../../../sample.png");
 
 			Bitmap bmp2 = new Bitmap (2 * bmp.Width, 2 * bmp.Height, PixelFormat.Format32bppArgb);
 			float[,] yArray2 = new float[bmp2.Width, bmp2.Height];
